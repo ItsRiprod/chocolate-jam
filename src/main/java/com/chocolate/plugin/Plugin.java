@@ -9,6 +9,7 @@ import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
  * Main plugin class for modmod.
  */
 
+// add another comment
 public class Plugin extends JavaPlugin {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 

@@ -15,7 +15,6 @@ hytale.install_dir=path/to/Hytale
 hytale.decompile_partial=true
 ```
 
-
 # Commands
 
 ```bash
