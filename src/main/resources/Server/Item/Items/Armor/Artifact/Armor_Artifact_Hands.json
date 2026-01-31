@@ -1,0 +1,69 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Armor_Artifact_Hands.name"
+  },
+  "Parent": "Armor_Iron_Hands",
+  "Recipe": {
+    "Input": [],
+    "BenchRequirement": []
+  },
+  "Quality": "Epic",
+  "ItemLevel": 65,
+  "Icon": "Icons/ItemsGenerated/Artifact_Hands.png",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -30
+    ]
+  },
+  "Model": "Items/Armors/Artifact/Hands.blockymodel",
+  "Texture": "Items/Armors/Artifact/Hands_Texture.png",
+  "Armor": {
+    "ArmorSlot": "Hands",
+    "BaseDamageResistance": 0,
+    "DamageResistance": {
+      "Physical": [
+        {
+          "Amount": 0.04,
+          "CalculationType": "Multiplicative"
+        }
+      ],
+      "Projectile": [
+        {
+          "Amount": 0.04,
+          "CalculationType": "Multiplicative"
+        }
+      ]
+    },
+    "StatModifiers": {
+      "Health": [
+        {
+          "Amount": 7,
+          "CalculationType": "Additive"
+        }
+      ],
+      "Mana": [
+        {
+          "Amount": 29,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "Tags": {
+    "Type": [
+      "Armor"
+    ],
+    "Family": [
+      "Onyxium"
+    ]
+  },
+  "MaxDurability": 120,
+  "ItemSoundSetId": "ISS_Armor_Leather"
+}

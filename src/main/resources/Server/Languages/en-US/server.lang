@@ -48,4 +48,5 @@ hexcode.cast.success=Hex cast successfully
 hexcode.cast.fail.mana=Not enough mana
 hexcode.cast.fail.incompatible=Incompatible glyph combination
 hexcode.cast.fail.empty=No hex to cast
-hexcode.composition.invalid=Invalid hex composition
+hexcode.composition.invalid=Invalid hex compositionitems.Armor_Artifact_Hands.name = Artifact Gloves
+items.Armor_Artifact_Legs.name = Artifact Boots
