@@ -418,12 +418,6 @@
     },
     {
       "x": -6,
-      "y": 16,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 17,
       "z": -2,
       "name": "Rock_Shale_Brick"
@@ -511,12 +505,6 @@
       "y": 15,
       "z": -1,
       "name": "Deco_Bone_Skulls"
-    },
-    {
-      "x": -6,
-      "y": 16,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -6,
@@ -614,18 +602,6 @@
     },
     {
       "x": -6,
-      "y": 15,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 16,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 17,
       "z": 0,
       "name": "Rock_Shale_Brick"
@@ -812,12 +788,6 @@
       "y": 15,
       "z": 2,
       "name": "Deco_Bone_Pile"
-    },
-    {
-      "x": -6,
-      "y": 16,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -6,
@@ -911,12 +881,6 @@
     },
     {
       "x": -6,
-      "y": 16,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 17,
       "z": 3,
       "name": "Rock_Shale_Brick"
@@ -992,18 +956,6 @@
       "y": 14,
       "z": 4,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -6,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
     },
     {
       "x": -6,
@@ -1098,18 +1050,6 @@
       "y": 14,
       "z": 5,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -6,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": -6,
@@ -2940,30 +2880,6 @@
     },
     {
       "x": -4,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 6,
       "z": -8,
       "name": "Rock_Shale_Brick"
@@ -2979,24 +2895,6 @@
       "y": 1,
       "z": -7,
       "name": "Rock_Shale_Brick_Smooth"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -3080,30 +2978,6 @@
     },
     {
       "x": -4,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 7,
       "z": -5,
       "name": "Rock_Shale_Brick_Stairs",
@@ -3162,30 +3036,6 @@
       "y": 3,
       "z": -4,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -3244,12 +3094,6 @@
     },
     {
       "x": -4,
-      "y": 17,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 18,
       "z": -4,
       "name": "Rock_Shale"
@@ -3298,30 +3142,6 @@
     },
     {
       "x": -4,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 9,
       "z": -3,
       "name": "Rock_Shale_Brick_Stairs",
@@ -3546,30 +3366,6 @@
     },
     {
       "x": -4,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 11,
       "z": -1,
       "name": "Rock_Shale_Brick_Stairs",
@@ -3668,30 +3464,6 @@
     },
     {
       "x": -4,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 12,
       "z": 0,
       "name": "Rock_Shale_Brick_Stairs",
@@ -3783,27 +3555,11 @@
     },
     {
       "x": -4,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 11,
       "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -4,
@@ -4013,27 +3769,11 @@
     },
     {
       "x": -4,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 14,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -4,
@@ -4130,25 +3870,15 @@
       "x": -4,
       "y": 12,
       "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
+      "name": "Furniture_Human_Ruins_Brazier"
     },
     {
       "x": -4,
       "y": 15,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -4,
@@ -4250,30 +3980,6 @@
     },
     {
       "x": -4,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 17,
       "z": 5,
       "name": "Rock_Shale_Brick"
@@ -4532,6 +4238,12 @@
     },
     {
       "x": -4,
+      "y": 9,
+      "z": 8,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
       "y": 12,
       "z": 8,
       "name": "Rock_Shale"
@@ -4570,7 +4282,7 @@
       "x": -4,
       "y": 18,
       "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": -4,
@@ -4588,6 +4300,66 @@
       "x": -4,
       "y": 21,
       "z": 8,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 12,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 13,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 14,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 12,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 13,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 14,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 13,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -4,
+      "y": 13,
+      "z": 12,
       "name": "Rock_Shale"
     },
     {
@@ -4595,36 +4367,6 @@
       "y": 1,
       "z": -8,
       "name": "Rock_Shale_Brick_Smooth"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4637,30 +4379,6 @@
       "y": 1,
       "z": -7,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4696,24 +4414,6 @@
     },
     {
       "x": -3,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": -6,
       "name": "Rock_Shale_Brick_Stairs",
@@ -4736,42 +4436,6 @@
       "y": 2,
       "z": -5,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 8,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4814,42 +4478,6 @@
       "y": 2,
       "z": -4,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4962,48 +4590,6 @@
     },
     {
       "x": -3,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 11,
       "z": -3,
       "name": "Rock_Shale"
@@ -5095,42 +4681,6 @@
     },
     {
       "x": -3,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 11,
       "z": -2,
       "name": "Rock_Shale_Brick_Stairs",
@@ -5219,48 +4769,6 @@
       "y": 5,
       "z": -1,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -5355,42 +4863,6 @@
     },
     {
       "x": -3,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 13,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 14,
       "z": 0,
       "name": "Rock_Shale"
@@ -5472,36 +4944,6 @@
       "y": 8,
       "z": 1,
       "name": "Rubble_Basalt"
-    },
-    {
-      "x": -3,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 13,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -5592,36 +5034,6 @@
       "y": 9,
       "z": 2,
       "name": "Rock_Basalt"
-    },
-    {
-      "x": -3,
-      "y": 10,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 14,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -5839,36 +5251,6 @@
       "y": 12,
       "z": 4,
       "name": "Rubble_Basalt"
-    },
-    {
-      "x": -3,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 17,
-      "z": 4,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -5963,30 +5345,6 @@
     },
     {
       "x": -3,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 17,
       "z": 5,
       "name": "Plant_Bush_Dead_Hanging"
@@ -6263,9 +5621,15 @@
     },
     {
       "x": -3,
+      "y": 11,
+      "z": 8,
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": -3,
       "y": 12,
       "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": -3,
@@ -6295,13 +5659,13 @@
       "x": -3,
       "y": 17,
       "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": -3,
       "y": 18,
       "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": -3,
@@ -6335,69 +5699,149 @@
     },
     {
       "x": -3,
-      "y": 12,
+      "y": 11,
       "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 13,
-      "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -3,
       "y": 14,
       "z": 9,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": -3,
       "y": 15,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": -3,
       "y": 16,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 17,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 18,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 11,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 12,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 13,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 14,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 15,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 16,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 13,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 14,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 15,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 16,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 13,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 14,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 15,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -3,
+      "y": 12,
+      "z": 13,
+      "name": "Rock_Shale"
     },
     {
       "x": -2,
       "y": 1,
       "z": -8,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -6410,30 +5854,6 @@
       "y": 1,
       "z": -7,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -6456,42 +5876,6 @@
     },
     {
       "x": -2,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 7,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 8,
       "z": -6,
       "name": "Rock_Basalt"
@@ -6501,48 +5885,6 @@
       "y": 1,
       "z": -5,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -6588,48 +5930,6 @@
     },
     {
       "x": -2,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 9,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 10,
       "z": -4,
       "name": "Rock_Basalt"
@@ -6645,12 +5945,6 @@
       "y": 12,
       "z": -4,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -6735,48 +6029,6 @@
     },
     {
       "x": -2,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 11,
       "z": -3,
       "name": "Rock_Basalt"
@@ -6874,48 +6126,6 @@
     },
     {
       "x": -2,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 11,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 12,
       "z": -2,
       "name": "Rock_Basalt"
@@ -7004,48 +6214,6 @@
       "z": -1,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -7140,48 +6308,6 @@
     },
     {
       "x": -2,
-      "y": 7,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 14,
       "z": 0,
       "name": "Rock_Basalt"
@@ -7263,36 +6389,6 @@
       "y": 7,
       "z": 1,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -2,
-      "y": 8,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -7401,36 +6497,6 @@
     },
     {
       "x": -2,
-      "y": 10,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 14,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 15,
       "z": 2,
       "name": "Rock_Basalt"
@@ -7527,33 +6593,11 @@
     },
     {
       "x": -2,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 14,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 15,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": -2,
@@ -7647,45 +6691,11 @@
     },
     {
       "x": -2,
-      "y": 11,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 12,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 17,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": -2,
@@ -7779,39 +6789,11 @@
     },
     {
       "x": -2,
-      "y": 12,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 17,
       "z": 5,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": -2,
@@ -8112,45 +7094,33 @@
     },
     {
       "x": -2,
-      "y": 12,
+      "y": 11,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 14,
-      "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -2,
       "y": 15,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 16,
-      "z": 8,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -2,
       "y": 17,
       "z": 8,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -2,
       "y": 18,
       "z": 8,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -2,
@@ -8184,105 +7154,125 @@
     },
     {
       "x": -2,
-      "y": 12,
+      "y": 11,
       "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 13,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 14,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 15,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 16,
-      "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -2,
       "y": 17,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": -2,
-      "y": 12,
-      "z": 10,
-      "name": "Empty"
+      "y": 18,
+      "z": 9,
+      "name": "Rock_Shale"
     },
     {
       "x": -2,
-      "y": 13,
-      "z": 10,
-      "name": "Empty"
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
     },
     {
       "x": -2,
-      "y": 14,
+      "y": 11,
       "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 15,
-      "z": 10,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -2,
       "y": 16,
       "z": 10,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
+    },
+    {
+      "x": -2,
+      "y": 17,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 18,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 19,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 16,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 17,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 13,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 14,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 15,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 16,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 17,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -2,
+      "y": 12,
+      "z": 13,
+      "name": "Rock_Shale"
     },
     {
       "x": -1,
       "y": 1,
       "z": -8,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -8295,30 +7285,6 @@
       "y": 1,
       "z": -7,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -8341,42 +7307,6 @@
     },
     {
       "x": -1,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 7,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 8,
       "z": -6,
       "name": "Rock_Basalt"
@@ -8386,48 +7316,6 @@
       "y": 1,
       "z": -5,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -8474,48 +7362,6 @@
     },
     {
       "x": -1,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 9,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 10,
       "z": -4,
       "name": "Rock_Basalt"
@@ -8546,12 +7392,6 @@
     },
     {
       "x": -1,
-      "y": 15,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 16,
       "z": -4,
       "name": "Rock_Shale_Brick"
@@ -8561,12 +7401,6 @@
       "y": 17,
       "z": -4,
       "name": "Deco_Bone_Skulls"
-    },
-    {
-      "x": -1,
-      "y": 18,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -8614,48 +7448,6 @@
     },
     {
       "x": -1,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 11,
       "z": -3,
       "name": "Rock_Basalt"
@@ -8759,48 +7551,6 @@
     },
     {
       "x": -1,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 11,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 12,
       "z": -2,
       "name": "Rock_Basalt"
@@ -8895,48 +7645,6 @@
       "z": -1,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -9038,48 +7746,6 @@
     },
     {
       "x": -1,
-      "y": 7,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 14,
       "z": 0,
       "name": "Rock_Basalt"
@@ -9168,48 +7834,6 @@
       "z": 1,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": -1,
-      "y": 8,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -9304,39 +7928,11 @@
     },
     {
       "x": -1,
-      "y": 9,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 14,
       "z": 2,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": -1,
@@ -9434,42 +8030,6 @@
       "z": 3,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": -1,
-      "y": 10,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 3,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -9576,42 +8136,6 @@
     },
     {
       "x": -1,
-      "y": 12,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 17,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 18,
       "z": 4,
       "name": "Rock_Basalt"
@@ -9702,39 +8226,11 @@
     },
     {
       "x": -1,
-      "y": 12,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 17,
       "z": 5,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": -1,
@@ -9825,42 +8321,6 @@
       "y": 11,
       "z": 6,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 12,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 16,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 17,
-      "z": 6,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -9955,42 +8415,6 @@
     },
     {
       "x": -1,
-      "y": 12,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 16,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 17,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 18,
       "z": 7,
       "name": "Rock_Shale_Brick_Half",
@@ -10049,45 +8473,9 @@
     },
     {
       "x": -1,
-      "y": 12,
+      "y": 11,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 16,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 17,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 18,
-      "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -1,
@@ -10121,99 +8509,141 @@
     },
     {
       "x": -1,
-      "y": 12,
+      "y": 11,
       "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 16,
-      "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -1,
       "y": 17,
       "z": 9,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": 18,
+      "z": 9,
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 11,
+      "z": 10,
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": -1,
+      "y": 17,
+      "z": 10,
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
+    },
+    {
+      "x": -1,
+      "y": 18,
+      "z": 10,
+      "name": "Rock_Shale"
     },
     {
       "x": -1,
       "y": 12,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 13,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 14,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 15,
-      "z": 10,
-      "name": "Empty"
+      "z": 11,
+      "name": "Rock_Shale"
     },
     {
       "x": -1,
       "y": 16,
-      "z": 10,
-      "name": "Empty"
+      "z": 11,
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 1
+    },
+    {
+      "x": -1,
+      "y": 17,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 18,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 13,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 14,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 15,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 16,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 17,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": -1,
+      "y": 12,
+      "z": 13,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 1,
       "z": -8,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon/Level_1/Corridors/*",
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      }
     },
     {
       "x": 0,
@@ -10226,30 +8656,6 @@
       "y": 1,
       "z": -7,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -10272,42 +8678,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 8,
       "z": -6,
       "name": "Rock_Basalt"
@@ -10317,48 +8687,6 @@
       "y": 1,
       "z": -5,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -10405,48 +8733,6 @@
     },
     {
       "x": 0,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 10,
       "z": -4,
       "name": "Rock_Basalt"
@@ -10465,21 +8751,9 @@
     },
     {
       "x": 0,
-      "y": 13,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 14,
       "z": -4,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -10495,12 +8769,6 @@
     },
     {
       "x": 0,
-      "y": 18,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 19,
       "z": -4,
       "name": "Rock_Shale"
@@ -10544,48 +8812,6 @@
     },
     {
       "x": 0,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 11,
       "z": -3,
       "name": "Rock_Basalt"
@@ -10695,48 +8921,6 @@
     },
     {
       "x": 0,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 12,
       "z": -2,
       "name": "Rock_Basalt"
@@ -10840,48 +9024,6 @@
     },
     {
       "x": 0,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 13,
       "z": -1,
       "name": "Rock_Basalt"
@@ -10976,48 +9118,6 @@
       "z": 0,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 0,
-      "y": 7,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -11118,48 +9218,6 @@
     },
     {
       "x": 0,
-      "y": 8,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 15,
       "z": 1,
       "name": "Rock_Basalt"
@@ -11254,48 +9312,6 @@
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 0,
-      "y": 9,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 10,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -11396,48 +9412,6 @@
     },
     {
       "x": 0,
-      "y": 10,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 17,
       "z": 3,
       "name": "Rock_Basalt"
@@ -11535,48 +9509,6 @@
     },
     {
       "x": 0,
-      "y": 11,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 17,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 18,
       "z": 4,
       "name": "Rock_Basalt"
@@ -11673,42 +9605,6 @@
     },
     {
       "x": 0,
-      "y": 12,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 17,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 18,
       "z": 5,
       "name": "Rock_Basalt"
@@ -11802,42 +9698,6 @@
       "y": 11,
       "z": 6,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 0,
-      "y": 12,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 17,
-      "z": 6,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -11938,42 +9798,6 @@
     },
     {
       "x": 0,
-      "y": 12,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 17,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 18,
       "z": 7,
       "name": "Rock_Shale_Brick_Half",
@@ -12030,45 +9854,9 @@
     },
     {
       "x": 0,
-      "y": 12,
+      "y": 11,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 17,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 18,
-      "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": 0,
@@ -12102,105 +9890,93 @@
     },
     {
       "x": 0,
-      "y": 12,
+      "y": 11,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": 0,
+      "y": 18,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 0,
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 0,
+      "y": 11,
+      "z": 10,
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": 0,
+      "y": 18,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 0,
+      "y": 18,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 13,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 14,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 15,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 16,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 17,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 0,
       "y": 12,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 13,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 14,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 15,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 16,
-      "z": 10,
-      "name": "Empty"
+      "z": 13,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 1,
       "z": -8,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -12213,30 +9989,6 @@
       "y": 1,
       "z": -7,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -12259,36 +10011,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": -6,
       "name": "Plant_Bush_Dead_Hanging"
@@ -12304,48 +10026,6 @@
       "y": 1,
       "z": -5,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 8,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -12431,48 +10111,6 @@
       "z": -4,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -12574,48 +10212,6 @@
     },
     {
       "x": 1,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 11,
       "z": -3,
       "name": "Rock_Basalt"
@@ -12719,48 +10315,6 @@
     },
     {
       "x": 1,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 12,
       "z": -2,
       "name": "Rock_Basalt"
@@ -12858,48 +10412,6 @@
     },
     {
       "x": 1,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 13,
       "z": -1,
       "name": "Rock_Basalt"
@@ -12988,48 +10500,6 @@
       "z": 0,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 1,
-      "y": 7,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -13124,48 +10594,6 @@
     },
     {
       "x": 1,
-      "y": 8,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 15,
       "z": 1,
       "name": "Rock_Basalt"
@@ -13254,48 +10682,6 @@
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 1,
-      "y": 9,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 10,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -13390,48 +10776,6 @@
     },
     {
       "x": 1,
-      "y": 10,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 17,
       "z": 3,
       "name": "Rock_Basalt"
@@ -13520,48 +10864,6 @@
       "z": 4,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 1,
-      "y": 11,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 17,
-      "z": 4,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -13656,42 +10958,6 @@
     },
     {
       "x": 1,
-      "y": 12,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 17,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 18,
       "z": 5,
       "name": "Rock_Basalt"
@@ -13779,42 +11045,6 @@
       "y": 11,
       "z": 6,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 12,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 17,
-      "z": 6,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -13909,42 +11139,6 @@
     },
     {
       "x": 1,
-      "y": 12,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 17,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 18,
       "z": 7,
       "name": "Rock_Shale_Brick_Half",
@@ -14003,45 +11197,9 @@
     },
     {
       "x": 1,
-      "y": 12,
+      "y": 11,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 17,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 18,
-      "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": 1,
@@ -14075,99 +11233,93 @@
     },
     {
       "x": 1,
-      "y": 12,
+      "y": 11,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": 1,
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "z": 10,
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": 1,
+      "y": 19,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 1,
+      "y": 18,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 13,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 14,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 15,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 16,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 17,
-      "z": 9,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 1,
+      "y": 18,
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 1,
       "y": 12,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 13,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 14,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 15,
-      "z": 10,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 16,
-      "z": 10,
-      "name": "Empty"
+      "z": 13,
+      "name": "Rock_Shale"
     },
     {
       "x": 2,
       "y": 1,
       "z": -8,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -14180,30 +11332,6 @@
       "y": 1,
       "z": -7,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -14232,36 +11360,6 @@
     },
     {
       "x": 2,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 7,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 8,
       "z": -6,
       "name": "Rock_Basalt"
@@ -14277,42 +11375,6 @@
       "y": 2,
       "z": -5,
       "name": "Rubble_Basalt_Medium"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -14404,48 +11466,6 @@
       "z": -4,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -14554,48 +11574,6 @@
     },
     {
       "x": 2,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 11,
       "z": -3,
       "name": "Rock_Basalt"
@@ -14690,48 +11668,6 @@
       "z": -2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 11,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -14833,48 +11769,6 @@
     },
     {
       "x": 2,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 13,
       "z": -1,
       "name": "Rock_Basalt"
@@ -14959,48 +11853,6 @@
     },
     {
       "x": 2,
-      "y": 7,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 14,
       "z": 0,
       "name": "Rock_Basalt"
@@ -15083,48 +11935,6 @@
       "z": 1,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 2,
-      "y": 8,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -15213,45 +12023,11 @@
     },
     {
       "x": 2,
-      "y": 9,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 10,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 15,
       "z": 2,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": 2,
@@ -15340,48 +12116,6 @@
     },
     {
       "x": 2,
-      "y": 10,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 15,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 16,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 17,
       "z": 3,
       "name": "Rock_Basalt"
@@ -15467,48 +12201,6 @@
     },
     {
       "x": 2,
-      "y": 11,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 17,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 18,
       "z": 4,
       "name": "Rock_Basalt"
@@ -15591,42 +12283,6 @@
       "z": 5,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 2,
-      "y": 12,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 17,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -15927,45 +12583,25 @@
     },
     {
       "x": 2,
-      "y": 12,
+      "y": 11,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": 2,
       "y": 15,
       "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 16,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 17,
-      "z": 8,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 2,
       "y": 18,
       "z": 8,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": 2,
@@ -15999,87 +12635,89 @@
     },
     {
       "x": 2,
-      "y": 12,
+      "y": 11,
       "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 13,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 14,
-      "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 15,
-      "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": 2,
       "y": 16,
       "z": 9,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
+    },
+    {
+      "x": 2,
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 2,
+      "y": 11,
+      "z": 10,
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": 2,
       "y": 12,
-      "z": 10,
-      "name": "Empty"
+      "z": 11,
+      "name": "Rock_Shale"
     },
     {
       "x": 2,
       "y": 13,
-      "z": 10,
-      "name": "Empty"
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 2,
+      "y": 18,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 2,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 2,
+      "y": 13,
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 2,
       "y": 14,
-      "z": 10,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 2,
       "y": 15,
-      "z": 10,
-      "name": "Empty"
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 2,
+      "y": 16,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 2,
+      "y": 17,
+      "z": 12,
+      "name": "Rock_Shale"
     },
     {
       "x": 3,
       "y": 1,
       "z": -8,
       "name": "Rock_Shale_Brick_Smooth"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -16104,18 +12742,6 @@
       "y": 3,
       "z": -7,
       "name": "Rock_Basalt"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -7,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -7,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -16190,36 +12816,6 @@
       "y": 2,
       "z": -5,
       "name": "Rock_Basalt"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -16272,48 +12868,6 @@
     },
     {
       "x": 3,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 8,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 9,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 10,
       "z": -4,
       "name": "Rock_Shale"
@@ -16366,48 +12920,6 @@
       "z": -3,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 9,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 10,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -16499,42 +13011,6 @@
       "z": -2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 8,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 9,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 10,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -16639,42 +13115,6 @@
       "y": 6,
       "z": -1,
       "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
-    },
-    {
-      "x": 3,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 11,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 12,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -16762,39 +13202,11 @@
     },
     {
       "x": 3,
-      "y": 8,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 12,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 13,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Moss_Cave_Blue",
+      "support": 15,
+      "rotation": 8
     },
     {
       "x": 3,
@@ -16879,42 +13291,6 @@
       "y": 8,
       "z": 1,
       "name": "Rock_Basalt"
-    },
-    {
-      "x": 3,
-      "y": 9,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 13,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -17008,30 +13384,6 @@
     },
     {
       "x": 3,
-      "y": 11,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 12,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 15,
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
@@ -17118,48 +13470,6 @@
     },
     {
       "x": 3,
-      "y": 10,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 15,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 16,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 17,
       "z": 3,
       "name": "Rock_Shale"
@@ -17242,42 +13552,6 @@
       "z": 4,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 2
-    },
-    {
-      "x": 3,
-      "y": 11,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 12,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -17366,42 +13640,6 @@
     },
     {
       "x": 3,
-      "y": 12,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 15,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 17,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 18,
       "z": 5,
       "name": "Rock_Shale"
@@ -17752,7 +13990,7 @@
       "x": 3,
       "y": 18,
       "z": 8,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": 3,
@@ -17780,63 +14018,169 @@
     },
     {
       "x": 3,
+      "y": 11,
+      "z": 9,
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": 3,
       "y": 12,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale"
     },
     {
       "x": 3,
       "y": 13,
       "z": 9,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 14,
-      "z": 9,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 3,
       "y": 15,
       "z": 9,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 3,
       "y": 16,
       "z": 9,
-      "name": "Empty"
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 17,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 18,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 19,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "z": 10,
+      "name": "Rock_Shale_Brick"
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 17,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 13,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 14,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 17,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 13,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 14,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 17,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 3,
+      "y": 17,
+      "z": 13,
+      "name": "Rock_Shale"
     },
     {
       "x": 4,
       "y": 1,
       "z": -8,
       "name": "Rock_Shale_Brick_Smooth"
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -8,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": -8,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -17956,30 +14300,6 @@
     },
     {
       "x": 4,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 7,
       "z": -5,
       "name": "Rock_Shale_Brick_Stairs",
@@ -18026,30 +14346,6 @@
       "y": 3,
       "z": -4,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 7,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -18117,30 +14413,6 @@
       "y": 4,
       "z": -3,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 7,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 8,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -18371,30 +14643,6 @@
       "y": 6,
       "z": -1,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 4,
-      "y": 7,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 8,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 9,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 10,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -18495,24 +14743,6 @@
     },
     {
       "x": 4,
-      "y": 9,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 10,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 11,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 12,
       "z": 0,
       "name": "Rock_Shale_Brick_Stairs",
@@ -18607,24 +14837,6 @@
       "y": 9,
       "z": 1,
       "name": "Rock_Basalt"
-    },
-    {
-      "x": 4,
-      "y": 10,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 11,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 12,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -18834,27 +15046,11 @@
     },
     {
       "x": 4,
-      "y": 11,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 12,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 13,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 14,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 4,
@@ -18958,25 +15154,23 @@
       "x": 4,
       "y": 12,
       "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 13,
-      "z": 4,
-      "name": "Empty"
+      "name": "Furniture_Human_Ruins_Brazier"
     },
     {
       "x": 4,
       "y": 14,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 4,
       "y": 15,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 4,
@@ -19071,27 +15265,19 @@
     },
     {
       "x": 4,
-      "y": 13,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 14,
       "z": 5,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 4,
       "y": 15,
       "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
+      "name": "Plant_Moss_Wall_Blue",
+      "support": 15,
+      "rotation": 3
     },
     {
       "x": 4,
@@ -19419,18 +15605,6 @@
     },
     {
       "x": 4,
-      "y": 17,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 18,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 19,
       "z": 8,
       "name": "Rock_Shale"
@@ -19451,6 +15625,90 @@
       "x": 4,
       "y": 23,
       "z": 8,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 15,
+      "z": 9,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 15,
+      "z": 10,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 15,
+      "z": 11,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "z": 12,
+      "name": "Rock_Shale"
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "z": 12,
       "name": "Rock_Shale"
     },
     {
@@ -21026,28 +17284,6 @@
     },
     {
       "x": 6,
-      "y": 1,
-      "z": -8,
-      "name": "Prefab_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
-              "$type": "04"
-            }
-          },
-          "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon/Level_1/Corridors/*",
-            "FitHeightmap": false,
-            "InheritSeed": true,
-            "InheritHeightCondition": true
-          }
-        }
-      }
-    },
-    {
-      "x": 6,
       "y": 18,
       "z": -6,
       "name": "Rock_Shale_Brick"
@@ -21679,12 +17915,6 @@
     },
     {
       "x": 6,
-      "y": 13,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
       "y": 14,
       "z": 2,
       "name": "Rock_Shale_Brick"
@@ -21694,12 +17924,6 @@
       "y": 15,
       "z": 2,
       "name": "Deco_Bone_Pile"
-    },
-    {
-      "x": 6,
-      "y": 16,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 6,
@@ -21784,12 +18008,6 @@
       "y": 15,
       "z": 3,
       "name": "Deco_Bone_Skulls"
-    },
-    {
-      "x": 6,
-      "y": 16,
-      "z": 3,
-      "name": "Empty"
     },
     {
       "x": 6,
@@ -21887,18 +18105,6 @@
     },
     {
       "x": 6,
-      "y": 15,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 16,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
       "y": 17,
       "z": 4,
       "name": "Rock_Shale_Brick"
@@ -21986,12 +18192,6 @@
       "y": 15,
       "z": 5,
       "name": "Deco_Bone_Pile"
-    },
-    {
-      "x": 6,
-      "y": 16,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": 6,
@@ -22427,6 +18627,178 @@
       "y": 20,
       "z": 7,
       "name": "Rock_Shale"
+    }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "EffectController": {},
+        "DisplayName": {
+          "DisplayName": {
+            "MessageId": "server.npcRoles.Chicken_Desert.name",
+            "Bold": null,
+            "Italic": null,
+            "Monospace": null,
+            "Underline": null
+          }
+        },
+        "UIComponentList": {},
+        "Transform": {
+          "Position": {
+            "X": 0.4391391909628197,
+            "Y": 2.0,
+            "Z": -5.652924729711058
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": -3.1178171634674072,
+            "Roll": 0.0
+          }
+        },
+        "Velocity": {
+          "Velocity": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Interactions": {
+          "Interactions": {
+            "Use": "*UseNPC"
+          }
+        },
+        "Model": {
+          "Model": {
+            "Id": "Chicken_Robot",
+            "Scale": 1.100806474685669,
+            "Static": false
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "hJeIkByGM/yTULQyoi5F8A==",
+            "$type": "04"
+          }
+        },
+        "EntityStats": {
+          "Version": 5,
+          "Stats": {
+            "Oxygen": {
+              "Id": "Oxygen",
+              "Value": 100.0
+            },
+            "Mana": {
+              "Id": "Mana",
+              "Value": 0.0
+            },
+            "Health": {
+              "Id": "Health",
+              "Value": 38.0
+            },
+            "GlidingActive": {
+              "Id": "GlidingActive",
+              "Value": 0.0
+            },
+            "Immunity": {
+              "Id": "Immunity",
+              "Value": 0.0
+            },
+            "SignatureCharges": {
+              "Id": "SignatureCharges",
+              "Value": 0.0
+            },
+            "Stamina": {
+              "Id": "Stamina",
+              "Value": 10.0
+            },
+            "Ammo": {
+              "Id": "Ammo",
+              "Value": 0.0
+            },
+            "Unknown": {
+              "Id": "Unknown",
+              "Value": 0.0
+            },
+            "SignatureEnergy": {
+              "Id": "SignatureEnergy",
+              "Value": 0.0
+            },
+            "DeployablePreview": {
+              "Id": "DeployablePreview",
+              "Value": 0.0
+            },
+            "StaminaRegenDelay": {
+              "Id": "StaminaRegenDelay",
+              "Value": 0.0
+            },
+            "MagicCharges": {
+              "Id": "MagicCharges",
+              "Value": 0.0
+            }
+          }
+        },
+        "NPC": {
+          "Version": 5,
+          "UUID": {
+            "$binary": "a3IQKIISOYGc2TChJ/mbfg==",
+            "$type": "04"
+          },
+          "Inventory": {
+            "Version": 4,
+            "Storage": {
+              "Id": "Empty"
+            },
+            "Armor": {
+              "Id": "Simple",
+              "Capacity": 4,
+              "Items": {}
+            },
+            "HotBar": {
+              "Id": "Simple",
+              "Capacity": 3,
+              "Items": {}
+            },
+            "Utility": {
+              "Id": "Empty"
+            },
+            "Backpack": {
+              "Id": "Empty"
+            },
+            "ActiveHotbarSlot": 0,
+            "Tool": {
+              "Id": "Empty"
+            },
+            "ActiveToolsSlot": -1,
+            "ActiveUtilitySlot": -1,
+            "SortType": "Name"
+          },
+          "HvrPhs": 0.0,
+          "HvrHght": 0.0,
+          "MdlScl": 1.100806474685669,
+          "SpawnInstant": "0001-01-01T12:00:00Z",
+          "AlarmStore": {
+            "Parameters": {}
+          },
+          "WorldgenId": 0,
+          "PathManager": {},
+          "LeashPos": {
+            "X": 37.43913919096282,
+            "Y": 56.0,
+            "Z": 2.3470752702889417
+          },
+          "LeashHdg": -3.1178171634674072,
+          "LeashPtch": 0.0,
+          "RoleName": "Chicken_Robot"
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": -3.1178171634674072,
+            "Roll": 0.0
+          }
+        }
+      }
     }
   ]
 }

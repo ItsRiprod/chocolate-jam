@@ -10189,7 +10189,23 @@
       "x": 0,
       "y": 1,
       "z": -8,
-      "name": "Rock_Shale"
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon/Level_1/Corridors/*",
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      }
     },
     {
       "x": 0,
@@ -10212,6 +10228,12 @@
     {
       "x": 0,
       "y": 5,
+      "z": -8,
+      "name": "Empty"
+    },
+    {
+      "x": 0,
+      "y": 6,
       "z": -8,
       "name": "Empty"
     },
@@ -14171,6 +14193,12 @@
     },
     {
       "x": 2,
+      "y": 6,
+      "z": -8,
+      "name": "Empty"
+    },
+    {
+      "x": 2,
       "y": 7,
       "z": -8,
       "name": "Rock_Basalt"
@@ -16078,6 +16106,12 @@
     {
       "x": 3,
       "y": 5,
+      "z": -8,
+      "name": "Empty"
+    },
+    {
+      "x": 3,
+      "y": 6,
       "z": -8,
       "name": "Empty"
     },
@@ -21023,28 +21057,6 @@
       "y": 18,
       "z": 9,
       "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 6,
-      "y": 1,
-      "z": -8,
-      "name": "Prefab_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
-              "$type": "04"
-            }
-          },
-          "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon/Level_1/Corridors/*",
-            "FitHeightmap": false,
-            "InheritSeed": true,
-            "InheritHeightCondition": true
-          }
-        }
-      }
     },
     {
       "x": 6,

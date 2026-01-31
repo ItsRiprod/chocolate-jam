@@ -5999,28 +5999,6 @@
     {
       "x": 6,
       "y": 0,
-      "z": -7,
-      "name": "Prefab_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
-              "$type": "04"
-            }
-          },
-          "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon/Level_1/Spacers/*",
-            "FitHeightmap": false,
-            "InheritSeed": true,
-            "InheritHeightCondition": true
-          }
-        }
-      }
-    },
-    {
-      "x": 6,
-      "y": 0,
       "z": 7,
       "name": "Rock_Basalt"
     }
@@ -6067,7 +6045,7 @@
         },
         "UUID": {
           "UUID": {
-            "$binary": "zSCR54RMO/qacXRom1X2Iw==",
+            "$binary": "I7lrJYxNON+db8OaJ/3+Zg==",
             "$type": "04"
           }
         },
