@@ -1,0 +1,15 @@
+{
+  "Children": [],
+
+  "Environment": "Dungeon_MachineLair_Duke",
+
+  "Mask": {
+    "File": "Zones.Masks.Instance_Machine_Dungeon"
+  },
+
+  "Type": "PREFAB",
+
+  "Priority": 2,
+
+  "Prefab": ["Dungeon_Machine.Machine_7_Boss"]
+}

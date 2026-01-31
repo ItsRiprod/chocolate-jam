@@ -1,0 +1,22 @@
+{
+  "Children": [
+    {
+      "Node": ["Dungeons.Instance_Machine_Dungeon.Node_4_Machine_Tunnels"],
+      "Offset": [-5, 11, -13],
+      "Rotation": 0,
+      "Chance": 1
+    }
+  ],
+
+  "Environment": "Dungeon_MachineLair_SpiderCave",
+
+  "Mask": {
+    "File": "Zones.Masks.Instance_Machine_Dungeon"
+  },
+
+  "Type": "PREFAB",
+
+  "Priority": 2,
+
+  "Prefab": ["Dungeon_Machine.Machine_3_Checkpoint"]
+}

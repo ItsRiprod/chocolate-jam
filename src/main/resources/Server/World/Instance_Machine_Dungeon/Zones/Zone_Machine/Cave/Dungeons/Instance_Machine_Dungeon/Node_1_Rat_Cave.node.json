@@ -1,0 +1,22 @@
+{
+  "Children": [
+    {
+      "Node": ["Dungeons.Instance_Machine_Dungeon.Node_2_Spider_Cave"],
+      "Offset": [-93, -3, 10],
+      "Rotation": 0,
+      "Chance": 1
+    }
+  ],
+
+  "Environment": "Dungeon_MachineLair_RatCave",
+
+  "Mask": {
+    "File": "Zones.Masks.Instance_Machine_Dungeon"
+  },
+
+  "Type": "PREFAB",
+
+  "Priority": 2,
+
+  "Prefab": ["Dungeon_Machine.Machine_1_Rat_Cave"]
+}
