@@ -108,8 +108,6 @@ val syncAssets = tasks.register<Copy>("syncAssets") {
 
     // don't overwrite manifest template
     exclude("manifest.json")
-    exclude("**/*.lpf")
-    exclude("**/*.bak")
 
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
 
