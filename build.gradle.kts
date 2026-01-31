@@ -20,13 +20,10 @@ dependencies {
 }
 
 hytale {
-    // uncomment if you want to add the Assets.zip file to your external libraries;
-    // ⚠️ CAUTION, this file is very big and might make your IDE unresponsive for some time!
-    //
+    // uncomment to add Assets.zip to external libraries (big file, may slow IDE)
     // addAssetsDependency = true
 
-    // uncomment if you want to develop your mod against the pre-release version of the game.
-    //
+    // uncomment to use pre-release version
     // updateChannel = "pre-release"
 }
 
@@ -38,7 +35,14 @@ java {
     withSourcesJar()
 }
 
+val cleanResources = tasks.register<Delete>("cleanResources") {
+    delete(layout.buildDirectory.dir("resources/main"))
+}
+
 tasks.named<ProcessResources>("processResources") {
+
+    dependsOn(cleanResources)
+
     var replaceProperties = mapOf(
         "plugin_group" to findProperty("plugin_group"),
         "plugin_maven_group" to project.group,
@@ -74,8 +78,7 @@ tasks.withType<Jar> {
 
 publishing {
     repositories {
-        // This is where you put repositories that you want to publish to.
-        // Do NOT put repositories for your dependencies here.
+        // put publish repositories here, not dependencies
     }
 
     publications {
@@ -85,7 +88,7 @@ publishing {
     }
 }
 
-// IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
+// enable source/javadoc downloads for IDEA
 idea {
     module {
         isDownloadSources = true
@@ -97,16 +100,17 @@ val syncAssets = tasks.register<Copy>("syncAssets") {
     group = "hytale"
     description = "Automatically syncs assets from Build back to Source after server stops."
 
-    // Take from the temporary build folder (Where the game saved changes)
+    // from build folder (game's saved changes)
     from(layout.buildDirectory.dir("resources/main"))
 
-    // Copy into your actual project source (Where your code lives)
+    // to project source
     into("src/main/resources")
 
-    // IMPORTANT: Protect the manifest template from being overwritten
+    // don't overwrite manifest template
     exclude("manifest.json")
+    exclude("**/*.lpf")
+    exclude("**/*.bak")
 
-    // If a file exists, overwrite it with the new version from the game
     duplicatesStrategy = DuplicatesStrategy.INCLUDE
 
     doLast {
@@ -115,7 +119,6 @@ val syncAssets = tasks.register<Copy>("syncAssets") {
 }
 
 afterEvaluate {
-    // Now Gradle will find it, because the plugin has finished working
     val targetTask = tasks.findByName("runServer") ?: tasks.findByName("server")
 
     if (targetTask != null) {
