@@ -1,0 +1,153 @@
+{
+  "WaterTint": "#265982",
+  "SpawnDensity": 0.5,
+  "Tags": {
+    "Zone1": []
+  },
+  "WeatherForecasts": {
+    "0": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "1": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "2": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "3": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "4": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "5": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "6": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "7": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "8": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "9": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "10": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "11": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "12": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "13": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "14": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "15": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "16": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "17": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "18": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "19": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "20": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "21": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "22": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ],
+    "23": [
+      {
+        "WeatherId": "Machine_Dungeon",
+        "Weight": 1
+      }
+    ]
+  }
+}
