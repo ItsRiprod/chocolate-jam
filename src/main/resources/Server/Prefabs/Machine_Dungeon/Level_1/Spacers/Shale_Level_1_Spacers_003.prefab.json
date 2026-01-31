@@ -1,9 +1,9 @@
 {
   "version": 8,
   "blockIdVersion": 11,
-  "anchorX": 6,
+  "anchorX": 0,
   "anchorY": 0,
-  "anchorZ": 2,
+  "anchorZ": 3,
   "blocks": [
     {
       "x": -5,
@@ -734,6 +734,27 @@
     {
       "x": 0,
       "y": 0,
+      "z": -2,
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      }
+    },
+    {
+      "x": 0,
+      "y": 0,
       "z": -1,
       "name": "Rock_Shale"
     },
@@ -874,6 +895,12 @@
       "y": 5,
       "z": 2,
       "name": "Rock_Basalt"
+    },
+    {
+      "x": 0,
+      "y": 0,
+      "z": 3,
+      "name": "Editor_Anchor"
     },
     {
       "x": 1,
@@ -1622,12 +1649,6 @@
           }
         }
       }
-    },
-    {
-      "x": 6,
-      "y": 0,
-      "z": 2,
-      "name": "Rock_Basalt"
     }
   ]
 }
