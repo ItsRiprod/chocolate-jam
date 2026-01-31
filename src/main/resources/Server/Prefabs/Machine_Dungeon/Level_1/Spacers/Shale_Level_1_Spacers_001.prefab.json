@@ -745,7 +745,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon/Room_Medium/*",
+            "PrefabPath": "Machine_Dungeon/Room_Small/*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true

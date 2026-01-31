@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": -2,
   "anchorY": 0,
   "anchorZ": 7,
@@ -2122,12 +2122,7 @@
       "x": -4,
       "y": 1,
       "z": 6,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -4,
@@ -3895,12 +3890,7 @@
       "x": 0,
       "y": 1,
       "z": -5,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 0,
@@ -5751,12 +5741,7 @@
       "x": 3,
       "y": 1,
       "z": 1,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 3,
@@ -6397,6 +6382,12 @@
       "y": 5,
       "z": 3,
       "name": "Rock_Basalt"
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "z": 4,
+      "name": "Cloth_Block_Wool_Pink_Light"
     },
     {
       "x": 5,
@@ -7387,7 +7378,24 @@
       "x": 7,
       "y": 0,
       "z": -2,
-      "name": "Rock_Shale_Brick_Smooth"
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon/Level_1/Corridors/*",
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      },
+      "rotation": 3
     },
     {
       "x": 7,
@@ -7612,7 +7620,14 @@
         "SpawnMarkerComponent": {
           "SpawnMarker": "Outlander_Berserker",
           "RespawnTime": 0.0,
-          "SpawnCount": 0
+          "SpawnCount": 0,
+          "NPCReferences": [],
+          "PersistedFlock": {},
+          "SpawnPosition": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
         },
         "Transform": {
           "Position": {
@@ -7626,15 +7641,18 @@
             "Roll": 0.0
           }
         },
+        "Intangible": {},
+        "PrefabCopyable": {},
         "Model": {
           "Model": {
             "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
+            "Scale": 1.0,
+            "Static": false
           }
         },
         "UUID": {
           "UUID": {
-            "$binary": "Ff6xvJrCMhyw0AcO5Sb6Zg==",
+            "$binary": "tf4MlsQyPli5qT5A5sOBag==",
             "$type": "04"
           }
         },

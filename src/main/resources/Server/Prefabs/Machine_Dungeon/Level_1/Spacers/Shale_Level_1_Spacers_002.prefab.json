@@ -745,6 +745,7 @@
             }
           },
           "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon/Room_Small/*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true
@@ -1487,6 +1488,12 @@
     {
       "x": 5,
       "y": 0,
+      "z": -2,
+      "name": "Cloth_Block_Wool_Pink"
+    },
+    {
+      "x": 5,
+      "y": 0,
       "z": -1,
       "name": "Rock_Shale_Brick_Smooth"
     },
@@ -1625,34 +1632,6 @@
     {
       "x": 5,
       "y": 5,
-      "z": 2,
-      "name": "Rock_Basalt"
-    },
-    {
-      "x": 6,
-      "y": 0,
-      "z": -1,
-      "name": "Prefab_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
-              "$type": "04"
-            }
-          },
-          "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon/Level_1/Turn_Left/*",
-            "FitHeightmap": false,
-            "InheritSeed": true,
-            "InheritHeightCondition": true
-          }
-        }
-      }
-    },
-    {
-      "x": 6,
-      "y": 0,
       "z": 2,
       "name": "Rock_Basalt"
     }

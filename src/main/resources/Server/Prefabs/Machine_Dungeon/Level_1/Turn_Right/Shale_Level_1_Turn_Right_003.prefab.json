@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": -2,
   "anchorY": 0,
   "anchorZ": 7,
@@ -2609,12 +2609,7 @@
       "x": -3,
       "y": 1,
       "z": 5,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -3,
@@ -7308,12 +7303,7 @@
       "x": 6,
       "y": 1,
       "z": 1,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 6,
@@ -7446,6 +7436,12 @@
       "y": 5,
       "z": 4,
       "name": "Rock_Basalt"
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "z": 5,
+      "name": "Cloth_Block_Wool_Pink_Light"
     },
     {
       "x": 7,
@@ -7631,7 +7627,24 @@
       "x": 7,
       "y": 0,
       "z": -2,
-      "name": "Rock_Shale_Brick_Smooth"
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon/Level_1/Corridors/*",
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      },
+      "rotation": 3
     },
     {
       "x": 7,

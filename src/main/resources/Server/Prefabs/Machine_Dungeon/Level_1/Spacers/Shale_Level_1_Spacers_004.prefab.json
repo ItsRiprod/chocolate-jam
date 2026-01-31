@@ -734,27 +734,6 @@
     {
       "x": 0,
       "y": 0,
-      "z": -2,
-      "name": "Prefab_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
-              "$type": "04"
-            }
-          },
-          "prefabspawner": {
-            "FitHeightmap": false,
-            "InheritSeed": true,
-            "InheritHeightCondition": true
-          }
-        }
-      }
-    },
-    {
-      "x": 0,
-      "y": 0,
       "z": -1,
       "name": "Rock_Shale"
     },
