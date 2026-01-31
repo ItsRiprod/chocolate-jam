@@ -1,0 +1,73 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Armor_Artifact_Legs.name"
+  },
+  "Parent": "Armor_Iron_Legs",
+  "Recipe": {
+    "Input": [],
+    "BenchRequirement": []
+  },
+  "Quality": "Epic",
+  "ItemLevel": 65,
+  "Icon": "Icons/ItemsGenerated/Armor_Artifact_Legs.png",
+  "IconProperties": {
+    "Scale": 0.6,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      -1.2,
+      -14
+    ]
+  },
+  "Model": "Items/Armors/Artifact/Boots.blockymodel",
+  "Texture": "Items/Armors/Artifact/Boots_Texture.png",
+  "Armor": {
+    "ArmorSlot": "Legs",
+    "BaseDamageResistance": 0,
+    "CosmeticsToHide": [
+      "Pants",
+      "Shoes"
+    ],
+    "DamageResistance": {
+      "Physical": [
+        {
+          "Amount": 0.07,
+          "CalculationType": "Multiplicative"
+        }
+      ],
+      "Projectile": [
+        {
+          "Amount": 0.07,
+          "CalculationType": "Multiplicative"
+        }
+      ]
+    },
+    "StatModifiers": {
+      "Health": [
+        {
+          "Amount": 13,
+          "CalculationType": "Additive"
+        }
+      ],
+      "Mana": [
+        {
+          "Amount": 28,
+          "CalculationType": "Additive"
+        }
+      ]
+    }
+  },
+  "MaxDurability": 250,
+  "Tags": {
+    "Type": [
+      "Armor"
+    ],
+    "Family": [
+      "Prisma"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Armor_Leather"
+}
