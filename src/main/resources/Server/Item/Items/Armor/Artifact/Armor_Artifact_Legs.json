@@ -9,9 +9,9 @@
   },
   "Quality": "Epic",
   "ItemLevel": 65,
-  "Icon": "Icons/ItemsGenerated/Boots_Rocket.png",
+  "Icon": "Icons/ItemsGenerated/Armor_Artifact_Legs.png",
   "IconProperties": {
-    "Scale": 0.5,
+    "Scale": 0.6,
     "Rotation": [
       22.5,
       45,
