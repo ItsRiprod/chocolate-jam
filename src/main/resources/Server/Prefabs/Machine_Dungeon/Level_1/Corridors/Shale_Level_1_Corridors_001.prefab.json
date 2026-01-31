@@ -1,7 +1,7 @@
 {
   "version": 8,
   "blockIdVersion": 11,
-  "anchorX": 6,
+  "anchorX": 0,
   "anchorY": 0,
   "anchorZ": 7,
   "blocks": [
@@ -5995,12 +5995,6 @@
       "y": 5,
       "z": 7,
       "name": "Rock_Basalt"
-    },
-    {
-      "x": 6,
-      "y": 0,
-      "z": 7,
-      "name": "Rock_Basalt"
     }
   ],
   "entities": [
@@ -6045,7 +6039,7 @@
         },
         "UUID": {
           "UUID": {
-            "$binary": "I7lrJYxNON+db8OaJ/3+Zg==",
+            "$binary": "4KNwcCxdOBqJDu2wJfGv1A==",
             "$type": "04"
           }
         },
