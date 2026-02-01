@@ -73,9 +73,10 @@ public class DungeonRegisterCommand extends AbstractPlayerCommand {
             playerRef.sendMessage(Message.raw("Registering dungeon '" + dungeonId + "' at " + posStr));
         }
 
-        int registeredCount = dungeonService.registerDungeon(dungeonRef, store);
+        int registeredCount = dungeonService.registerDungeon(dungeonRef, store, world);
 
         playerRef.sendMessage(Message.raw("Registered " + registeredCount + " spawners to dungeon."));
+        playerRef.sendMessage(Message.raw("Registered " + dungeon.getDungeonBlockCount() + " dungeon blocks."));
 
         // Check entrance
         if (dungeon.getEntranceRef() != null && dungeon.getEntranceRef().isValid()) {

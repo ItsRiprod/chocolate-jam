@@ -1,0 +1,51 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.CM_Sparks_Block.name"
+  },
+  "Icon": "Icons/ItemsGenerated/Furniture_Ancient_Torch.png",
+  "Categories": [
+    "Blocks.Deco"
+  ],
+  "BlockType": {
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "Material": "Solid",
+    "CustomModel": "Blocks/Machine/small.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Weight": 1,
+        "Texture": "Blocks/Machine/small.png"
+      }
+    ],
+    "BlockSoundSetId": "Stone",
+    "BlockParticleSetId": "Stone",
+    "ParticleColor": "#2a4666",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "SoftBlocks"
+      }
+    },
+    "Particles": null,
+    "State": {
+      "Definitions": {
+        "On": {
+          "Particles": [
+            {
+              "SystemId": "CM_Sparks_System"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Block"
+    ],
+    "Family": [
+      "Machine"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

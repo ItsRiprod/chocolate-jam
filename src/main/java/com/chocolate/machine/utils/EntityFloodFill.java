@@ -6,7 +6,7 @@ import java.util.List;
 
 import javax.annotation.Nonnull;
 
-import com.chocolate.machine.dungeon.component.SpawnerComponent;
+import com.hypixel.hytale.component.Component;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.Ref;
@@ -26,20 +26,20 @@ public class EntityFloodFill {
     private static final ThreadLocal<ObjectArrayList<Ref<EntityStore>>> NEARBY_LIST = ThreadLocal
             .withInitial(ObjectArrayList::new);
 
-    public static List<Ref<EntityStore>> floodFillSpawners(
+    public static <T extends Component<EntityStore>> List<Ref<EntityStore>> floodFillSpawners(
             @Nonnull Ref<EntityStore> startRef,
             @Nonnull ComponentAccessor<EntityStore> accessor,
-            @Nonnull ComponentType<EntityStore, SpawnerComponent> spawnerType) {
+            @Nonnull ComponentType<EntityStore, T> componentType) {
 
-        return floodFillSpawners(startRef, accessor, spawnerType, RADIUS);
+        return floodFillSpawners(startRef, accessor, componentType, RADIUS);
     }
 
-    // finds all SpawnerComponent entities within radius using spatial BFS
+    // finds all entities with the specified component within radius using spatial BFS
     @Nonnull
-    public static List<Ref<EntityStore>> floodFillSpawners(
+    public static <T extends Component<EntityStore>> List<Ref<EntityStore>> floodFillSpawners(
             @Nonnull Ref<EntityStore> startRef,
             @Nonnull ComponentAccessor<EntityStore> accessor,
-            @Nonnull ComponentType<EntityStore, SpawnerComponent> spawnerType,
+            @Nonnull ComponentType<EntityStore, T> componentType,
             @Nonnull Double radius) {
 
         ObjectArrayList<Ref<EntityStore>> result = new ObjectArrayList<>();
@@ -83,7 +83,7 @@ public class EntityFloodFill {
                     continue;
                 }
 
-                if (accessor.getComponent(candidate, spawnerType) != null) {
+                if (accessor.getComponent(candidate, componentType) != null) {
                     visitedIndices.add(index);
                     queue.add(candidate);
                     result.add(candidate);

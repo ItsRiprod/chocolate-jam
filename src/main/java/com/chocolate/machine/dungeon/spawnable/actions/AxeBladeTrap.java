@@ -159,7 +159,9 @@ public class AxeBladeTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         deactivate(spawnerRef, componentAccessor);
-        componentAccessor.removeComponent(spawnerRef, AxeBladeActionComponent.getComponentType());
+        if (componentAccessor.getComponent(spawnerRef, AxeBladeActionComponent.getComponentType()) != null) {
+            componentAccessor.removeComponent(spawnerRef, AxeBladeActionComponent.getComponentType());
+        }
 
         LOGGER.atFine().log("Cleaned up AxeBladeActionComponent");
     }

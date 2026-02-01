@@ -1,0 +1,10 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "CM_Line_Spawner",
+      "PositionOffset": {
+        "Y": 0
+      }
+    }
+  ]
+}

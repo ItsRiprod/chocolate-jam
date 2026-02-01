@@ -18,16 +18,18 @@ public class ChocolateTrapCommand extends AbstractCommand {
         addSubCommand(new TrapToggleCommand());
         addSubCommand(new TrapPlaceCommand());
         addSubCommand(new TrapListCommand());
+        addSubCommand(new TrapConfigCommand());
 
     }
 
     @Override
     protected CompletableFuture<Void> execute(CommandContext context) {
         context.sendMessage(Message.raw("Chocolate Machine Commands:"));
-        context.sendMessage(Message.raw("/chocolate trap set <executionId> - Set trap type (look at trap)"));
-        context.sendMessage(Message.raw("/chocolate trap toggle - Toggle trap Active state"));
-        context.sendMessage(Message.raw("/chocolate trap place <executionId> - Place a trap entity at your current location"));
-        context.sendMessage(Message.raw("/chocolate trap list - List all Trap locations found via flood-fill"));
+        context.sendMessage(Message.raw("/cm t set <executionId> - Set trap type (look at trap)"));
+        context.sendMessage(Message.raw("/cm t toggle - Toggle trap Active state"));
+        context.sendMessage(Message.raw("/cm t place <executionId> - Place a trap entity"));
+        context.sendMessage(Message.raw("/cm t list - List all Trap locations"));
+        context.sendMessage(Message.raw("/cm t config - Show/set trap config (look at trap)"));
         return CompletableFuture.completedFuture(null);
     }
 }

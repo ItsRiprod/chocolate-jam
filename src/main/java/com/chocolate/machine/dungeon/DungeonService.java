@@ -1,7 +1,9 @@
 package com.chocolate.machine.dungeon;
 
+import com.chocolate.machine.dungeon.component.DungeonBlockEntry;
 import com.chocolate.machine.dungeon.component.DungeonComponent;
 import com.chocolate.machine.dungeon.component.DungeoneerComponent;
+import com.chocolate.machine.dungeon.component.DungeonEntranceComponent;
 import com.chocolate.machine.dungeon.component.SpawnerComponent;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
 import com.chocolate.machine.dungeon.spawnable.SpawnableRegistry;
@@ -10,9 +12,14 @@ import com.chocolate.machine.utils.EntityFloodFill;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.math.util.ChunkUtil;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.server.core.asset.type.blocktype.config.BlockType;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
+import com.hypixel.hytale.server.core.universe.world.World;
+import com.hypixel.hytale.server.core.universe.world.chunk.WorldChunk;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
@@ -23,8 +30,37 @@ import java.util.List;
 public class DungeonService {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
+    private static final String DUNGEON_BLOCK_PREFIX = "CM_";
+    private static final String STATE_BLOCK_PREFIX = "*" + DUNGEON_BLOCK_PREFIX;
+    private static final double BLOCK_SCAN_RADIUS = 200.0;
 
     private final SpawnableRegistry spawnableRegistry;
+
+    /**
+     * Checks if a block ID is a dungeon block (either base or with state applied).
+     * Handles both "CM_*" and "*CM_*_StateName" formats.
+     */
+    private static boolean isDungeonBlock(@Nonnull String blockId) {
+        return blockId.startsWith(DUNGEON_BLOCK_PREFIX) || blockId.startsWith(STATE_BLOCK_PREFIX);
+    }
+
+    /**
+     * Extracts the base block ID from a possibly state-modified block ID.
+     * Example: "*CM_Torch_On" -> "CM_Torch"
+     */
+    private static String getBaseBlockId(@Nonnull String blockId) {
+        if (blockId.startsWith("*")) {
+            // Format: *BaseId_StateName - strip leading * and trailing _StateName
+            String withoutStar = blockId.substring(1);
+            int lastUnderscore = withoutStar.lastIndexOf('_');
+            if (lastUnderscore > DUNGEON_BLOCK_PREFIX.length()) {
+                // Only strip if there's content after CM_
+                return withoutStar.substring(0, lastUnderscore);
+            }
+            return withoutStar;
+        }
+        return blockId;
+    }
 
     public DungeonService() {
         this.spawnableRegistry = SpawnableRegistry.getInstance();
@@ -34,6 +70,16 @@ public class DungeonService {
     public int registerDungeon(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
+        // Try to get world from component accessor
+        World world = componentAccessor.getExternalData().getWorld();
+        return registerDungeon(dungeonRef, componentAccessor, world);
+    }
+
+    // flood-fill to find and link all spawners to dungeon (with explicit world)
+    public int registerDungeon(
+            @Nonnull Ref<EntityStore> dungeonRef,
+            @Nonnull ComponentAccessor<EntityStore> componentAccessor,
+            @Nullable World world) {
 
         DungeonComponent dungeon = componentAccessor.getComponent(dungeonRef, DungeonComponent.getComponentType());
         if (dungeon == null) {
@@ -53,10 +99,34 @@ public class DungeonService {
             return 0;
         }
 
+        // Crash recovery: if dungeon was active but we're re-registering, reset state
+        if (dungeon.isActive()) {
+            LOGGER.atWarning().log("Dungeon was active but unregistered - resetting state");
+            dungeon.setActive(false);
+            dungeon.setArtifactHolderRef(null);
+            dungeon.clearDungeoneerRefs();
+        }
+
+        // Check for nearby dungeons to merge
+        MergeResult mergeResult = checkAndMergeDungeons(dungeonRef, componentAccessor);
+        if (!mergeResult.primaryDungeonRef.equals(dungeonRef)) {
+            LOGGER.atInfo().log("Dungeon was merged into another, skipping registration");
+            return 0;
+        }
+        if (mergeResult.merged) {
+            LOGGER.atInfo().log("Merged with nearby dungeon network");
+        }
+
+        // Re-fetch dungeon in case merge modified it
+        dungeon = componentAccessor.getComponent(dungeonRef, DungeonComponent.getComponentType());
+        if (dungeon == null) {
+            return 0;
+        }
+
         int registeredCount = 0;
 
         List<Ref<EntityStore>> nearbySpawners = EntityFloodFill.floodFillSpawners(
-                dungeonRef, componentAccessor, SpawnerComponent.getComponentType());
+                dungeonRef, componentAccessor, SpawnerComponent.getComponentType(), BLOCK_SCAN_RADIUS);
 
         for (Ref<EntityStore> spawnerRef : nearbySpawners) {
             SpawnerComponent spawner = componentAccessor.getComponent(spawnerRef,
@@ -73,10 +143,61 @@ public class DungeonService {
             LOGGER.atFine().log("Registered spawner '%s' to dungeon", spawner.getExecutionId());
         }
 
+        // Register dungeon blocks (CM_* blocks)
+        int blockCount = 0;
+        if (world != null) {
+            Vector3d center = dungeonTransform.getPosition();
+            blockCount = registerDungeonBlocks(dungeon, world, center);
+        } else {
+            LOGGER.atWarning().log("Cannot register dungeon blocks: world is null (use registerDungeon with world parameter)");
+        }
+
+        // Link entrance
+        linkEntrance(dungeonRef, dungeon, componentAccessor);
+
         dungeon.setRegistered(true);
-        LOGGER.atInfo().log("Dungeon registration complete: %d spawners registered", registeredCount);
+        LOGGER.atInfo().log("Dungeon registration complete: %d spawners, %d dungeon blocks registered",
+                registeredCount, blockCount);
 
         return registeredCount;
+    }
+
+    /**
+     * Links the dungeon entrance entity to the dungeon.
+     * Searches for DungeonEntranceComponent entities with matching dungeonId.
+     */
+    private boolean linkEntrance(
+            @Nonnull Ref<EntityStore> dungeonRef,
+            @Nonnull DungeonComponent dungeon,
+            @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
+
+        String dungeonId = dungeon.getDungeonId();
+        if (dungeonId.isEmpty()) {
+            LOGGER.atFine().log("Dungeon has no ID, skipping entrance linking");
+            return false;
+        }
+
+        // Search for entrance entities via flood-fill
+        List<Ref<EntityStore>> nearbyEntities = EntityFloodFill.floodFillSpawners(
+                dungeonRef, componentAccessor, DungeonEntranceComponent.getComponentType(), BLOCK_SCAN_RADIUS);
+
+        for (Ref<EntityStore> entityRef : nearbyEntities) {
+            if (!entityRef.isValid()) continue;
+
+            DungeonEntranceComponent entrance = componentAccessor.getComponent(entityRef,
+                    DungeonEntranceComponent.getComponentType());
+            if (entrance == null) continue;
+
+            if (entrance.getDungeonId().equals(dungeonId)) {
+                dungeon.setEntranceRef(entityRef);
+                LOGGER.atInfo().log("Linked entrance to dungeon '%s'", dungeonId);
+                return true;
+            }
+        }
+
+        LOGGER.atWarning().log("No entrance found for dungeon '%s' within radius %.0f",
+                dungeonId, BLOCK_SCAN_RADIUS);
+        return false;
     }
 
     /**
@@ -257,8 +378,11 @@ public class DungeonService {
             }
         }
 
-        LOGGER.atInfo().log("Dungeon activated: %d/%d spawners triggered",
-                activatedCount, dungeon.getSpawnerCount());
+        // Activate dungeon blocks
+        int blocksActivated = activateDungeonBlocks(dungeon, componentAccessor);
+
+        LOGGER.atInfo().log("Dungeon activated: %d/%d spawners triggered, %d blocks activated",
+                activatedCount, dungeon.getSpawnerCount(), blocksActivated);
     }
 
     /**
@@ -371,9 +495,13 @@ public class DungeonService {
             }
         }
 
+        // Deactivate dungeon blocks
+        int blocksDeactivated = deactivateDungeonBlocks(dungeon, componentAccessor);
+
         dungeon.setActive(false);
 
-        LOGGER.atInfo().log("Dungeon deactivated: %d spawners despawned", deactivatedCount);
+        LOGGER.atInfo().log("Dungeon deactivated: %d spawners despawned, %d blocks deactivated",
+                deactivatedCount, blocksDeactivated);
     }
 
     // deactivate and clear artifact holder (player died or dropped artifact)
@@ -551,5 +679,150 @@ public class DungeonService {
         }
 
         spawnable.register(spawnerRef, componentAccessor);
+    }
+
+    // ==================== Dungeon Block Methods ====================
+
+    /**
+     * Scans for blocks with IDs starting with DUNGEON_BLOCK_PREFIX and registers them.
+     *
+     * @param dungeon The dungeon component
+     * @param world The world to scan for blocks
+     * @param center Center position to scan around
+     * @return Number of blocks registered
+     */
+    private int registerDungeonBlocks(
+            @Nonnull DungeonComponent dungeon,
+            @Nonnull World world,
+            @Nonnull Vector3d center) {
+        int radius = (int) BLOCK_SCAN_RADIUS;
+        int registeredCount = 0;
+
+        int minX = (int) center.getX() - radius;
+        int maxX = (int) center.getX() + radius;
+        int minY = Math.max(0, (int) center.getY() - radius);
+        int maxY = Math.min(255, (int) center.getY() + radius);
+        int minZ = (int) center.getZ() - radius;
+        int maxZ = (int) center.getZ() + radius;
+
+        // Clear existing blocks before re-scanning
+        dungeon.clearDungeonBlocks();
+
+        for (int x = minX; x <= maxX; x++) {
+            for (int z = minZ; z <= maxZ; z++) {
+                WorldChunk chunk = world.getChunkIfInMemory(ChunkUtil.indexChunkFromBlock(x, z));
+                if (chunk == null) {
+                    continue;
+                }
+
+                for (int y = minY; y <= maxY; y++) {
+                    BlockType blockType = chunk.getBlockType(x, y, z);
+                    if (blockType == null || blockType.isUnknown()) {
+                        continue;
+                    }
+
+                    String blockId = blockType.getId();
+                    if (blockId != null && isDungeonBlock(blockId)) {
+                        // Store the base block ID (strip state prefix/suffix if present)
+                        String baseBlockId = getBaseBlockId(blockId);
+                        DungeonBlockEntry entry = new DungeonBlockEntry(x, y, z, baseBlockId);
+                        dungeon.addDungeonBlock(entry);
+                        registeredCount++;
+
+                        LOGGER.atFine().log("Registered dungeon block '%s' (base: '%s') at (%d, %d, %d)",
+                                blockId, baseBlockId, x, y, z);
+                    }
+                }
+            }
+        }
+
+        if (registeredCount > 0) {
+            LOGGER.atInfo().log("Found %d dungeon blocks matching prefix '%s'",
+                    registeredCount, DUNGEON_BLOCK_PREFIX);
+        }
+
+        return registeredCount;
+    }
+
+    /**
+     * Activates all dungeon blocks by changing their state to "On".
+     *
+     * @param dungeon The dungeon component containing block entries
+     * @param componentAccessor Component accessor to get world
+     * @return Number of blocks successfully activated
+     */
+    private int activateDungeonBlocks(
+            @Nonnull DungeonComponent dungeon,
+            @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
+
+        World world = componentAccessor.getExternalData().getWorld();
+        if (world == null) {
+            LOGGER.atWarning().log("Cannot activate dungeon blocks: world is null");
+            return 0;
+        }
+
+        int activatedCount = 0;
+        for (DungeonBlockEntry entry : dungeon.getDungeonBlocks()) {
+            if (setBlockState(world, entry.getPosition(), entry.getActiveState())) {
+                activatedCount++;
+            }
+        }
+
+        return activatedCount;
+    }
+
+    /**
+     * Deactivates all dungeon blocks by changing their state to "default".
+     *
+     * @param dungeon The dungeon component containing block entries
+     * @param componentAccessor Component accessor to get world
+     * @return Number of blocks successfully deactivated
+     */
+    private int deactivateDungeonBlocks(
+            @Nonnull DungeonComponent dungeon,
+            @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
+
+        World world = componentAccessor.getExternalData().getWorld();
+        if (world == null) {
+            LOGGER.atWarning().log("Cannot deactivate dungeon blocks: world is null");
+            return 0;
+        }
+
+        int deactivatedCount = 0;
+        for (DungeonBlockEntry entry : dungeon.getDungeonBlocks()) {
+            if (setBlockState(world, entry.getPosition(), entry.getInactiveState())) {
+                deactivatedCount++;
+            }
+        }
+
+        return deactivatedCount;
+    }
+
+    /**
+     * Changes a block's interaction state.
+     *
+     * @param world The world containing the block
+     * @param pos Block position
+     * @param state Target state name (e.g., "On" or "default")
+     * @return true if state was changed successfully
+     */
+    private boolean setBlockState(@Nonnull World world, @Nonnull Vector3i pos, @Nonnull String state) {
+        WorldChunk chunk = world.getChunkIfInMemory(ChunkUtil.indexChunkFromBlock(pos.getX(), pos.getZ()));
+        if (chunk == null) {
+            LOGGER.atFine().log("Cannot set block state: chunk not loaded at (%d, %d)", pos.getX(), pos.getZ());
+            return false;
+        }
+
+        BlockType blockType = chunk.getBlockType(pos.getX(), pos.getY(), pos.getZ());
+        if (blockType == null || blockType.isUnknown()) {
+            LOGGER.atFine().log("Cannot set block state: no block at (%d, %d, %d)",
+                    pos.getX(), pos.getY(), pos.getZ());
+            return false;
+        }
+
+        chunk.setBlockInteractionState(pos, blockType, state);
+        LOGGER.atFine().log("Set block '%s' at (%d, %d, %d) to state '%s'",
+                blockType.getId(), pos.getX(), pos.getY(), pos.getZ(), state);
+        return true;
     }
 }
