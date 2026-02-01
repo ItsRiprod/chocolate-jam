@@ -1,0 +1,9 @@
+items.PortalKey_Machine_Dungeon.name=Fragment: Dungeon of the Machine
+items.PortalKey_Machine_Dungeon.description=<msg key="server.items.PortalKey.description"/>\n\n<i>This fragment might bing you to a long dorment machine</i>
+
+portals.Machine_Dungeon=Dungeon of the Machine
+portals.Machine_Dungeon.description=This fragment might bing you to a long dorment machine\n\
+<b>This instance was added by chocolate.machine</b>
+
+portals.Machine_Dungeon.tip1=<color is="#0572c0">It's not as it seems</color>
+

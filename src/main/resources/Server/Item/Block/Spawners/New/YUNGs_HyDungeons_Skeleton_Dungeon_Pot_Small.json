@@ -1,0 +1,14 @@
+{
+  "Entries": [
+    {
+      "Name": "Furniture_Human_Ruins_Pot_Small",
+      "State": {
+        "Custom": false,
+        "AllowViewing": true,
+        "Type": "container",
+        "Droplist": "Yungs_HyDungeons_Skeleton_Dungeon_Pot"
+      },
+      "Weight": 100
+    }
+  ]
+}
