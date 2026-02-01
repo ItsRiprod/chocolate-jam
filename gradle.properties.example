@@ -11,5 +11,5 @@ plugin_group=Team
 plugin_description=Bring the true power of magic to Hytale
 plugin_author=Team
 plugin_website=
-plugin_main_entrypoint=com.team.plugin.Plugin
+plugin_main_entrypoint=com.chocolate.machine.Machine
 server_version=*
