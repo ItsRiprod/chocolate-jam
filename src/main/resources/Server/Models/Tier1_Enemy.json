@@ -1,0 +1,458 @@
+{
+  "Texture": "NPC/Robots/Tier1_Enemy_Texture_Rust.png",
+  "Model": "NPC/Robots/Tier1_Enemy.blockymodel",
+  "HitBox": {
+    "Max": {
+      "X": 0.2,
+      "Y": 1.2,
+      "Z": 0.2
+    },
+    "Min": {
+      "X": -0.2,
+      "Y": 0,
+      "Z": -0.2
+    }
+  },
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Idle.blockyanim",
+          "Speed": 0.5
+        }
+      ]
+    },
+    "Walk": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Walk.blockyanim",
+          "Speed": 1,
+          "SoundEventId": "SFX_Skeleton_Walk"
+        }
+      ]
+    },
+    "WalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Walk_Backward.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "Run": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Run.blockyanim",
+          "Speed": 0.9,
+          "SoundEventId": "SFX_Skeleton_Run"
+        }
+      ]
+    },
+    "RunBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Run_Backward.blockyanim",
+          "Speed": 0.9,
+          "SoundEventId": "SFX_Skeleton_Run"
+        }
+      ]
+    },
+    "Sprint": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Sprint.blockyanim",
+          "Speed": 1.1,
+          "SoundEventId": "SFX_Skeleton_Run"
+        }
+      ]
+    },
+    "Crouch": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Crouch.blockyanim",
+          "BlendingDuration": 0.1,
+          "Speed": 0.5
+        }
+      ]
+    },
+    "CrouchWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Crouch_Walk.blockyanim",
+          "BlendingDuration": 0.1,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "CrouchWalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Crouch_Walk_Backward.blockyanim",
+          "BlendingDuration": 0.1,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "Jump": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Jump.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "JumpWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Jump.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "JumpRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Jump_Far.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Default/Jump_Far2.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "Fall": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Fall.blockyanim",
+          "BlendingDuration": 0.4
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Default/Fall2.blockyanim",
+          "BlendingDuration": 0.4
+        }
+      ]
+    },
+    "Alerted": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Alerted.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Alerted"
+        }
+      ]
+    },
+    "FlyIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Fly/Fly_Idle.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "Fly": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Fly/Fly.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "FlyBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Fly/Fly_Backward.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "FlyFast": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Fly/Fly_Fast.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "SwimIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Idle.blockyanim"
+        }
+      ]
+    },
+    "Swim": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "SwimBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Backward.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "SwimFast": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Fast.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "SwimJump": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Jump.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "Speed": 0.8
+        }
+      ]
+    },
+    "SwimFloat": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Float.blockyanim"
+        }
+      ]
+    },
+    "SwimSink": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Sink.blockyanim"
+        }
+      ]
+    },
+    "SwimDive": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "SwimDiveBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive_Backward.blockyanim",
+          "Speed": 1
+        }
+      ]
+    },
+    "SwimDiveFast": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive_Fast.blockyanim",
+          "Speed": 0.6
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive_Fast2.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Idle.blockyanim",
+          "Speed": 0.3
+        }
+      ]
+    },
+    "FluidWalk": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Walk.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidWalkBackward": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Walk_Backward.blockyanim",
+          "Speed": 0.6
+        }
+      ]
+    },
+    "FluidRun": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Run.blockyanim",
+          "Speed": 0.5
+        }
+      ]
+    },
+    "ClimbIdle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Idle.blockyanim",
+          "Speed": 0.5
+        }
+      ]
+    },
+    "ClimbUp": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Up.blockyanim"
+        }
+      ]
+    },
+    "ClimbDown": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Down.blockyanim"
+        }
+      ]
+    },
+    "ClimbLeft": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Left.blockyanim"
+        }
+      ]
+    },
+    "ClimbRight": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Right.blockyanim"
+        }
+      ]
+    },
+    "Hurt": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Damage/Hurt.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Hurt"
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Damage/Hurt2.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Hurt"
+        }
+      ]
+    },
+    "Death": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Damage/Death.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Death_1"
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Damage/Death2.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Death_2"
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Damage/Death3.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Death_3"
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Damage/Death4.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Death_4"
+        }
+      ]
+    },
+    "Spawn": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Spawn.blockyanim",
+          "BlendingDuration": 0,
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Spawn_1"
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Default/Spawn2.blockyanim",
+          "BlendingDuration": 0,
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Spawn_2"
+        }
+      ]
+    },
+    "Despawn": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Despawn.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Despawn_1"
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Default/Despawn2.blockyanim",
+          "Looping": false,
+          "SoundEventId": "SFX_Skeleton_Despawn_2"
+        }
+      ]
+    },
+    "IdlePassive": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Flavor/Head_Shake.blockyanim",
+          "Weight": 4
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Flavor/Head_Spin.blockyanim",
+          "Weight": 1
+        },
+        {
+          "Animation": "NPC/Robots/Animations/Flavor/Head_Look_Around.blockyanim",
+          "Weight": 5
+        }
+      ],
+      "NextAnimationDelay": {
+        "Max": 15,
+        "Min": 5
+      }
+    },
+    "Search": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Flavor/Search.blockyanim",
+          "SoundEventId": "SFX_Skeleton_Search_2"
+        }
+      ]
+    },
+    "Sleep": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Sleep.blockyanim"
+        }
+      ]
+    },
+    "Laydown": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Laydown.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Wake": {
+      "Animations": [
+        {
+          "Animation": "NPC/Robots/Animations/Default/Wake.blockyanim",
+          "Looping": false
+        }
+      ]
+    }
+  }
+}
