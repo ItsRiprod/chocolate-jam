@@ -1,5 +1,8 @@
 package com.chocolate.machine.dungeon.component.actions;
 
+import com.hypixel.hytale.codec.Codec;
+import com.hypixel.hytale.codec.KeyedCodec;
+import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.Component;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.Ref;
@@ -14,6 +17,34 @@ import java.util.Random;
  * Manages the press cycle: IDLE -> PRESSING -> RETRACTING -> COOLDOWN -> loop
  */
 public class HydraulicPressActionComponent implements Component<EntityStore> {
+
+    public static final BuilderCodec<HydraulicPressActionComponent> CODEC = BuilderCodec
+            .builder(HydraulicPressActionComponent.class, HydraulicPressActionComponent::new)
+            .append(new KeyedCodec<>("PressAnimationDuration", Codec.FLOAT),
+                    (c, v) -> c.pressAnimationDuration = v,
+                    c -> c.pressAnimationDuration)
+            .add()
+            .append(new KeyedCodec<>("RetractAnimationDuration", Codec.FLOAT),
+                    (c, v) -> c.retractAnimationDuration = v,
+                    c -> c.retractAnimationDuration)
+            .add()
+            .append(new KeyedCodec<>("MinCooldown", Codec.FLOAT),
+                    (c, v) -> c.minCooldown = v,
+                    c -> c.minCooldown)
+            .add()
+            .append(new KeyedCodec<>("MaxCooldown", Codec.FLOAT),
+                    (c, v) -> c.maxCooldown = v,
+                    c -> c.maxCooldown)
+            .add()
+            .append(new KeyedCodec<>("DamageAmount", Codec.FLOAT),
+                    (c, v) -> c.damageAmount = v,
+                    c -> c.damageAmount)
+            .add()
+            .append(new KeyedCodec<>("VelocityMultiplier", Codec.FLOAT),
+                    (c, v) -> c.velocityMultiplier = v,
+                    c -> c.velocityMultiplier)
+            .add()
+            .build();
 
     public enum Phase {
         IDLE,

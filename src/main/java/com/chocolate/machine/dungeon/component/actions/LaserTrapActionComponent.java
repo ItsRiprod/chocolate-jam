@@ -1,11 +1,13 @@
 package com.chocolate.machine.dungeon.component.actions;
 
+import com.hypixel.hytale.codec.Codec;
+import com.hypixel.hytale.codec.KeyedCodec;
+import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.Component;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
-import java.util.Random;
 
 /**
  * Per-spawner runtime state for laser trap.
@@ -13,31 +15,62 @@ import java.util.Random;
  */
 public class LaserTrapActionComponent implements Component<EntityStore> {
 
+    public static final BuilderCodec<LaserTrapActionComponent> CODEC = BuilderCodec
+            .builder(LaserTrapActionComponent.class, LaserTrapActionComponent::new)
+            .append(new KeyedCodec<>("FireInterval", Codec.FLOAT),
+                    (c, v) -> c.fireInterval = v,
+                    c -> c.fireInterval)
+            .add()
+            .append(new KeyedCodec<>("Damage", Codec.FLOAT),
+                    (c, v) -> c.damage = v,
+                    c -> c.damage)
+            .add()
+            .append(new KeyedCodec<>("OffsetX", Codec.FLOAT),
+                    (c, v) -> c.offsetX = v,
+                    c -> c.offsetX)
+            .add()
+            .append(new KeyedCodec<>("OffsetY", Codec.FLOAT),
+                    (c, v) -> c.offsetY = v,
+                    c -> c.offsetY)
+            .add()
+            .append(new KeyedCodec<>("OffsetZ", Codec.FLOAT),
+                    (c, v) -> c.offsetZ = v,
+                    c -> c.offsetZ)
+            .add()
+            .append(new KeyedCodec<>("Yaw", Codec.FLOAT),
+                    (c, v) -> c.yaw = v,
+                    c -> c.yaw)
+            .add()
+            .append(new KeyedCodec<>("Pitch", Codec.FLOAT),
+                    (c, v) -> c.pitch = v,
+                    c -> c.pitch)
+            .add()
+            .build();
+
     private static ComponentType<EntityStore, LaserTrapActionComponent> componentType;
-    private static final Random RANDOM = new Random();
 
     // runtime state
     private boolean active;
     private float fireTimer = 0f;
     private float yaw = 0f;
-    private float pitch = 0f;
+    private float pitch = 90f;  // Default shoots up (model faces up by default)
 
     // configurable via command
     private float fireInterval = 2.0f;
-    private float damage = 10f;
-    private float speed = 40f;
+    private float damage = 15f;
+    private float offsetX = 0f;  // Spawn position offset X
+    private float offsetY = 0f;  // Spawn position offset Y
+    private float offsetZ = 0f;  // Spawn position offset Z
 
-    // fixed values
-    private float minFireInterval = 1.5f;
-    private float maxFireInterval = 3.0f;
-    private boolean randomizeInterval = false;
     private String projectileId = "Laser_Projectile";
-    private float spawnOffsetX = 0f;
-    private float spawnOffsetY = 0.5f;
-    private float spawnOffsetZ = 0f;
 
     public LaserTrapActionComponent() {
         this.active = false;
+    }
+
+    public LaserTrapActionComponent(float fireTimer) {
+        this.active = false;
+        this.fireTimer = fireTimer;
     }
 
     public static void setComponentType(ComponentType<EntityStore, LaserTrapActionComponent> type) {
@@ -70,12 +103,9 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
 
     public void resetFireTimer() {
         this.fireTimer = 0f;
-        if (randomizeInterval) {
-            this.fireInterval = minFireInterval + RANDOM.nextFloat() * (maxFireInterval - minFireInterval);
-        }
     }
 
-    // --- Direction (set from spawner rotation) ---
+    // --- Direction (set via /cm t config offset) ---
 
     public float getYaw() {
         return yaw;
@@ -111,30 +141,34 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
         this.damage = damage;
     }
 
-    public float getSpeed() {
-        return speed;
+    public float getOffsetX() {
+        return offsetX;
     }
 
-    public void setSpeed(float speed) {
-        this.speed = speed;
+    public void setOffsetX(float offsetX) {
+        this.offsetX = offsetX;
+    }
+
+    public float getOffsetY() {
+        return offsetY;
+    }
+
+    public void setOffsetY(float offsetY) {
+        this.offsetY = offsetY;
+    }
+
+    public float getOffsetZ() {
+        return offsetZ;
+    }
+
+    public void setOffsetZ(float offsetZ) {
+        this.offsetZ = offsetZ;
     }
 
     // --- Fixed values ---
 
     public String getProjectileId() {
         return projectileId;
-    }
-
-    public float getSpawnOffsetX() {
-        return spawnOffsetX;
-    }
-
-    public float getSpawnOffsetY() {
-        return spawnOffsetY;
-    }
-
-    public float getSpawnOffsetZ() {
-        return spawnOffsetZ;
     }
 
     // --- Reset ---
@@ -152,7 +186,9 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
         copy.fireTimer = this.fireTimer;
         copy.fireInterval = this.fireInterval;
         copy.damage = this.damage;
-        copy.speed = this.speed;
+        copy.offsetX = this.offsetX;
+        copy.offsetY = this.offsetY;
+        copy.offsetZ = this.offsetZ;
         copy.yaw = this.yaw;
         copy.pitch = this.pitch;
         return copy;

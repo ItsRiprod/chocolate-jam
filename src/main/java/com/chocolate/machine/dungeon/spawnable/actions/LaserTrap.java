@@ -81,16 +81,8 @@ public class LaserTrap implements Spawnable {
             state = componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
         }
 
-        // get spawner rotation to set initial fire direction
-        TransformComponent spawnerTransform = componentAccessor.getComponent(
-                spawnerRef, TransformComponent.getComponentType());
-
-        if (spawnerTransform != null) {
-            Vector3f rotation = spawnerTransform.getRotation();
-            // yaw is rotation around Y axis, pitch is rotation around X
-            state.setYaw(rotation.y);
-            state.setPitch(rotation.x);
-        }
+        // Direction is configured via /cm t config offset command
+        // Uses hardcoded defaults from LaserTrapActionComponent (pitch=90 shoots up)
 
         state.setActive(true);
         state.resetFireTimer();
@@ -174,13 +166,17 @@ public class LaserTrap implements Spawnable {
 
         Vector3d basePos = spawnerTransform.getPosition();
 
-        // calculate spawn position with offset
-        double spawnX = basePos.x + laser.getSpawnOffsetX();
-        double spawnY = basePos.y + laser.getSpawnOffsetY();
-        double spawnZ = basePos.z + laser.getSpawnOffsetZ();
+        // Calculate spawn position with configured offsets
+        double spawnX = basePos.x + laser.getOffsetX();
+        double spawnY = basePos.y + laser.getOffsetY();
+        double spawnZ = basePos.z + laser.getOffsetZ();
 
         Vector3d spawnPos = new Vector3d(spawnX, spawnY, spawnZ);
-        Vector3f rotation = new Vector3f(laser.getPitch(), laser.getYaw(), 0f);
+
+        // Use configured direction (set via /cm t config rotate)
+        float pitch = laser.getPitch();
+        float yaw = laser.getYaw();
+        Vector3f rotation = new Vector3f(pitch, yaw, 0f);
 
         // get time resource for despawn component
         TimeResource timeResource = commandBuffer.getResource(TimeResource.getResourceType());
@@ -205,14 +201,13 @@ public class LaserTrap implements Spawnable {
             projectileComponent.initializePhysics(boundingBox);
         }
 
-        // shoot the projectile (sets velocity based on direction)
-        UUID creatorUuid = UUID.randomUUID();  // trap has no real "creator" entity
+        UUID creatorUuid = UUID.randomUUID();
         projectileComponent.shoot(
                 holder,
                 creatorUuid,
                 spawnX, spawnY, spawnZ,
-                laser.getYaw(),
-                laser.getPitch());
+                yaw,
+                pitch);
 
         // spawn the projectile entity
         Ref<EntityStore> projectileRef = commandBuffer.addEntity(holder, AddReason.SPAWN);
@@ -222,7 +217,7 @@ public class LaserTrap implements Spawnable {
             SoundUtil.playSoundEvent3d(getFireSoundIndex(), SoundCategory.SFX, spawnPos, commandBuffer);
 
             LOGGER.atFine().log("Fired laser projectile at (%.1f, %.1f, %.1f) yaw=%.2f pitch=%.2f",
-                    spawnX, spawnY, spawnZ, laser.getYaw(), laser.getPitch());
+                    spawnX, spawnY, spawnZ, yaw, pitch);
         }
     }
 }

@@ -12,6 +12,7 @@ import com.chocolate.machine.dungeon.spawnable.SpawnableRegistry;
 import com.chocolate.machine.dungeon.spawnable.actions.ArcherAction;
 import com.chocolate.machine.dungeon.spawnable.actions.ArrowTrap;
 import com.chocolate.machine.dungeon.spawnable.actions.AxeBladeTrap;
+import com.chocolate.machine.dungeon.spawnable.actions.BeamTrap;
 import com.chocolate.machine.dungeon.spawnable.actions.BruteAction;
 import com.chocolate.machine.dungeon.spawnable.actions.GolemAction;
 import com.chocolate.machine.dungeon.spawnable.actions.HydraulicPressTrap;
@@ -42,6 +43,8 @@ public class DungeonModule extends System<EntityStore> {
 
     // runtime only
     private ComponentType<EntityStore, SkeletonActionComponent> skeletonActionComponentType;
+
+    // trap action components (persistent)
     private ComponentType<EntityStore, AxeBladeActionComponent> axeBladeActionComponentType;
     private ComponentType<EntityStore, HydraulicPressActionComponent> hydraulicPressActionComponentType;
     private ComponentType<EntityStore, LaserTrapActionComponent> laserTrapActionComponentType;
@@ -94,17 +97,18 @@ public class DungeonModule extends System<EntityStore> {
     private void registerDefaultSpawnables() {
         SpawnableRegistry registry = SpawnableRegistry.getInstance();
 
-        // runtime only components
+        // runtime only components (no persistence)
         skeletonActionComponentType = registerComponent(SkeletonActionComponent.class, SkeletonActionComponent::new);
         SkeletonActionComponent.setComponentType(skeletonActionComponentType);
 
-        axeBladeActionComponentType = registerComponent(AxeBladeActionComponent.class, AxeBladeActionComponent::new);
+        // trap action components (persistent configuration)
+        axeBladeActionComponentType = registerComponent(AxeBladeActionComponent.class, "AxeBlade", AxeBladeActionComponent.CODEC);
         AxeBladeActionComponent.setComponentType(axeBladeActionComponentType);
 
-        hydraulicPressActionComponentType = registerComponent(HydraulicPressActionComponent.class, HydraulicPressActionComponent::new);
+        hydraulicPressActionComponentType = registerComponent(HydraulicPressActionComponent.class, "HydraulicPress", HydraulicPressActionComponent.CODEC);
         HydraulicPressActionComponent.setComponentType(hydraulicPressActionComponentType);
 
-        laserTrapActionComponentType = registerComponent(LaserTrapActionComponent.class, LaserTrapActionComponent::new);
+        laserTrapActionComponentType = registerComponent(LaserTrapActionComponent.class, "LaserTrap", LaserTrapActionComponent.CODEC);
         LaserTrapActionComponent.setComponentType(laserTrapActionComponentType);
 
         // traps
@@ -112,6 +116,7 @@ public class DungeonModule extends System<EntityStore> {
         registry.register(new HydraulicPressTrap());
         registry.register(new ArrowTrap());
         registry.register(new LaserTrap());
+        registry.register(new BeamTrap());
 
         // entities
         registry.register(new GolemAction());

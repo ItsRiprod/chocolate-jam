@@ -7,7 +7,9 @@ import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionCompo
 import com.chocolate.machine.dungeon.component.actions.LaserTrapActionComponent;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
+import com.hypixel.hytale.math.vector.Vector3f;
 import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.modules.entity.component.HeadRotation;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.arguments.system.OptionalArg;
 import com.hypixel.hytale.server.core.command.system.arguments.types.ArgTypes;
@@ -65,11 +67,12 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
                 handlePress(context, store, targetRef, fieldName, valueStr);
                 break;
             case "laser":
-                handleLaser(context, store, targetRef, fieldName, valueStr);
+            case "beam":
+                handleLaser(context, store, ref, targetRef, fieldName, valueStr);
                 break;
             default:
                 context.sendMessage(Message.raw("Trap type '" + executionId + "' is not configurable."));
-                context.sendMessage(Message.raw("Configurable: press, laser"));
+                context.sendMessage(Message.raw("Configurable: press, laser, beam"));
                 break;
         }
     }
@@ -167,7 +170,7 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
     }
 
     private void handleLaser(CommandContext context, Store<EntityStore> store,
-            Ref<EntityStore> targetRef, String fieldName, String valueStr) {
+            Ref<EntityStore> playerRef, Ref<EntityStore> targetRef, String fieldName, String valueStr) {
 
         LaserTrapActionComponent laser = store.getComponent(targetRef,
                 LaserTrapActionComponent.getComponentType());
@@ -182,8 +185,28 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
             context.sendMessage(Message.raw("=== Laser Config ==="));
             context.sendMessage(Message.raw("  interval: " + laser.getFireInterval()));
             context.sendMessage(Message.raw("  damage: " + laser.getDamage()));
-            context.sendMessage(Message.raw("  speed: " + laser.getSpeed()));
-            context.sendMessage(Message.raw("Use: /cm t config <field> <value>"));
+            context.sendMessage(Message.raw("  pitch: " + laser.getPitch()));
+            context.sendMessage(Message.raw("  yaw: " + laser.getYaw()));
+            context.sendMessage(Message.raw("  offsetX: " + laser.getOffsetX()));
+            context.sendMessage(Message.raw("  offsetY: " + laser.getOffsetY()));
+            context.sendMessage(Message.raw("  offsetZ: " + laser.getOffsetZ()));
+            context.sendMessage(Message.raw("  rotate: (sets direction to player's look direction)"));
+            context.sendMessage(Message.raw("Use: /cm t config <field> [value]"));
+            return;
+        }
+
+        // Special handling for "rotate" - captures player's head rotation
+        if ("rotate".equals(fieldName)) {
+            HeadRotation headRotation = store.getComponent(playerRef, HeadRotation.getComponentType());
+            if (headRotation == null) {
+                context.sendMessage(Message.raw("Could not get player head rotation."));
+                return;
+            }
+            Vector3f rotation = headRotation.getRotation();
+            laser.setPitch(rotation.getPitch());
+            laser.setYaw(rotation.getYaw());
+            context.sendMessage(Message.raw("Set laser direction to player look: pitch=" +
+                    rotation.getPitch() + " yaw=" + rotation.getYaw()));
             return;
         }
 
@@ -196,8 +219,20 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
                 case "damage":
                     context.sendMessage(Message.raw("damage = " + laser.getDamage()));
                     break;
-                case "speed":
-                    context.sendMessage(Message.raw("speed = " + laser.getSpeed()));
+                case "pitch":
+                    context.sendMessage(Message.raw("pitch = " + laser.getPitch()));
+                    break;
+                case "yaw":
+                    context.sendMessage(Message.raw("yaw = " + laser.getYaw()));
+                    break;
+                case "offsetX":
+                    context.sendMessage(Message.raw("offsetX = " + laser.getOffsetX()));
+                    break;
+                case "offsetY":
+                    context.sendMessage(Message.raw("offsetY = " + laser.getOffsetY()));
+                    break;
+                case "offsetZ":
+                    context.sendMessage(Message.raw("offsetZ = " + laser.getOffsetZ()));
                     break;
                 default:
                     context.sendMessage(Message.raw("Unknown field: " + fieldName));
@@ -224,9 +259,25 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
                 laser.setDamage(value);
                 context.sendMessage(Message.raw("Set damage = " + value));
                 break;
-            case "speed":
-                laser.setSpeed(value);
-                context.sendMessage(Message.raw("Set speed = " + value));
+            case "pitch":
+                laser.setPitch(value);
+                context.sendMessage(Message.raw("Set pitch = " + value));
+                break;
+            case "yaw":
+                laser.setYaw(value);
+                context.sendMessage(Message.raw("Set yaw = " + value));
+                break;
+            case "offsetX":
+                laser.setOffsetX(value);
+                context.sendMessage(Message.raw("Set offsetX = " + value));
+                break;
+            case "offsetY":
+                laser.setOffsetY(value);
+                context.sendMessage(Message.raw("Set offsetY = " + value));
+                break;
+            case "offsetZ":
+                laser.setOffsetZ(value);
+                context.sendMessage(Message.raw("Set offsetZ = " + value));
                 break;
             default:
                 context.sendMessage(Message.raw("Unknown field: " + fieldName));

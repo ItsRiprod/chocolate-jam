@@ -3,7 +3,7 @@
     {
       "SpawnerId": "CM_Line_Spawner",
       "PositionOffset": {
-        "Y": 2
+        "Y": 0
       }
     }
   ]
