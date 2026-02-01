@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 13,
   "anchorZ": 9,
@@ -4705,7 +4705,23 @@
       "x": 0,
       "y": 0,
       "z": -8,
-      "name": "Rock_Shale"
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon.99_Boss.*",
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      }
     },
     {
       "x": 0,
@@ -6683,12 +6699,7 @@
       "x": 2,
       "y": 1,
       "z": -6,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 2,
@@ -8065,12 +8076,7 @@
       "x": 3,
       "y": 8,
       "z": 2,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 3,

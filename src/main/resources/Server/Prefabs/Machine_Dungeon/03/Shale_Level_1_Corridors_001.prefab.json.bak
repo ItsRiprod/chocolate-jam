@@ -2745,7 +2745,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.Level_1.Spacer1.*",
+            "PrefabPath": "Machine_Dungeon.04.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true

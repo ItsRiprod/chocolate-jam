@@ -16666,7 +16666,7 @@
       "components": {
         "Components": {
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.Level_1.Corridors.*",
+            "PrefabPath": "Machine_Dungeon.Level_1.02.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true

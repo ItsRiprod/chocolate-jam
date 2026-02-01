@@ -4704,6 +4704,28 @@
     {
       "x": 0,
       "y": 0,
+      "z": -17,
+      "name": "Prefab_Spawner_Block",
+      "components": {
+        "Components": {
+          "PlacedByInteraction": {
+            "WhoPlacedUuid": {
+              "$binary": "JaSVvQNmR72aTaNLgMLlyg==",
+              "$type": "04"
+            }
+          },
+          "prefabspawner": {
+            "PrefabPath": "Machine_Dungeon.10.*",
+            "FitHeightmap": false,
+            "InheritSeed": true,
+            "InheritHeightCondition": true
+          }
+        }
+      }
+    },
+    {
+      "x": 0,
+      "y": 0,
       "z": -8,
       "name": "Prefab_Spawner_Block",
       "components": {
@@ -4715,7 +4737,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.99_Boss.*",
+            "PrefabPath": "Machine_Dungeon.09.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true
