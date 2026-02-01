@@ -6,6 +6,7 @@ import com.chocolate.machine.dungeon.system.DungeonAreaSystem;
 import com.chocolate.machine.dungeon.system.DungeonBossRoomSystem;
 import com.chocolate.machine.dungeon.system.DungeonDeathSystem;
 import com.chocolate.machine.dungeon.system.DungeoneerCleanupSystem;
+import com.chocolate.machine.dungeon.system.DungeonTickSystem;
 import com.chocolate.machine.dungeon.system.DungeonRegistrationSystem;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
@@ -27,11 +28,9 @@ public class Machine extends JavaPlugin {
     protected void setup() {
         LOGGER.atInfo().log("Setting up Chocolate Machine...");
 
-        // register dungeon module (components + spawnables)
         dungeonModule = new DungeonModule();
         EntityStore.REGISTRY.registerSystem(dungeonModule);
 
-        // register dungeon systems
         registerDungeonSystems();
 
         setupCommands();
@@ -40,30 +39,21 @@ public class Machine extends JavaPlugin {
     }
 
     private void registerDungeonSystems() {
-        // Registration system - handles dungeon setup when DungeonComponent spawns
         getEntityStoreRegistry().registerSystem(new DungeonRegistrationSystem());
-        LOGGER.atInfo().log("Registered DungeonRegistrationSystem");
 
-        // Boss room system - detects players entering boss room, adds DungeoneerComponent
         getEntityStoreRegistry().registerSystem(new DungeonBossRoomSystem());
-        LOGGER.atInfo().log("Registered DungeonBossRoomSystem");
 
-        // Area system - detects players leaving entrance (escape detection)
         getEntityStoreRegistry().registerSystem(new DungeonAreaSystem());
-        LOGGER.atInfo().log("Registered DungeonAreaSystem");
 
-        // Death system - intercepts player deaths in dungeon
         getEntityStoreRegistry().registerSystem(new DungeonDeathSystem());
-        LOGGER.atInfo().log("Registered DungeonDeathSystem");
 
-        // Cleanup system - handles player disconnect while in dungeon
         getEntityStoreRegistry().registerSystem(new DungeoneerCleanupSystem());
-        LOGGER.atInfo().log("Registered DungeoneerCleanupSystem");
+
+        getEntityStoreRegistry().registerSystem(new DungeonTickSystem());
     }
 
     private void setupCommands() {
         getCommandRegistry().registerCommand(new ChocolateCommand());
-        LOGGER.atInfo().log("Registered /chocolate command");
     }
 
     public DungeonModule getDungeonModule() {

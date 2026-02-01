@@ -1,0 +1,43 @@
+{
+  "version": 8,
+  "blockIdVersion": 8,
+  "anchorX": 0,
+  "anchorY": 0,
+  "anchorZ": 0,
+  "blocks": [
+    {
+      "x": 0,
+      "y": 0,
+      "z": 0,
+      "name": "Rock_Stone_Cobble"
+    }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Rotation": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        },
+        "DungeonEntrance": {
+          "DungeonId": "chocolate_dungeon_01",
+          "TriggerRadius": 8.0
+        },
+        "Model": {
+          "Model": {
+            "Id": "Healing_Totem",
+            "Scale": 2.0
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "Model": "NPC/Traps/Press.blockymodel",
+  "Texture": "NPC/Traps/press.png",
+  "HitBox": {
+    "Max": {
+      "X": 1.0,
+      "Y": 1.0,
+      "Z": 1.0
+    },
+    "Min": {
+      "X": -1.0,
+      "Y": -1.0,
+      "Z": -1.0
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Idle.blockyanim",
+          "Looping": true
+        }
+      ]
+    },
+    "Press": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Activate.blockyanim",
+          "Looping": false,
+          "Speed": 1.0
+        }
+      ]
+    },
+    "Release": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Deactivate.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Cycle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Peek.blockyanim",
+          "Looping": true
+        }
+      ]
+    }
+  }
+}

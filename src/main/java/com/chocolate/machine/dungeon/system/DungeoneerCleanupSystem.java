@@ -74,7 +74,7 @@ public class DungeoneerCleanupSystem extends RefSystem<EntityStore> {
                 if (otherPlayer != null) {
                     otherPlayer.sendMessage(Message.raw("The relic holder disconnected! Dungeon reset."));
                 }
-                commandBuffer.removeComponent(otherRef, DungeoneerComponent.getComponentType());
+                commandBuffer.tryRemoveComponent(otherRef, DungeoneerComponent.getComponentType());
             }
 
             dungeon.clearDungeoneerRefs();

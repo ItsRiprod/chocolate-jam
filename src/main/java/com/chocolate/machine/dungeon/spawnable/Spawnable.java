@@ -1,13 +1,16 @@
 package com.chocolate.machine.dungeon.spawnable;
 
+import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
 
-// interface for spawnable trap/monster implementations
 public interface Spawnable {
+
+    @Nonnull
+    String getId();
 
     void register(
             @Nonnull Ref<EntityStore> spawnerRef,
@@ -29,6 +32,9 @@ public interface Spawnable {
             @Nonnull Ref<EntityStore> spawnerRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor);
 
-    @Nonnull
-    String getId();
+    default void tick(
+            float dt,
+            @Nonnull Ref<EntityStore> spawnerRef,
+            @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+    }
 }

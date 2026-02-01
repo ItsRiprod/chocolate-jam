@@ -1,0 +1,63 @@
+{
+  "SkyTopColors": [
+    {
+      "Hour": 3,
+      "Color": "#25354bff"
+    }
+  ],
+  "SkyBottomColors": [
+    {
+      "Hour": 3,
+      "Color": "#25364bff"
+    }
+  ],
+  "SkySunsetColors": [
+    {
+      "Hour": 3,
+      "Color": "#253b4bff"
+    }
+  ],
+  "FogColors": [
+    {
+      "Hour": 3,
+      "Color": "#051c22"
+    }
+  ],
+  "FogDensities": [
+    {
+      "Hour": 0,
+      "Value": 0.85
+    }
+  ],
+  "FogHeightFalloffs": [
+    {
+      "Hour": 0,
+      "Value": 1.7
+    }
+  ],
+  "FogDistance": [
+    -244,
+    84
+  ],
+  "FogOptions": {
+    "FogHeightCameraFixed": 0.5,
+    "EffectiveViewDistanceMultiplier": 1.0
+  },
+  "SunScales": [
+    {
+      "Hour": 0,
+      "Value": 1
+    }
+  ],
+  "MoonScales": [
+    {
+      "Hour": 0,
+      "Value": 1
+    }
+  ],
+  "Particle": {
+    "SystemId": "Ash",
+    "OvergroundOnly": false,
+    "Color": "#abb3b4"
+  }
+}
