@@ -1,0 +1,51 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Rock_Stone_Cobble.name"
+  },
+  "ItemLevel": 10,
+  "MaxStack": 100,
+  "Icon": "Icons/ItemsGenerated/Rock_Stone_Cobble.png",
+  "Categories": [
+    "Blocks.Rocks"
+  ],
+  "PlayerAnimationsId": "Block",
+  "Set": "Rock_Stone_Cobble",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Group": "Stone",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "BlockParticleSetId": "Stone",
+    "ParticleColor": "#615d44",
+    "BlockSoundSetId": "Stone",
+    "CustomModelTexture": [
+      {
+        "Texture": "Items/Weapons/New_Mace.png"
+      }
+    ],
+    "CustomModel": "Items/Weapons/New_Mace_Big.blockymodel",
+    "CustomModelScale": 3
+  },
+  "ResourceTypes": [
+    {
+      "Id": "Rock"
+    },
+    {
+      "Id": "Rock_Stone"
+    }
+  ],
+  "Tags": {
+    "Type": [
+      "Rock"
+    ],
+    "Family": [
+      "Stone"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}
