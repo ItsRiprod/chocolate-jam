@@ -6,9 +6,9 @@
   "anchorZ": 7,
   "blocks": [
     {
-      "x": -8,
+      "x": -11,
       "y": 0,
-      "z": -11,
+      "z": -14,
       "name": "Prefab_Spawner_Block",
       "components": {
         "Components": {
@@ -2766,7 +2766,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.05.*",
+            "PrefabPath": "Machine_Dungeon.05_Room1.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true
