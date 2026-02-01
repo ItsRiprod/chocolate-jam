@@ -23,7 +23,7 @@ public class ArcherAction implements Spawnable {
 
     public static final String ID = "archer";
 
-    private static final String SKELETON_ROLE = "Skeleton_Archer";
+    private static final String SKELETON_ROLE = "Tier2_Enemy";
 
     private static final String SKELETON_GROUP = null;
 
