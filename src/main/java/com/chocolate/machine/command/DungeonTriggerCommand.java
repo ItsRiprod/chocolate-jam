@@ -117,10 +117,10 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
                 dungeonService.deactivate(dungeonRef, store);
                 dungeon.setArtifactHolderRef(null);
 
-                // Remove DungeoneerComponent from all players
+                // Remove DungeoneerComponent from all players (use tryRemove for safety)
                 for (Ref<EntityStore> otherRef : dungeon.getDungeoneerRefs()) {
                     if (otherRef.isValid()) {
-                        store.removeComponent(otherRef, DungeoneerComponent.getComponentType());
+                        store.tryRemoveComponent(otherRef, DungeoneerComponent.getComponentType());
                     }
                 }
                 dungeon.clearDungeoneerRefs();
@@ -129,10 +129,8 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
             }
         }
 
-        // Remove our DungeoneerComponent (if not already removed in the loop above)
-        if (store.getComponent(playerEntityRef, DungeoneerComponent.getComponentType()) != null) {
-            store.removeComponent(playerEntityRef, DungeoneerComponent.getComponentType());
-        }
+        // Remove our DungeoneerComponent (tryRemove handles if already removed in the loop above)
+        store.tryRemoveComponent(playerEntityRef, DungeoneerComponent.getComponentType());
 
         playerRef.sendMessage(Message.raw("Escape simulated successfully!"));
         playerRef.sendMessage(Message.raw("Run /chocolate dungeon trigger again to become relic holder."));

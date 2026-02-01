@@ -124,8 +124,8 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
                 playerRefComponent != null ? playerRefComponent.getUsername() : playerUuid,
                 dungeonId, isRelicHolder);
 
-        // Remove DungeoneerComponent from player
-        commandBuffer.removeComponent(playerRef, DungeoneerComponent.getComponentType());
+        // Remove DungeoneerComponent from player (use tryRemove to handle world shutdown race conditions)
+        commandBuffer.tryRemoveComponent(playerRef, DungeoneerComponent.getComponentType());
         entrance.getPlayersInside().remove(playerUuid);
 
         // remove from dungeon tracking
@@ -176,7 +176,7 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
             if (dungeoneerRef.isValid()) {
                 DungeoneerComponent otherDungeoneer = commandBuffer.getComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
                 if (otherDungeoneer != null) {
-                    commandBuffer.removeComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
+                    commandBuffer.tryRemoveComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
 
                     PlayerRef otherPlayer = commandBuffer.getComponent(dungeoneerRef, PlayerRef.getComponentType());
                     if (otherPlayer != null) {

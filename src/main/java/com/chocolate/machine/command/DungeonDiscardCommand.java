@@ -83,15 +83,11 @@ public class DungeonDiscardCommand extends AbstractPlayerCommand {
             }
         }
 
-        // Remove DungeoneerComponent from all dungeoneers
+        // Remove DungeoneerComponent from all dungeoneers (use tryRemove for safety)
         int dungeoneerCount = dungeon.getDungeoneerRefs().size();
         for (Ref<EntityStore> dungeoneerRef : dungeon.getDungeoneerRefs()) {
             if (!dungeoneerRef.isValid()) continue;
-
-            DungeoneerComponent dungeoneer = store.getComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
-            if (dungeoneer != null) {
-                store.removeComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
-            }
+            store.tryRemoveComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
         }
 
         // Clear all references

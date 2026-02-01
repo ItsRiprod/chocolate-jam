@@ -5,6 +5,7 @@ import com.chocolate.machine.dungeon.component.DungeonEntranceComponent;
 import com.chocolate.machine.dungeon.component.DungeoneerComponent;
 import com.chocolate.machine.dungeon.component.SpawnerComponent;
 import com.chocolate.machine.dungeon.component.actions.AxeBladeActionComponent;
+import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent;
 import com.chocolate.machine.dungeon.component.actions.SkeletonActionComponent;
 import com.chocolate.machine.dungeon.spawnable.SpawnableRegistry;
 import com.chocolate.machine.dungeon.spawnable.actions.ArcherAction;
@@ -40,6 +41,7 @@ public class DungeonModule extends System<EntityStore> {
     // runtime only
     private ComponentType<EntityStore, SkeletonActionComponent> skeletonActionComponentType;
     private ComponentType<EntityStore, AxeBladeActionComponent> axeBladeActionComponentType;
+    private ComponentType<EntityStore, HydraulicPressActionComponent> hydraulicPressActionComponentType;
 
     // resources
     private ResourceType<EntityStore, DungeonBossRoomSystem.PendingDungeoneerResource> pendingDungeoneerResourceType;
@@ -95,6 +97,9 @@ public class DungeonModule extends System<EntityStore> {
         axeBladeActionComponentType = registerComponent(AxeBladeActionComponent.class, AxeBladeActionComponent::new);
         AxeBladeActionComponent.setComponentType(axeBladeActionComponentType);
 
+        hydraulicPressActionComponentType = registerComponent(HydraulicPressActionComponent.class, HydraulicPressActionComponent::new);
+        HydraulicPressActionComponent.setComponentType(hydraulicPressActionComponentType);
+
         // traps
         registry.register(new AxeBladeTrap());
         registry.register(new HydraulicPressTrap());
@@ -136,5 +141,10 @@ public class DungeonModule extends System<EntityStore> {
     @Nonnull
     public ComponentType<EntityStore, AxeBladeActionComponent> getAxeBladeActionComponentType() {
         return axeBladeActionComponentType;
+    }
+
+    @Nonnull
+    public ComponentType<EntityStore, HydraulicPressActionComponent> getHydraulicPressActionComponentType() {
+        return hydraulicPressActionComponentType;
     }
 }
