@@ -35,6 +35,7 @@ build/
 /run/
 # /lib
 # /lib
-/lib
+# /lib
 /.claude
 gradle.properties
+/lib

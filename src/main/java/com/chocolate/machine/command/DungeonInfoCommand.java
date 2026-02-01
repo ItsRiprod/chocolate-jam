@@ -108,6 +108,7 @@ public class DungeonInfoCommand extends AbstractPlayerCommand {
             playerRef.sendMessage(Message.raw("--- Dungeon Status ---"));
             playerRef.sendMessage(Message.raw("Active: " + (dungeon.isActive() ? "Yes" : "No")));
             playerRef.sendMessage(Message.raw("Total spawners: " + dungeon.getSpawnerCount()));
+            playerRef.sendMessage(Message.raw("Dungeon blocks: " + dungeon.getDungeonBlockCount()));
 
             if (dungeon.getArtifactHolderRef() != null && dungeon.getArtifactHolderRef().isValid()) {
                 playerRef.sendMessage(Message.raw("Artifact holder: Player"));
