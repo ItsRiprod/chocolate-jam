@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 2,
   "anchorZ": 7,
@@ -6725,14 +6725,7 @@
       "x": 0,
       "y": 4,
       "z": -1,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      }
+      "name": "Cloth_Block_Wool_Purple"
     },
     {
       "x": 0,
@@ -11420,14 +11413,7 @@
       "x": 5,
       "y": 1,
       "z": 2,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      },
+      "name": "Cloth_Block_Wool_Purple",
       "rotation": 3
     },
     {
@@ -13592,133 +13578,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "PatrolPathMarker": {
-          "Version": 5,
-          "Position": {
-            "X": 1.26873779296875,
-            "Y": 4.0,
-            "Z": 0.939239501953125
-          },
-          "HeadRotation": {
-            "Pitch": 0.0,
-            "Yaw": 2.9639644622802734,
-            "Roll": 0.0
-          },
-          "BodyRotation": {
-            "Pitch": 0.0,
-            "Yaw": 2.9432201385498047,
-            "Roll": 0.0
-          },
-          "DisplayName": "0.d47f8c53-18ba-4671-af4c-7a44c356fb19 (OutlanderGuard_006) #0 [Wait 0.0s] <Rotate 0.00deg>",
-          "NameTagVisible": true,
-          "UUID": {
-            "$binary": "xZPgcx2YNmi+KUHmgcF6xw==",
-            "$type": "04"
-          },
-          "Metadata": {},
-          "PathId": {
-            "$binary": "1H+MUxi6RnGvTHpEw1b7GQ==",
-            "$type": "04"
-          },
-          "PathName": "OutlanderGuard_006",
-          "PathLength": 1,
-          "Order": 0,
-          "PauseTime": 0.0,
-          "ObsvAngle": 0.0
-        },
-        "HiddenFromAdventurePlayer": {},
-        "Model": {
-          "Model": {
-            "Id": "Mannequin",
-            "Scale": 1.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 1.26873779296875,
-            "Y": 4.0,
-            "Z": 0.939239501953125
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": 2.9432201385498047,
-            "Roll": 0.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "xB2jMubtPTm+rgTfCEg3nQ==",
-            "$type": "04"
-          }
-        },
-        "Velocity": {
-          "Velocity": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": 2.9639644622802734,
-            "Roll": 0.0
-          }
-        }
-      }
-    },
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Hunter"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Hunter",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 1.268713867187671,
-            "Y": 4.0,
-            "Z": 0.9392418212890448
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -119.55815124511719,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "iJL6nO5MMYKwNKvLz4jCLg==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -122.69974517822266,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }

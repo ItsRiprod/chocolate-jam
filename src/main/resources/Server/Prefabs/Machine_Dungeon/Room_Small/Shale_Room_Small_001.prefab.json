@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 1,
   "anchorY": 35,
   "anchorZ": 21,
@@ -3977,20 +3977,7 @@
       "x": -1,
       "y": 36,
       "z": 14,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "x9M0GYCLPG+IqIodoDzEcQ==",
-              "$type": "04"
-            }
-          },
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier2"
-          }
-        }
-      },
+      "name": "Cloth_Block_Wool_Purple",
       "rotation": 1
     },
     {
@@ -5247,20 +5234,7 @@
       "x": 1,
       "y": 37,
       "z": 10,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "x9M0GYCLPG+IqIodoDzEcQ==",
-              "$type": "04"
-            }
-          },
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      }
+      "name": "Cloth_Block_Wool_Purple"
     },
     {
       "x": 1,
@@ -7802,12 +7776,7 @@
       "x": 4,
       "y": 36,
       "z": 18,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 4,
@@ -10900,56 +10869,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 0.49707783203120925,
-            "Y": 36.00076116943353,
-            "Z": 16.51625033416758
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -15.259873390197754,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "K9QJoEZcM8Wp4T3Un/NI4g==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -18.401466369628906,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }

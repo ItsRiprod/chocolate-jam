@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 0,
   "anchorZ": 7,
@@ -3745,11 +3745,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -2,
-              "Y": 4,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -3810,11 +3805,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -2,
-              "Y": 4,
-              "Z": -11
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -3857,11 +3847,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -2,
-              "Y": 1,
-              "Z": -10
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -4550,11 +4535,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -1,
-              "Y": 1,
-              "Z": -11
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -5985,11 +5965,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 1,
-              "Y": 5,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -6040,14 +6015,7 @@
       "x": 1,
       "y": 4,
       "z": -4,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      }
+      "name": "Cloth_Block_Wool_Purple"
     },
     {
       "x": 1,
@@ -6658,11 +6626,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 2,
-              "Y": 1,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -6867,11 +6830,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 2,
-              "Y": 1,
-              "Z": -9
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -7901,12 +7859,7 @@
       "x": 3,
       "y": 1,
       "z": 4,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 3,
@@ -8158,11 +8111,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 4,
-              "Y": 2,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -8501,14 +8449,7 @@
       "x": 4,
       "y": 1,
       "z": 1,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      },
+      "name": "Cloth_Block_Wool_Purple",
       "rotation": 3
     },
     {
@@ -8615,11 +8556,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 4,
-              "Y": 2,
-              "Z": -4
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -8932,11 +8868,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 4,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -8979,11 +8910,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 1,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9206,11 +9132,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 4,
-              "Z": -8
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9253,11 +9174,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 1,
-              "Z": -7
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9288,11 +9204,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 4,
-              "Z": -7
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9528,11 +9439,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 1,
-              "Z": -2
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9955,11 +9861,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 5,
-              "Z": -9
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10020,11 +9921,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 5,
-              "Z": -8
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10061,11 +9957,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 1,
-              "Z": -7
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10096,11 +9987,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 4,
-              "Z": -7
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10143,11 +10029,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 1,
-              "Z": -6
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10358,11 +10239,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 1,
-              "Z": -2
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10393,11 +10269,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 4,
-              "Z": -2
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10416,11 +10287,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 5,
-              "Z": -2
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10457,11 +10323,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 1,
-              "Z": -1
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10492,11 +10353,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 4,
-              "Z": -1
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10515,11 +10371,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 5,
-              "Z": -1
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -11312,107 +11163,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 1.2875108398440034,
-            "Y": 1.0005600097655787,
-            "Z": 0.5814288574218267
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -15.886378288269043,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "LzxBE5vDPma3ZO9tCoYOzQ==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -19.027971267700195,
-            "Roll": 0.0
-          }
-        }
-      }
-    },
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Hunter"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Hunter",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 0.42645263671875,
-            "Y": 4.0,
-            "Z": -3.492218017578125
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": 3.1415927410125732,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "pMie18gyMc+yGwGnonN+VQ==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -3.126485824584961,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }

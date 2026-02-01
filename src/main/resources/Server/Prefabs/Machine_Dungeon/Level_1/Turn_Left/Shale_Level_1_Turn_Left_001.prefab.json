@@ -7609,59 +7609,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "NPCReferences": [],
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 3.450531005859375,
-            "Y": 1.0004119873046875,
-            "Z": -1.5143613815307617
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": 2.177273750305176,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "PrefabCopyable": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0,
-            "Static": false
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "VX+/BwXbPEiyHEyPfDVWZA==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -1.5444259643554688,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }

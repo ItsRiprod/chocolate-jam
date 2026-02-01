@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 0,
   "anchorZ": 7,
@@ -1900,12 +1900,7 @@
       "x": -5,
       "y": 1,
       "z": 2,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -5,
@@ -2388,12 +2383,7 @@
       "x": -4,
       "y": 1,
       "z": -3,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -4,
@@ -3983,12 +3973,7 @@
       "x": -2,
       "y": 1,
       "z": 0,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -2,
@@ -5441,14 +5426,7 @@
       "x": 0,
       "y": 1,
       "z": 0,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      }
+      "name": "Cloth_Block_Wool_Purple"
     },
     {
       "x": 0,
@@ -7477,12 +7455,7 @@
       "x": 3,
       "y": 1,
       "z": -3,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 3,
@@ -8444,12 +8417,7 @@
       "x": 4,
       "y": 1,
       "z": 2,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 4,
@@ -10906,56 +10874,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 0.48320693359391953,
-            "Y": 1.0006952514647764,
-            "Z": 2.380625488281339
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -15.681628227233887,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "r2IWWFYDOT2r7v3C2aZTbg==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -18.82322120666504,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 0,
   "anchorZ": 7,
@@ -855,20 +855,7 @@
       "x": -6,
       "y": 5,
       "z": -5,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "x9M0GYCLPG+IqIodoDzEcQ==",
-              "$type": "04"
-            }
-          },
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier2"
-          }
-        }
-      },
+      "name": "Cloth_Block_Wool_Purple",
       "rotation": 1
     },
     {
@@ -1108,11 +1095,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -6,
-              "Y": 5,
-              "Z": -7
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -1149,11 +1131,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -6,
-              "Y": 1,
-              "Z": -6
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -1172,11 +1149,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -6,
-              "Y": 2,
-              "Z": -6
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -1283,11 +1255,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -6,
-              "Y": 1,
-              "Z": -4
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -1351,11 +1318,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -6,
-              "Y": 1,
-              "Z": -3
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -1374,11 +1336,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -6,
-              "Y": 2,
-              "Z": -3
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -1650,11 +1607,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -5,
-              "Y": 5,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -2004,11 +1956,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -5,
-              "Y": 5,
-              "Z": -6
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -2093,14 +2040,7 @@
       "x": -5,
       "y": 1,
       "z": 3,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      },
+      "name": "Cloth_Block_Wool_Purple",
       "rotation": 1
     },
     {
@@ -2153,11 +2093,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -5,
-              "Y": 1,
-              "Z": -3
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -2410,11 +2345,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -4,
-              "Y": 1,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -2433,11 +2363,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -4,
-              "Y": 2,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -2492,11 +2417,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -4,
-              "Y": 1,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -2654,11 +2574,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -4,
-              "Y": 1,
-              "Z": -9
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -3447,11 +3362,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -3,
-              "Y": 1,
-              "Z": -8
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -4343,12 +4253,7 @@
       "x": -2,
       "y": 1,
       "z": 2,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -2,
@@ -5418,11 +5323,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 0,
-              "Y": 2,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -5477,11 +5377,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 0,
-              "Y": 1,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -5500,11 +5395,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 0,
-              "Y": 2,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -5573,14 +5463,7 @@
       "x": 0,
       "y": 4,
       "z": -4,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      }
+      "name": "Cloth_Block_Wool_Purple"
     },
     {
       "x": 0,
@@ -6241,11 +6124,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 1,
-              "Y": 1,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -6282,11 +6160,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 1,
-              "Y": 5,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -8420,11 +8293,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 4,
-              "Y": 1,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -8487,11 +8355,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 4,
-              "Y": 1,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -8668,11 +8531,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 4,
-              "Y": 4,
-              "Z": -9
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9437,11 +9295,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 1,
-              "Z": -8
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9646,11 +9499,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 1,
-              "Z": -4
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9777,11 +9625,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 5,
-              "Y": 4,
-              "Z": -2
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10354,12 +10197,7 @@
       "x": 6,
       "y": 1,
       "z": 2,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 6,
@@ -10413,11 +10251,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 1,
-              "Z": -4
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -10480,11 +10313,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 6,
-              "Y": 1,
-              "Z": -3
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -11399,56 +11227,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": -3.9337429687499252,
-            "Y": 1.0,
-            "Z": 0.5833187011722316
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -14.430378913879395,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "hc6lL49nNH2db6uHo3U6pg==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -17.571971893310547,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 35,
   "anchorZ": 21,
@@ -2309,11 +2309,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": -4,
-              "Y": 4,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -5386,20 +5381,7 @@
       "x": 0,
       "y": 36,
       "z": 13,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "x9M0GYCLPG+IqIodoDzEcQ==",
-              "$type": "04"
-            }
-          },
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
-          }
-        }
-      }
+      "name": "Cloth_Block_Wool_Purple"
     },
     {
       "x": 0,
@@ -5901,11 +5883,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 1,
-              "Y": 4,
-              "Z": -13
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -7396,11 +7373,6 @@
       "components": {
         "Components": {
           "container": {
-            "Position": {
-              "X": 3,
-              "Y": 2,
-              "Z": -12
-            },
             "Custom": false,
             "AllowViewing": true,
             "ItemContainer": {
@@ -9251,20 +9223,7 @@
       "x": 5,
       "y": 38,
       "z": 17,
-      "name": "Block_Spawner_Block",
-      "components": {
-        "Components": {
-          "PlacedByInteraction": {
-            "WhoPlacedUuid": {
-              "$binary": "x9M0GYCLPG+IqIodoDzEcQ==",
-              "$type": "04"
-            }
-          },
-          "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier2"
-          }
-        }
-      },
+      "name": "Cloth_Block_Wool_Purple",
       "rotation": 3
     },
     {
@@ -10933,56 +10892,5 @@
     }
   ],
   "entities": [
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": 2.285790136718788,
-            "Y": 36.0,
-            "Z": 15.631017913818368
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -16.476123809814453,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "jl52F1yONkSk27sjCOcNeg==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -19.61771583557129,
-            "Roll": 0.0
-          }
-        }
-      }
-    }
   ]
 }
