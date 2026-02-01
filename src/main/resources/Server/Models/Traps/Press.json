@@ -1,6 +1,6 @@
 {
   "Model": "NPC/Traps/Press.blockymodel",
-  "Texture": "NPC/Traps/press.png",
+  "Texture": "NPC/Traps/Press_Metallic.png",
   "HitBox": {
     "Max": {
       "X": 1.0,
