@@ -1,0 +1,11 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "First",
+      "PositionOffset": {
+        "Y": 2
+      }
+    }
+  ],
+  "LifeSpan": 0
+}
