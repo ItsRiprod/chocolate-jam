@@ -3,21 +3,21 @@
   "Model": "NPC/Robots/Tier1_Enemy.blockymodel",
   "HitBox": {
     "Max": {
-      "X": 0.3,
-      "Y": 1.8,
-      "Z": 0.3
+      "X": 0.2,
+      "Y": 1.2,
+      "Z": 0.2
     },
     "Min": {
-      "X": -0.3,
+      "X": -0.2,
       "Y": 0,
-      "Z": -0.3
+      "Z": -0.2
     }
   },
   "AnimationSets": {
     "Idle": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Idle.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Idle.blockyanim",
           "Speed": 0.5
         }
       ]
@@ -25,7 +25,7 @@
     "Walk": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Walk.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Walk.blockyanim",
           "Speed": 1,
           "SoundEventId": "SFX_Skeleton_Walk"
         }
@@ -34,7 +34,7 @@
     "WalkBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Walk_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Walk_Backward.blockyanim",
           "Speed": 1
         }
       ]
@@ -42,7 +42,7 @@
     "Run": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Run.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Run.blockyanim",
           "Speed": 0.9,
           "SoundEventId": "SFX_Skeleton_Run"
         }
@@ -51,7 +51,7 @@
     "RunBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Run_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Run_Backward.blockyanim",
           "Speed": 0.9,
           "SoundEventId": "SFX_Skeleton_Run"
         }
@@ -60,7 +60,7 @@
     "Sprint": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Sprint.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Sprint.blockyanim",
           "Speed": 1.1,
           "SoundEventId": "SFX_Skeleton_Run"
         }
@@ -69,7 +69,7 @@
     "Crouch": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Crouch.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Crouch.blockyanim",
           "BlendingDuration": 0.1,
           "Speed": 0.5
         }
@@ -78,7 +78,7 @@
     "CrouchWalk": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Crouch_Walk.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Crouch_Walk.blockyanim",
           "BlendingDuration": 0.1,
           "Speed": 0.8
         }
@@ -87,7 +87,7 @@
     "CrouchWalkBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Crouch_Walk_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Crouch_Walk_Backward.blockyanim",
           "BlendingDuration": 0.1,
           "Speed": 0.8
         }
@@ -96,7 +96,7 @@
     "Jump": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Jump.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Jump.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "Speed": 0.8
@@ -106,7 +106,7 @@
     "JumpWalk": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Jump.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Jump.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "Speed": 0.8
@@ -116,13 +116,13 @@
     "JumpRun": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Jump_Far.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Jump_Far.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "Speed": 0.8
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Jump_Far2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Jump_Far2.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "Speed": 0.8
@@ -132,11 +132,11 @@
     "Fall": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Fall.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Fall.blockyanim",
           "BlendingDuration": 0.4
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Fall2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Fall2.blockyanim",
           "BlendingDuration": 0.4
         }
       ]
@@ -144,7 +144,7 @@
     "Alerted": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Alerted.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Alerted.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Alerted"
         }
@@ -153,7 +153,7 @@
     "FlyIdle": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Fly/Fly_Idle.blockyanim",
+          "Animation": "NPC/Robots/Animations/Fly/Fly_Idle.blockyanim",
           "Speed": 1
         }
       ]
@@ -161,7 +161,7 @@
     "Fly": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Fly/Fly.blockyanim",
+          "Animation": "NPC/Robots/Animations/Fly/Fly.blockyanim",
           "Speed": 1
         }
       ]
@@ -169,7 +169,7 @@
     "FlyBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Fly/Fly_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Fly/Fly_Backward.blockyanim",
           "Speed": 1
         }
       ]
@@ -177,7 +177,7 @@
     "FlyFast": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Fly/Fly_Fast.blockyanim",
+          "Animation": "NPC/Robots/Animations/Fly/Fly_Fast.blockyanim",
           "Speed": 1
         }
       ]
@@ -185,14 +185,14 @@
     "SwimIdle": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Idle.blockyanim"
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Idle.blockyanim"
         }
       ]
     },
     "Swim": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim.blockyanim",
           "Speed": 0.6
         }
       ]
@@ -200,7 +200,7 @@
     "SwimBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Backward.blockyanim",
           "Speed": 1
         }
       ]
@@ -208,7 +208,7 @@
     "SwimFast": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Fast.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Fast.blockyanim",
           "Speed": 0.6
         }
       ]
@@ -216,7 +216,7 @@
     "SwimJump": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Jump.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Jump.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "Speed": 0.8
@@ -226,21 +226,21 @@
     "SwimFloat": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Float.blockyanim"
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Float.blockyanim"
         }
       ]
     },
     "SwimSink": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Sink.blockyanim"
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Sink.blockyanim"
         }
       ]
     },
     "SwimDive": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Dive.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive.blockyanim",
           "Speed": 0.6
         }
       ]
@@ -248,7 +248,7 @@
     "SwimDiveBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Dive_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive_Backward.blockyanim",
           "Speed": 1
         }
       ]
@@ -256,11 +256,11 @@
     "SwimDiveFast": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Dive_Fast.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive_Fast.blockyanim",
           "Speed": 0.6
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Swim/Swim_Dive_Fast2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Swim/Swim_Dive_Fast2.blockyanim",
           "Speed": 0.6
         }
       ]
@@ -268,7 +268,7 @@
     "FluidIdle": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Idle.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Idle.blockyanim",
           "Speed": 0.3
         }
       ]
@@ -276,7 +276,7 @@
     "FluidWalk": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Walk.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Walk.blockyanim",
           "Speed": 0.6
         }
       ]
@@ -284,7 +284,7 @@
     "FluidWalkBackward": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Walk_Backward.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Walk_Backward.blockyanim",
           "Speed": 0.6
         }
       ]
@@ -292,7 +292,7 @@
     "FluidRun": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Run.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Run.blockyanim",
           "Speed": 0.5
         }
       ]
@@ -300,7 +300,7 @@
     "ClimbIdle": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Climb/Climb_Idle.blockyanim",
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Idle.blockyanim",
           "Speed": 0.5
         }
       ]
@@ -308,41 +308,41 @@
     "ClimbUp": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Climb/Climb_Up.blockyanim"
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Up.blockyanim"
         }
       ]
     },
     "ClimbDown": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Climb/Climb_Down.blockyanim"
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Down.blockyanim"
         }
       ]
     },
     "ClimbLeft": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Climb/Climb_Left.blockyanim"
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Left.blockyanim"
         }
       ]
     },
     "ClimbRight": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Climb/Climb_Right.blockyanim"
+          "Animation": "NPC/Robots/Animations/Climb/Climb_Right.blockyanim"
         }
       ]
     },
     "Hurt": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Damage/Hurt.blockyanim",
+          "Animation": "NPC/Robots/Animations/Damage/Hurt.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Hurt"
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Damage/Hurt2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Damage/Hurt2.blockyanim",
           "BlendingDuration": 0.1,
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Hurt"
@@ -352,22 +352,22 @@
     "Death": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Damage/Death.blockyanim",
+          "Animation": "NPC/Robots/Animations/Damage/Death.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Death_1"
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Damage/Death2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Damage/Death2.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Death_2"
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Damage/Death3.blockyanim",
+          "Animation": "NPC/Robots/Animations/Damage/Death3.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Death_3"
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Damage/Death4.blockyanim",
+          "Animation": "NPC/Robots/Animations/Damage/Death4.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Death_4"
         }
@@ -376,13 +376,13 @@
     "Spawn": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Spawn.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Spawn.blockyanim",
           "BlendingDuration": 0,
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Spawn_1"
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Spawn2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Spawn2.blockyanim",
           "BlendingDuration": 0,
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Spawn_2"
@@ -392,12 +392,12 @@
     "Despawn": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Despawn.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Despawn.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Despawn_1"
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Despawn2.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Despawn2.blockyanim",
           "Looping": false,
           "SoundEventId": "SFX_Skeleton_Despawn_2"
         }
@@ -406,15 +406,15 @@
     "IdlePassive": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Flavor/Head_Shake.blockyanim",
+          "Animation": "NPC/Robots/Animations/Flavor/Head_Shake.blockyanim",
           "Weight": 4
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Flavor/Head_Spin.blockyanim",
+          "Animation": "NPC/Robots/Animations/Flavor/Head_Spin.blockyanim",
           "Weight": 1
         },
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Flavor/Head_Look_Around.blockyanim",
+          "Animation": "NPC/Robots/Animations/Flavor/Head_Look_Around.blockyanim",
           "Weight": 5
         }
       ],
@@ -426,7 +426,7 @@
     "Search": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Flavor/Search.blockyanim",
+          "Animation": "NPC/Robots/Animations/Flavor/Search.blockyanim",
           "SoundEventId": "SFX_Skeleton_Search_2"
         }
       ]
@@ -434,14 +434,14 @@
     "Sleep": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Sleep.blockyanim"
+          "Animation": "NPC/Robots/Animations/Default/Sleep.blockyanim"
         }
       ]
     },
     "Laydown": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Laydown.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Laydown.blockyanim",
           "Looping": false
         }
       ]
@@ -449,7 +449,7 @@
     "Wake": {
       "Animations": [
         {
-          "Animation": "NPC/Undead/Skeleton/Animations/Default/Wake.blockyanim",
+          "Animation": "NPC/Robots/Animations/Default/Wake.blockyanim",
           "Looping": false
         }
       ]

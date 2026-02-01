@@ -3,7 +3,7 @@
     {
       "id": "1",
       "name": "Origin",
-      "position": {"x": 0, "y": 0, "z": 0},
+      "position": {"x": 1, "y": 0, "z": 0},
       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
       "shape": {
         "type": "none",
@@ -73,11 +73,11 @@
             {
               "id": "3",
               "name": "Wheel",
-              "position": {"x": 14.5, "y": -32.5, "z": -1},
+              "position": {"x": 14.5, "y": -15.08873, "z": -0.5},
               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0, "y": 17.5, "z": 0.5},
+                "offset": {"x": 0, "y": 0.08873, "z": 0},
                 "stretch": {"x": 1, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,
@@ -238,11 +238,11 @@
             {
               "id": "8",
               "name": "Wheel2",
-              "position": {"x": -11.5, "y": -32.5, "z": -1},
+              "position": {"x": -11.5, "y": -15.08873, "z": -0.5},
               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0, "y": 17.5, "z": 0.5},
+                "offset": {"x": 0, "y": 0.08873, "z": 0},
                 "stretch": {"x": 1, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,
@@ -1137,8 +1137,8 @@
                                   },
                                   "top": {
                                     "offset": {"x": 135, "y": 73},
-                                    "mirror": {"x": false, "y": false},
-                                    "angle": 90
+                                    "mirror": {"x": true, "y": true},
+                                    "angle": 270
                                   },
                                   "bottom": {
                                     "offset": {"x": 195, "y": 94},
@@ -1154,25 +1154,6 @@
                             },
                             {
                               "id": "33",
-                              "name": "L-Eyebrow-Attachment2",
-                              "position": {"x": 6.99987, "y": -0.50689, "z": 22.91456},
-                              "orientation": {"x": 0.01456, "y": 0, "z": 0, "w": 0.99989},
-                              "shape": {
-                                "type": "none",
-                                "offset": {"x": 0, "y": 0, "z": 0},
-                                "stretch": {"x": 0, "y": 0, "z": 0},
-                                "settings": {
-                                  "isPiece": true
-                                },
-                                "textureLayout": {},
-                                "unwrapMode": "custom",
-                                "visible": true,
-                                "doubleSided": false,
-                                "shadingMode": "flat"
-                              }
-                            },
-                            {
-                              "id": "34",
                               "name": "R-Eye-Attachment2",
                               "position": {"x": 6.99987, "y": -6.5, "z": 20.15496},
                               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -1191,7 +1172,7 @@
                               }
                             },
                             {
-                              "id": "35",
+                              "id": "34",
                               "name": "L-Eye-Attachment2",
                               "position": {"x": -6.99997, "y": -6.50002, "z": 19.98958},
                               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -1210,26 +1191,7 @@
                               }
                             },
                             {
-                              "id": "36",
-                              "name": "R-Eyebrow-Attachment2",
-                              "position": {"x": -6.99987, "y": -0.34217, "z": 22.91936},
-                              "orientation": {"x": 0.01456, "y": 0, "z": 0, "w": 0.99989},
-                              "shape": {
-                                "type": "none",
-                                "offset": {"x": 0, "y": 0, "z": 0},
-                                "stretch": {"x": 0, "y": 0, "z": 0},
-                                "settings": {
-                                  "isPiece": true
-                                },
-                                "textureLayout": {},
-                                "unwrapMode": "custom",
-                                "visible": true,
-                                "doubleSided": false,
-                                "shadingMode": "flat"
-                              }
-                            },
-                            {
-                              "id": "37",
+                              "id": "35",
                               "name": "cube--C2",
                               "position": {"x": 13, "y": 29.0003, "z": -16.00001},
                               "orientation": {"x": 0, "y": -0.36244, "z": -0.93201, "w": 0},
@@ -1257,7 +1219,7 @@
                               }
                             },
                             {
-                              "id": "38",
+                              "id": "36",
                               "name": "cube--C3",
                               "position": {"x": -30, "y": -8.9997, "z": -16.00001},
                               "orientation": {"x": 0.25628, "y": -0.25628, "z": -0.65903, "w": 0.65903},
@@ -1285,7 +1247,7 @@
                               }
                             },
                             {
-                              "id": "39",
+                              "id": "37",
                               "name": "cube--C4",
                               "position": {"x": 30, "y": -8.9997, "z": -16.00001},
                               "orientation": {"x": 0.25628, "y": 0.25628, "z": 0.65903, "w": 0.65903},
@@ -1313,7 +1275,7 @@
                               }
                             },
                             {
-                              "id": "40",
+                              "id": "38",
                               "name": "cube--C5",
                               "position": {"x": 5, "y": 11.50035, "z": -3.00002},
                               "orientation": {"x": 0, "y": 0, "z": -0.15212, "w": 0.98836},
@@ -1365,7 +1327,7 @@
                               }
                             },
                             {
-                              "id": "41",
+                              "id": "39",
                               "name": "cube--C6",
                               "position": {"x": 13, "y": -7.49965, "z": -3.00002},
                               "orientation": {"x": 0, "y": 0, "z": -0.23769, "w": 0.97134},
@@ -1417,7 +1379,7 @@
                               }
                             },
                             {
-                              "id": "42",
+                              "id": "40",
                               "name": "cube--C7",
                               "position": {"x": -13, "y": -7.49965, "z": -3.00002},
                               "orientation": {"x": 0, "y": 0, "z": 0.23769, "w": 0.97134},
@@ -1469,7 +1431,7 @@
                               }
                             },
                             {
-                              "id": "43",
+                              "id": "41",
                               "name": "cube--C8",
                               "position": {"x": -5, "y": 11.50035, "z": -3.00002},
                               "orientation": {"x": 0, "y": 0, "z": 0.15212, "w": 0.98836},
@@ -1521,7 +1483,7 @@
                               }
                             },
                             {
-                              "id": "44",
+                              "id": "42",
                               "name": "eyes",
                               "position": {"x": -6, "y": -4.49965, "z": 14.99998},
                               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -1572,7 +1534,7 @@
                               },
                               "children": [
                                 {
-                                  "id": "45",
+                                  "id": "43",
                                   "name": "eyes--C1",
                                   "position": {"x": -11, "y": 0, "z": 0},
                                   "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -1626,7 +1588,7 @@
                               ]
                             },
                             {
-                              "id": "46",
+                              "id": "44",
                               "name": "Helmet",
                               "position": {"x": 0, "y": 4.0003, "z": 4.99999},
                               "orientation": {"x": 0, "y": -0.70711, "z": 0, "w": 0.70711},
@@ -1681,7 +1643,7 @@
                       ]
                     },
                     {
-                      "id": "47",
+                      "id": "45",
                       "name": "R-Arm",
                       "position": {"x": -15, "y": 7, "z": -1},
                       "orientation": {"x": -0.00929, "y": -0.06034, "z": -0.23725, "w": 0.96953},
@@ -1732,7 +1694,7 @@
                       },
                       "children": [
                         {
-                          "id": "48",
+                          "id": "46",
                           "name": "R-Forearm",
                           "position": {"x": -0.49984, "y": -9.01512, "z": -0.49127},
                           "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -1783,7 +1745,7 @@
                           },
                           "children": [
                             {
-                              "id": "49",
+                              "id": "47",
                               "name": "R-Hand",
                               "position": {"x": 0, "y": -8, "z": 0},
                               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
@@ -1834,7 +1796,7 @@
                               },
                               "children": [
                                 {
-                                  "id": "50",
+                                  "id": "48",
                                   "name": "R-Attachment",
                                   "position": {"x": 0, "y": 0, "z": 0},
                                   "orientation": {"x": 0.70711, "y": 0, "z": 0, "w": 0.70711},
@@ -1865,6 +1827,44 @@
           ]
         }
       ]
+    },
+    {
+      "id": "49",
+      "name": "L-Eyebrow-Attachment2",
+      "position": {"x": -113, "y": 0, "z": 0},
+      "orientation": {"x": 0.01456, "y": 0, "z": 0, "w": 0.99989},
+      "shape": {
+        "type": "none",
+        "offset": {"x": 0, "y": 0, "z": 0},
+        "stretch": {"x": 0, "y": 0, "z": 0},
+        "settings": {
+          "isPiece": true
+        },
+        "textureLayout": {},
+        "unwrapMode": "custom",
+        "visible": true,
+        "doubleSided": false,
+        "shadingMode": "flat"
+      }
+    },
+    {
+      "id": "50",
+      "name": "R-Eyebrow-Attachment2",
+      "position": {"x": -113, "y": 0, "z": 0},
+      "orientation": {"x": 0.01456, "y": 0, "z": 0, "w": 0.99989},
+      "shape": {
+        "type": "none",
+        "offset": {"x": 0, "y": 0, "z": 0},
+        "stretch": {"x": 0, "y": 0, "z": 0},
+        "settings": {
+          "isPiece": true
+        },
+        "textureLayout": {},
+        "unwrapMode": "custom",
+        "visible": true,
+        "doubleSided": false,
+        "shadingMode": "flat"
+      }
     }
   ],
   "format": "character",

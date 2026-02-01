@@ -16,8 +16,8 @@
     },
     "FlockArray": {
       "Value": [
-        "Skeleton_Fighter",
-        "Skeleton_Archer"
+        "Tier1_Enemy",
+        "Tier2_Enemy"
       ],
       "TypeHint": "String",
       "Description": "Array containing NPCs for this flock type."
@@ -50,7 +50,7 @@
     "DropList": "Drop_Skeleton_Fighter",
     "Appearance": "Tier3_Enemy",
     "Weapons": [
-      "Weapon_Sword_Crude"
+      "Weapon_Sword_Doomed"
     ],
     "FlockArray": {
       "Compute": "FlockArray"
@@ -64,7 +64,7 @@
     "WanderRadius": {
       "Compute": "WanderRadius"
     },
-    "Attack": "Root_NPC_Skeleton_Fighter_Attack",
+    "Attack": "Root_NPC_Machine_Attack",
     "AttackDistance": 2.5,
     "AttackPauseRange": [
       1,

@@ -73,11 +73,11 @@
             {
               "id": "3",
               "name": "Wheel3",
-              "position": {"x": 0.5, "y": -45, "z": 1.5},
+              "position": {"x": 0.5, "y": -27.58873, "z": 2},
               "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0, "y": 17.5, "z": 0.5},
+                "offset": {"x": 0, "y": 0.08873, "z": 0},
                 "stretch": {"x": 1, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,
@@ -238,11 +238,11 @@
             {
               "id": "8",
               "name": "Wheel2",
-              "position": {"x": -21.5, "y": -45, "z": 1.5},
+              "position": {"x": -18.47627, "y": -27.8533, "z": 2},
               "orientation": {"x": 0, "y": 0, "z": -0.08716, "w": 0.99619},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0, "y": 17.5, "z": 0.5},
+                "offset": {"x": 0, "y": 0.08873, "z": 0},
                 "stretch": {"x": 1, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,
@@ -403,11 +403,11 @@
             {
               "id": "13",
               "name": "Wheel",
-              "position": {"x": 22.5, "y": -45, "z": 0.5},
+              "position": {"x": 19.47627, "y": -27.8533, "z": 1},
               "orientation": {"x": 0, "y": 0, "z": 0.08716, "w": 0.99619},
               "shape": {
                 "type": "box",
-                "offset": {"x": 0, "y": 17.5, "z": 0.5},
+                "offset": {"x": 0, "y": 0.08873, "z": 0},
                 "stretch": {"x": 1, "y": 1, "z": 1},
                 "settings": {
                   "isPiece": false,

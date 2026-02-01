@@ -23,7 +23,7 @@ public class BruteAction implements Spawnable {
 
     public static final String ID = "brute";
 
-    private static final String SKELETON_ROLE = "Ghoul";
+    private static final String SKELETON_ROLE = "Tier3_Enemy";
 
     private static final String SKELETON_GROUP = null;
 

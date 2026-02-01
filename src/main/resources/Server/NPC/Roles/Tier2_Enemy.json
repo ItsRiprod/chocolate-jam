@@ -16,8 +16,8 @@
     },
     "FlockArray": {
       "Value": [
-        "Skeleton_Fighter",
-        "Skeleton_Archer"
+        "Tier1_Enemy",
+        "Tier3_Enemy"
       ],
       "TypeHint": "String",
       "Description": "Array containing NPCs for this flock type."
@@ -42,7 +42,7 @@
     "DropList": "Drop_Skeleton_Archer",
     "Appearance": "Tier2_Enemy",
     "Weapons": [
-      "Weapon_Shortbow_Iron_Rusty"
+      "Weapon_Shortbow_Doomed"
     ],
     "FlockArray": {
       "Compute": "FlockArray"

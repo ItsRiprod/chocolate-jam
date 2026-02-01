@@ -23,9 +23,9 @@ public class GolemAction implements Spawnable {
 
     public static final String ID = "skeleton";
 
-    private static final String SKELETON_ROLE = "Skeleton";
+    private static final String GOLEM_ROLE = "Tier1_Enemy";
 
-    private static final String SKELETON_GROUP = null;
+    private static final String GOLEM_GROUP = null;
 
     public GolemAction() {
     }
@@ -104,10 +104,10 @@ public class GolemAction implements Spawnable {
         }
 
         Pair<Ref<EntityStore>, ?> npcPair = npcPlugin.spawnNPC(
-                store, SKELETON_ROLE, SKELETON_GROUP, position, rotation);
+                store, GOLEM_ROLE, GOLEM_GROUP, position, rotation);
 
         if (npcPair == null) {
-            LOGGER.atWarning().log("Failed to spawn skeleton - role '%s' may not exist", SKELETON_ROLE);
+            LOGGER.atWarning().log("Failed to spawn skeleton - role '%s' may not exist", GOLEM_ROLE);
             return;
         }
 

@@ -1,0 +1,20 @@
+{
+  "Interactions": [
+    {
+      "Type": "Chaining",
+      "ChainId": "Slashes",
+      "ChainingAllowance": 15,
+      "Next": [
+        "Machine_Swing_Down",
+        "Machine_Swing_Left",
+        "Machine_Swing_Right",
+        "Machine_Swing_Up_Left"
+      ]
+    }
+  ],
+  "Tags": {
+    "Attack": [
+      "Melee"
+    ]
+  }
+}
