@@ -1,6 +1,6 @@
 {
   "formatVersion": 1,
-  "duration": 180,
+  "duration": 121,
   "holdLastKeyframe": true,
   "nodeAnimations": {
     "Head": {
@@ -21,7 +21,28 @@
           "interpolationType": "linear"
         }
       ],
-      "orientation": [],
+      "orientation": [
+        {
+          "time": 17,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": 1},
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 50,
+          "delta": {"x": 0, "y": -0.02618, "z": 0, "w": 0.99966},
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 92,
+          "delta": {"x": 0, "y": 0.02618, "z": 0, "w": 0.99966},
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 120,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": 1},
+          "interpolationType": "linear"
+        }
+      ],
       "shapeStretch": [
         {
           "time": 120,
@@ -171,6 +192,24 @@
           "interpolationType": "linear"
         }
       ],
+      "shapeVisible": [],
+      "shapeUvOffset": []
+    },
+    "Shaft4": {
+      "position": [
+        {
+          "time": 0,
+          "delta": {"x": 0, "y": -9, "z": 0},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 121,
+          "delta": {"x": 0, "y": 31, "z": 0},
+          "interpolationType": "linear"
+        }
+      ],
+      "orientation": [],
+      "shapeStretch": [],
       "shapeVisible": [],
       "shapeUvOffset": []
     }

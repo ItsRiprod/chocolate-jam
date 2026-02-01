@@ -14,17 +14,21 @@ import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Holder;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.RemoveReason;
-import com.hypixel.hytale.component.ResourceType;
 import com.hypixel.hytale.component.Store;
-import com.hypixel.hytale.component.spatial.SpatialResource;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.math.shape.Box;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3f;
 import com.hypixel.hytale.protocol.AnimationSlot;
+import com.hypixel.hytale.protocol.ChangeVelocityType;
+import com.hypixel.hytale.server.core.asset.type.camera.CameraEffect;
 import com.hypixel.hytale.server.core.asset.type.model.config.Model;
 import com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset;
+import com.hypixel.hytale.server.core.asset.type.particle.config.WorldParticle;
+import com.hypixel.hytale.server.core.asset.type.soundevent.config.SoundEvent;
 import com.hypixel.hytale.server.core.entity.AnimationUtils;
 import com.hypixel.hytale.server.core.entity.UUIDComponent;
+import com.hypixel.hytale.server.core.entity.knockback.KnockbackComponent;
 import com.hypixel.hytale.server.core.modules.entity.EntityModule;
 import com.hypixel.hytale.server.core.modules.entity.component.BoundingBox;
 import com.hypixel.hytale.server.core.modules.entity.component.ModelComponent;
@@ -34,7 +38,11 @@ import com.hypixel.hytale.server.core.modules.entity.damage.DamageCause;
 import com.hypixel.hytale.server.core.modules.entity.damage.DamageSystems;
 import com.hypixel.hytale.server.core.modules.entity.tracker.NetworkId;
 import com.hypixel.hytale.server.core.modules.entitystats.EntityStatMap;
+import com.hypixel.hytale.server.core.universe.world.ParticleUtil;
+import com.hypixel.hytale.server.core.universe.world.SoundUtil;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.server.core.util.TargetUtil;
+import com.hypixel.hytale.protocol.SoundCategory;
 
 public class HydraulicPressTrap implements Spawnable {
 
@@ -47,20 +55,48 @@ public class HydraulicPressTrap implements Spawnable {
     private static final String ANIM_RELEASE = "Release";
     private static final String ANIM_IDLE = "Idle";
 
-    private static final String DAMAGE_CAUSE_NAME = "Physical";
+    private static final String DAMAGE_CAUSE_NAME = "Environment";
+    private static final String ENVIRONMENT_SOURCE_TYPE = "hydraulic_press";
 
-    private final ResourceType<EntityStore, SpatialResource<Ref<EntityStore>, EntityStore>> entitySpatialResource;
+    private static final String IMPACT_SOUND_ASSET = "SFX_Mace_T2_Impact";
+    private static final String IMPACT_PARTICLE_SYSTEM = "Impact_Mace_Bash";
+    private static final String CAMERA_SHAKE_ASSET = "Impact_Strong";
+
+    // world effects for press slam (plays for all nearby players)
+    private static final String SLAM_SOUND_ASSET = "SFX_Metal_Hit";
+    private static final String SLAM_PARTICLE_SYSTEM = "Block_Land_Hard_Dust";
+
     private int damageCauseIndex = -1;
-
-    public HydraulicPressTrap() {
-        this.entitySpatialResource = EntityModule.get().getEntitySpatialResourceType();
-    }
+    private int impactSoundIndex = -1;
+    private int cameraShakeIndex = -1;
+    private int slamSoundIndex = -1;
 
     private int getDamageCauseIndex() {
         if (damageCauseIndex < 0) {
             damageCauseIndex = DamageCause.getAssetMap().getIndex(DAMAGE_CAUSE_NAME);
         }
         return damageCauseIndex;
+    }
+
+    private int getImpactSoundIndex() {
+        if (impactSoundIndex < 0) {
+            impactSoundIndex = SoundEvent.getAssetMap().getIndex(IMPACT_SOUND_ASSET);
+        }
+        return impactSoundIndex;
+    }
+
+    private int getCameraShakeIndex() {
+        if (cameraShakeIndex < 0) {
+            cameraShakeIndex = CameraEffect.getAssetMap().getIndex(CAMERA_SHAKE_ASSET);
+        }
+        return cameraShakeIndex;
+    }
+
+    private int getSlamSoundIndex() {
+        if (slamSoundIndex < 0) {
+            slamSoundIndex = SoundEvent.getAssetMap().getIndex(SLAM_SOUND_ASSET);
+        }
+        return slamSoundIndex;
     }
 
     @Nonnull
@@ -263,7 +299,8 @@ public class HydraulicPressTrap implements Spawnable {
             Ref<EntityStore> pressRef,
             Vector3d pressPosition,
             CommandBuffer<EntityStore> commandBuffer) {
-        if (!press.hasDamagedThisCycle()) {
+        // trigger damage at the exact moment the press hits (synced with animation frame 35)
+        if (!press.hasDamagedThisCycle() && press.getPhaseTimer() >= press.getDamageDelayTime()) {
             checkAndDamageEntities(press, pressPosition, commandBuffer);
         }
 
@@ -290,29 +327,100 @@ public class HydraulicPressTrap implements Spawnable {
             Vector3d position,
             CommandBuffer<EntityStore> commandBuffer) {
 
-        SpatialResource<Ref<EntityStore>, EntityStore> spatial = commandBuffer.getResource(entitySpatialResource);
-        List<Ref<EntityStore>> nearbyEntities = SpatialResource.getThreadLocalReferenceList();
-        spatial.getSpatialStructure().collect(position, press.getDamageRadius(), nearbyEntities);
+        // play slam sound and particle for all nearby players
+        SoundUtil.playSoundEvent3d(getSlamSoundIndex(), SoundCategory.SFX, position, commandBuffer);
+        ParticleUtil.spawnParticleEffect(SLAM_PARTICLE_SYSTEM, position, commandBuffer);
+
+        // build damage zone aabb (static box below press origin)
+        Box damageZone = new Box(
+                position.x - press.getDamageZoneWidth() / 2,
+                position.y + press.getDamageZoneOffsetY(),
+                position.z - press.getDamageZoneDepth() / 2,
+                position.x + press.getDamageZoneWidth() / 2,
+                position.y + press.getDamageZoneOffsetY() + press.getDamageZoneHeight(),
+                position.z + press.getDamageZoneDepth() / 2);
+
+        // get min/max vectors for TargetUtil
+        Vector3d zoneMin = new Vector3d(damageZone.min.x, damageZone.min.y, damageZone.min.z);
+        Vector3d zoneMax = new Vector3d(damageZone.max.x, damageZone.max.y, damageZone.max.z);
+
+        LOGGER.atInfo().log("Press damage check at pos=(%.1f, %.1f, %.1f), zone y=[%.1f to %.1f]",
+                position.x, position.y, position.z, zoneMin.y, zoneMax.y);
+
+        // use TargetUtil to find both players and entities in the box
+        List<Ref<EntityStore>> nearbyEntities = TargetUtil.getAllEntitiesInBox(zoneMin, zoneMax, commandBuffer);
+
+        LOGGER.atInfo().log("Found %d nearby entities (players + entities)", nearbyEntities.size());
 
         for (int i = 0; i < nearbyEntities.size(); i++) {
             Ref<EntityStore> entityRef = nearbyEntities.get(i);
             if (!entityRef.isValid()) {
+                LOGGER.atInfo().log("Entity %d: invalid ref", i);
                 continue;
             }
 
+            // skip the press entity itself
+            if (entityRef.equals(press.getSpawnedRef())) {
+                LOGGER.atInfo().log("Entity %d: is press entity, skipping", i);
+                continue;
+            }
+
+            // must have stats to take damage
             EntityStatMap stats = commandBuffer.getComponent(entityRef, EntityStatMap.getComponentType());
             if (stats == null) {
+                LOGGER.atInfo().log("Entity %d: no EntityStatMap, skipping", i);
                 continue;
             }
 
-            if (entityRef.equals(press.getSpawnedRef())) {
+            TransformComponent entityTransform = commandBuffer.getComponent(entityRef,
+                    TransformComponent.getComponentType());
+            if (entityTransform == null) {
                 continue;
             }
+
+            Vector3d entityPos = entityTransform.getPosition();
+            LOGGER.atInfo().log("Damaging entity at (%.1f, %.1f, %.1f)", entityPos.x, entityPos.y, entityPos.z);
+
+            // calculate knockback direction - push outward from press center
+            double dx = entityPos.x - position.x;
+            double dz = entityPos.z - position.z;
+            double horizontalDist = Math.sqrt(dx * dx + dz * dz);
+
+            double knockbackX = 0;
+            double knockbackZ = 0;
+            if (horizontalDist > 0.01) {
+                knockbackX = (dx / horizontalDist) * press.getKnockbackForceHorizontal();
+                knockbackZ = (dz / horizontalDist) * press.getKnockbackForceHorizontal();
+            }
+
+            // get or create knockback component on the entity (required for it to actually work)
+            KnockbackComponent knockback = commandBuffer.getComponent(entityRef, KnockbackComponent.getComponentType());
+            if (knockback == null) {
+                knockback = new KnockbackComponent();
+                commandBuffer.putComponent(entityRef, KnockbackComponent.getComponentType(), knockback);
+            }
+            knockback.setVelocity(new Vector3d(knockbackX, press.getKnockbackForceY(), knockbackZ));
+            knockback.setVelocityType(ChangeVelocityType.Set);
+            knockback.setDuration(press.getKnockbackDuration());
 
             Damage damage = new Damage(
-                    Damage.NULL_SOURCE,
+                    new Damage.EnvironmentSource(ENVIRONMENT_SOURCE_TYPE),
                     getDamageCauseIndex(),
                     press.getDamageAmount());
+            // knockback is already applied via component on entity, don't add to damage metadata
+            damage.putMetaObject(Damage.IMPACT_SOUND_EFFECT,
+                    new Damage.SoundEffect(getImpactSoundIndex()));
+
+            // impact particles
+            WorldParticle impactParticle = new WorldParticle(
+                    IMPACT_PARTICLE_SYSTEM, null, 1.0f, null, null);
+            damage.putMetaObject(Damage.IMPACT_PARTICLES,
+                    new Damage.Particles(null, new WorldParticle[] { impactParticle }, 75.0));
+
+            // camera shake
+            damage.putMetaObject(Damage.CAMERA_EFFECT,
+                    new Damage.CameraEffect(getCameraShakeIndex()));
+
             DamageSystems.executeDamage(entityRef, commandBuffer, damage);
         }
 

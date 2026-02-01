@@ -348,14 +348,87 @@
               "id": "11",
               "name": "Node--C1",
               "position": {"x": 0, "y": 0, "z": 0},
-              "orientation": {"x": 0, "y": -0.04362, "z": 0, "w": 0.99905},
+              "orientation": {"x": 0, "y": -0.08716, "z": 0, "w": 0.99619},
               "shape": {
                 "type": "box",
                 "offset": {"x": 0, "y": 16.5, "z": -0.5},
                 "stretch": {"x": 1.01, "y": 1.01, "z": 1.01},
                 "settings": {
                   "isPiece": false,
-                  "size": {"x": 22, "y": 63, "z": 17},
+                  "size": {"x": 18, "y": 63, "z": 15},
+                  "isStaticBox": true
+                },
+                "textureLayout": {
+                  "back": {
+                    "offset": {"x": 160, "y": 0},
+                    "mirror": {"x": false, "y": false},
+                    "angle": 0
+                  },
+                  "right": {
+                    "offset": {"x": 188, "y": 202},
+                    "mirror": {"x": false, "y": false},
+                    "angle": 0
+                  },
+                  "front": {
+                    "offset": {"x": 116, "y": 161},
+                    "mirror": {"x": false, "y": false},
+                    "angle": 0
+                  },
+                  "left": {
+                    "offset": {"x": 205, "y": 133},
+                    "mirror": {"x": false, "y": false},
+                    "angle": 0
+                  },
+                  "top": {
+                    "offset": {"x": 233, "y": 34},
+                    "mirror": {"x": true, "y": true},
+                    "angle": 0
+                  },
+                  "bottom": {
+                    "offset": {"x": 44, "y": 211},
+                    "mirror": {"x": true, "y": false},
+                    "angle": 0
+                  }
+                },
+                "unwrapMode": "custom",
+                "visible": true,
+                "doubleSided": false,
+                "shadingMode": "flat"
+              }
+            }
+          ]
+        },
+        {
+          "id": "12",
+          "name": "Shaft4",
+          "position": {"x": 0, "y": 280, "z": 0},
+          "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+          "shape": {
+            "type": "none",
+            "offset": {"x": 0, "y": 0, "z": 0},
+            "stretch": {"x": 0, "y": 0, "z": 0},
+            "settings": {
+              "isPiece": false
+            },
+            "textureLayout": {},
+            "unwrapMode": "custom",
+            "visible": true,
+            "doubleSided": false,
+            "shadingMode": "flat"
+          },
+          "children": [
+            {
+              "id": "13",
+              "name": "Node--C1",
+              "position": {"x": 0, "y": 0, "z": 0},
+              "orientation": {"x": 0, "y": 0.02181, "z": 0, "w": 0.99976},
+              "shape": {
+                "type": "box",
+                "offset": {"x": 0, "y": 16.5, "z": -0.5},
+                "stretch": {"x": 1.01, "y": 1.01, "z": 1.01},
+                "settings": {
+                  "isPiece": false,
+                  "size": {"x": 16, "y": 63, "z": 13},
                   "isStaticBox": true
                 },
                 "textureLayout": {

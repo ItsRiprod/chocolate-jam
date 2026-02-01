@@ -29,7 +29,7 @@
         {
           "Animation": "NPC/Traps/Animations/Press_Activate.blockyanim",
           "Looping": false,
-          "Speed": 1.5
+          "Speed": 1.0
         }
       ]
     },

@@ -4,6 +4,7 @@
   "Tags": {
     "Zone1": []
   },
+  "BlockModificationAllowed": false,
   "WeatherForecasts": {
     "0": [
       {

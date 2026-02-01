@@ -34,16 +34,30 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
     private float phaseTimer = 0f;
     private float currentCooldownDuration = 0f;
 
-    // Configurable timings (seconds)
-    private float pressAnimationDuration = 3.0f;
-    private float retractAnimationDuration = 1.0f;
-    private float minCooldown = 1.0f;
-    private float maxCooldown = 3.0f;
+    // timings (seconds) - calculated from animation files
+    // press: 183 ticks @ 60fps @ 1.0x speed = 3.0495s
+    // retract: 180 ticks @ 60fps @ 1.0x speed = 3.0s
+    private float pressAnimationDuration = 3.0495f;
+    private float retractAnimationDuration = 3.0f;
+    private float minCooldown = 0.0f;
+    private float maxCooldown = 2.0f;
 
-    // Damage config
-    private float damageRadius = 1.5f;
+    // damage config
     private float damageAmount = 25f;
     private boolean hasDamagedThisCycle = false;
+
+    private float damageDelayTime = 0.2033f;
+
+    // aabb damage zone (static box at press origin)
+    private float damageZoneWidth = 2.0f;
+    private float damageZoneHeight = 2.0f;  // player is ~1.8 blocks tall
+    private float damageZoneDepth = 2.0f;
+    private float damageZoneOffsetY = 0.0f;  // start at ground level (model origin)
+
+    // knockback
+    private float knockbackForceY = 1.3f;
+    private float knockbackForceHorizontal = 1.3f;  // pushes entities outward from press center
+    private float knockbackDuration = 0f;
 
     public HydraulicPressActionComponent() {
         this.spawnedRef = null;
@@ -145,14 +159,6 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
 
     // --- Damage config ---
 
-    public float getDamageRadius() {
-        return damageRadius;
-    }
-
-    public void setDamageRadius(float radius) {
-        this.damageRadius = radius;
-    }
-
     public float getDamageAmount() {
         return damageAmount;
     }
@@ -167,6 +173,74 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
 
     public void setHasDamagedThisCycle(boolean value) {
         this.hasDamagedThisCycle = value;
+    }
+
+    public float getDamageDelayTime() {
+        return damageDelayTime;
+    }
+
+    public void setDamageDelayTime(float time) {
+        this.damageDelayTime = time;
+    }
+
+    // --- AABB damage zone ---
+
+    public float getDamageZoneWidth() {
+        return damageZoneWidth;
+    }
+
+    public void setDamageZoneWidth(float width) {
+        this.damageZoneWidth = width;
+    }
+
+    public float getDamageZoneHeight() {
+        return damageZoneHeight;
+    }
+
+    public void setDamageZoneHeight(float height) {
+        this.damageZoneHeight = height;
+    }
+
+    public float getDamageZoneDepth() {
+        return damageZoneDepth;
+    }
+
+    public void setDamageZoneDepth(float depth) {
+        this.damageZoneDepth = depth;
+    }
+
+    public float getDamageZoneOffsetY() {
+        return damageZoneOffsetY;
+    }
+
+    public void setDamageZoneOffsetY(float offsetY) {
+        this.damageZoneOffsetY = offsetY;
+    }
+
+    // --- Knockback config ---
+
+    public float getKnockbackForceY() {
+        return knockbackForceY;
+    }
+
+    public void setKnockbackForceY(float forceY) {
+        this.knockbackForceY = forceY;
+    }
+
+    public float getKnockbackForceHorizontal() {
+        return knockbackForceHorizontal;
+    }
+
+    public void setKnockbackForceHorizontal(float force) {
+        this.knockbackForceHorizontal = force;
+    }
+
+    public float getKnockbackDuration() {
+        return knockbackDuration;
+    }
+
+    public void setKnockbackDuration(float duration) {
+        this.knockbackDuration = duration;
     }
 
     // --- Reset ---
@@ -193,9 +267,16 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
         copy.retractAnimationDuration = this.retractAnimationDuration;
         copy.minCooldown = this.minCooldown;
         copy.maxCooldown = this.maxCooldown;
-        copy.damageRadius = this.damageRadius;
         copy.damageAmount = this.damageAmount;
         copy.hasDamagedThisCycle = this.hasDamagedThisCycle;
+        copy.damageDelayTime = this.damageDelayTime;
+        copy.damageZoneWidth = this.damageZoneWidth;
+        copy.damageZoneHeight = this.damageZoneHeight;
+        copy.damageZoneDepth = this.damageZoneDepth;
+        copy.damageZoneOffsetY = this.damageZoneOffsetY;
+        copy.knockbackForceY = this.knockbackForceY;
+        copy.knockbackForceHorizontal = this.knockbackForceHorizontal;
+        copy.knockbackDuration = this.knockbackDuration;
         return copy;
     }
 }
