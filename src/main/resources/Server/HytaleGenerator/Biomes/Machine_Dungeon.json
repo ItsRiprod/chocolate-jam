@@ -72,7 +72,7 @@
           "WeightedPrefabPaths": [
             {
               "$NodeId": "WeightedPath.Prefab.Prop-306756c1-0e06-463e-9d1f-f94e7a534ef1",
-              "Path": "Machine_Dungeon/01_Entrance",
+              "Path": "Machine_Dungeon/Var1/01_Entrance",
               "Weight": 1
             }
           ],

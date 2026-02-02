@@ -4715,7 +4715,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.99_Boss.*",
+            "PrefabPath": "Machine_Dungeon.Var1.99_Boss.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true
