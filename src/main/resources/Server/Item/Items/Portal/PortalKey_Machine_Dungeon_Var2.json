@@ -1,6 +1,6 @@
 {
   "TranslationProperties": {
-    "Name": "Machine.items.PortalKey_Machine_Dungeon.name",
+    "Name": "Machine.items.PortalKey_Machine_Dungeon_Var2.name",
     "Description": "Machine.items.PortalKey_machine_Dungeon.description"
   },
   "Icon": "Icons/ItemsGenerated/PortalKey_Machine_Dungeon.png",

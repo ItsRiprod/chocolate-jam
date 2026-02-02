@@ -1,12 +1,15 @@
 {
   "TranslationProperties": {
-    "Name": "Machine.items.PortalKey_Machine_Dungeon.name",
+    "Name": "Machine.items.PortalKey_Machine_Dungeon_Var1.name",
     "Description": "Machine.items.PortalKey_machine_Dungeon.description"
   },
   "Icon": "Icons/ItemsGenerated/PortalKey_Machine_Dungeon.png",
   "Categories": [
     "Blocks.Portals"
   ],
+  "PortalKey": {
+    "PortalType": "PortalType_Machine_Dungeon_Var1"
+  },
   "BlockType": {
     "DrawType": "Model",
     "Material": "Solid",
@@ -63,8 +66,5 @@
       5,
       17
     ]
-  },
-  "PortalKey": {
-    "PortalType": "PortalType_Machine_Dungeon_Var1"
   }
 }
