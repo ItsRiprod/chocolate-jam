@@ -11,11 +11,6 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-/**
- * Per-spawner runtime state for hammer trap.
- * Manages the hammer cycle: IDLE -> Swing R 1s animation -> Swing L (1s animation) (repeat) [On deactivation] -> IDLE
- * (deactivated)
- */
 public class BigFreakingHammerComponent implements Component<EntityStore> {
 
     public enum KnockbackAxis {

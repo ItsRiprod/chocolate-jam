@@ -4,10 +4,6 @@ import com.hypixel.hytale.math.vector.Vector3i;
 
 import javax.annotation.Nonnull;
 
-/**
- * Tracks a dungeon-aware block's position and type.
- * Used to change block state when dungeon activates/deactivates.
- */
 public class DungeonBlockEntry {
 
     private static final String ACTIVE_STATE = "On";
@@ -50,17 +46,11 @@ public class DungeonBlockEntry {
         return blockTypeId;
     }
 
-    /**
-     * State to use when dungeon is active.
-     */
     @Nonnull
     public String getActiveState() {
         return ACTIVE_STATE;
     }
 
-    /**
-     * State to use when dungeon is inactive.
-     */
     @Nonnull
     public String getInactiveState() {
         return INACTIVE_STATE;

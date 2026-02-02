@@ -12,10 +12,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Random;
 
-/**
- * Per-spawner runtime state for hydraulic press trap.
- * Manages the press cycle: IDLE -> PRESSING -> RETRACTING -> COOLDOWN -> loop
- */
 public class HydraulicPressActionComponent implements Component<EntityStore> {
 
     public static final BuilderCodec<HydraulicPressActionComponent> CODEC = BuilderCodec

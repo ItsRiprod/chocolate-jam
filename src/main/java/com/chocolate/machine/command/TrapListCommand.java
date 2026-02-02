@@ -27,7 +27,6 @@ public class TrapListCommand extends AbstractPlayerCommand {
     public void execute(@Nonnull CommandContext context, @Nonnull Store<EntityStore> store,
             @Nonnull Ref<EntityStore> playerEntityRef, @Nonnull PlayerRef playerRef, @Nonnull World world) {
 
-        // flood-fill from player position using spatial indexing
         List<Ref<EntityStore>> spawners = EntityFloodFill.floodFillSpawners(
                 playerEntityRef,
                 store,

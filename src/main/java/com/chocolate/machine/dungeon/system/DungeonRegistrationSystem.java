@@ -21,11 +21,6 @@ import com.hypixel.hytale.server.core.modules.entity.component.TransformComponen
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Handles dungeon registration when DungeonComponent entities spawn.
- * Flood fills to find nearby SpawnerComponent entities and links them to the dungeon.
- * Also finds the DungeonEntranceComponent with matching dungeonId.
- */
 public class DungeonRegistrationSystem extends RefSystem<EntityStore> {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();

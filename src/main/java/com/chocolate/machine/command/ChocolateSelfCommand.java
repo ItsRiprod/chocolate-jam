@@ -15,9 +15,6 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Display information about the player's current dungeon status.
- */
 public class ChocolateSelfCommand extends AbstractPlayerCommand {
 
     public ChocolateSelfCommand() {
@@ -31,7 +28,6 @@ public class ChocolateSelfCommand extends AbstractPlayerCommand {
 
         playerRef.sendMessage(Message.raw("=== Chocolate Machine Status ==="));
 
-        // Get player position
         TransformComponent playerTransform = store.getComponent(playerEntityRef, TransformComponent.getComponentType());
         if (playerTransform != null) {
             Vector3d pos = playerTransform.getPosition();
@@ -39,7 +35,6 @@ public class ChocolateSelfCommand extends AbstractPlayerCommand {
                     pos.getX(), pos.getY(), pos.getZ())));
         }
 
-        // Check dungeoneer status
         DungeoneerComponent dungeoneer = store.getComponent(playerEntityRef, DungeoneerComponent.getComponentType());
 
         if (dungeoneer == null) {
@@ -51,12 +46,10 @@ public class ChocolateSelfCommand extends AbstractPlayerCommand {
             playerRef.sendMessage(Message.raw("Relic Holder: " + (dungeoneer.isRelicHolder() ? "Yes" : "No")));
             playerRef.sendMessage(Message.raw("Dungeon Network: " + dungeoneer.getDungeonId()));
 
-            // Show spawn position
             Vector3d spawnPos = dungeoneer.getSpawnPosition();
             playerRef.sendMessage(Message.raw(String.format("Dungeon Spawn: (%.1f, %.1f, %.1f)",
                     spawnPos.getX(), spawnPos.getY(), spawnPos.getZ())));
 
-            // Get dungeon info if available
             Ref<EntityStore> dungeonRef = dungeoneer.getDungeonRef();
             if (dungeonRef != null && dungeonRef.isValid()) {
                 DungeonComponent dungeon = store.getComponent(dungeonRef, DungeonComponent.getComponentType());

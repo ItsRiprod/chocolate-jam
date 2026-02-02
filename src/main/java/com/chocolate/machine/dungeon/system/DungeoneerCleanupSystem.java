@@ -18,10 +18,6 @@ import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Handles cleanup when a player with DungeoneerComponent is removed (disconnect, etc).
- * If relic holder disconnects, resets the dungeon.
- */
 public class DungeoneerCleanupSystem extends RefSystem<EntityStore> {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();

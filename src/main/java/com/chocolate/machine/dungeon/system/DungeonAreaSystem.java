@@ -28,10 +28,6 @@ import com.hypixel.hytale.server.core.modules.entity.component.TransformComponen
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Monitors the dungeon entrance area.
- * Detects when players with DungeoneerComponent leave the entrance (escape).
- */
 public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();

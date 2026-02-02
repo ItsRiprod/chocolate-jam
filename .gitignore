@@ -1,10 +1,12 @@
+### Gradle IGNORE ###
+
 .gradle/
-build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### IntelliJ IDEA ###
+### IntelliJ IDEA IGNORE ###
+
 /.idea/
 *.iws
 *.iml
@@ -13,7 +15,8 @@ build/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+### Eclipse IGNORE ###
+
 .apt_generated
 .classpath
 .factorypath
@@ -25,17 +28,20 @@ build/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### VS Code ###
+### VS Code IGNORE ###
+
 /.vscode/
 
-### Mac OS ###
+### Mac OS IGNORE ###
+
 .DS_Store
 
 ### Misc ###
+
+# Built during dev
 /run/
-# /lib
-# /lib
-# /lib
-/.claude
 gradle.properties
+# library files (extracted assets.zip)
 /lib
+# Build Files
+build/

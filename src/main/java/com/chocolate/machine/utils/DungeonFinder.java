@@ -16,23 +16,11 @@ import com.hypixel.hytale.server.core.modules.entity.EntityModule;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Utility class for finding nearby dungeon entities.
- */
 public class DungeonFinder {
 
     private static final double DEFAULT_SEARCH_RADIUS = 500.0;
-
-    /** Range within which dungeons should be merged into one network */
     public static final double MERGE_RANGE = 50.0;
 
-    /**
-     * Find the nearest DungeonComponent entity to a given position.
-     *
-     * @param position The position to search from
-     * @param accessor Component accessor
-     * @return The nearest dungeon ref, or null if none found
-     */
     @Nullable
     public static Ref<EntityStore> findNearestDungeon(
             @Nonnull Vector3d position,
@@ -40,14 +28,6 @@ public class DungeonFinder {
         return findNearestDungeon(position, accessor, DEFAULT_SEARCH_RADIUS);
     }
 
-    /**
-     * Find the nearest DungeonComponent entity to a given position.
-     *
-     * @param position The position to search from
-     * @param accessor Component accessor
-     * @param searchRadius The radius to search within
-     * @return The nearest dungeon ref, or null if none found
-     */
     @Nullable
     public static Ref<EntityStore> findNearestDungeon(
             @Nonnull Vector3d position,
@@ -84,13 +64,6 @@ public class DungeonFinder {
         return nearestDungeon;
     }
 
-    /**
-     * Find the nearest DungeonComponent entity to a player entity.
-     *
-     * @param playerRef The player entity reference
-     * @param accessor Component accessor
-     * @return The nearest dungeon ref, or null if none found
-     */
     @Nullable
     public static Ref<EntityStore> findNearestDungeonToPlayer(
             @Nonnull Ref<EntityStore> playerRef,
@@ -104,15 +77,6 @@ public class DungeonFinder {
         return findNearestDungeon(playerTransform.getPosition(), accessor);
     }
 
-    /**
-     * Find ALL DungeonComponent entities within a given range of a position.
-     * Used to detect multiple dungeons that should be merged.
-     *
-     * @param position The position to search from
-     * @param accessor Component accessor
-     * @param searchRadius The radius to search within
-     * @return List of dungeon refs found (may be empty)
-     */
     @Nonnull
     public static List<Ref<EntityStore>> findAllDungeonsInRange(
             @Nonnull Vector3d position,
@@ -141,14 +105,6 @@ public class DungeonFinder {
         return result;
     }
 
-    /**
-     * Find ALL DungeonComponent entities within MERGE_RANGE of a dungeon entity.
-     * Used to find dungeons that should be merged into one network.
-     *
-     * @param dungeonRef The dungeon entity to search from
-     * @param accessor Component accessor
-     * @return List of other dungeon refs within merge range (excludes the input dungeon)
-     */
     @Nonnull
     public static List<Ref<EntityStore>> findDungeonsToMerge(
             @Nonnull Ref<EntityStore> dungeonRef,
@@ -161,7 +117,6 @@ public class DungeonFinder {
 
         List<Ref<EntityStore>> allDungeons = findAllDungeonsInRange(transform.getPosition(), accessor, MERGE_RANGE);
 
-        // Remove self from list
         allDungeons.removeIf(ref -> ref.equals(dungeonRef));
 
         return allDungeons;

@@ -1,24 +1,22 @@
-# Hytale Plugin Template
+*From the Chocolate Team we present*
+# The Machine
 
-A template for Hytale java plugins. Created by [Up](https://github.com/UpcraftLP), and slightly modified by Kaupenjoe and Riprod
 
-### Configuring the Template
-If you for example installed the game in a non-standard location, you will need to tell the project about that.
-The recommended way is to create a file at `%USERPROFILE%/.gradle/gradle.properties` to set these properties globally.
+## Setting up the environment
+1. Ensure Java 25 is installed
+2. Edit gradle.properties.example to include the path to your Hytale installation
+3. Rename to gradle.properties
+4. Run ./gradlew runServer
+5. Create a new server in Hytale with IP "localhost"
+6. Join!
 
-```properties
-# Set a custom game install location
-hytale.install_dir=path/to/Hytale
+## Entering Dungeon
+1. Craft the Machine Fragment
+2. Enter portal
+3. Enjoy
 
-# Speed up the decompilation process significantly, by only including the core hytale packages.
-# Recommended if decompiling the game takes a very long time on your PC.
-hytale.decompile_partial=true
-```
+---
 
-# Commands
+The Machine was part of the HytaleModding ModJam created by a team of four talented individuals over the course of 4 days.
 
-```bash
-./gradlew runServer # starts the server
-./gradlew decompileJar # decompile the server.jar
-./gradlew build # builds the mod
-```
+Stability may be.. questionable.. 

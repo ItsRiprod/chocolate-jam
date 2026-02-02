@@ -26,7 +26,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.List;
 
-// handles dungeon lifecycle: registration, activation, spawner control
 public class DungeonService {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
@@ -36,18 +35,11 @@ public class DungeonService {
 
     private final SpawnableRegistry spawnableRegistry;
 
-    /**
-     * Checks if a block ID is a dungeon block (either base or with state applied).
-     * Handles both "CM_*" and "*CM_*_StateName" formats.
-     */
     private static boolean isDungeonBlock(@Nonnull String blockId) {
         return blockId.startsWith(DUNGEON_BLOCK_PREFIX) || blockId.startsWith(STATE_BLOCK_PREFIX);
     }
 
-    /**
-     * Extracts the base block ID from a possibly state-modified block ID.
-     * Example: "*CM_Torch_On" -> "CM_Torch"
-     */
+    // *CM_Torch_On -> CM_Torch
     private static String getBaseBlockId(@Nonnull String blockId) {
         if (blockId.startsWith("*")) {
             // Format: *BaseId_StateName - strip leading * and trailing _StateName
@@ -66,7 +58,6 @@ public class DungeonService {
         this.spawnableRegistry = SpawnableRegistry.getInstance();
     }
 
-    // flood-fill to find and link all spawners to dungeon
     public int registerDungeon(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
@@ -75,7 +66,6 @@ public class DungeonService {
         return registerDungeon(dungeonRef, componentAccessor, world);
     }
 
-    // flood-fill to find and link all spawners to dungeon (with explicit world)
     public int registerDungeon(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor,
@@ -162,10 +152,6 @@ public class DungeonService {
         return registeredCount;
     }
 
-    /**
-     * Links the dungeon entrance entity to the dungeon.
-     * Searches for DungeonEntranceComponent entities with matching dungeonId.
-     */
     private boolean linkEntrance(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull DungeonComponent dungeon,
@@ -200,15 +186,9 @@ public class DungeonService {
         return false;
     }
 
-    /**
-     * Result of checking for nearby dungeons that should be merged.
-     */
     public static class MergeResult {
-        /** The primary dungeon to use (has BossRoom, or was chosen as primary) */
         public final Ref<EntityStore> primaryDungeonRef;
-        /** Whether any merging occurred */
         public final boolean merged;
-        /** Whether there was a conflict (multiple BossRooms) */
         public final boolean hasConflict;
 
         public MergeResult(Ref<EntityStore> primaryDungeonRef, boolean merged, boolean hasConflict) {
@@ -218,15 +198,6 @@ public class DungeonService {
         }
     }
 
-    /**
-     * Check for and merge nearby dungeon networks within MERGE_RANGE (50 blocks).
-     * Prefers the dungeon with a configured BossRoom (non-empty dungeonId).
-     * If both have BossRooms, logs an error with both locations.
-     *
-     * @param dungeonRef The dungeon to check from
-     * @param store Store for component removal
-     * @return MergeResult with the primary dungeon to use
-     */
     public MergeResult checkAndMergeDungeons(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> store) {
@@ -385,14 +356,6 @@ public class DungeonService {
                 activatedCount, dungeon.getSpawnerCount(), blocksActivated);
     }
 
-    /**
-     * Called when a player picks up the relic in a dungeon.
-     * Marks them as relic holder and activates the dungeon.
-     *
-     * @param playerRef The player who picked up the relic
-     * @param componentAccessor Component accessor
-     * @return true if successful, false if player is not a dungeoneer
-     */
     public boolean relicPickedUp(
             @Nonnull Ref<EntityStore> playerRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
@@ -429,13 +392,6 @@ public class DungeonService {
         return true;
     }
 
-    /**
-     * Called when a relic holder drops or loses the relic.
-     * Transfers relic to another player or resets if no one else can hold it.
-     *
-     * @param playerRef The player who lost the relic
-     * @param componentAccessor Component accessor
-     */
     public void relicLost(
             @Nonnull Ref<EntityStore> playerRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
@@ -504,7 +460,6 @@ public class DungeonService {
                 deactivatedCount, blocksDeactivated);
     }
 
-    // deactivate and clear artifact holder (player died or dropped artifact)
     public void reset(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
@@ -599,7 +554,6 @@ public class DungeonService {
         return true;
     }
 
-    // change spawner action type, handles cleanup
     public boolean setSpawnerAction(
             @Nonnull Ref<EntityStore> spawnerRef,
             @Nonnull String newExecutionId,
@@ -614,7 +568,6 @@ public class DungeonService {
         spawner.setActive(false);
         String oldExecutionId = spawner.getExecutionId();
 
-        // cleanup old action
         if (!oldExecutionId.isEmpty()) {
             Spawnable oldSpawnable = spawnableRegistry.get(oldExecutionId);
             if (oldSpawnable != null) {
@@ -625,7 +578,6 @@ public class DungeonService {
 
         spawner.setExecutionId(newExecutionId);
 
-        // register new action
         if (!newExecutionId.isEmpty()) {
             Spawnable newSpawnable = spawnableRegistry.get(newExecutionId);
             if (newSpawnable != null) {
@@ -681,16 +633,6 @@ public class DungeonService {
         spawnable.register(spawnerRef, componentAccessor);
     }
 
-    // ==================== Dungeon Block Methods ====================
-
-    /**
-     * Scans for blocks with IDs starting with DUNGEON_BLOCK_PREFIX and registers them.
-     *
-     * @param dungeon The dungeon component
-     * @param world The world to scan for blocks
-     * @param center Center position to scan around
-     * @return Number of blocks registered
-     */
     private int registerDungeonBlocks(
             @Nonnull DungeonComponent dungeon,
             @Nonnull World world,
@@ -744,13 +686,6 @@ public class DungeonService {
         return registeredCount;
     }
 
-    /**
-     * Activates all dungeon blocks by changing their state to "On".
-     *
-     * @param dungeon The dungeon component containing block entries
-     * @param componentAccessor Component accessor to get world
-     * @return Number of blocks successfully activated
-     */
     private int activateDungeonBlocks(
             @Nonnull DungeonComponent dungeon,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
@@ -771,13 +706,6 @@ public class DungeonService {
         return activatedCount;
     }
 
-    /**
-     * Deactivates all dungeon blocks by changing their state to "default".
-     *
-     * @param dungeon The dungeon component containing block entries
-     * @param componentAccessor Component accessor to get world
-     * @return Number of blocks successfully deactivated
-     */
     private int deactivateDungeonBlocks(
             @Nonnull DungeonComponent dungeon,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
@@ -798,14 +726,6 @@ public class DungeonService {
         return deactivatedCount;
     }
 
-    /**
-     * Changes a block's interaction state.
-     *
-     * @param world The world containing the block
-     * @param pos Block position
-     * @param state Target state name (e.g., "On" or "default")
-     * @return true if state was changed successfully
-     */
     private boolean setBlockState(@Nonnull World world, @Nonnull Vector3i pos, @Nonnull String state) {
         WorldChunk chunk = world.getChunkIfInMemory(ChunkUtil.indexChunkFromBlock(pos.getX(), pos.getZ()));
         if (chunk == null) {

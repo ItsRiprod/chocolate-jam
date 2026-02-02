@@ -23,11 +23,6 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.util.TargetUtil;
 
-/**
- * Configure trap properties.
- * /cm t config - lists configurable fields for the trap you're looking at
- * /cm t config <field> <value> - sets a field value
- */
 public class TrapConfigCommand extends AbstractPlayerCommand {
 
     private final OptionalArg<String> fieldNameArg;
@@ -99,7 +94,6 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
         }
 
         if (fieldName == null || fieldName.isEmpty()) {
-            // List all configurable fields
             context.sendMessage(Message.raw("=== Press Config ==="));
             context.sendMessage(Message.raw("  pressAnimDuration: " + press.getPressAnimationDuration()));
             context.sendMessage(Message.raw("  retractAnimDuration: " + press.getRetractAnimationDuration()));
@@ -112,7 +106,6 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
         }
 
         if (valueStr == null || valueStr.isEmpty()) {
-            // Show single field
             switch (fieldName) {
                 case "pressAnimDuration":
                     context.sendMessage(Message.raw("pressAnimDuration = " + press.getPressAnimationDuration()));
@@ -191,7 +184,6 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
         }
 
         if (fieldName == null || fieldName.isEmpty()) {
-            // List all configurable fields
             context.sendMessage(Message.raw("=== Laser Config ==="));
             context.sendMessage(Message.raw("  interval: " + laser.getFireInterval()));
             context.sendMessage(Message.raw("  damage: " + laser.getDamage()));
@@ -205,7 +197,6 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
             return;
         }
 
-        // Special handling for "rotate" - captures player's head rotation
         if ("rotate".equals(fieldName)) {
             HeadRotation headRotation = store.getComponent(playerRef, HeadRotation.getComponentType());
             if (headRotation == null) {
