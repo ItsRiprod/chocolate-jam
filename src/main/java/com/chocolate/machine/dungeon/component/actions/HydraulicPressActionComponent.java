@@ -46,7 +46,7 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
             .add()
             .build();
 
-    public enum Phase {
+    public enum PressPhase {
         IDLE,
         PRESSING,
         RETRACTING,
@@ -60,7 +60,7 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
     @Nullable
     private Ref<EntityStore> spawnedRef;
     private boolean active;
-    private Phase phase = Phase.IDLE;
+    private PressPhase phase = PressPhase.IDLE;
     private float phaseTimer = 0f;
     private float currentCooldownDuration = 0f;
     private boolean hasDamagedThisCycle = false;
@@ -123,14 +123,14 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
 
     // --- Phase management ---
 
-    public Phase getPhase() {
+    public PressPhase getPhase() {
         return phase;
     }
 
-    public void setPhase(Phase phase) {
+    public void setPhase(PressPhase phase) {
         this.phase = phase;
         this.phaseTimer = 0f;
-        if (phase == Phase.COOLDOWN) {
+        if (phase == PressPhase.COOLDOWN) {
             this.currentCooldownDuration = minCooldown + RANDOM.nextFloat() * (maxCooldown - minCooldown);
         }
     }
@@ -244,7 +244,7 @@ public class HydraulicPressActionComponent implements Component<EntityStore> {
     public void reset() {
         this.spawnedRef = null;
         this.active = false;
-        this.phase = Phase.IDLE;
+        this.phase = PressPhase.IDLE;
         this.phaseTimer = 0f;
         this.currentCooldownDuration = 0f;
         this.hasDamagedThisCycle = false;

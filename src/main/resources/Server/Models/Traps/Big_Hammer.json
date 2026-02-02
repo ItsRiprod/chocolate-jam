@@ -1,51 +1,45 @@
 {
-  "Texture": "Items/Weapons/Big_Hammer.png",
-  "Model": "Items/Weapons/Big_Hammer.blockymodel",
+  "Texture": "NPC/Traps/Big_Hammer.png",
+  "Model": "NPC/Traps/Big_Hammer.blockymodel",
   "HitBox": {
     "Max": {
-      "X": 1.5,
-      "Y": 1.5,
-      "Z": 1.5
+      "X": 0.5,
+      "Y": 0.5,
+      "Z": 0.5
     },
     "Min": {
-      "X": -1.5,
-      "Y": -1.5,
-      "Z": -1.5
+      "X": -0.5,
+      "Y": -0.5,
+      "Z": -0.5
     }
   },
   "MinScale": 1,
   "MaxScale": 1,
   "AnimationSets": {
-    "Idle": {
+    "Hammer_Idle": {
       "Animations": [
         {
-          "Animation": "NPC/Traps/Animations/Press_Idle.blockyanim",
-          "Looping": true
+          "Animation": "NPC/Traps/Animations/Hammer_Idle.blockyanim",
+          "Looping": false,
+          "Speed": 0.5
         }
       ]
     },
-    "Press": {
+    "Hammer_Swing_R": {
       "Animations": [
         {
-          "Animation": "NPC/Traps/Animations/Press_Activate.blockyanim",
+          "Animation": "NPC/Traps/Animations/Hammer_Swing_R.blockyanim",
           "Looping": false,
           "Speed": 1.0
         }
       ]
     },
-    "Release": {
+    "Hammer_Swing_L": {
       "Animations": [
         {
-          "Animation": "NPC/Traps/Animations/Press_Deactivate.blockyanim",
-          "Looping": false
-        }
-      ]
-    },
-    "Cycle": {
-      "Animations": [
-        {
-          "Animation": "NPC/Traps/Animations/Press_Peek.blockyanim",
-          "Looping": true
+          "Animation": "NPC/Traps/Animations/Hammer_Swing_L.blockyanim",
+          "Looping": false,
+          "Speed": 1.0
         }
       ]
     }

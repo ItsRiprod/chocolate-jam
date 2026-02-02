@@ -3,8 +3,12 @@ package com.chocolate.machine.command;
 import javax.annotation.Nonnull;
 
 import com.chocolate.machine.dungeon.component.SpawnerComponent;
+import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent;
+import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.KnockbackAxis;
 import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent;
 import com.chocolate.machine.dungeon.component.actions.LaserTrapActionComponent;
+import com.chocolate.machine.dungeon.component.actions.SawBladeComponent;
+import com.chocolate.machine.dungeon.component.actions.SawBladeComponent.MovementAxis;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.math.vector.Vector3f;
@@ -70,9 +74,15 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
             case "beam":
                 handleLaser(context, store, ref, targetRef, fieldName, valueStr);
                 break;
+            case "hammer":
+                handleHammer(context, store, targetRef, fieldName, valueStr);
+                break;
+            case "sawblade":
+                handleSawblade(context, store, targetRef, fieldName, valueStr);
+                break;
             default:
                 context.sendMessage(Message.raw("Trap type '" + executionId + "' is not configurable."));
-                context.sendMessage(Message.raw("Configurable: press, laser, beam"));
+                context.sendMessage(Message.raw("Configurable: press, laser, beam, hammer, sawblade"));
                 break;
         }
     }
@@ -278,6 +288,143 @@ public class TrapConfigCommand extends AbstractPlayerCommand {
             case "offsetZ":
                 laser.setOffsetZ(value);
                 context.sendMessage(Message.raw("Set offsetZ = " + value));
+                break;
+            default:
+                context.sendMessage(Message.raw("Unknown field: " + fieldName));
+                break;
+        }
+    }
+
+    private void handleHammer(CommandContext context, Store<EntityStore> store,
+            Ref<EntityStore> targetRef, String fieldName, String valueStr) {
+
+        BigFreakingHammerComponent hammer = store.getComponent(targetRef,
+                BigFreakingHammerComponent.getComponentType());
+
+        if (hammer == null) {
+            context.sendMessage(Message.raw("Hammer component not found. Activate the trap first."));
+            return;
+        }
+
+        if (fieldName == null || fieldName.isEmpty()) {
+            context.sendMessage(Message.raw("=== Hammer Config ==="));
+            context.sendMessage(Message.raw("  damage: " + hammer.getDamageAmount()));
+            context.sendMessage(Message.raw("  knockback: " + hammer.getKnockbackForceHorizontal()));
+            context.sendMessage(Message.raw("  axis: " + hammer.getKnockbackAxis().name()));
+            context.sendMessage(Message.raw("Use: /cm t config <field> <value>"));
+            return;
+        }
+
+        if (valueStr == null || valueStr.isEmpty()) {
+            switch (fieldName) {
+                case "damage":
+                    context.sendMessage(Message.raw("damage = " + hammer.getDamageAmount()));
+                    break;
+                case "knockback":
+                    context.sendMessage(Message.raw("knockback = " + hammer.getKnockbackForceHorizontal()));
+                    break;
+                case "axis":
+                    context.sendMessage(Message.raw("axis = " + hammer.getKnockbackAxis().name()));
+                    break;
+                default:
+                    context.sendMessage(Message.raw("Unknown field: " + fieldName));
+                    break;
+            }
+            return;
+        }
+
+        if ("axis".equals(fieldName)) {
+            try {
+                KnockbackAxis axis = KnockbackAxis.valueOf(valueStr.toUpperCase());
+                hammer.setKnockbackAxis(axis);
+                context.sendMessage(Message.raw("Set axis = " + axis.name()));
+            } catch (IllegalArgumentException e) {
+                context.sendMessage(Message.raw("Invalid axis. Use: X or Z"));
+            }
+            return;
+        }
+
+        float value;
+        try {
+            value = Float.parseFloat(valueStr);
+        } catch (NumberFormatException e) {
+            context.sendMessage(Message.raw("Invalid number: " + valueStr));
+            return;
+        }
+
+        switch (fieldName) {
+            case "damage":
+                hammer.setDamageAmount(value);
+                context.sendMessage(Message.raw("Set damage = " + value));
+                break;
+            case "knockback":
+                hammer.setKnockbackForceHorizontal(value);
+                context.sendMessage(Message.raw("Set knockback = " + value));
+                break;
+            default:
+                context.sendMessage(Message.raw("Unknown field: " + fieldName));
+                break;
+        }
+    }
+
+    private void handleSawblade(CommandContext context, Store<EntityStore> store,
+            Ref<EntityStore> targetRef, String fieldName, String valueStr) {
+
+        SawBladeComponent sawblade = store.getComponent(targetRef,
+                SawBladeComponent.getComponentType());
+
+        if (sawblade == null) {
+            context.sendMessage(Message.raw("Sawblade component not found. Activate the trap first."));
+            return;
+        }
+
+        if (fieldName == null || fieldName.isEmpty()) {
+            context.sendMessage(Message.raw("=== Sawblade Config ==="));
+            context.sendMessage(Message.raw("  damage: " + sawblade.getDamageAmount()));
+            context.sendMessage(Message.raw("  axis: " + sawblade.getMovementAxis().name()));
+            context.sendMessage(Message.raw("Use: /cm t config <field> <value>"));
+            return;
+        }
+
+        if (valueStr == null || valueStr.isEmpty()) {
+            switch (fieldName) {
+                case "damage":
+                    context.sendMessage(Message.raw("damage = " + sawblade.getDamageAmount()));
+                    break;
+                case "axis":
+                    context.sendMessage(Message.raw("axis = " + sawblade.getMovementAxis().name()));
+                    break;
+                default:
+                    context.sendMessage(Message.raw("Unknown field: " + fieldName));
+                    break;
+            }
+            return;
+        }
+
+        if ("axis".equals(fieldName)) {
+            try {
+                MovementAxis axis = MovementAxis.valueOf(valueStr.toUpperCase());
+                sawblade.setMovementAxis(axis);
+                context.sendMessage(Message.raw("Set axis = " + axis.name()));
+                context.sendMessage(Message.raw("Reset the trap to apply rotation change."));
+            } catch (IllegalArgumentException e) {
+                context.sendMessage(Message.raw("Invalid axis. Use: X or Z"));
+            }
+            return;
+        }
+
+        float value;
+        try {
+            value = Float.parseFloat(valueStr);
+        } catch (NumberFormatException e) {
+            context.sendMessage(Message.raw("Invalid number: " + valueStr));
+            return;
+        }
+
+        switch (fieldName) {
+            case "damage":
+                sawblade.setDamageAmount(value);
+                context.sendMessage(Message.raw("Set damage = " + value));
                 break;
             default:
                 context.sendMessage(Message.raw("Unknown field: " + fieldName));

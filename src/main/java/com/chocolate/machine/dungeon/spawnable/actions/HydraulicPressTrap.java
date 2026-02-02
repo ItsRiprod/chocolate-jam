@@ -6,7 +6,7 @@ import java.util.UUID;
 import javax.annotation.Nonnull;
 
 import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent;
-import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent.Phase;
+import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent.PressPhase;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
@@ -181,7 +181,7 @@ public class HydraulicPressTrap implements Spawnable {
 
         state.setSpawnedRef(spawnedRef);
         state.setActive(true);
-        state.setPhase(Phase.IDLE);
+        state.setPhase(PressPhase.IDLE);
     }
 
     @Override
@@ -287,7 +287,7 @@ public class HydraulicPressTrap implements Spawnable {
     private void startPressCycle(HydraulicPressActionComponent press,
             Ref<EntityStore> pressRef,
             CommandBuffer<EntityStore> commandBuffer) {
-        press.setPhase(Phase.PRESSING);
+        press.setPhase(PressPhase.PRESSING);
         press.setHasDamagedThisCycle(false);
 
         AnimationUtils.playAnimation(
@@ -322,7 +322,7 @@ public class HydraulicPressTrap implements Spawnable {
 
     private void handleCooldownPhase(HydraulicPressActionComponent press) {
         if (press.getPhaseTimer() >= press.getCurrentCooldownDuration()) {
-            press.setPhase(Phase.IDLE);
+            press.setPhase(PressPhase.IDLE);
         }
     }
 
@@ -433,7 +433,7 @@ public class HydraulicPressTrap implements Spawnable {
     private void startRetract(HydraulicPressActionComponent press,
             Ref<EntityStore> pressRef,
             CommandBuffer<EntityStore> commandBuffer) {
-        press.setPhase(Phase.RETRACTING);
+        press.setPhase(PressPhase.RETRACTING);
 
         AnimationUtils.playAnimation(
                 pressRef,
@@ -446,7 +446,7 @@ public class HydraulicPressTrap implements Spawnable {
     private void startCooldown(HydraulicPressActionComponent press,
             Ref<EntityStore> pressRef,
             CommandBuffer<EntityStore> commandBuffer) {
-        press.setPhase(Phase.COOLDOWN);
+        press.setPhase(PressPhase.COOLDOWN);
 
         AnimationUtils.playAnimation(
                 pressRef,
