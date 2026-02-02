@@ -14,6 +14,11 @@ import com.chocolate.machine.utils.EntityFloodFill;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.hypixel.hytale.math.vector.Vector3i;
+import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData;
+import com.hypixel.hytale.server.core.entity.entities.player.data.PlayerWorldData;
+import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.command.system.CommandContext;
 import com.hypixel.hytale.server.core.command.system.basecommands.AbstractPlayerCommand;
@@ -22,6 +27,8 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 public class DungeonToggleCommand extends AbstractPlayerCommand {
+
+    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
     public DungeonToggleCommand() {
         super("toggle", "Toggle dungeon Active state (assembles dungeon on first run)");
@@ -75,8 +82,11 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
                 ", blocks=" + dungeon.getDungeonBlockCount() + ")"));
 
         if (dungeon.isActive()) {
+            // clean up all dungeoneers before deactivating (restores spawn points)
+            cleanupAllDungeoneers(store, dungeon);
+
             dungeonService.deactivate(dungeonRef, store);
-            playerRef.sendMessage(Message.raw("Dungeon DEACTIVATED. Spawners despawned, blocks reset."));
+            playerRef.sendMessage(Message.raw("Dungeon DEACTIVATED. Spawners despawned, blocks reset, dungeoneers removed."));
         } else {
             // Add player as dungeoneer if not already
             ensurePlayerIsDungeoneer(store, playerEntityRef, dungeonRef, dungeon);
@@ -90,28 +100,88 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
     private void ensurePlayerIsDungeoneer(Store<EntityStore> store, Ref<EntityStore> playerEntityRef,
             Ref<EntityStore> dungeonRef, DungeonComponent dungeon) {
 
-        DungeoneerComponent existingDungeoneer = store.getComponent(playerEntityRef, DungeoneerComponent.getComponentType());
-        if (existingDungeoneer != null) {
-            return; // Already a dungeoneer
-        }
-
-        // Add DungeoneerComponent to player
+        // get spawn position from dungeon
         Vector3d spawnPosition = dungeon.getSpawnPosition();
+        LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] dungeon.getSpawnPosition() = (%.1f, %.1f, %.1f)",
+                spawnPosition.getX(), spawnPosition.getY(), spawnPosition.getZ());
+
         if (spawnPosition.getX() == 0 && spawnPosition.getY() == 0 && spawnPosition.getZ() == 0) {
-            // Use dungeon entity position as fallback
             var transform = store.getComponent(dungeonRef,
                     com.hypixel.hytale.server.core.modules.entity.component.TransformComponent.getComponentType());
             if (transform != null) {
                 spawnPosition = transform.getPosition();
+                LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] using dungeon transform position = (%.1f, %.1f, %.1f)",
+                        spawnPosition.getX(), spawnPosition.getY(), spawnPosition.getZ());
             }
         }
 
-        DungeoneerComponent dungeoneer = new DungeoneerComponent(dungeon.getDungeonId(), spawnPosition);
+        DungeoneerComponent dungeoneer = store.getComponent(playerEntityRef, DungeoneerComponent.getComponentType());
+        boolean isNew = (dungeoneer == null);
+
+        LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] isNew=%s, dungeonId=%s", isNew, dungeon.getDungeonId());
+
+        if (isNew) {
+            dungeoneer = new DungeoneerComponent(dungeon.getDungeonId(), spawnPosition);
+        } else {
+            // update existing dungeoneer with current dungeon data
+            LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] updating existing dungeoneer, old spawn=(%.1f, %.1f, %.1f)",
+                    dungeoneer.getSpawnPosition().getX(), dungeoneer.getSpawnPosition().getY(), dungeoneer.getSpawnPosition().getZ());
+            dungeoneer.setDungeonId(dungeon.getDungeonId());
+            dungeoneer.setSpawnPosition(spawnPosition);
+        }
+
         dungeoneer.setDungeonRef(dungeonRef);
         dungeoneer.setRelicHolder(true);
 
-        store.addComponent(playerEntityRef, DungeoneerComponent.getComponentType(), dungeoneer);
-        dungeon.addDungeoneerRef(playerEntityRef);
+        // backup and override respawn point
+        Player player = store.getComponent(playerEntityRef, Player.getComponentType());
+        if (player != null) {
+            World world = store.getExternalData().getWorld();
+            PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(world.getName());
+
+            // only backup original if this is new (don't overwrite backup with dungeon spawn)
+            if (isNew) {
+                dungeoneer.setOriginalRespawnPoints(worldData.getRespawnPoints());
+            }
+
+            Vector3i blockPos = new Vector3i(
+                    (int) spawnPosition.getX(),
+                    (int) spawnPosition.getY(),
+                    (int) spawnPosition.getZ());
+            PlayerRespawnPointData dungeonSpawn = new PlayerRespawnPointData(
+                    blockPos, spawnPosition, "Dungeon");
+            worldData.setRespawnPoints(new PlayerRespawnPointData[] { dungeonSpawn });
+
+            LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] set respawn point to (%.1f, %.1f, %.1f)",
+                    spawnPosition.getX(), spawnPosition.getY(), spawnPosition.getZ());
+        }
+
+        if (isNew) {
+            store.addComponent(playerEntityRef, DungeoneerComponent.getComponentType(), dungeoneer);
+        }
+
+        if (!dungeon.getDungeoneerRefs().contains(playerEntityRef)) {
+            dungeon.addDungeoneerRef(playerEntityRef);
+        }
+
+        LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] done - dungeoneer spawn=(%.1f, %.1f, %.1f), dungeonRef valid=%s",
+                dungeoneer.getSpawnPosition().getX(), dungeoneer.getSpawnPosition().getY(), dungeoneer.getSpawnPosition().getZ(),
+                dungeonRef != null && dungeonRef.isValid());
+    }
+
+    private void cleanupAllDungeoneers(Store<EntityStore> store, DungeonComponent dungeon) {
+        // remove DungeoneerComponent from all tracked players
+        // this triggers DungeoneerRespawnRestoreSystem to restore spawn points
+        int count = 0;
+        for (Ref<EntityStore> dungeoneerRef : dungeon.getDungeoneerRefs()) {
+            if (dungeoneerRef.isValid()) {
+                store.removeComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
+                count++;
+            }
+        }
+        dungeon.clearDungeoneerRefs();
+        dungeon.setArtifactHolderRef(null);
+        LOGGER.atInfo().log("[cleanupAllDungeoneers] removed DungeoneerComponent from %d players", count);
     }
 
     private Ref<EntityStore> findDungeonNearPlayer(Store<EntityStore> store, Ref<EntityStore> playerEntityRef) {

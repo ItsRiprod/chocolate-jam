@@ -1,0 +1,40 @@
+{
+  "version": 8,
+  "blockIdVersion": 11,
+  "anchorX": 0,
+  "anchorY": 0,
+  "anchorZ": 0,
+  "blocks": [
+    { "x": 0, "y": 0, "z": 0, "name": "Rock_Stone" },
+    { "x": 0, "y": 1, "z": 0, "name": "Empty" },
+    { "x": 0, "y": 2, "z": 0, "name": "Empty" }
+  ],
+  "fluids": [
+    { "x": 0, "y": 0, "z": 0, "name": "Empty", "level": 0 },
+    { "x": 0, "y": 1, "z": 0, "name": "Empty", "level": 0 },
+    { "x": 0, "y": 2, "z": 0, "name": "Empty", "level": 0 }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "Transform": {
+          "Position": { "X": 0.5, "Y": 1.0, "Z": 0.5 },
+          "Rotation": { "Pitch": 0.0, "Yaw": 0.0, "Roll": 0.0 }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": { "ExecutionId": "laser" },
+        "Model": {
+          "Model": { "Id": "Trap_Spawner", "Scale": 1.0, "Static": true }
+        },
+        "UUID": {
+          "UUID": { "$binary": "njd91hEOMXuji1wHcT1p8A==", "$type": "04" }
+        },
+        "LaserTrap": {},
+        "HeadRotation": {
+          "Rotation": { "Pitch": 0.0, "Yaw": 0.0, "Roll": 0.0 }
+        }
+      }
+    }
+  ]
+}

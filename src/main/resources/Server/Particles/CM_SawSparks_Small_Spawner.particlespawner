@@ -1,0 +1,117 @@
+{
+  "RenderMode": "Erosion",
+  "ParticleRotationInfluence": "BillboardVelocity",
+  "LightInfluence": 0,
+  "MaxConcurrentParticles": 100,
+  "ParticleLifeSpan": {
+    "Min": 0.2,
+    "Max": 0.5
+  },
+  "ParticleRotateWithSpawner": false,
+  "SpawnRate": {
+    "Min": 20,
+    "Max": 100
+  },
+  "Particle": {
+    "Texture": "Particles/Textures/Basic/Glow.png",
+    "ScaleRatioConstraint": "None",
+    "InitialAnimationFrame": {
+      "Scale": {
+        "X": {
+          "Min": 0.01,
+          "Max": 0.1
+        },
+        "Y": {
+          "Min": 0.01,
+          "Max": 0.1
+        }
+      },
+      "Opacity": 1.0,
+      "Color": "#ffeb00",
+      "Rotation": {
+        "Y": {
+          "Min": 90.0,
+          "Max": 90.0
+        }
+      }
+    },
+    "Animation": {
+      "0": {
+        "Opacity": 1,
+        "Rotation": {
+          "Z": {
+            "Min": -180.0,
+            "Max": -180.0
+          }
+        },
+        "Color": "#fff200"
+      },
+      "100": {
+        "Color": "#9b4100",
+        "Opacity": 1.0,
+        "Scale": {
+          "X": {
+            "Min": 0.01,
+            "Max": 0.01
+          },
+          "Y": {
+            "Min": 0.01,
+            "Max": 0.01
+          }
+        }
+      }
+    }
+  },
+  "TrailSpawnerPositionMultiplier": 1.0,
+  "TrailSpawnerRotationMultiplier": 1.0,
+  "SpawnBurst": false,
+  "LinearFiltering": true,
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0.1,
+      "Max": 3
+    },
+    "Pitch": {
+      "Min": 70.0,
+      "Max": 110.0
+    },
+    "Yaw": {
+      "Min": -180.0,
+      "Max": 180.0
+    }
+  },
+  "Attractors": [
+    {
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Radius": 0,
+      "RadialAcceleration": 3,
+      "RadialTangentAcceleration": 0,
+      "LinearAcceleration": {
+        "X": 1,
+        "Y": 1,
+        "Z": 0
+      }
+    }
+  ],
+  "VelocityStretchMultiplier": 1000.0,
+  "EmitOffset": {
+    "X": {
+      "Max": 0.2
+    },
+    "Z": {
+      "Max": 0.2
+    }
+  },
+  "TotalParticles": {
+    "Min": 600,
+    "Max": 600
+  },
+  "WaveDelay": {
+    "Min": 0,
+    "Max": 2
+  }
+}

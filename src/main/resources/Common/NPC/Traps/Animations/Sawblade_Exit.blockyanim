@@ -1,0 +1,56 @@
+{
+  "formatVersion": 1,
+  "duration": 60,
+  "holdLastKeyframe": true,
+  "nodeAnimations": {
+    "Wheel": {
+      "position": [
+        {
+          "time": 0,
+          "delta": {"x": 0, "y": 24, "z": 0},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 58,
+          "delta": {"x": 0, "y": 0, "z": 0},
+          "interpolationType": "linear"
+        }
+      ],
+      "orientation": [
+        {
+          "time": 0,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": 1},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 15,
+          "delta": {"x": -1, "y": 0, "z": 0, "w": 0},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 29,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": -1},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 30,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": 1},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 45,
+          "delta": {"x": -1, "y": 0, "z": 0, "w": 0},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 59,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": -1},
+          "interpolationType": "linear"
+        }
+      ],
+      "shapeStretch": [],
+      "shapeVisible": [],
+      "shapeUvOffset": []
+    }
+  }
+}

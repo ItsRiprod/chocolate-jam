@@ -1,0 +1,47 @@
+{
+  "Texture": "NPC/Traps/SawBlade_Texture.png",
+  "Model": "NPC/Traps/SawBlade.blockymodel",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    },
+    "Min": {
+      "X": -0.1,
+      "Y": -0.1,
+      "Z": -0.1
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "AnimationSets": {
+    "SawBlade_Spin": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/SawBlade_Spin.blockyanim",
+          "Looping": false,
+          "Speed": 1.0
+        }
+      ]
+    },
+    "Sawblade_Enter": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Sawblade_Enter.blockyanim",
+          "Looping": false,
+          "Speed": 1.0
+        }
+      ]
+    },
+    "Sawblade_Exit": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Sawblade_Exit.blockyanim",
+          "Looping": false,
+          "Speed": 1.0
+        }
+      ]
+    }
+  }
+}

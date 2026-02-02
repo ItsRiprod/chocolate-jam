@@ -10,14 +10,18 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-import java.util.Random;
 
 /**
- * Per-spawner runtime state for hydraulic press trap.
- * Manages the press cycle: IDLE -> Swing R (repeat) 1s animation -> Swing L (1s animation - same animation as Swing R but different state) -> IDLE
+ * Per-spawner runtime state for hammer trap.
+ * Manages the hammer cycle: IDLE -> Swing R 1s animation -> Swing L (1s animation) (repeat) [On deactivation] -> IDLE
  * (deactivated)
  */
 public class BigFreakingHammerComponent implements Component<EntityStore> {
+
+    public enum KnockbackAxis {
+        X,
+        Z
+    }
 
     public static final BuilderCodec<BigFreakingHammerComponent> CODEC = BuilderCodec
             .builder(BigFreakingHammerComponent.class, BigFreakingHammerComponent::new)
@@ -25,48 +29,49 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
                     (c, v) -> c.damageAmount = v,
                     c -> c.damageAmount)
             .add()
-            .append(new KeyedCodec<>("VelocityMultiplier", Codec.FLOAT),
-                    (c, v) -> c.velocityMultiplier = v,
-                    c -> c.velocityMultiplier)
+            .append(new KeyedCodec<>("KnockbackForce", Codec.FLOAT),
+                    (c, v) -> c.knockbackForceHorizontal = v,
+                    c -> c.knockbackForceHorizontal)
+            .add()
+            .append(new KeyedCodec<>("KnockbackAxis", Codec.STRING),
+                    (c, v) -> c.knockbackAxis = KnockbackAxis.valueOf(v),
+                    c -> c.knockbackAxis.name())
             .add()
             .build();
 
-    public enum Phase {
+    public enum HammerPhase {
         IDLE,
-        SWINGING,
-        RETRACTING,
-        COOLDOWN
+        SWING_RIGHT,
+        SWING_LEFT
     }
 
     private static ComponentType<EntityStore, BigFreakingHammerComponent> componentType;
-    private static final Random RANDOM = new Random();
 
     // runtime state
     @Nullable
     private Ref<EntityStore> spawnedRef;
     private boolean active;
-    private Phase phase = Phase.IDLE;
+    private HammerPhase phase = HammerPhase.IDLE;
     private float phaseTimer = 0f;
     private float currentCooldownDuration = 0f;
     private boolean hasDamagedThisCycle = false;
 
-    // configurable via command
-    private float pressAnimationDuration = 3.0495f;
-    private float retractAnimationDuration = 3.0f;
-    private float minCooldown = 0.0f;
-    private float maxCooldown = 2.0f;
-    private float damageAmount = 25f;
-    private float velocityMultiplier = 1.0f;
+    private float damageAmount = 75f;
+    private KnockbackAxis knockbackAxis = KnockbackAxis.X;
+    private boolean pendingDeactivation = false;
+    private boolean needsIdleAnimation = true;
 
-    // fixed values
-    private float damageDelayTime = 0.2033f;
-    private float damageZoneWidth = 2.0f;
-    private float damageZoneHeight = 2.0f;
+    private float damageDelayTime = 0.45f;
+    private float damageZoneWidth = 6.0f;
+    private float damageZoneHeight = 3.0f;
     private float damageZoneDepth = 2.0f;
     private float damageZoneOffsetY = 0.0f;
-    private float knockbackForceY = 1.3f;
-    private float knockbackForceHorizontal = 1.3f;
+    private float knockbackForceY = 5.0f;
+    private float knockbackForceHorizontal = 8.0f;
     private float knockbackDuration = 0f;
+
+    // animation durations
+    private float swingAnimationDuration = 1.0f;
 
     public BigFreakingHammerComponent() {
         this.spawnedRef = null;
@@ -108,16 +113,13 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
 
     // --- Phase management ---
 
-    public Phase getPhase() {
+    public HammerPhase getPhase() {
         return phase;
     }
 
-    public void setPhase(Phase phase) {
+    public void setPhase(HammerPhase phase) {
         this.phase = phase;
         this.phaseTimer = 0f;
-        if (phase == Phase.COOLDOWN) {
-            this.currentCooldownDuration = minCooldown + RANDOM.nextFloat() * (maxCooldown - minCooldown);
-        }
     }
 
     public float getPhaseTimer() {
@@ -142,38 +144,6 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
 
     // --- Configurable via command ---
 
-    public float getPressAnimationDuration() {
-        return pressAnimationDuration;
-    }
-
-    public void setPressAnimationDuration(float duration) {
-        this.pressAnimationDuration = duration;
-    }
-
-    public float getRetractAnimationDuration() {
-        return retractAnimationDuration;
-    }
-
-    public void setRetractAnimationDuration(float duration) {
-        this.retractAnimationDuration = duration;
-    }
-
-    public float getMinCooldown() {
-        return minCooldown;
-    }
-
-    public void setMinCooldown(float minCooldown) {
-        this.minCooldown = minCooldown;
-    }
-
-    public float getMaxCooldown() {
-        return maxCooldown;
-    }
-
-    public void setMaxCooldown(float maxCooldown) {
-        this.maxCooldown = maxCooldown;
-    }
-
     public float getDamageAmount() {
         return damageAmount;
     }
@@ -182,15 +152,33 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
         this.damageAmount = amount;
     }
 
-    public float getVelocityMultiplier() {
-        return velocityMultiplier;
+    public KnockbackAxis getKnockbackAxis() {
+        return knockbackAxis;
     }
 
-    public void setVelocityMultiplier(float multiplier) {
-        this.velocityMultiplier = multiplier;
+    public void setKnockbackAxis(KnockbackAxis axis) {
+        this.knockbackAxis = axis;
     }
 
-    // --- Fixed values ---
+    public void setKnockbackForceHorizontal(float force) {
+        this.knockbackForceHorizontal = force;
+    }
+
+    public boolean isPendingDeactivation() {
+        return pendingDeactivation;
+    }
+
+    public void setPendingDeactivation(boolean pending) {
+        this.pendingDeactivation = pending;
+    }
+
+    public boolean needsIdleAnimation() {
+        return needsIdleAnimation;
+    }
+
+    public void setNeedsIdleAnimation(boolean needs) {
+        this.needsIdleAnimation = needs;
+    }
 
     public float getDamageDelayTime() {
         return damageDelayTime;
@@ -213,15 +201,21 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
     }
 
     public float getKnockbackForceY() {
-        return knockbackForceY * velocityMultiplier;
+        return knockbackForceY;
     }
 
     public float getKnockbackForceHorizontal() {
-        return knockbackForceHorizontal * velocityMultiplier;
+        return knockbackForceHorizontal;
     }
 
     public float getKnockbackDuration() {
         return knockbackDuration;
+    }
+
+    // -- Animation durations ---
+
+    public float getSwingAnimationDuration() {
+        return swingAnimationDuration;
     }
 
     // --- Reset ---
@@ -229,10 +223,12 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
     public void reset() {
         this.spawnedRef = null;
         this.active = false;
-        this.phase = Phase.IDLE;
+        this.phase = HammerPhase.IDLE;
         this.phaseTimer = 0f;
         this.currentCooldownDuration = 0f;
         this.hasDamagedThisCycle = false;
+        this.pendingDeactivation = false;
+        this.needsIdleAnimation = true;
     }
 
     @Nonnull
@@ -244,13 +240,12 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
         copy.phase = this.phase;
         copy.phaseTimer = this.phaseTimer;
         copy.currentCooldownDuration = this.currentCooldownDuration;
-        copy.pressAnimationDuration = this.pressAnimationDuration;
-        copy.retractAnimationDuration = this.retractAnimationDuration;
-        copy.minCooldown = this.minCooldown;
-        copy.maxCooldown = this.maxCooldown;
         copy.damageAmount = this.damageAmount;
-        copy.velocityMultiplier = this.velocityMultiplier;
+        copy.knockbackAxis = this.knockbackAxis;
+        copy.knockbackForceHorizontal = this.knockbackForceHorizontal;
         copy.hasDamagedThisCycle = this.hasDamagedThisCycle;
+        copy.pendingDeactivation = this.pendingDeactivation;
+        copy.needsIdleAnimation = this.needsIdleAnimation;
         return copy;
     }
 }

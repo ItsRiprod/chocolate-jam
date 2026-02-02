@@ -1,0 +1,11 @@
+{
+  "Layers": [
+    {
+      "Files": ["Sounds/Traps/SawBlade_Loop.ogg"],
+      "Looping": true
+    }
+  ],
+  "Volume": 0,
+  "Parent": "SFX_Attn_Moderate",
+  "MaxInstance": 5
+}

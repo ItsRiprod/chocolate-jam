@@ -3,10 +3,12 @@ package com.chocolate.machine.dungeon.component;
 import com.hypixel.hytale.codec.Codec;
 import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
+import com.hypixel.hytale.codec.codecs.array.ArrayCodec;
 import com.hypixel.hytale.component.Component;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
@@ -40,6 +42,11 @@ public class DungeoneerComponent implements Component<EntityStore> {
                     (c, v) -> c.spawnZ = v,
                     c -> c.spawnZ)
             .add()
+            .append(new KeyedCodec<>("OriginalRespawnPoints",
+                    new ArrayCodec<>(PlayerRespawnPointData.CODEC, PlayerRespawnPointData[]::new)),
+                    (c, v) -> c.originalRespawnPoints = v,
+                    c -> c.originalRespawnPoints)
+            .add()
             .build();
 
     private static ComponentType<EntityStore, DungeoneerComponent> componentType;
@@ -52,6 +59,10 @@ public class DungeoneerComponent implements Component<EntityStore> {
     private double spawnX = 0.0;
     private double spawnY = 0.0;
     private double spawnZ = 0.0;
+
+    // backup of player's original respawn points (restored when leaving dungeon)
+    @Nullable
+    private PlayerRespawnPointData[] originalRespawnPoints;
 
     // Runtime reference to the dungeon entity (not serialized)
     @Nullable
@@ -112,6 +123,15 @@ public class DungeoneerComponent implements Component<EntityStore> {
         this.dungeonRef = dungeonRef;
     }
 
+    @Nullable
+    public PlayerRespawnPointData[] getOriginalRespawnPoints() {
+        return originalRespawnPoints;
+    }
+
+    public void setOriginalRespawnPoints(@Nullable PlayerRespawnPointData[] originalRespawnPoints) {
+        this.originalRespawnPoints = originalRespawnPoints;
+    }
+
     @Nonnull
     @Override
     public DungeoneerComponent clone() {
@@ -121,6 +141,7 @@ public class DungeoneerComponent implements Component<EntityStore> {
         copy.spawnX = this.spawnX;
         copy.spawnY = this.spawnY;
         copy.spawnZ = this.spawnZ;
+        copy.originalRespawnPoints = this.originalRespawnPoints;
         copy.dungeonRef = this.dungeonRef;
         return copy;
     }

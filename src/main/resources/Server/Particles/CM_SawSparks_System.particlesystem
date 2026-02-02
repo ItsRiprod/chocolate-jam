@@ -1,0 +1,16 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "CM_SawSparks_Spawner",
+      "PositionOffset": {
+        "Y": 0.2
+      }
+    },
+    {
+      "PositionOffset": {
+        "Y": 0.2
+      },
+      "SpawnerId": "CM_SawSparks_Small_Spawner"
+    }
+  ]
+}

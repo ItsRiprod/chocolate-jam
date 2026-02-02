@@ -3,24 +3,6 @@
   "duration": 60,
   "holdLastKeyframe": true,
   "nodeAnimations": {
-    "root": {
-      "position": [],
-      "orientation": [
-        {
-          "time": 3,
-          "delta": {"x": 0, "y": 0, "z": 0, "w": 1},
-          "interpolationType": "smooth"
-        },
-        {
-          "time": 55,
-          "delta": {"x": -1, "y": 0, "z": 0, "w": 0},
-          "interpolationType": "smooth"
-        }
-      ],
-      "shapeStretch": [],
-      "shapeVisible": [],
-      "shapeUvOffset": []
-    },
     "Bar2": {
       "position": [
         {
@@ -128,6 +110,34 @@
         }
       ],
       "orientation": [],
+      "shapeStretch": [],
+      "shapeVisible": [],
+      "shapeUvOffset": []
+    },
+    "Handle": {
+      "position": [],
+      "orientation": [
+        {
+          "time": 0,
+          "delta": {"x": 0, "y": 0, "z": -1, "w": 0},
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 3,
+          "delta": {"x": 0, "y": 0, "z": -1, "w": 0},
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 55,
+          "delta": {"x": 0, "y": 0, "z": -0.01745, "w": 0.99985},
+          "interpolationType": "smooth"
+        },
+        {
+          "time": 60,
+          "delta": {"x": 0, "y": 0, "z": -0.01745, "w": 0.99985},
+          "interpolationType": "smooth"
+        }
+      ],
       "shapeStretch": [],
       "shapeVisible": [],
       "shapeUvOffset": []
