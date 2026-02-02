@@ -1,0 +1,53 @@
+{
+  "Texture": "Items/Weapons/Big_Hammer.png",
+  "Model": "Items/Weapons/Big_Hammer.blockymodel",
+  "HitBox": {
+    "Max": {
+      "X": 1.5,
+      "Y": 1.5,
+      "Z": 1.5
+    },
+    "Min": {
+      "X": -1.5,
+      "Y": -1.5,
+      "Z": -1.5
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Idle.blockyanim",
+          "Looping": true
+        }
+      ]
+    },
+    "Press": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Activate.blockyanim",
+          "Looping": false,
+          "Speed": 1.0
+        }
+      ]
+    },
+    "Release": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Deactivate.blockyanim",
+          "Looping": false
+        }
+      ]
+    },
+    "Cycle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Press_Peek.blockyanim",
+          "Looping": true
+        }
+      ]
+    }
+  }
+}

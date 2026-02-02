@@ -55,6 +55,10 @@ public class DungeonEntranceComponent implements Component<EntityStore> {
         return dungeonId;
     }
 
+    public void setDungeonId(String dungeonId) {
+        this.dungeonId = dungeonId;
+    }
+
     public Set<UUID> getPlayersInside() {
         return playersInside;
     }
