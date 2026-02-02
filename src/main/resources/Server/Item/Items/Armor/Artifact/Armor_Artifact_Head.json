@@ -3,7 +3,7 @@
     "Name": "server.items.Armor_Artifact_Head.name"
   },
   "Parent": "Armor_Iron_Head",
-  "Quality": "Epic",
+  "Quality": "Artifact",
   "ItemLevel": 65,
   "Icon": "Icons/ItemsGenerated/Armor_Artifact_Head.png",
   "IconProperties": {
@@ -94,5 +94,5 @@
     ]
   },
   "MaxDurability": 120,
-  "ItemSoundSetId": "ISS_Armor_Cloth"
+  "ItemSoundSetId": "ISS_Armor_Leather"
 }

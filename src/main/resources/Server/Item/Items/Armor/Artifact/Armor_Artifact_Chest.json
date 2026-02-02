@@ -3,7 +3,7 @@
     "Name": "server.items.Armor_Artifact_Chest.name"
   },
   "Parent": "Armor_Iron_Chest",
-  "Quality": "Epic",
+  "Quality": "Artifact",
   "ItemLevel": 65,
   "Icon": "Icons/ItemsGenerated/Armor_Artifact_Chest.png",
   "IconProperties": {
@@ -94,6 +94,6 @@
       "Cobalt"
     ]
   },
-  "ItemSoundSetId": "ISS_Armor_Heavy",
+  "ItemSoundSetId": "ISS_Armor_Leather",
   "DurabilityLossOnHit": 0.5
 }

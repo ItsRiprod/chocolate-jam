@@ -40,11 +40,7 @@ public class DungeonEntranceComponent implements Component<EntityStore> {
         return componentType;
     }
 
-
-    // Track players currently inside (per-instance state)
     private final Set<UUID> playersInside = ConcurrentHashMap.newKeySet();
-
-    // Track players who were inside last tick (for escape detection)
     private final Set<UUID> playersInsideLastTick = ConcurrentHashMap.newKeySet();
 
     public double getTriggerRadius() {
@@ -67,10 +63,6 @@ public class DungeonEntranceComponent implements Component<EntityStore> {
         return playersInsideLastTick;
     }
 
-    /**
-     * Called at end of tick to update last-tick tracking.
-     * Copies current inside set to last-tick set.
-     */
     public void updateLastTickTracking() {
         playersInsideLastTick.clear();
         playersInsideLastTick.addAll(playersInside);
@@ -81,7 +73,6 @@ public class DungeonEntranceComponent implements Component<EntityStore> {
         DungeonEntranceComponent copy = new DungeonEntranceComponent();
         copy.triggerRadius = this.triggerRadius;
         copy.dungeonId = this.dungeonId;
-        // Copy runtime state
         copy.playersInside.addAll(this.playersInside);
         copy.playersInsideLastTick.addAll(this.playersInsideLastTick);
         return copy;

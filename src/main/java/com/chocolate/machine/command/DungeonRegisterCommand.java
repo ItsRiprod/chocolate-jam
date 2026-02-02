@@ -16,9 +16,6 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Find the nearest BossRoom (DungeonComponent) and re-register all nearby spawners.
- */
 public class DungeonRegisterCommand extends AbstractPlayerCommand {
 
     public DungeonRegisterCommand() {
@@ -38,7 +35,6 @@ public class DungeonRegisterCommand extends AbstractPlayerCommand {
 
         DungeonService dungeonService = module.getDungeonService();
 
-        // Find nearest dungeon
         Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeonToPlayer(playerEntityRef, store);
 
         if (dungeonRef == null || !dungeonRef.isValid()) {
@@ -64,7 +60,6 @@ public class DungeonRegisterCommand extends AbstractPlayerCommand {
         String dungeonId = dungeon.getDungeonId();
         int oldCount = dungeon.getSpawnerCount();
 
-        // Clear and re-register
         if (dungeon.isRegistered()) {
             playerRef.sendMessage(Message.raw("Re-registering dungeon '" + dungeonId + "' at " + posStr));
             playerRef.sendMessage(Message.raw("Previous spawner count: " + oldCount));

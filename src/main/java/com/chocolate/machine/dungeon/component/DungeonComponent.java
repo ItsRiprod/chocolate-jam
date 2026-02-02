@@ -16,10 +16,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Attached to dungeon controller entity (placed in boss room prefab).
- * Holds dungeon state including spawner refs, active state, and configuration.
- */
 public class DungeonComponent implements Component<EntityStore> {
 
     public static final BuilderCodec<DungeonComponent> CODEC = BuilderCodec
@@ -53,7 +49,6 @@ public class DungeonComponent implements Component<EntityStore> {
 
     private static ComponentType<EntityStore, DungeonComponent> componentType;
 
-    // Serialized fields
     @Nonnull
     private String dungeonId = "";
     private double triggerRadius = 10.0;
@@ -62,7 +57,6 @@ public class DungeonComponent implements Component<EntityStore> {
     private double spawnZ = 0.0;
     private boolean active = false;
 
-    // Runtime (not serialized)
     @Nullable
     private Ref<EntityStore> artifactHolderRef;
     @Nullable

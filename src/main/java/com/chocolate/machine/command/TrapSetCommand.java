@@ -24,10 +24,6 @@ import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.util.TargetUtil;
 
-/**
- * Set execution ID of the spawner you're looking at.
- * Auto-registers the spawner into the nearest dungeon if within range.
- */
 public class TrapSetCommand extends AbstractPlayerCommand {
 
     private static final double AUTO_REGISTER_RANGE = 50.0;
@@ -64,7 +60,6 @@ public class TrapSetCommand extends AbstractPlayerCommand {
 
         SpawnerComponent spawner = store.getComponent(targetRef, SpawnerComponent.getComponentType());
         if (spawner == null) {
-            // add SpawnerComponent if missing
             spawner = new SpawnerComponent();
             store.addComponent(targetRef, SpawnerComponent.getComponentType(), spawner);
         }
@@ -84,7 +79,6 @@ public class TrapSetCommand extends AbstractPlayerCommand {
             DungeonService service = module.getDungeonService();
             service.setSpawnerAction(targetRef, newId, store);
 
-            // Auto-register into nearest dungeon if not already registered
             autoRegisterSpawner(targetRef, spawner, transform, store, playerRef);
         } else {
             // fallback: just set ID directly
@@ -103,7 +97,6 @@ public class TrapSetCommand extends AbstractPlayerCommand {
 
         if (transform == null) return;
 
-        // Only search within AUTO_REGISTER_RANGE blocks
         Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeon(
                 transform.getPosition(), store, AUTO_REGISTER_RANGE);
         if (dungeonRef == null || !dungeonRef.isValid()) {
@@ -117,7 +110,6 @@ public class TrapSetCommand extends AbstractPlayerCommand {
             return;
         }
 
-        // Link spawner to dungeon
         dungeon.addSpawnerRef(spawnerRef);
 
         playerRef.sendMessage(Message.raw("Auto-registered to dungeon '" + dungeon.getDungeonId() + "'"));

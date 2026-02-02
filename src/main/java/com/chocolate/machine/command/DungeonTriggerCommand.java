@@ -17,11 +17,6 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Toggle dungeon trigger state for testing:
- * - First run: Make executor the relic holder, activate dungeon
- * - Second run: Simulate relic holder escaping (deactivate dungeon)
- */
 public class DungeonTriggerCommand extends AbstractPlayerCommand {
 
     public DungeonTriggerCommand() {
@@ -41,14 +36,11 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
 
         DungeonService dungeonService = module.getDungeonService();
 
-        // Check if player is already a dungeoneer with relic
         DungeoneerComponent existingDungeoneer = store.getComponent(playerEntityRef, DungeoneerComponent.getComponentType());
 
         if (existingDungeoneer != null && existingDungeoneer.isRelicHolder()) {
-            // Player is relic holder - simulate escape
             handleSimulateEscape(playerEntityRef, playerRef, existingDungeoneer, dungeonService, store);
         } else {
-            // Player is not relic holder - become relic holder
             handleBecomeRelicHolder(playerEntityRef, playerRef, existingDungeoneer, dungeonService, store);
         }
     }
@@ -56,7 +48,6 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
     private void handleBecomeRelicHolder(Ref<EntityStore> playerEntityRef, PlayerRef playerRef,
             DungeoneerComponent existingDungeoneer, DungeonService dungeonService, Store<EntityStore> store) {
 
-        // Find nearest dungeon
         Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeonToPlayer(playerEntityRef, store);
 
         if (dungeonRef == null || !dungeonRef.isValid()) {
@@ -72,7 +63,6 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
 
         String dungeonId = dungeon.getDungeonId();
 
-        // Add DungeoneerComponent if not already present
         if (existingDungeoneer == null) {
             Vector3d spawnPosition = dungeon.getSpawnPosition();
             existingDungeoneer = new DungeoneerComponent(dungeonId, spawnPosition);
@@ -82,11 +72,9 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
             playerRef.sendMessage(Message.raw("Added as dungeoneer to '" + dungeonId + "'"));
         }
 
-        // Make player the relic holder
         existingDungeoneer.setRelicHolder(true);
         dungeon.setArtifactHolderRef(playerEntityRef);
 
-        // Activate dungeon if not already active
         if (!dungeon.isActive()) {
             dungeonService.activate(dungeonRef, playerEntityRef, store);
             playerRef.sendMessage(Message.raw("You are now the relic holder! Dungeon '" + dungeonId + "' activated."));
@@ -106,18 +94,15 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
 
         playerRef.sendMessage(Message.raw("Simulating escape from dungeon '" + dungeonId + "'..."));
 
-        // Clear relic holder status
         dungeoneer.setRelicHolder(false);
 
         if (dungeonRef != null && dungeonRef.isValid()) {
             DungeonComponent dungeon = store.getComponent(dungeonRef, DungeonComponent.getComponentType());
 
             if (dungeon != null) {
-                // Deactivate dungeon
                 dungeonService.deactivate(dungeonRef, store);
                 dungeon.setArtifactHolderRef(null);
 
-                // Remove DungeoneerComponent from all players (use tryRemove for safety)
                 for (Ref<EntityStore> otherRef : dungeon.getDungeoneerRefs()) {
                     if (otherRef.isValid()) {
                         store.tryRemoveComponent(otherRef, DungeoneerComponent.getComponentType());
@@ -129,7 +114,6 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
             }
         }
 
-        // Remove our DungeoneerComponent (tryRemove handles if already removed in the loop above)
         store.tryRemoveComponent(playerEntityRef, DungeoneerComponent.getComponentType());
 
         playerRef.sendMessage(Message.raw("Escape simulated successfully!"));

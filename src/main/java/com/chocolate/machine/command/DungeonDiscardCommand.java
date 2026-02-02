@@ -18,10 +18,6 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Discard/unregister the nearest dungeon.
- * Useful for prefab editing to clear stale data.
- */
 public class DungeonDiscardCommand extends AbstractPlayerCommand {
 
     public DungeonDiscardCommand() {
@@ -41,7 +37,6 @@ public class DungeonDiscardCommand extends AbstractPlayerCommand {
 
         DungeonService dungeonService = module.getDungeonService();
 
-        // Find nearest dungeon
         Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeonToPlayer(playerEntityRef, store);
 
         if (dungeonRef == null || !dungeonRef.isValid()) {
@@ -66,13 +61,11 @@ public class DungeonDiscardCommand extends AbstractPlayerCommand {
 
         playerRef.sendMessage(Message.raw("Discarding dungeon '" + dungeonId + "' at " + posStr + "..."));
 
-        // Deactivate if active
         if (dungeon.isActive()) {
             dungeonService.deactivate(dungeonRef, store);
             playerRef.sendMessage(Message.raw("Deactivated dungeon."));
         }
 
-        // Clean up all spawners
         int spawnerCount = dungeon.getSpawnerCount();
         for (Ref<EntityStore> spawnerRef : dungeon.getSpawnerRefs()) {
             if (!spawnerRef.isValid()) continue;
@@ -83,14 +76,12 @@ public class DungeonDiscardCommand extends AbstractPlayerCommand {
             }
         }
 
-        // Remove DungeoneerComponent from all dungeoneers (use tryRemove for safety)
         int dungeoneerCount = dungeon.getDungeoneerRefs().size();
         for (Ref<EntityStore> dungeoneerRef : dungeon.getDungeoneerRefs()) {
             if (!dungeoneerRef.isValid()) continue;
             store.tryRemoveComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
         }
 
-        // Clear all references
         dungeon.clearSpawnerRefs();
         dungeon.clearDungeoneerRefs();
         dungeon.setEntranceRef(null);

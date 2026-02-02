@@ -14,10 +14,6 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-/**
- * Attached to players when they enter a dungeon's boss room.
- * Tracks their dungeon participation state.
- */
 public class DungeoneerComponent implements Component<EntityStore> {
 
     public static final BuilderCodec<DungeoneerComponent> CODEC = BuilderCodec
@@ -55,16 +51,13 @@ public class DungeoneerComponent implements Component<EntityStore> {
     private String dungeonId = "";
     private boolean isRelicHolder = false;
 
-    // Spawn position (copied from dungeon when entering boss room)
     private double spawnX = 0.0;
     private double spawnY = 0.0;
     private double spawnZ = 0.0;
 
-    // backup of player's original respawn points (restored when leaving dungeon)
     @Nullable
     private PlayerRespawnPointData[] originalRespawnPoints;
 
-    // Runtime reference to the dungeon entity (not serialized)
     @Nullable
     private Ref<EntityStore> dungeonRef;
 

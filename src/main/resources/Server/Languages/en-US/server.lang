@@ -2,3 +2,4 @@ items.Armor_Artifact_Hands.name = Artifact Gloves
 items.Armor_Artifact_Legs.name = Artifact Boots
 items.Armor_Artifact_Chest.name = Artifact Chestplate
 items.Armor_Artifact_Head.name = Artifact Headband
+general.qualities.Artifact = Artifact

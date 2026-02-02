@@ -58,7 +58,6 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
             }
         }
 
-        // Check for and merge nearby dungeons (within 50 blocks)
         DungeonService.MergeResult mergeResult = dungeonService.checkAndMergeDungeons(dungeonRef, store);
         dungeonRef = mergeResult.primaryDungeonRef;
 
@@ -75,20 +74,17 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
             return;
         }
 
-        // Debug info to help diagnose double-activation issues
         String dungeonId = dungeon.getDungeonId();
         playerRef.sendMessage(Message.raw("Using dungeon '" + (dungeonId.isEmpty() ? "(unnamed)" : dungeonId) +
                 "' (active=" + dungeon.isActive() + ", spawners=" + dungeon.getSpawnerCount() +
                 ", blocks=" + dungeon.getDungeonBlockCount() + ")"));
 
         if (dungeon.isActive()) {
-            // clean up all dungeoneers before deactivating (restores spawn points)
             cleanupAllDungeoneers(store, dungeon);
 
             dungeonService.deactivate(dungeonRef, store);
             playerRef.sendMessage(Message.raw("Dungeon DEACTIVATED. Spawners despawned, blocks reset, dungeoneers removed."));
         } else {
-            // Add player as dungeoneer if not already
             ensurePlayerIsDungeoneer(store, playerEntityRef, dungeonRef, dungeon);
 
             dungeonService.activate(dungeonRef, playerEntityRef, store);
@@ -100,7 +96,6 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
     private void ensurePlayerIsDungeoneer(Store<EntityStore> store, Ref<EntityStore> playerEntityRef,
             Ref<EntityStore> dungeonRef, DungeonComponent dungeon) {
 
-        // get spawn position from dungeon
         Vector3d spawnPosition = dungeon.getSpawnPosition();
         LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] dungeon.getSpawnPosition() = (%.1f, %.1f, %.1f)",
                 spawnPosition.getX(), spawnPosition.getY(), spawnPosition.getZ());
@@ -123,7 +118,6 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
         if (isNew) {
             dungeoneer = new DungeoneerComponent(dungeon.getDungeonId(), spawnPosition);
         } else {
-            // update existing dungeoneer with current dungeon data
             LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] updating existing dungeoneer, old spawn=(%.1f, %.1f, %.1f)",
                     dungeoneer.getSpawnPosition().getX(), dungeoneer.getSpawnPosition().getY(), dungeoneer.getSpawnPosition().getZ());
             dungeoneer.setDungeonId(dungeon.getDungeonId());
@@ -133,13 +127,11 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
         dungeoneer.setDungeonRef(dungeonRef);
         dungeoneer.setRelicHolder(true);
 
-        // backup and override respawn point
         Player player = store.getComponent(playerEntityRef, Player.getComponentType());
         if (player != null) {
             World world = store.getExternalData().getWorld();
             PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(world.getName());
 
-            // only backup original if this is new (don't overwrite backup with dungeon spawn)
             if (isNew) {
                 dungeoneer.setOriginalRespawnPoints(worldData.getRespawnPoints());
             }
@@ -170,8 +162,7 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
     }
 
     private void cleanupAllDungeoneers(Store<EntityStore> store, DungeonComponent dungeon) {
-        // remove DungeoneerComponent from all tracked players
-        // this triggers DungeoneerRespawnRestoreSystem to restore spawn points
+        // triggers DungeoneerRespawnRestoreSystem
         int count = 0;
         for (Ref<EntityStore> dungeoneerRef : dungeon.getDungeoneerRefs()) {
             if (dungeoneerRef.isValid()) {
@@ -200,7 +191,6 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
             return null;
         }
 
-        // look for existing dungeon controller
         Ref<EntityStore> dungeonRef = null;
         for (Ref<EntityStore> spawnerRef : spawners) {
             if (!spawnerRef.isValid()) {
@@ -214,7 +204,6 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
             }
         }
 
-        // no controller found, use first spawner
         if (dungeonRef == null) {
             dungeonRef = spawners.get(0);
             store.ensureAndGetComponent(dungeonRef, DungeonComponent.getComponentType());

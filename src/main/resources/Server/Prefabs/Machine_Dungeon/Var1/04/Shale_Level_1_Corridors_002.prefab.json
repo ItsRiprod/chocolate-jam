@@ -19,7 +19,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.06.*",
+            "PrefabPath": "Machine_Dungeon.Var1.06.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true
@@ -2766,7 +2766,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.05_Room1.*",
+            "PrefabPath": "Machine_Dungeon.Var1.05_Room1.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true

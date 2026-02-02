@@ -30,18 +30,11 @@ import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
-/**
- * Detects players entering the dungeon boss room.
- * When a player enters, adds DungeoneerComponent to track their dungeon participation.
- */
 public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
-    /**
-     * Resource to track players being added as dungeoneers this tick.
-     * Prevents duplicate additions when multiple dungeon entities process the same player.
-     */
+    // prevents dupe additions when multiple dungeons process same player
     public static class PendingDungeoneerResource implements Resource<EntityStore> {
         private final Set<Ref<EntityStore>> pendingPlayers = new HashSet<>();
 

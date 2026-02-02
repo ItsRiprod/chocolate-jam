@@ -9,10 +9,6 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
 
-/**
- * Per-spawner runtime state for laser trap.
- * Periodically shoots laser projectiles in a configurable direction.
- */
 public class LaserTrapActionComponent implements Component<EntityStore> {
 
     public static final BuilderCodec<LaserTrapActionComponent> CODEC = BuilderCodec

@@ -27,7 +27,6 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
 
-// dungeon module - registers components, systems, and spawnables
 public class DungeonModule extends System<EntityStore> {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
@@ -36,22 +35,18 @@ public class DungeonModule extends System<EntityStore> {
 
     private final DungeonService dungeonService;
 
-    // persistent (serialized)
     private ComponentType<EntityStore, DungeonComponent> dungeonComponentType;
     private ComponentType<EntityStore, DungeoneerComponent> dungeoneerComponentType;
     private ComponentType<EntityStore, DungeonEntranceComponent> dungeonEntranceComponentType;
     private ComponentType<EntityStore, SpawnerComponent> spawnerComponentType;
 
-    // runtime only
     private ComponentType<EntityStore, SkeletonActionComponent> skeletonActionComponentType;
 
-    // trap action components (persistent)
     private ComponentType<EntityStore, BigFreakingHammerComponent> hammerActionComponent;
     private ComponentType<EntityStore, HydraulicPressActionComponent> hydraulicPressActionComponentType;
     private ComponentType<EntityStore, LaserTrapActionComponent> laserTrapActionComponentType;
     private ComponentType<EntityStore, SawBladeComponent> sawBladeComponentType;
 
-    // resources
     private ResourceType<EntityStore, DungeonBossRoomSystem.PendingDungeoneerResource> pendingDungeoneerResourceType;
 
     public DungeonModule() {
@@ -99,11 +94,9 @@ public class DungeonModule extends System<EntityStore> {
     private void registerDefaultSpawnables() {
         SpawnableRegistry registry = SpawnableRegistry.getInstance();
 
-        // runtime only components (no persistence)
         skeletonActionComponentType = registerComponent(SkeletonActionComponent.class, SkeletonActionComponent::new);
         SkeletonActionComponent.setComponentType(skeletonActionComponentType);
 
-        // trap action components (persistent configuration)
         hammerActionComponent = registerComponent(BigFreakingHammerComponent.class, "Hammer", BigFreakingHammerComponent.CODEC);
         BigFreakingHammerComponent.setComponentType(hammerActionComponent);
 
@@ -116,14 +109,12 @@ public class DungeonModule extends System<EntityStore> {
         sawBladeComponentType = registerComponent(SawBladeComponent.class, "SawBlade", SawBladeComponent.CODEC);
         SawBladeComponent.setComponentType(sawBladeComponentType);
 
-        // traps
         registry.register(new HammerTrap());
         registry.register(new SawBladeTrap());
         registry.register(new HydraulicPressTrap());
         registry.register(new LaserTrap());
         registry.register(new BeamTrap());
 
-        // entities
         registry.register(new GolemAction());
         registry.register(new ArcherAction());
         registry.register(new BruteAction());
