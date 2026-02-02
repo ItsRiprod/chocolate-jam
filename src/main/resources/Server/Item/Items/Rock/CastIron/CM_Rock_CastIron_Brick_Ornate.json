@@ -1,0 +1,122 @@
+{
+  "TranslationProperties": {
+    "Name": "Cast Iron Brick Ornate"
+  },
+  "Icon": "Icons/ItemsGenerated/CM_Rock_CastIron_Brick_Ornate.png",
+  "Set": "Rock_Shale_Brick",
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 1,
+        "ResourceTypeId": "Rock_Shale"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Builders",
+        "Type": "StructuralCrafting",
+        "Categories": [
+          "Ornate"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 0
+  },
+  "BlockType": {
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "Textures": [
+      {
+        "Weight": 1,
+        "All": "BlockTextures/Rock_CastIron_Brick_Ornate.png"
+      }
+    ],
+    "ParticleColor": "#432e22",
+    "State": {
+      "Definitions": {
+        "On": {
+          "Interactions": {
+            "Use": {
+              "Interactions": [
+                {
+                  "Type": "ChangeState",
+                  "Changes": {
+                    "default": "default"
+                  },
+                  "UpdateBlockState": true
+                }
+              ]
+            }
+          },
+          "DrawType": "CubeWithModel",
+          "CustomModel": "Blocks/Structures/Base_Shapes/Cube_Overlay.blockymodel",
+          "CustomModelTexture": [
+            {
+              "Texture": "BlockTextures/Rock_CastIron_Brick_Ornate_Glow.png"
+            }
+          ],
+          "Light": {
+            "Radius": 1,
+            "Color": "#f00"
+          },
+          "Textures": [
+            {
+              "All": "BlockTextures/Rock_CastIron_Brick_Ornate.png"
+            }
+          ],
+          "Material": "Solid",
+          "Opacity": "Transparent",
+          "RequiresAlphaBlending": false,
+          "Looping": false
+        }
+      }
+    },
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "ChangeState",
+            "Changes": {
+              "default": "On"
+            }
+          }
+        ]
+      }
+    },
+    "FlipType": "Orthogonal",
+    "RotationYawPlacementOffset": "None",
+    "RandomRotation": "None",
+    "VariantRotation": "Pipe",
+    "RequiresAlphaBlending": false
+  },
+  "Tags": {
+    "Type": [
+      "Rock"
+    ],
+    "Family": [
+      "Shale"
+    ]
+  },
+  "Parent": "Rock_Shale_Brick",
+  "ResourceTypes": [
+    {
+      "Id": "Rock_Shale_Brick"
+    }
+  ],
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}
