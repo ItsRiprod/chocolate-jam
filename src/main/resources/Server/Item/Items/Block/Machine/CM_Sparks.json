@@ -1,0 +1,110 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.CM_Torch.name"
+  },
+  "PlayerAnimationsId": "Torch",
+  "Categories": [
+    "Blocks.Deco"
+  ],
+  "Icon": "Icons/ItemsGenerated/Furniture_Ancient_Torch.png",
+  "IconProperties": {
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Scale": 0.45,
+    "Translation": [
+      0,
+      -10.8
+    ]
+  },
+  "BlockType": {
+    "DrawType": "Model",
+    "CustomModel": "Blocks/Machine/Torch.blockymodel",
+    "BlockSoundSetId": "Torch",
+    "Opacity": "Transparent",
+    "CustomModelTexture": [
+      {
+        "Weight": 1,
+        "Texture": "Blocks/Machine/Torch_Texture.png"
+      }
+    ],
+    "CustomModelScale": 0.85,
+    "Light": null,
+    "Gathering": {
+      "Soft": {
+        "IsWeaponBreakable": true
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        },
+        {
+          "FaceType": "Branch"
+        },
+        {
+          "FaceType": "Rock_Beam"
+        },
+        {
+          "FaceType": "Wood_Beam"
+        },
+        {
+          "FaceType": "Fence"
+        },
+        {
+          "FaceType": "Fence_Corner"
+        },
+        {
+          "FaceType": "Wall"
+        },
+        {
+          "FaceType": "Wall_Corner"
+        }
+      ]
+    },
+    "HitboxType": "Torch",
+    "MovementSettings": {},
+    "Particles": null,
+    "Flags": {
+      "IsUsable": true
+    },
+    "Material": "Empty",
+    "ParticleColor": "#484023",
+    "VariantRotation": "NESW",
+    "Looping": true,
+    "State": {
+      "Definitions": {
+        "On": {
+          "Light": {
+            "Radius": 0,
+            "Color": "#ba9"
+          },
+          "Particles": [
+            {
+              "SystemId": "Torch_Fire",
+              "TargetNodeName": "Flame",
+              "Scale": 0.55,
+              "PositionOffset": {
+                "Y": -0.18
+              }
+            }
+          ],
+          "AmbientSoundEventId": "SFX_Torch_On_Loop"
+        }
+      }
+    }
+  },
+  "Tags": {
+    "Type": [
+      "Block"
+    ],
+    "Family": [
+      "Machine"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Wood"
+}

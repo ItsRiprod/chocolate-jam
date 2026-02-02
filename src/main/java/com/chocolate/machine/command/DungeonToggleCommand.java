@@ -44,7 +44,7 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
 
         if (dungeonRef == null || !dungeonRef.isValid()) {
             playerRef.sendMessage(Message.raw("Assembling a new dungeon..."));
-            dungeonRef = assembleNewDungeon(store, playerEntityRef, dungeonService, playerRef);
+            dungeonRef = assembleNewDungeon(store, playerEntityRef, dungeonService, playerRef, world);
             if (dungeonRef == null) {
                 playerRef.sendMessage(Message.raw("No spawners found nearby. Cannot create dungeon."));
                 return;
@@ -71,17 +71,19 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
         // Debug info to help diagnose double-activation issues
         String dungeonId = dungeon.getDungeonId();
         playerRef.sendMessage(Message.raw("Using dungeon '" + (dungeonId.isEmpty() ? "(unnamed)" : dungeonId) +
-                "' (active=" + dungeon.isActive() + ", spawners=" + dungeon.getSpawnerCount() + ")"));
+                "' (active=" + dungeon.isActive() + ", spawners=" + dungeon.getSpawnerCount() +
+                ", blocks=" + dungeon.getDungeonBlockCount() + ")"));
 
         if (dungeon.isActive()) {
             dungeonService.deactivate(dungeonRef, store);
-            playerRef.sendMessage(Message.raw("Dungeon DEACTIVATED. All spawners despawned."));
+            playerRef.sendMessage(Message.raw("Dungeon DEACTIVATED. Spawners despawned, blocks reset."));
         } else {
             // Add player as dungeoneer if not already
             ensurePlayerIsDungeoneer(store, playerEntityRef, dungeonRef, dungeon);
 
             dungeonService.activate(dungeonRef, playerEntityRef, store);
-            playerRef.sendMessage(Message.raw("Dungeon ACTIVATED. " + dungeon.getSpawnerCount() + " spawners triggered."));
+            playerRef.sendMessage(Message.raw("Dungeon ACTIVATED. " + dungeon.getSpawnerCount() + " spawners, " +
+                    dungeon.getDungeonBlockCount() + " blocks triggered."));
         }
     }
 
@@ -117,7 +119,7 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
     }
 
     private Ref<EntityStore> assembleNewDungeon(Store<EntityStore> store, Ref<EntityStore> playerEntityRef,
-            DungeonService dungeonService, PlayerRef playerRef) {
+            DungeonService dungeonService, PlayerRef playerRef, World world) {
 
         List<Ref<EntityStore>> spawners = EntityFloodFill.floodFillSpawners(
                 playerEntityRef,
@@ -150,7 +152,7 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
             playerRef.sendMessage(Message.raw("Created new dungeon controller from first spawner."));
         }
 
-        int count = dungeonService.registerDungeon(dungeonRef, store);
+        int count = dungeonService.registerDungeon(dungeonRef, store, world);
         playerRef.sendMessage(Message.raw("Assembled dungeon with " + count + " spawners."));
 
         return dungeonRef;

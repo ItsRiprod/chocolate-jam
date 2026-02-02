@@ -232,7 +232,10 @@ public class HydraulicPressTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         deactivate(spawnerRef, componentAccessor);
-        componentAccessor.removeComponent(spawnerRef, HydraulicPressActionComponent.getComponentType());
+        // only remove if the component exists on this entity
+        if (componentAccessor.getComponent(spawnerRef, HydraulicPressActionComponent.getComponentType()) != null) {
+            componentAccessor.removeComponent(spawnerRef, HydraulicPressActionComponent.getComponentType());
+        }
     }
 
     @Override

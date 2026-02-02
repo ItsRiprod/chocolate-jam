@@ -71,6 +71,8 @@ public class DungeonComponent implements Component<EntityStore> {
     private final List<Ref<EntityStore>> dungeoneerRefs = new ArrayList<>();
     @Nonnull
     private final List<Ref<EntityStore>> spawnerRefs = new ArrayList<>();
+    @Nonnull
+    private final List<DungeonBlockEntry> dungeonBlocks = new ArrayList<>();
     private boolean registered = false;
 
     public DungeonComponent() {
@@ -203,12 +205,33 @@ public class DungeonComponent implements Component<EntityStore> {
         return spawnerRefs.size();
     }
 
+    // Dungeon blocks - blocks that change state with dungeon activation
+    @Nonnull
+    public List<DungeonBlockEntry> getDungeonBlocks() {
+        return Collections.unmodifiableList(dungeonBlocks);
+    }
+
+    public void addDungeonBlock(@Nonnull DungeonBlockEntry entry) {
+        if (!dungeonBlocks.contains(entry)) {
+            dungeonBlocks.add(entry);
+        }
+    }
+
+    public void clearDungeonBlocks() {
+        dungeonBlocks.clear();
+    }
+
+    public int getDungeonBlockCount() {
+        return dungeonBlocks.size();
+    }
+
     // reset state
     public void reset() {
         this.setActive(false);
         this.setArtifactHolderRef(null);
         this.clearDungeoneerRefs();
         this.clearSpawnerRefs();
+        this.clearDungeonBlocks();
         this.setEntranceRef(null);
         this.setRegistered(false);
     }
@@ -227,6 +250,7 @@ public class DungeonComponent implements Component<EntityStore> {
         copy.entranceRef = this.entranceRef;
         copy.dungeoneerRefs.addAll(this.dungeoneerRefs);
         copy.spawnerRefs.addAll(this.spawnerRefs);
+        copy.dungeonBlocks.addAll(this.dungeonBlocks);
         copy.registered = this.registered;
         return copy;
     }

@@ -171,7 +171,9 @@ public class ArcherAction implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         deactivate(spawnerRef, componentAccessor);
-        componentAccessor.removeComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+        if (componentAccessor.getComponent(spawnerRef, SkeletonActionComponent.getComponentType()) != null) {
+            componentAccessor.removeComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+        }
 
         LOGGER.atFine().log("Cleaned up SkeletonActionComponent");
     }

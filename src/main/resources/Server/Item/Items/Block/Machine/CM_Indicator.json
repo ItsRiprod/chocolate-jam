@@ -1,0 +1,56 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.CM_Indicator.name"
+  },
+  "Icon": "Icons/ItemsGenerated/CM_Indicator.png",
+  "Categories": [
+    "Blocks.Deco"
+  ],
+  "BlockType": {
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "Material": "Solid",
+    "CustomModel": "Blocks/Machine/CM_Indicator_Off.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Weight": 1,
+        "Texture": "Blocks/Machine/CM_Indicator_Off.png"
+      }
+    ],
+    "CustomModelAnimation": "Blocks/Machine/Animations/CM_Indicator_Off.blockyanim",
+    "BlockSoundSetId": "Stone",
+    "BlockParticleSetId": "Stone",
+    "ParticleColor": "#2a4666",
+    "HitboxType": "CM_Indicator",
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "SoftBlocks"
+      }
+    },
+    "State": {
+      "Definitions": {
+        "On": {
+          "HitboxType": "CM_Indicator_Up",
+          "CustomModelTexture": [
+            {
+              "Weight": 1,
+              "Texture": "Blocks/Machine/CM_Indicator_On.png"
+            }
+          ],
+          "CustomModelAnimation": "Blocks/Machine/Animations/CM_Indicator_On.blockyanim",
+          "Looping": true
+        }
+      }
+    }
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Block"
+    ],
+    "Family": [
+      "Machine"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}

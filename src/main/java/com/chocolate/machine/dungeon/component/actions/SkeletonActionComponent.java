@@ -8,7 +8,7 @@ import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
-// per-spawner state for skeleton action (runtime only)
+// per-spawner state for skeleton action
 public class SkeletonActionComponent implements Component<EntityStore> {
 
     private static ComponentType<EntityStore, SkeletonActionComponent> componentType;

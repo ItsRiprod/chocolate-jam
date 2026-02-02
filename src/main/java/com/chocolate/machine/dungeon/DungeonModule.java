@@ -6,14 +6,17 @@ import com.chocolate.machine.dungeon.component.DungeoneerComponent;
 import com.chocolate.machine.dungeon.component.SpawnerComponent;
 import com.chocolate.machine.dungeon.component.actions.AxeBladeActionComponent;
 import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent;
+import com.chocolate.machine.dungeon.component.actions.LaserTrapActionComponent;
 import com.chocolate.machine.dungeon.component.actions.SkeletonActionComponent;
 import com.chocolate.machine.dungeon.spawnable.SpawnableRegistry;
 import com.chocolate.machine.dungeon.spawnable.actions.ArcherAction;
 import com.chocolate.machine.dungeon.spawnable.actions.ArrowTrap;
 import com.chocolate.machine.dungeon.spawnable.actions.AxeBladeTrap;
+import com.chocolate.machine.dungeon.spawnable.actions.BeamTrap;
 import com.chocolate.machine.dungeon.spawnable.actions.BruteAction;
 import com.chocolate.machine.dungeon.spawnable.actions.GolemAction;
 import com.chocolate.machine.dungeon.spawnable.actions.HydraulicPressTrap;
+import com.chocolate.machine.dungeon.spawnable.actions.LaserTrap;
 import com.chocolate.machine.dungeon.system.DungeonBossRoomSystem;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.ResourceType;
@@ -40,8 +43,11 @@ public class DungeonModule extends System<EntityStore> {
 
     // runtime only
     private ComponentType<EntityStore, SkeletonActionComponent> skeletonActionComponentType;
+
+    // trap action components (persistent)
     private ComponentType<EntityStore, AxeBladeActionComponent> axeBladeActionComponentType;
     private ComponentType<EntityStore, HydraulicPressActionComponent> hydraulicPressActionComponentType;
+    private ComponentType<EntityStore, LaserTrapActionComponent> laserTrapActionComponentType;
 
     // resources
     private ResourceType<EntityStore, DungeonBossRoomSystem.PendingDungeoneerResource> pendingDungeoneerResourceType;
@@ -91,19 +97,26 @@ public class DungeonModule extends System<EntityStore> {
     private void registerDefaultSpawnables() {
         SpawnableRegistry registry = SpawnableRegistry.getInstance();
 
+        // runtime only components (no persistence)
         skeletonActionComponentType = registerComponent(SkeletonActionComponent.class, SkeletonActionComponent::new);
         SkeletonActionComponent.setComponentType(skeletonActionComponentType);
 
-        axeBladeActionComponentType = registerComponent(AxeBladeActionComponent.class, AxeBladeActionComponent::new);
+        // trap action components (persistent configuration)
+        axeBladeActionComponentType = registerComponent(AxeBladeActionComponent.class, "AxeBlade", AxeBladeActionComponent.CODEC);
         AxeBladeActionComponent.setComponentType(axeBladeActionComponentType);
 
-        hydraulicPressActionComponentType = registerComponent(HydraulicPressActionComponent.class, HydraulicPressActionComponent::new);
+        hydraulicPressActionComponentType = registerComponent(HydraulicPressActionComponent.class, "HydraulicPress", HydraulicPressActionComponent.CODEC);
         HydraulicPressActionComponent.setComponentType(hydraulicPressActionComponentType);
+
+        laserTrapActionComponentType = registerComponent(LaserTrapActionComponent.class, "LaserTrap", LaserTrapActionComponent.CODEC);
+        LaserTrapActionComponent.setComponentType(laserTrapActionComponentType);
 
         // traps
         registry.register(new AxeBladeTrap());
         registry.register(new HydraulicPressTrap());
         registry.register(new ArrowTrap());
+        registry.register(new LaserTrap());
+        registry.register(new BeamTrap());
 
         // entities
         registry.register(new GolemAction());
@@ -146,5 +159,10 @@ public class DungeonModule extends System<EntityStore> {
     @Nonnull
     public ComponentType<EntityStore, HydraulicPressActionComponent> getHydraulicPressActionComponentType() {
         return hydraulicPressActionComponentType;
+    }
+
+    @Nonnull
+    public ComponentType<EntityStore, LaserTrapActionComponent> getLaserTrapActionComponentType() {
+        return laserTrapActionComponentType;
     }
 }

@@ -19,16 +19,22 @@ public class ChocolateDungeonCommand extends AbstractCommand {
         addSubCommand(new DungeonRegisterCommand());
         addSubCommand(new DungeonDiscardCommand());
         addSubCommand(new DungeonTriggerCommand());
+        addSubCommand(new DungeonDeleteCommand());
+        addSubCommand(new DungeonAssignCommand());
+        addSubCommand(new DungeonEntranceCommand());
     }
 
     @Override
     protected CompletableFuture<Void> execute(CommandContext context) {
         context.sendMessage(Message.raw("Chocolate Machine Dungeon Commands:"));
-        context.sendMessage(Message.raw("/chocolate dungeon info - Show dungeon info at your location"));
-        context.sendMessage(Message.raw("/chocolate dungeon toggle - Toggle dungeon Active state"));
-        context.sendMessage(Message.raw("/chocolate dungeon register - Re-register nearest dungeon's spawners"));
-        context.sendMessage(Message.raw("/chocolate dungeon discard - Discard/clear dungeon state (for prefab editing)"));
-        context.sendMessage(Message.raw("/chocolate dungeon trigger - Become relic holder / simulate escape"));
+        context.sendMessage(Message.raw("/cm d info - Show dungeon info at your location"));
+        context.sendMessage(Message.raw("/cm d toggle - Toggle dungeon Active state"));
+        context.sendMessage(Message.raw("/cm d register - Re-register nearest dungeon's spawners"));
+        context.sendMessage(Message.raw("/cm d discard - Discard/clear dungeon state"));
+        context.sendMessage(Message.raw("/cm d trigger - Become relic holder / simulate escape"));
+        context.sendMessage(Message.raw("/cm d delete [--nearest] - Delete bossroom"));
+        context.sendMessage(Message.raw("/cm d assign [--dungeon_id <id>] - Assign entity as bossroom"));
+        context.sendMessage(Message.raw("/cm d entrance [--dungeon_id <id>] [--delete] - Manage entrance"));
         return CompletableFuture.completedFuture(null);
     }
 }
