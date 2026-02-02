@@ -1,0 +1,15 @@
+{
+  "QualityValue": 5,
+  "ItemTooltipTexture": "UI/ItemQualities/Tooltips/ItemTooltipArtifact.png",
+  "ItemTooltipArrowTexture": "UI/ItemQualities/Tooltips/ItemTooltipArtifactArrow.png",
+  "SlotTexture": "UI/ItemQualities/Slots/SlotArtifact.png",
+  "BlockSlotTexture": "UI/ItemQualities/Slots/SlotArtifact.png",
+  "SpecialSlotTexture": "UI/ItemQualities/Slots/SlotArtifact.png",
+  "TextColor": "#3a94a7",
+  "LocalizationKey": "server.general.qualities.Artifact",
+  "VisibleQualityLabel": true,
+  "RenderSpecialSlot": true,
+  "ItemEntityConfig": {
+    "ParticleSystemId": "Drop_Artifact"
+  }
+}
