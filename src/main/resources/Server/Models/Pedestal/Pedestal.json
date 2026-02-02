@@ -1,0 +1,53 @@
+{
+  "Model": "NPC/Pedestal/Pedestal.blockymodel",
+  "Texture": "NPC/Pedestal/Pedestal_Texture.png",
+  "EyeHeight": 1.6,
+  "HitBox": {
+    "Max": {
+      "X": 0.3,
+      "Y": 1,
+      "Z": 0.3
+    },
+    "Min": {
+      "X": -0.3,
+      "Y": 0,
+      "Z": -0.3
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Pedestal/Animations/LootIdle.blockyanim",
+          "BlendingDuration": 0.1,
+          "Looping": true
+        }
+      ]
+    }
+  },
+  "PhysicsValues": {
+    "Mass": 0.001,
+    "DragCoefficient": 0
+  },
+  "DefaultAttachments": [
+    {
+      "Model": "NPC/Pedestal/Chest_Small.blockymodel",
+      "Texture": "Items/Armors/Artifact/Chest_Texture.png"
+    },
+    {
+      "Model": "NPC/Pedestal/Boots_Small.blockymodel",
+      "Texture": "Items/Armors/Artifact/Boots_Texture.png"
+    },
+    {
+      "Model": "NPC/Pedestal/Hands_Small.blockymodel",
+      "Texture": "Items/Armors/Artifact/Hands_Texture.png"
+    },
+    {
+      "Model": "NPC/Pedestal/Head_Small.blockymodel",
+      "Texture": "Items/Armors/Artifact/Head_Texture.png"
+    }
+  ],
+  "Parent": "Klops"
+}

@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 0,
   "anchorZ": 13,
@@ -75,31 +75,31 @@
       "x": -12,
       "y": 1,
       "z": -11,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -12,
       "y": 2,
       "z": -11,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -12,
       "y": 3,
       "z": -11,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -12,
       "y": 4,
       "z": -11,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -12,
       "y": 5,
       "z": -11,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
@@ -129,37 +129,13 @@
       "x": -12,
       "y": 0,
       "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 1,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 2,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 3,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 4,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -12,
       "y": 5,
       "z": -10,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
@@ -189,37 +165,13 @@
       "x": -12,
       "y": 0,
       "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 1,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 2,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 3,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -12,
-      "y": 4,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Brick"
     },
     {
       "x": -12,
       "y": 5,
       "z": -9,
-      "name": "Rock_Basalt_Brick"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
@@ -253,36 +205,12 @@
     },
     {
       "x": -12,
-      "y": 1,
-      "z": -8,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 2,
-      "z": -8,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 3,
-      "z": -8,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 4,
+      "y": 5,
       "z": -8,
       "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
-      "y": 5,
-      "z": -8,
-      "name": "Rock_Basalt"
-    },
-    {
-      "x": -12,
       "y": 6,
       "z": -8,
       "name": "Rock_Basalt"
@@ -313,33 +241,9 @@
     },
     {
       "x": -12,
-      "y": 1,
-      "z": -7,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 2,
-      "z": -7,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 3,
-      "z": -7,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 4,
-      "z": -7,
-      "name": "Rock_Shale_Cobble"
-    },
-    {
-      "x": -12,
       "y": 5,
       "z": -7,
-      "name": "Rock_Basalt"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
@@ -373,33 +277,9 @@
     },
     {
       "x": -12,
-      "y": 1,
-      "z": -6,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 2,
-      "z": -6,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 3,
-      "z": -6,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -12,
-      "y": 4,
-      "z": -6,
-      "name": "Rock_Shale_Cobble"
-    },
-    {
-      "x": -12,
       "y": 5,
       "z": -6,
-      "name": "Rock_Basalt"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
@@ -459,7 +339,7 @@
       "x": -12,
       "y": 5,
       "z": -5,
-      "name": "Rock_Basalt"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -12,
@@ -1693,30 +1573,6 @@
     },
     {
       "x": -11,
-      "y": 1,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -11,
-      "y": 2,
-      "z": -10,
-      "name": "Plant_Moss_Rug_Green_Dark"
-    },
-    {
-      "x": -11,
-      "y": 3,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -11,
-      "y": 4,
-      "z": -10,
-      "name": "Plant_Moss_Rug_Green_Dark"
-    },
-    {
-      "x": -11,
       "y": 5,
       "z": -10,
       "name": "Rock_Basalt_Brick"
@@ -1748,30 +1604,6 @@
     {
       "x": -11,
       "y": 0,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -11,
-      "y": 1,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -11,
-      "y": 2,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -11,
-      "y": 3,
-      "z": -9,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -11,
-      "y": 4,
       "z": -9,
       "name": "Rock_Basalt_Brick"
     },
@@ -1900,7 +1732,7 @@
       "x": -11,
       "y": 5,
       "z": -7,
-      "name": "Empty"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -11,
@@ -1947,21 +1779,9 @@
     },
     {
       "x": -11,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -11,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -11,
       "y": 5,
       "z": -6,
-      "name": "Empty"
+      "name": "Rock_Shale_Cobble"
     },
     {
       "x": -11,
@@ -2849,12 +2669,7 @@
       "x": -11,
       "y": 1,
       "z": 9,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -11,
@@ -3286,12 +3101,6 @@
     },
     {
       "x": -10,
-      "y": 3,
-      "z": -10,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
       "y": 4,
       "z": -10,
       "name": "Empty"
@@ -3534,12 +3343,6 @@
     },
     {
       "x": -10,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
       "y": 5,
       "z": -6,
       "name": "Empty"
@@ -4003,12 +3806,7 @@
       "x": -10,
       "y": 1,
       "z": 2,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -10,
@@ -5109,12 +4907,6 @@
     {
       "x": -9,
       "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
       "z": -6,
       "name": "Empty"
     },
@@ -6694,12 +6486,6 @@
     },
     {
       "x": -8,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
       "y": 5,
       "z": -6,
       "name": "Empty"
@@ -13686,12 +13472,7 @@
       "x": -4,
       "y": 1,
       "z": 6,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -4,
@@ -28815,12 +28596,7 @@
       "x": 6,
       "y": 1,
       "z": -4,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": 6,
@@ -39333,13 +39109,14 @@
     {
       "Components": {
         "Nameplate": {
-          "Text": "Outlander_Berserker"
+          "Text": "Outlander_Hunter"
         },
         "HiddenFromAdventurePlayer": {},
         "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
+          "SpawnMarker": "Outlander_Hunter",
           "RespawnTime": 0.0,
           "SpawnCount": 0,
+          "NPCReferences": [],
           "PersistedFlock": {},
           "SpawnPosition": {
             "X": 0.0,
@@ -39349,33 +39126,109 @@
         },
         "Transform": {
           "Position": {
-            "X": 8.507746923827995,
-            "Y": 1.0004111206054205,
-            "Z": 1.1326925292969463
+            "X": -7.661832958984405,
+            "Y": 1.0,
+            "Z": 7.977616406250036
           },
           "Rotation": {
             "Pitch": 0.0,
-            "Yaw": -11.029988288879395,
+            "Yaw": -205.8701934814453,
             "Roll": 0.0
           }
         },
         "Intangible": {},
+        "PrefabCopyable": {},
         "Model": {
           "Model": {
             "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
+            "Scale": 1.0,
+            "Static": false
           }
         },
         "UUID": {
           "UUID": {
-            "$binary": "gKSN96+RM2SrpYLCG65bLQ==",
+            "$binary": "YALR8tvWMw2Itpm0u1pFRg==",
             "$type": "04"
           }
         },
         "HeadRotation": {
           "Rotation": {
             "Pitch": 0.0,
-            "Yaw": -14.171581268310547,
+            "Yaw": -209.01177978515625,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Nameplate": {
+          "Text": "0.896b31d9-cd6d-48b0-951e-d3cb06e5cfbe (OutlanderGuard_012) #0 [Wait 0.0s] <Rotate 0.00deg>"
+        },
+        "PatrolPathMarker": {
+          "Version": 5,
+          "DisplayName": "0.896b31d9-cd6d-48b0-951e-d3cb06e5cfbe (OutlanderGuard_012) #0 [Wait 0.0s] <Rotate 0.00deg>",
+          "UUID": {
+            "$binary": "rdfftbuCOniqyrmvITjtvg==",
+            "$type": "04"
+          },
+          "PathId": {
+            "$binary": "a2Toe9hkROmrDfgor1yZgw==",
+            "$type": "04"
+          },
+          "PathName": "OutlanderGuard_012",
+          "PathLength": 1,
+          "Order": 0,
+          "PauseTime": 0.0,
+          "ObsvAngle": 0.0
+        },
+        "HiddenFromAdventurePlayer": {},
+        "DisplayName": {
+          "DisplayName": {
+            "RawText": "0.896b31d9-cd6d-48b0-951e-d3cb06e5cfbe (OutlanderGuard_012) #0 [Wait 0.0s] <Rotate 0.00deg>",
+            "Bold": null,
+            "Italic": null,
+            "Monospace": null,
+            "Underline": null
+          }
+        },
+        "Transform": {
+          "Position": {
+            "X": -7.661832958984405,
+            "Y": 1.0,
+            "Z": 7.977616406250036
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": -209.01177978515625,
+            "Roll": 0.0
+          }
+        },
+        "Velocity": {
+          "Velocity": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Model": {
+          "Model": {
+            "Id": "Mannequin",
+            "Scale": 1.0,
+            "Static": false
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "rdfftbuCOniqyrmvITjtvg==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": -209.01177978515625,
             "Roll": 0.0
           }
         }
@@ -39391,6 +39244,61 @@
           "SpawnMarker": "Outlander_Berserker",
           "RespawnTime": 0.0,
           "SpawnCount": 0,
+          "NPCReferences": [],
+          "PersistedFlock": {},
+          "SpawnPosition": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          }
+        },
+        "Transform": {
+          "Position": {
+            "X": -7.316721337890499,
+            "Y": 1.0008600097655602,
+            "Z": 0.9447687988279085
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": -7.829378128051758,
+            "Roll": 0.0
+          }
+        },
+        "Intangible": {},
+        "PrefabCopyable": {},
+        "Model": {
+          "Model": {
+            "Id": "NPC_Spawn_Marker",
+            "Scale": 1.0,
+            "Static": false
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "japdg9FEMTi470leX71Xsg==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": -10.97097110748291,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Nameplate": {
+          "Text": "Outlander_Berserker"
+        },
+        "HiddenFromAdventurePlayer": {},
+        "SpawnMarkerComponent": {
+          "SpawnMarker": "Outlander_Berserker",
+          "RespawnTime": 0.0,
+          "SpawnCount": 0,
+          "NPCReferences": [],
           "PersistedFlock": {},
           "SpawnPosition": {
             "X": 0.0,
@@ -39411,15 +39319,17 @@
           }
         },
         "Intangible": {},
+        "PrefabCopyable": {},
         "Model": {
           "Model": {
             "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
+            "Scale": 1.0,
+            "Static": false
           }
         },
         "UUID": {
           "UUID": {
-            "$binary": "HdJ3AqViOSq2O/p4k58fyg==",
+            "$binary": "75z9/MtQP5uUFZvos//4KQ==",
             "$type": "04"
           }
         },
@@ -39442,6 +39352,7 @@
           "SpawnMarker": "Outlander_Berserker",
           "RespawnTime": 0.0,
           "SpawnCount": 0,
+          "NPCReferences": [],
           "PersistedFlock": {},
           "SpawnPosition": {
             "X": 0.0,
@@ -39451,161 +39362,35 @@
         },
         "Transform": {
           "Position": {
-            "X": -7.316721337890499,
-            "Y": 1.0008600097655602,
-            "Z": 0.9447687988279085
+            "X": 8.507746923827995,
+            "Y": 1.0004111206054205,
+            "Z": 1.1326925292969463
           },
           "Rotation": {
             "Pitch": 0.0,
-            "Yaw": -7.829378128051758,
+            "Yaw": -11.029988288879395,
             "Roll": 0.0
           }
         },
         "Intangible": {},
+        "PrefabCopyable": {},
         "Model": {
           "Model": {
             "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
+            "Scale": 1.0,
+            "Static": false
           }
         },
         "UUID": {
           "UUID": {
-            "$binary": "ne5HN9JnPymISozR5jTjVA==",
+            "$binary": "5cjUP6KtNmiGRP+RtuJ1Pw==",
             "$type": "04"
           }
         },
         "HeadRotation": {
           "Rotation": {
             "Pitch": 0.0,
-            "Yaw": -10.97097110748291,
-            "Roll": 0.0
-          }
-        }
-      }
-    },
-    {
-      "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Hunter"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Hunter",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": -7.661832958984405,
-            "Y": 1.0,
-            "Z": 7.977616406249979
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -205.8701934814453,
-            "Roll": 0.0
-          }
-        },
-        "Intangible": {},
-        "Model": {
-          "Model": {
-            "Id": "NPC_Spawn_Marker",
-            "Scale": 1.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "uWRx72W2Mh+xFjWRcXgzfQ==",
-            "$type": "04"
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -209.01177978515625,
-            "Roll": 0.0
-          }
-        }
-      }
-    },
-    {
-      "Components": {
-        "PatrolPathMarker": {
-          "Version": 5,
-          "Position": {
-            "X": -7.661832958984405,
-            "Y": 1.0,
-            "Z": 7.977616406249979
-          },
-          "HeadRotation": {
-            "Pitch": 0.0,
-            "Yaw": -209.01177978515625,
-            "Roll": 0.0
-          },
-          "BodyRotation": {
-            "Pitch": 0.0,
-            "Yaw": -209.01177978515625,
-            "Roll": 0.0
-          },
-          "DisplayName": "0.896b31d9-cd6d-48b0-951e-d3cb06e5cfbe (OutlanderGuard_012) #0 [Wait 0.0s] <Rotate 0.00deg>",
-          "NameTagVisible": true,
-          "UUID": {
-            "$binary": "CobGw3DXPoa64lDvsOdV3w==",
-            "$type": "04"
-          },
-          "Metadata": {},
-          "PathId": {
-            "$binary": "iWsx2c1tSLCVHtPLBuXPvg==",
-            "$type": "04"
-          },
-          "PathName": "OutlanderGuard_012",
-          "PathLength": 1,
-          "Order": 0,
-          "PauseTime": 0.0,
-          "ObsvAngle": 0.0
-        },
-        "HiddenFromAdventurePlayer": {},
-        "Model": {
-          "Model": {
-            "Id": "Mannequin",
-            "Scale": 1.0
-          }
-        },
-        "Transform": {
-          "Position": {
-            "X": -7.661832958984405,
-            "Y": 1.0,
-            "Z": 7.977616406249979
-          },
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -209.01177978515625,
-            "Roll": 0.0
-          }
-        },
-        "UUID": {
-          "UUID": {
-            "$binary": "FR0XnF0EPsi3PFGOqgrsIw==",
-            "$type": "04"
-          }
-        },
-        "Velocity": {
-          "Velocity": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
-        "HeadRotation": {
-          "Rotation": {
-            "Pitch": 0.0,
-            "Yaw": -209.01177978515625,
+            "Yaw": -14.171581268310547,
             "Roll": 0.0
           }
         }
