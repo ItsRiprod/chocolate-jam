@@ -1,0 +1,22 @@
+{
+  "Description": {
+    "DisplayName": "Machine.portals.Machine_Dungeon_Var2",
+    "FlavorText": "Machine.portals.Machine_Dungeon.description",
+    "ThemeColor": "#f3b33cec",
+    "SplashImage": "DefaultArtwork.png",
+    "Tips": [
+      "Machine.portals.Machine_Dungeon.tip1"
+    ]
+  },
+  "PlayerSpawn": {
+    "Y": 100,
+    "Center": {
+      "X": 22,
+      "Z": -2,
+      "Y": 101
+    },
+    "Yaw": 90,
+    "ScanHeight": 0
+  },
+  "InstanceId": "Machine_Dungeon_Var2"
+}

@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "Machine.items.PortalKey_Machine_Dungeon.name",
+    "Description": "Machine.items.PortalKey_machine_Dungeon.description"
+  },
+  "Icon": "Icons/ItemsGenerated/PortalKey_Machine_Dungeon.png",
+  "Categories": [
+    "Blocks.Portals"
+  ],
+  "BlockType": {
+    "DrawType": "Model",
+    "Material": "Solid",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/Miscellaneous/Portal_Shard.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Blocks/Miscellaneous/Portal_Shard_Texture.png",
+        "Weight": 1
+      }
+    ]
+  },
+  "Recipe": {
+    "TimeSeconds": 1,
+    "KnowledgeRequired": false,
+    "Input": [
+      {
+        "ItemId": "Ingredient_Bar_Iron",
+        "Quantity": 35
+      },
+      {
+        "ItemId": "Ingredient_Void_Essence",
+        "Quantity": 5
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Arcanebench",
+        "Type": "Crafting",
+        "Categories": [
+          "Arcane_Portals"
+        ]
+      }
+    ],
+    "RequiredMemoriesLevel": 5
+  },
+  "PlayerAnimationsId": "Item",
+  "Tags": {
+    "Type": [
+      "Portal",
+      "Temporary"
+    ]
+  },
+  "Quality": "Uncommon",
+  "ItemLevel": 51,
+  "IconProperties": {
+    "Scale": 0.7,
+    "Rotation": [
+      167,
+      177,
+      341
+    ],
+    "Translation": [
+      5,
+      17
+    ]
+  },
+  "PortalKey": {
+    "PortalType": "PortalType_Machine_Dungeon_Var1"
+  }
+}

@@ -1,7 +1,6 @@
 {
-  "InstanceId": "Machine_Dungeon",
   "Description": {
-    "DisplayName": "Machine.portals.Machine_Dungeon",
+    "DisplayName": "Machine.portals.Machine_Dungeon_Var3",
     "FlavorText": "Machine.portals.Machine_Dungeon.description",
     "ThemeColor": "#f3b33cec",
     "SplashImage": "DefaultArtwork.png",
@@ -18,5 +17,6 @@
     },
     "Yaw": 90,
     "ScanHeight": 0
-  }
+  },
+  "InstanceId": "Machine_Dungeon_Var3"
 }

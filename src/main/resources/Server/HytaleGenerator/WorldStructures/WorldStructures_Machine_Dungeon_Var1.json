@@ -1,7 +1,6 @@
 {
   "Type": "NoiseRange",
-  "Biomes": [],
-  "DefaultBiome": "Machine_Dungeon",
+  "DefaultBiome": "Biome_Machine_Dungeon_Var1",
   "BiomeTransitions": [],
   "DefaultTransitionDistance": 128,
   "Density": {

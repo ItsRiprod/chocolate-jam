@@ -20,7 +20,7 @@
   "IsSavingPlayers": true,
   "WorldGen": {
     "Type": "HytaleGenerator",
-    "WorldStructure": "Machine_Dungeon",
+    "WorldStructure": "WorldStructures_Machine_Dungeon_Var3",
     "PlayerSpawn" : {
       "X": 0,
       "Y": 101,
