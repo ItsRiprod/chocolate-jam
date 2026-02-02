@@ -4,8 +4,8 @@ import com.chocolate.machine.command.ChocolateCommand;
 import com.chocolate.machine.dungeon.DungeonModule;
 import com.chocolate.machine.dungeon.system.DungeonAreaSystem;
 import com.chocolate.machine.dungeon.system.DungeonBossRoomSystem;
-import com.chocolate.machine.dungeon.system.DungeonDeathSystem;
 import com.chocolate.machine.dungeon.system.DungeoneerCleanupSystem;
+import com.chocolate.machine.dungeon.system.DungeoneerRespawnRestoreSystem;
 import com.chocolate.machine.dungeon.system.DungeonTickSystem;
 import com.chocolate.machine.dungeon.system.DungeonRegistrationSystem;
 import com.hypixel.hytale.logger.HytaleLogger;
@@ -45,9 +45,9 @@ public class Machine extends JavaPlugin {
 
         getEntityStoreRegistry().registerSystem(new DungeonAreaSystem());
 
-        getEntityStoreRegistry().registerSystem(new DungeonDeathSystem());
-
         getEntityStoreRegistry().registerSystem(new DungeoneerCleanupSystem());
+
+        getEntityStoreRegistry().registerSystem(new DungeoneerRespawnRestoreSystem());
 
         getEntityStoreRegistry().registerSystem(new DungeonTickSystem());
     }

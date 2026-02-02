@@ -10,6 +10,7 @@ import com.chocolate.machine.dungeon.DungeonModule;
 import com.chocolate.machine.dungeon.component.DungeonComponent;
 import com.chocolate.machine.dungeon.component.DungeonEntranceComponent;
 import com.chocolate.machine.dungeon.component.DungeoneerComponent;
+import com.chocolate.machine.utils.DungeonFinder;
 import com.hypixel.hytale.component.ArchetypeChunk;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
@@ -133,9 +134,27 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
         DungeonComponent dungeon = null;
         if (dungeonRef != null && dungeonRef.isValid()) {
             dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
-            if (dungeon != null) {
-                dungeon.removeDungeoneerRef(playerRef);
+        }
+
+        // if dungeonRef was invalid (e.g. after reconnect), find dungeon by position
+        if (dungeon == null) {
+            TransformComponent playerTransform = commandBuffer.getComponent(playerRef, TransformComponent.getComponentType());
+            if (playerTransform != null) {
+                Ref<EntityStore> foundDungeonRef = DungeonFinder.findNearestDungeon(
+                        playerTransform.getPosition(), commandBuffer);
+                if (foundDungeonRef != null && foundDungeonRef.isValid()) {
+                    DungeonComponent foundDungeon = commandBuffer.getComponent(foundDungeonRef, DungeonComponent.getComponentType());
+                    if (foundDungeon != null && foundDungeon.getDungeonId().equals(dungeonId)) {
+                        dungeon = foundDungeon;
+                        dungeonRef = foundDungeonRef;
+                        LOGGER.atInfo().log("[DungeonAreaSystem] Found dungeon by position for cleanup (dungeonRef was invalid)");
+                    }
+                }
             }
+        }
+
+        if (dungeon != null) {
+            dungeon.removeDungeoneerRef(playerRef);
         }
 
         if (playerRefComponent != null) {
@@ -143,7 +162,7 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
         }
 
         if (isRelicHolder) {
-            handleRelicHolderEscaped(dungeoneer, commandBuffer);
+            handleRelicHolderEscaped(dungeon, dungeonRef, commandBuffer);
         } else if (dungeon != null && dungeon.isActive() && dungeon.getDungeoneerRefs().isEmpty()) {
             // last player left without relic holder escaping - deactivate
             LOGGER.atInfo().log("[DungeonAreaSystem] All dungeoneers left dungeon '%s', deactivating",
@@ -152,16 +171,11 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
         }
     }
 
-    private void handleRelicHolderEscaped(DungeoneerComponent dungeoneer, ComponentAccessor<EntityStore> commandBuffer) {
+    private void handleRelicHolderEscaped(DungeonComponent dungeon, Ref<EntityStore> dungeonRef,
+            ComponentAccessor<EntityStore> commandBuffer) {
 
-        Ref<EntityStore> dungeonRef = dungeoneer.getDungeonRef();
-        if (dungeonRef == null || !dungeonRef.isValid()) {
-            LOGGER.atWarning().log("[DungeonAreaSystem] Relic holder escaped but dungeon ref invalid");
-            return;
-        }
-
-        DungeonComponent dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
-        if (dungeon == null) {
+        if (dungeon == null || dungeonRef == null || !dungeonRef.isValid()) {
+            LOGGER.atWarning().log("[DungeonAreaSystem] Relic holder escaped but dungeon is null");
             return;
         }
 

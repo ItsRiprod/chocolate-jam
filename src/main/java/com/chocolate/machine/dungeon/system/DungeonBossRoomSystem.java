@@ -19,10 +19,15 @@ import com.hypixel.hytale.component.spatial.SpatialResource;
 import com.hypixel.hytale.component.system.tick.EntityTickingSystem;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.math.vector.Vector3d;
+import com.hypixel.hytale.math.vector.Vector3i;
 import com.hypixel.hytale.server.core.Message;
+import com.hypixel.hytale.server.core.entity.entities.Player;
+import com.hypixel.hytale.server.core.entity.entities.player.data.PlayerRespawnPointData;
+import com.hypixel.hytale.server.core.entity.entities.player.data.PlayerWorldData;
 import com.hypixel.hytale.server.core.modules.entity.EntityModule;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
+import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 /**
@@ -132,6 +137,28 @@ public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
 
             DungeoneerComponent dungeoneer = new DungeoneerComponent(dungeonId, spawnPosition);
             dungeoneer.setDungeonRef(dungeonRef);
+
+            // backup and override respawn point
+            Player player = commandBuffer.getComponent(playerRef, Player.getComponentType());
+            if (player != null) {
+                World world = commandBuffer.getExternalData().getWorld();
+                String worldName = world.getName();
+                PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+
+                PlayerRespawnPointData[] originalRespawn = worldData.getRespawnPoints();
+                dungeoneer.setOriginalRespawnPoints(originalRespawn);
+
+                Vector3i blockPos = new Vector3i(
+                        (int) spawnPosition.getX(),
+                        (int) spawnPosition.getY(),
+                        (int) spawnPosition.getZ());
+                PlayerRespawnPointData dungeonSpawn = new PlayerRespawnPointData(
+                        blockPos, spawnPosition, "Dungeon");
+                worldData.setRespawnPoints(new PlayerRespawnPointData[] { dungeonSpawn });
+
+                LOGGER.atInfo().log("[DungeonBossRoomSystem] Set dungeon respawn for player, backed up %d original points",
+                        originalRespawn != null ? originalRespawn.length : 0);
+            }
 
             commandBuffer.addComponent(playerRef, DungeoneerComponent.getComponentType(), dungeoneer);
             dungeon.addDungeoneerRef(playerRef);
