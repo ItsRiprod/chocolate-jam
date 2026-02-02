@@ -2743,7 +2743,7 @@
             }
           },
           "prefabspawner": {
-            "PrefabPath": "Machine_Dungeon.11.*",
+            "PrefabPath": "Machine_Dungeon.Var1.11.*",
             "FitHeightmap": false,
             "InheritSeed": true,
             "InheritHeightCondition": true
