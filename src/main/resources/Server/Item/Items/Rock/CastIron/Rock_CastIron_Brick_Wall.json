@@ -1,9 +1,9 @@
 {
   "TranslationProperties": {
-    "Name": "server.items.Rock_Shale_Brick_Wall.name"
+    "Name": "server.items.Rock_CastIron_Brick_Wall.name"
   },
-  "Icon": "Icons/ItemsGenerated/Rock_Shale_Brick_Wall.png",
-  "Set": "Rock_Shale_Brick",
+  "Icon": "Icons/ItemsGenerated/Rock_CastIron_Brick_Wall.png",
+  "Set": "Rock_CastIron_Brick",
   "Recipe": {
     "Input": [
       {
@@ -24,10 +24,10 @@
     "TimeSeconds": 0
   },
   "BlockType": {
-    "CustomModel": "Blocks/Structures/Walls/Wall_Shale_Brick.blockymodel",
+    "CustomModel": "Blocks/Structures/Walls/Wall_CastIron_Brick.blockymodel",
     "CustomModelTexture": [
       {
-        "Texture": "Blocks/Structures/Walls/Wall_Shale_Brick_Texture.png",
+        "Texture": "Blocks/Structures/Walls/Wall_CastIron_Brick_Texture.png",
         "Weight": 1
       }
     ],
@@ -38,7 +38,7 @@
         "GatherType": "Rocks"
       }
     },
-    "ParticleColor": "#3d4a52",
+    "ParticleColor": "#523d3d",
     "State": {
       "Definitions": {
         "Corner": {
@@ -62,8 +62,8 @@
     "ConnectedBlockRuleSet": {
       "Type": "CustomTemplate",
       "TemplateShapeBlockPatterns": {
-        "Straight": "Rock_Shale_Brick_Wall",
-        "Corner": "*Rock_Shale_Brick_Wall_State_Definitions_Corner"
+        "Straight": "Rock_CastIron_Brick_Wall",
+        "Corner": "*Rock_CastIron_Brick_Wall_State_Definitions_Corner"
       },
       "TemplateShapeAssetId": "WallConnectedBlockTemplate"
     },

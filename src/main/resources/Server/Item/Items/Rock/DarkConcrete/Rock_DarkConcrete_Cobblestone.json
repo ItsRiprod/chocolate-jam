@@ -1,0 +1,70 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Rock_DarkConcrete_Cobblestone.name"
+  },
+  "Icon": "Icons/ItemsGenerated/Rock_DarkConcrete_Cobblestone.png",
+  "Set": "Rock_DarkConcrete_Brick",
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 1,
+        "ResourceTypeId": "Rock_Basalt"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Id": "Builders",
+        "Type": "StructuralCrafting",
+        "Categories": [
+          "Bricks"
+        ]
+      }
+    ],
+    "OutputQuantity": 1,
+    "TimeSeconds": 0
+  },
+  "BlockType": {
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Rocks"
+      }
+    },
+    "Textures": [
+      {
+        "Weight": 1,
+        "Sides": "BlockTextures/Rock_DarkConcrete_Cobblestone.png",
+        "UpDown": "BlockTextures/Rock_DarkConcrete_Cobblestone_Top.png"
+      }
+    ],
+    "ParticleColor": "#565656"
+  },
+  "ResourceTypes": [
+    {
+      "Id": "Bricks"
+    },
+    {
+      "Id": "Rock_Basalt_Brick"
+    }
+  ],
+  "Tags": {
+    "Type": [
+      "Rock"
+    ],
+    "Family": [
+      "Basalt"
+    ]
+  },
+  "Parent": "Rock_Stone_Brick",
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}
