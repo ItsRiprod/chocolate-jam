@@ -72,7 +72,11 @@ public class GolemAction implements Spawnable {
         if (state == null) {
             LOGGER.atWarning().log("No SkeletonActionComponent found, registering first");
             register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+            state = componentAccessor.ensureAndGetComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+            if (state == null) {
+                LOGGER.atSevere().log("Failed to register SkeletonActionComponent. State is still null.");
+                return;
+            }
         }
 
         if (state.hasSpawned()) {
