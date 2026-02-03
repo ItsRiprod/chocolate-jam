@@ -32,6 +32,18 @@ public class SpawnableRegistry {
         LOGGER.atInfo().log("Registered spawnable: %s", id);
     }
 
+    public void registerAlias(@Nonnull String alias, @Nonnull String targetId) {
+        Spawnable target = registry.get(targetId);
+        if (target == null) {
+            throw new IllegalArgumentException("Cannot create alias '" + alias + "': target '" + targetId + "' not registered");
+        }
+        if (registry.containsKey(alias)) {
+            throw new IllegalArgumentException("Spawnable with ID '" + alias + "' is already registered");
+        }
+        registry.put(alias, target);
+        LOGGER.atInfo().log("Registered alias: %s -> %s", alias, targetId);
+    }
+
     public boolean unregister(@Nonnull String id) {
         Spawnable removed = registry.remove(id);
         if (removed != null) {

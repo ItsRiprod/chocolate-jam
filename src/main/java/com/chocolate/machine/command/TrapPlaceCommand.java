@@ -91,7 +91,11 @@ public class TrapPlaceCommand extends AbstractPlayerCommand {
         if (module != null) {
             Spawnable spawnable = registry.get(execId);
             if (spawnable != null) {
-                spawnable.register(spawnerRef, store);
+                try {
+                    spawnable.register(spawnerRef, store);
+                } catch (Exception e) {
+                    playerRef.sendMessage(Message.raw("Failed to register spawnable: " + e.getMessage()));
+                }
             }
 
             autoRegisterSpawner(spawnerRef, spawner, position, store, playerRef);

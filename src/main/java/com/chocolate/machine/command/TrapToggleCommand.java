@@ -34,6 +34,10 @@ public class TrapToggleCommand extends AbstractPlayerCommand {
         }
 
         DungeonService dungeonService = module.getDungeonService();
+        if (dungeonService == null) {
+            playerRef.sendMessage(Message.raw("DungeonService not available."));
+            return;
+        }
 
         Ref<EntityStore> targetRef = TargetUtil.getTargetEntity(playerEntityRef, store);
 

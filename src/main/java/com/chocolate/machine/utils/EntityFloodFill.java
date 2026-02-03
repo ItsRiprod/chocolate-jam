@@ -49,10 +49,20 @@ public class EntityFloodFill {
         queue.add(startRef);
         visitedIndices.add(startRef.getIndex());
 
+        EntityModule entityModule = EntityModule.get();
+        if (entityModule == null) {
+            return result;
+        }
         SpatialResource<Ref<EntityStore>, EntityStore> entitySpatial = accessor
-                .getResource(EntityModule.get().getEntitySpatialResourceType());
+                .getResource(entityModule.getEntitySpatialResourceType());
+        if (entitySpatial == null) {
+            return result;
+        }
 
         ObjectArrayList<Ref<EntityStore>> nearby = NEARBY_LIST.get();
+        if (nearby == null) {
+            nearby = new ObjectArrayList<>();
+        }
 
         while (!queue.isEmpty()) {
             Ref<EntityStore> current = queue.poll();

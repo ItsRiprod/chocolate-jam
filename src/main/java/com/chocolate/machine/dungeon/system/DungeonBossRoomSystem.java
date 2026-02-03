@@ -93,7 +93,13 @@ public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
         String dungeonId = dungeon.getDungeonId();
 
         // Get the pending resource to track additions this tick
+        if (pendingResourceType == null) {
+            return;
+        }
         PendingDungeoneerResource pendingResource = commandBuffer.getResource(pendingResourceType);
+        if (pendingResource == null) {
+            return;
+        }
 
         // Query players near this boss room
         SpatialResource<Ref<EntityStore>, EntityStore> spatial = commandBuffer.getResource(playerSpatialResource);
@@ -134,23 +140,30 @@ public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
             // backup and override respawn point
             Player player = commandBuffer.getComponent(playerRef, Player.getComponentType());
             if (player != null) {
-                World world = commandBuffer.getExternalData().getWorld();
-                String worldName = world.getName();
-                PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+                try {
+                    World world = commandBuffer.getExternalData().getWorld();
+                    if (world == null) continue;
+                    String worldName = world.getName();
+                    if (worldName == null) continue;
+                    PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+                    if (worldData == null) continue;
 
-                PlayerRespawnPointData[] originalRespawn = worldData.getRespawnPoints();
-                dungeoneer.setOriginalRespawnPoints(originalRespawn);
+                    PlayerRespawnPointData[] originalRespawn = worldData.getRespawnPoints();
+                    dungeoneer.setOriginalRespawnPoints(originalRespawn);
 
-                Vector3i blockPos = new Vector3i(
-                        (int) spawnPosition.getX(),
-                        (int) spawnPosition.getY(),
-                        (int) spawnPosition.getZ());
-                PlayerRespawnPointData dungeonSpawn = new PlayerRespawnPointData(
-                        blockPos, spawnPosition, "Dungeon");
-                worldData.setRespawnPoints(new PlayerRespawnPointData[] { dungeonSpawn });
+                    Vector3i blockPos = new Vector3i(
+                            (int) spawnPosition.getX(),
+                            (int) spawnPosition.getY(),
+                            (int) spawnPosition.getZ());
+                    PlayerRespawnPointData dungeonSpawn = new PlayerRespawnPointData(
+                            blockPos, spawnPosition, "Dungeon");
+                    worldData.setRespawnPoints(new PlayerRespawnPointData[] { dungeonSpawn });
 
-                LOGGER.atInfo().log("[DungeonBossRoomSystem] Set dungeon respawn for player, backed up %d original points",
-                        originalRespawn != null ? originalRespawn.length : 0);
+                    LOGGER.atInfo().log("[DungeonBossRoomSystem] Set dungeon respawn for player, backed up %d original points",
+                            originalRespawn != null ? originalRespawn.length : 0);
+                } catch (Exception e) {
+                    LOGGER.atWarning().log("failed to backup player respawn: %s", e.getMessage());
+                }
             }
 
             commandBuffer.addComponent(playerRef, DungeoneerComponent.getComponentType(), dungeoneer);
