@@ -6,7 +6,7 @@ items.CM_Sparks.name=Machine Sparks
 items.PortalKey_Machine_Dungeon_Var1.name=Fragment: Dungeon of the Machine V1
 items.PortalKey_Machine_Dungeon_Var2.name=Fragment: Dungeon of the Machine
 items.PortalKey_Machine_Dungeon_Var3.name=Fragment: Dungeon of the Machine V3
-items.PortalKey_Machine_Dungeon.description=<msg key="server.items.PortalKey.description"/>\n\n<i>This fragment might bring you to a long dorment machine</i>
+items.PortalKey_Machine_Dungeon.description=This fragment might bring you to a long<color is="#3a94a7"> dormant machine </color>
 
 portals.Machine_Dungeon_Var1.name=Dungeon of the Machine V1
 portals.Machine_Dungeon_Var2.name=Dungeon of the Machine
