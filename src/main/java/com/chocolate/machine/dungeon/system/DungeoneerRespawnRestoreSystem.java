@@ -58,13 +58,20 @@ public class DungeoneerRespawnRestoreSystem extends RefChangeSystem<EntityStore,
 
         PlayerRespawnPointData[] originalRespawn = component.getOriginalRespawnPoints();
 
-        World world = commandBuffer.getExternalData().getWorld();
-        String worldName = world.getName();
-        PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+        try {
+            World world = commandBuffer.getExternalData().getWorld();
+            if (world == null) return;
+            String worldName = world.getName();
+            if (worldName == null) return;
+            PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+            if (worldData == null) return;
 
-        worldData.setRespawnPoints(originalRespawn);
+            worldData.setRespawnPoints(originalRespawn);
 
-        LOGGER.atInfo().log("[DungeoneerRespawnRestoreSystem] Restored %d original respawn points for player",
-                originalRespawn != null ? originalRespawn.length : 0);
+            LOGGER.atInfo().log("[DungeoneerRespawnRestoreSystem] Restored %d original respawn points for player",
+                    originalRespawn != null ? originalRespawn.length : 0);
+        } catch (Exception e) {
+            LOGGER.atWarning().log("failed to restore respawn points: %s", e.getMessage());
+        }
     }
 }

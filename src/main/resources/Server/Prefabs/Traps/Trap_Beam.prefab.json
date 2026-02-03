@@ -24,6 +24,10 @@
         "PrefabCopyable": {},
         "Prop": {},
         "Spawner": { "ExecutionId": "beam" },
+        "LaserBeam": {
+          "Pitch": 90.0,
+          "Yaw": 0.0
+        },
         "Model": {
           "Model": { "Id": "Trap_Spawner", "Scale": 1.0, "Static": true }
         },

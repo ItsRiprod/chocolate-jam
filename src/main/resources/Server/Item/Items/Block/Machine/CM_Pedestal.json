@@ -2,7 +2,7 @@
   "TranslationProperties": {
     "Name": "server.items.CM_Pedestal.name"
   },
-  "Icon": "Icons/ItemsGenerated/CM_Pedestal.png",
+  "Icon": "Icons/ItemsGenerated/CM_Indicator.png",
   "Categories": [
     "Blocks.Deco"
   ],
@@ -10,6 +10,11 @@
   "BlockType": {
     "DrawType": "Model",
     "Opacity": "Transparent",
+    "Particles": [
+      {
+        "SystemId": "CM_Pedestal_System"
+      }
+    ],
     "Material": "Solid",
     "CustomModel": "Blocks/Machine/CM_Pedestal.blockymodel",
     "CustomModelScale": 0.5,
@@ -24,14 +29,12 @@
     "Interactions": {
       "Use": {
         "Interactions": [
-          {
-            "Type": "CM_PedestalBlock"
-          }
+          "CM_PedestalBlock"
         ]
       }
     },
     "CustomModelAnimation": "Blocks/Machine/Animations/LootIdle.blockyanim",
-    "Looping": true,
+    "Looping": false,
     "State": {
       "Definitions": {
         "On": {

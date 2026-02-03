@@ -490,8 +490,13 @@ public class DungeonService {
             return false;
         }
         
-        spawnable.activate(spawnerRef, componentAccessor);
-        
+        try {
+            spawnable.activate(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to activate spawnable '%s': %s", executionId, e.getMessage());
+            return false;
+        }
+
         spawner.setActive(true);
 
         LOGGER.atFine().log("Activated spawner '%s'", executionId);
@@ -522,7 +527,12 @@ public class DungeonService {
             return false;
         }
 
-        spawnable.deactivate(spawnerRef, componentAccessor);
+        try {
+            spawnable.deactivate(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to deactivate spawnable '%s': %s", executionId, e.getMessage());
+            return false;
+        }
 
         LOGGER.atFine().log("Deactivated spawner '%s'", executionId);
         return true;
@@ -547,7 +557,12 @@ public class DungeonService {
             return false;
         }
 
-        spawnable.reset(spawnerRef, componentAccessor);
+        try {
+            spawnable.reset(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to reset spawnable '%s': %s", executionId, e.getMessage());
+            return false;
+        }
         spawner.setActive(true);
 
         LOGGER.atFine().log("Reset spawner '%s'", executionId);
@@ -571,7 +586,11 @@ public class DungeonService {
         if (!oldExecutionId.isEmpty()) {
             Spawnable oldSpawnable = spawnableRegistry.get(oldExecutionId);
             if (oldSpawnable != null) {
-                oldSpawnable.cleanup(spawnerRef, componentAccessor);
+                try {
+                    oldSpawnable.cleanup(spawnerRef, componentAccessor);
+                } catch (Exception e) {
+                    LOGGER.atSevere().log("failed to cleanup spawnable '%s': %s", oldExecutionId, e.getMessage());
+                }
                 LOGGER.atFine().log("Cleaned up old action '%s'", oldExecutionId);
             }
         }
@@ -581,7 +600,12 @@ public class DungeonService {
         if (!newExecutionId.isEmpty()) {
             Spawnable newSpawnable = spawnableRegistry.get(newExecutionId);
             if (newSpawnable != null) {
-                newSpawnable.register(spawnerRef, componentAccessor);
+                try {
+                    newSpawnable.register(spawnerRef, componentAccessor);
+                } catch (Exception e) {
+                    LOGGER.atSevere().log("failed to register spawnable '%s': %s", newExecutionId, e.getMessage());
+                    return false;
+                }
                 LOGGER.atFine().log("Registered new action '%s'", newExecutionId);
                 return true;
             } else {
@@ -606,7 +630,11 @@ public class DungeonService {
         if (!executionId.isEmpty()) {
             Spawnable spawnable = spawnableRegistry.get(executionId);
             if (spawnable != null) {
-                spawnable.cleanup(spawnerRef, componentAccessor);
+                try {
+                    spawnable.cleanup(spawnerRef, componentAccessor);
+                } catch (Exception e) {
+                    LOGGER.atSevere().log("failed to cleanup spawnable '%s': %s", executionId, e.getMessage());
+                }
                 spawner.setActive(false);
                 LOGGER.atFine().log("Cleaned up spawner '%s'", executionId);
             }
@@ -630,7 +658,11 @@ public class DungeonService {
             return;
         }
 
-        spawnable.register(spawnerRef, componentAccessor);
+        try {
+            spawnable.register(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to register spawnable '%s': %s", executionId, e.getMessage());
+        }
     }
 
     private int registerDungeonBlocks(

@@ -58,7 +58,7 @@ public class LaserBeamComponent implements Component<EntityStore> {
     private float soundTimer = 0f;
     private float damageTimer = 0f;
     private float yaw = 0f;
-    private float pitch = 0f;
+    private float pitch = 90f;
 
     private float damage = 25f;
     private float damageInterval = 0.3f;
