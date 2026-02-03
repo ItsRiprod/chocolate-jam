@@ -1,5 +1,6 @@
 package com.chocolate.machine.dungeon.spawnable.actions;
 
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.actions.SawBladeComponent;
 import com.chocolate.machine.dungeon.component.actions.SawBladeComponent.Phase;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
@@ -96,7 +97,12 @@ public class SawBladeTrap implements Spawnable {
 
         if (state == null) {
             state = new SawBladeComponent();
-            componentAccessor.addComponent(spawnerRef, SawBladeComponent.getComponentType(), state);
+            try {
+                componentAccessor.addComponent(spawnerRef, SawBladeComponent.getComponentType(), state);
+            } catch (IllegalArgumentException e) {
+                state = componentAccessor.getComponent(spawnerRef, SawBladeComponent.getComponentType());
+                if (state == null) return;
+            }
         }
 
         if (state.hasSpawned()) {
@@ -130,6 +136,10 @@ public class SawBladeTrap implements Spawnable {
         if (state == null) {
             register(spawnerRef, componentAccessor);
             state = componentAccessor.getComponent(spawnerRef, SawBladeComponent.getComponentType());
+            if (state == null) {
+                LOGGER.atWarning().log("failed to register SawBladeComponent");
+                return;
+            }
         }
 
         if (!state.hasSpawned()) {
@@ -251,6 +261,10 @@ public class SawBladeTrap implements Spawnable {
 
         holder.ensureComponent(EntityModule.get().getVisibleComponentType());
         holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
+
+        if (SpawnedEntityComponent.getComponentType() != null) {
+            holder.addComponent(SpawnedEntityComponent.getComponentType(), new SpawnedEntityComponent(ID));
+        }
 
         ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(SAWBLADE_MODEL_ASSET);
         if (modelAsset != null) {

@@ -2,6 +2,7 @@ package com.chocolate.machine.dungeon.spawnable.actions;
 
 import com.chocolate.machine.dungeon.component.actions.SkeletonActionComponent;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
+import com.chocolate.machine.dungeon.spawnable.SpawnerProximityUtil;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Ref;
@@ -62,7 +63,7 @@ public class BruteAction implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         if (!spawnerRef.isValid()) {
-            LOGGER.atWarning().log("Cannot activate skeleton: spawner ref is invalid");
+            LOGGER.atWarning().log("Cannot activate brute: spawner ref is invalid");
             return;
         }
 
@@ -70,27 +71,51 @@ public class BruteAction implements Spawnable {
                 spawnerRef, SkeletonActionComponent.getComponentType());
 
         if (state == null) {
-            LOGGER.atWarning().log("No SkeletonActionComponent found, registering first");
             register(spawnerRef, componentAccessor);
-            state = componentAccessor.ensureAndGetComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+            state = componentAccessor.getComponent(spawnerRef, SkeletonActionComponent.getComponentType());
             if (state == null) {
-                LOGGER.atSevere().log("Failed to register BruteAction. State is still null.");
+                LOGGER.atSevere().log("Failed to register BruteAction");
                 return;
             }
         }
 
+        state.setActive(true);
+        LOGGER.atFine().log("Brute spawner activated, will spawn when player nearby");
+    }
 
+    @Override
+    public void tick(
+            float dt,
+            @Nonnull Ref<EntityStore> spawnerRef,
+            @Nonnull CommandBuffer<EntityStore> commandBuffer) {
 
-        if (state.hasSpawned()) {
-            LOGGER.atFine().log("Skeleton already spawned");
+        SkeletonActionComponent state = commandBuffer.getComponent(
+                spawnerRef, SkeletonActionComponent.getComponentType());
+
+        if (state == null || !state.isActive()) {
             return;
         }
 
-        TransformComponent spawnerTransform = componentAccessor.getComponent(
+        if (state.hasSpawned()) {
+            return;
+        }
+
+        if (!SpawnerProximityUtil.isPlayerNearby(spawnerRef, commandBuffer)) {
+            return;
+        }
+
+        spawnNPC(spawnerRef, state, commandBuffer);
+    }
+
+    private void spawnNPC(
+            Ref<EntityStore> spawnerRef,
+            SkeletonActionComponent state,
+            CommandBuffer<EntityStore> commandBuffer) {
+
+        TransformComponent spawnerTransform = commandBuffer.getComponent(
                 spawnerRef, TransformComponent.getComponentType());
 
         if (spawnerTransform == null) {
-            LOGGER.atWarning().log("Spawner has no TransformComponent");
             return;
         }
 
@@ -103,24 +128,22 @@ public class BruteAction implements Spawnable {
             return;
         }
 
-        Store<EntityStore> store = getStore(componentAccessor);
+        Store<EntityStore> store = commandBuffer.getStore();
         if (store == null) {
-            LOGGER.atWarning().log("Cannot get Store from ComponentAccessor");
             return;
         }
 
         Pair<Ref<EntityStore>, ?> npcPair = npcPlugin.spawnNPC(
                 store, SKELETON_ROLE, SKELETON_GROUP, position, rotation);
 
-        if (npcPair == null) {
-            LOGGER.atWarning().log("Failed to spawn skeleton - role '%s' may not exist", SKELETON_ROLE);
+        if (npcPair == null || npcPair.first() == null) {
+            LOGGER.atWarning().log("Failed to spawn brute - role '%s' may not exist", SKELETON_ROLE);
             return;
         }
 
         state.setSpawnedRef(npcPair.first());
-        state.setActive(true);
 
-        LOGGER.atInfo().log("Spawned skeleton at (%.1f, %.1f, %.1f)",
+        LOGGER.atInfo().log("Spawned brute at (%.1f, %.1f, %.1f)",
                 position.getX(), position.getY(), position.getZ());
     }
 

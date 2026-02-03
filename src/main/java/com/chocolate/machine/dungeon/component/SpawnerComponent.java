@@ -28,7 +28,6 @@ public class SpawnerComponent implements Component<EntityStore> {
     @Nonnull
     private String executionId = "";
 
-    @Nullable
     private boolean isActive = false;
     
     public SpawnerComponent() {

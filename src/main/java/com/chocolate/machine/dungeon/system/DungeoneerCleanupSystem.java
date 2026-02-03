@@ -5,6 +5,8 @@ import javax.annotation.Nonnull;
 import com.chocolate.machine.dungeon.DungeonModule;
 import com.chocolate.machine.dungeon.component.DungeonComponent;
 import com.chocolate.machine.dungeon.component.DungeoneerComponent;
+import java.util.List;
+
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.Ref;
@@ -61,14 +63,21 @@ public class DungeoneerCleanupSystem extends RefSystem<EntityStore> {
             LOGGER.atInfo().log("[DungeoneerCleanupSystem] Relic holder disconnected! Resetting dungeon '%s'",
                     dungeon.getDungeonId());
 
-            DungeonModule.get().getDungeonService().reset(dungeonRef, commandBuffer);
+            DungeonModule dungeonModule = DungeonModule.get();
+            if (dungeonModule != null && dungeonModule.getDungeonService() != null) {
+                dungeonModule.getDungeonService().reset(dungeonRef, commandBuffer);
+            }
 
-            for (Ref<EntityStore> otherRef : dungeon.getDungeoneerRefs()) {
+            for (Ref<EntityStore> otherRef : List.copyOf(dungeon.getDungeoneerRefs())) {
                 if (!otherRef.isValid()) continue;
 
                 PlayerRef otherPlayer = commandBuffer.getComponent(otherRef, PlayerRef.getComponentType());
                 if (otherPlayer != null) {
-                    otherPlayer.sendMessage(Message.raw("The relic holder disconnected! Dungeon reset."));
+                    try {
+                        otherPlayer.sendMessage(Message.raw("The relic holder disconnected! Dungeon reset."));
+                    } catch (Exception e) {
+                        LOGGER.atWarning().log("failed to send message to player: %s", e.getMessage());
+                    }
                 }
                 commandBuffer.tryRemoveComponent(otherRef, DungeoneerComponent.getComponentType());
             }
@@ -79,7 +88,10 @@ public class DungeoneerCleanupSystem extends RefSystem<EntityStore> {
             // last non-relic player left - deactivate
             LOGGER.atInfo().log("[DungeoneerCleanupSystem] All dungeoneers left dungeon '%s', deactivating",
                     dungeon.getDungeonId());
-            DungeonModule.get().getDungeonService().deactivate(dungeonRef, commandBuffer);
+            DungeonModule dungeonModule = DungeonModule.get();
+            if (dungeonModule != null && dungeonModule.getDungeonService() != null) {
+                dungeonModule.getDungeonService().deactivate(dungeonRef, commandBuffer);
+            }
         }
     }
 

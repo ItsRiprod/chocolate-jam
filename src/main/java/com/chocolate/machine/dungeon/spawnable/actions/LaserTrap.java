@@ -63,6 +63,10 @@ public class LaserTrap implements Spawnable {
         if (state == null) {
             register(spawnerRef, componentAccessor);
             state = componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
+            if (state == null) {
+                LOGGER.atWarning().log("failed to register LaserTrapActionComponent");
+                return;
+            }
         }
 
         state.setActive(true);
@@ -156,12 +160,27 @@ public class LaserTrap implements Spawnable {
         Vector3f rotation = new Vector3f(pitch, yaw, 0f);
 
         TimeResource timeResource = commandBuffer.getResource(TimeResource.getResourceType());
+        if (timeResource == null) {
+            LOGGER.atWarning().log("TimeResource not available");
+            return;
+        }
 
-        Holder<EntityStore> holder = ProjectileComponent.assembleDefaultProjectile(
-                timeResource,
-                laser.getProjectileId(),
-                spawnPos,
-                rotation);
+        Holder<EntityStore> holder;
+        try {
+            holder = ProjectileComponent.assembleDefaultProjectile(
+                    timeResource,
+                    laser.getProjectileId(),
+                    spawnPos,
+                    rotation);
+        } catch (Exception e) {
+            LOGGER.atWarning().log("Failed to assemble projectile: %s", e.getMessage());
+            return;
+        }
+
+        if (holder == null) {
+            LOGGER.atWarning().log("Failed to assemble projectile - holder is null");
+            return;
+        }
 
         ProjectileComponent projectileComponent = holder.getComponent(ProjectileComponent.getComponentType());
         if (projectileComponent == null || !projectileComponent.initialize()) {

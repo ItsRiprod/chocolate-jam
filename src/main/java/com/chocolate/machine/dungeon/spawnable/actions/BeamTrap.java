@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import javax.annotation.Nonnull;
 
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.actions.LaserBeamComponent;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
 import com.hypixel.hytale.component.AddReason;
@@ -107,6 +108,10 @@ public class BeamTrap implements Spawnable {
         if (state == null) {
             register(spawnerRef, componentAccessor);
             state = componentAccessor.getComponent(spawnerRef, LaserBeamComponent.getComponentType());
+            if (state == null) {
+                LOGGER.atWarning().log("failed to register LaserBeamComponent");
+                return;
+            }
         }
 
         TransformComponent spawnerTransform = componentAccessor.getComponent(
@@ -119,6 +124,10 @@ public class BeamTrap implements Spawnable {
         removeBeamSegments(state, componentAccessor);
 
         World world = componentAccessor.getExternalData().getWorld();
+        if (world == null) {
+            LOGGER.atWarning().log("cannot activate beam trap: world is null");
+            return;
+        }
         spawnBeamSegments(spawnerRef, state, spawnerTransform, world, componentAccessor);
 
         state.setActive(true);
@@ -227,7 +236,7 @@ public class BeamTrap implements Spawnable {
 
         double blockHitDistance = findBlockHitDistance(world, startX, startY, startZ, direction, state);
 
-        int numSegments = (int) Math.ceil(blockHitDistance / LaserBeamComponent.BEAM_SEGMENT_HEIGHT);
+        int numSegments = (int) Math.ceil(blockHitDistance / LaserBeamComponent.BEAM_SEGMENT_HEIGHT) + 2; // add two for making it "connect" with the last block
         if (numSegments < 1) {
             numSegments = 1;
         }
@@ -312,7 +321,17 @@ public class BeamTrap implements Spawnable {
         holder.ensureComponent(EntityModule.get().getVisibleComponentType());
         holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
 
-        Model model = Model.createScaledModel(modelAsset, 2.0f);
+        if (SpawnedEntityComponent.getComponentType() != null) {
+            holder.addComponent(SpawnedEntityComponent.getComponentType(), new SpawnedEntityComponent(ID));
+        }
+
+        Model model;
+        try {
+            model = Model.createScaledModel(modelAsset, 2.0f);
+        } catch (Exception e) {
+            LOGGER.atWarning().log("failed to create beam model: %s", e.getMessage());
+            return null;
+        }
         holder.addComponent(ModelComponent.getComponentType(), new ModelComponent(model));
         holder.addComponent(BoundingBox.getComponentType(), new BoundingBox(model.getBoundingBox()));
 
@@ -355,6 +374,9 @@ public class BeamTrap implements Spawnable {
         Vector3d direction = Transform.getDirection(pitchRad, yawRad);
 
         World world = commandBuffer.getExternalData().getWorld();
+        if (world == null) {
+            return;
+        }
         double beamLength = findBlockHitDistance(world, startX, startY, startZ, direction, state);
 
         Vector3d endPos = new Vector3d(
@@ -371,7 +393,7 @@ public class BeamTrap implements Spawnable {
         List<Ref<EntityStore>> nearbyEntities = TargetUtil.getAllEntitiesInSphere(midPoint, searchRadius,
                 commandBuffer);
 
-        List<Ref<EntityStore>> beamSegments = state.getBeamSegments();
+        List<Ref<EntityStore>> beamSegments = List.copyOf(state.getBeamSegments());
 
         for (Ref<EntityStore> entityRef : nearbyEntities) {
             if (!entityRef.isValid() || entityRef.equals(spawnerRef)) {

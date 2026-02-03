@@ -65,6 +65,9 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
 
         if (existingDungeoneer == null) {
             Vector3d spawnPosition = dungeon.getSpawnPosition();
+            if (spawnPosition == null) {
+                spawnPosition = new Vector3d(0, 0, 0);
+            }
             existingDungeoneer = new DungeoneerComponent(dungeonId, spawnPosition);
             existingDungeoneer.setDungeonRef(dungeonRef);
             store.addComponent(playerEntityRef, DungeoneerComponent.getComponentType(), existingDungeoneer);
@@ -103,7 +106,7 @@ public class DungeonTriggerCommand extends AbstractPlayerCommand {
                 dungeonService.deactivate(dungeonRef, store);
                 dungeon.setArtifactHolderRef(null);
 
-                for (Ref<EntityStore> otherRef : dungeon.getDungeoneerRefs()) {
+                for (Ref<EntityStore> otherRef : java.util.List.copyOf(dungeon.getDungeoneerRefs())) {
                     if (otherRef.isValid()) {
                         store.tryRemoveComponent(otherRef, DungeoneerComponent.getComponentType());
                     }

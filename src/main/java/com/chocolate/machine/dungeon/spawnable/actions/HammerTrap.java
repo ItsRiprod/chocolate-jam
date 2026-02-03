@@ -1,5 +1,6 @@
 package com.chocolate.machine.dungeon.spawnable.actions;
 
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.HammerPhase;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.KnockbackAxis;
@@ -118,7 +119,12 @@ public class HammerTrap implements Spawnable {
 
         if (state == null) {
             state = new BigFreakingHammerComponent();
-            componentAccessor.addComponent(spawnerRef, BigFreakingHammerComponent.getComponentType(), state);
+            try {
+                componentAccessor.addComponent(spawnerRef, BigFreakingHammerComponent.getComponentType(), state);
+            } catch (IllegalArgumentException e) {
+                state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+                if (state == null) return;
+            }
         }
 
         if (state.hasSpawned()) {
@@ -152,6 +158,10 @@ public class HammerTrap implements Spawnable {
         if (state == null) {
             register(spawnerRef, componentAccessor);
             state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            if (state == null) {
+                LOGGER.atWarning().log("failed to register BigFreakingHammerComponent");
+                return;
+            }
         }
 
         if (!state.hasSpawned()) {
@@ -275,6 +285,10 @@ public class HammerTrap implements Spawnable {
 
         holder.ensureComponent(EntityModule.get().getVisibleComponentType());
         holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
+
+        if (SpawnedEntityComponent.getComponentType() != null) {
+            holder.addComponent(SpawnedEntityComponent.getComponentType(), new SpawnedEntityComponent(ID));
+        }
 
         ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(HAMMER_MODEL_ASSET);
         if (modelAsset != null) {
@@ -409,7 +423,8 @@ public class HammerTrap implements Spawnable {
                 continue;
             }
 
-            if (entityRef.equals(hammer.getSpawnedRef())) {
+            Ref<EntityStore> hammerSpawnedRef = hammer.getSpawnedRef();
+            if (hammerSpawnedRef != null && entityRef.equals(hammerSpawnedRef)) {
                 continue;
             }
 

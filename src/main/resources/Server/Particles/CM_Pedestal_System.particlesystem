@@ -3,7 +3,7 @@
     {
       "SpawnerId": "CM_Pedestal_Spawner",
       "PositionOffset": {
-        "Y": 6
+        "Y": 0
       },
       "RotationOffset": {
         "Yaw": 0,
@@ -14,7 +14,7 @@
     {
       "SpawnerId": "CM_Pedestal_Sparks",
       "PositionOffset": {
-        "Y": 6
+        "Y": 1
       }
     }
   ]
