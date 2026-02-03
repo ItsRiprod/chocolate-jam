@@ -12,6 +12,7 @@
     "Opacity": "Transparent",
     "Material": "Solid",
     "CustomModel": "Blocks/Machine/CM_Pedestal.blockymodel",
+    "CustomModelScale": 0.5,
     "CustomModelTexture": [
       {
         "Weight": 1,
@@ -36,7 +37,7 @@
         "On": {
           "HitboxType": "Pedestal",
           "CustomModelAnimation": "Blocks/Machine/Animations/PedestalTrigger.blockyanim",
-          "Looping": true
+          "Looping": false
         }
       }
     },
