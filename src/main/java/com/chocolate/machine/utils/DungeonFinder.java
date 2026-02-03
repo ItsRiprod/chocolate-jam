@@ -141,4 +141,52 @@ public class DungeonFinder {
 
         return allDungeons;
     }
+
+    @Nullable
+    public static Ref<EntityStore> findNearestEntrance(
+            @Nonnull Vector3d position,
+            @Nonnull ComponentAccessor<EntityStore> accessor,
+            double searchRadius) {
+
+        EntityModule entityModule = EntityModule.get();
+        if (entityModule == null) {
+            return null;
+        }
+
+        ResourceType<EntityStore, SpatialResource<Ref<EntityStore>, EntityStore>> entitySpatialType =
+                entityModule.getEntitySpatialResourceType();
+        SpatialResource<Ref<EntityStore>, EntityStore> spatial = accessor.getResource(entitySpatialType);
+        if (spatial == null) {
+            return null;
+        }
+
+        List<Ref<EntityStore>> nearbyEntities = SpatialResource.getThreadLocalReferenceList();
+        if (nearbyEntities == null) {
+            return null;
+        }
+        spatial.getSpatialStructure().collect(position, searchRadius, nearbyEntities);
+
+        Ref<EntityStore> nearestEntrance = null;
+        double nearestDistance = Double.MAX_VALUE;
+
+        for (int i = 0; i < nearbyEntities.size(); i++) {
+            Ref<EntityStore> entityRef = nearbyEntities.get(i);
+            if (!entityRef.isValid()) continue;
+
+            com.chocolate.machine.dungeon.component.DungeonEntranceComponent entrance =
+                    accessor.getComponent(entityRef, com.chocolate.machine.dungeon.component.DungeonEntranceComponent.getComponentType());
+            if (entrance == null) continue;
+
+            TransformComponent transform = accessor.getComponent(entityRef, TransformComponent.getComponentType());
+            if (transform == null) continue;
+
+            double distance = position.distanceSquaredTo(transform.getPosition());
+            if (distance < nearestDistance) {
+                nearestDistance = distance;
+                nearestEntrance = entityRef;
+            }
+        }
+
+        return nearestEntrance;
+    }
 }

@@ -6,11 +6,13 @@ import javax.annotation.Nullable;
 import com.chocolate.machine.dungeon.DungeonModule;
 import com.chocolate.machine.dungeon.DungeonService;
 import com.chocolate.machine.dungeon.component.DungeonComponent;
+import com.chocolate.machine.dungeon.component.DungeonEntranceComponent;
 import com.chocolate.machine.dungeon.component.DungeoneerComponent;
 import com.chocolate.machine.utils.DungeonFinder;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.Ref;
+import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.math.util.ChunkUtil;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
@@ -37,12 +39,16 @@ import com.hypixel.hytale.server.npc.util.InventoryHelper;
 
 public class PedestalBlockInteraction extends SimpleBlockInteraction {
 
+    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
+
     @Nonnull
     public static final BuilderCodec<PedestalBlockInteraction> CODEC = BuilderCodec.builder(
             PedestalBlockInteraction.class, PedestalBlockInteraction::new, SimpleBlockInteraction.CODEC)
             .build();
 
     private static final String TRIGGERED_SOUND = "SFX_CM_Triggered";
+    private static final double ENTRANCE_SEARCH_RADIUS = 100.0;
+
     private static final String[] ARTIFACT_ARMOR = {
             "Armor_Artifact_Head",
             "Armor_Artifact_Chest",
@@ -72,16 +78,49 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
 
             PlayerRef playerRefComponent = commandBuffer.getComponent(playerRef, PlayerRef.getComponentType());
 
-            Vector3d blockCenter = new Vector3d(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);
-            Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeon(blockCenter, commandBuffer);
-
-            if (dungeonRef == null) {
+            DungeonModule module = DungeonModule.get();
+            if (module == null) {
                 context.getState().state = InteractionState.Failed;
                 return;
             }
+            DungeonService dungeonService = module.getDungeonService();
 
-            DungeonComponent dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
-            if (dungeon == null || dungeon.isTriggered() || dungeon.isActive()) {
+            Vector3d blockCenter = new Vector3d(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);
+            Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeon(blockCenter, commandBuffer);
+            DungeonComponent dungeon = null;
+
+            if (dungeonRef != null) {
+                dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
+            }
+
+            // if no dungeon found, spawn one on the pedestal
+            if (dungeonRef == null || dungeon == null) {
+                LOGGER.atInfo().log("[PedestalBlockInteraction] No dungeon found, attempting to spawn one");
+
+                String dungeonId = findEntranceDungeonId(blockCenter, commandBuffer);
+                if (dungeonId == null || dungeonId.isEmpty()) {
+                    dungeonId = "chocolate";
+                    LOGGER.atWarning().log("[PedestalBlockInteraction] No entrance found, using default dungeonId: %s", dungeonId);
+                }
+
+                Vector3d spawnPos = new Vector3d(pos.x + 0.5, pos.y + 1.0, pos.z + 0.5);
+                dungeonRef = dungeonService.spawnDungeonEntity(spawnPos, dungeonId, commandBuffer);
+
+                if (dungeonRef == null) {
+                    LOGGER.atSevere().log("[PedestalBlockInteraction] Failed to spawn dungeon entity");
+                    context.getState().state = InteractionState.Failed;
+                    return;
+                }
+
+                dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
+                if (dungeon == null) {
+                    LOGGER.atSevere().log("[PedestalBlockInteraction] Spawned entity has no DungeonComponent");
+                    context.getState().state = InteractionState.Failed;
+                    return;
+                }
+            }
+
+            if (dungeon.isTriggered() || dungeon.isActive()) {
                 context.getState().state = InteractionState.Failed;
                 return;
             }
@@ -99,21 +138,14 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
                     Message.raw("Objective Update"),
                     true);
 
-            DungeonModule module = DungeonModule.get();
-            if (module == null) {
-                context.getState().state = InteractionState.Failed;
-                return;
-            }
-
-            DungeonService dungeonService = module.getDungeonService();
-
             // reset if already registered (same as /cm d register command)
             if (dungeon.isRegistered()) {
                 dungeon.reset();
             }
 
             // register first, then activate
-            dungeonService.registerDungeon(dungeonRef, commandBuffer, world);
+            // use blockCenter as searchOrigin so flood fill works even if dungeon entity was just spawned
+            dungeonService.registerDungeon(dungeonRef, commandBuffer, world, blockCenter);
             dungeonService.activate(dungeonRef, playerRef, commandBuffer);
 
             dungeon.setArtifactHolderRef(playerRef);
@@ -192,5 +224,21 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
             @Nullable ItemStack itemInHand,
             @Nonnull World world,
             @Nonnull Vector3i targetBlock) {
+    }
+
+    @Nullable
+    private String findEntranceDungeonId(Vector3d position, CommandBuffer<EntityStore> commandBuffer) {
+        Ref<EntityStore> entranceRef = DungeonFinder.findNearestEntrance(position, commandBuffer, ENTRANCE_SEARCH_RADIUS);
+        if (entranceRef == null || !entranceRef.isValid()) {
+            return null;
+        }
+
+        DungeonEntranceComponent entrance = commandBuffer.getComponent(entranceRef, DungeonEntranceComponent.getComponentType());
+        if (entrance != null && entrance.getDungeonId() != null && !entrance.getDungeonId().isEmpty()) {
+            LOGGER.atInfo().log("[PedestalBlockInteraction] Found entrance with dungeonId: %s", entrance.getDungeonId());
+            return entrance.getDungeonId();
+        }
+
+        return null;
     }
 }
