@@ -42,7 +42,7 @@
     "DropList": "Drop_Skeleton_Archer",
     "Appearance": "Tier2_Enemy",
     "Weapons": [
-      "Weapon_Shortbow_Doomed"
+      "New_Bow"
     ],
     "FlockArray": {
       "Compute": "FlockArray"

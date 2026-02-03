@@ -4,9 +4,8 @@
   },
   "Parent": "Template_Weapon_Shortbow",
   "Quality": "Rare",
-  "Model": "Items/Weapons/New_Bow.blockymodel",
-  "Texture": "Items/Weapons/New_Bow.png",
-  "Icon": "Icons/ItemsGenerated/New_Bow.png",
+  "Model": "Items/New_Bow.blockymodel",
+  "Texture": "Items/New_Bow.png",
   "ItemLevel": 35,
   "Recipe": {
     "TimeSeconds": 4,
@@ -285,12 +284,6 @@
   },
   "MaxDurability": 150,
   "DurabilityLossOnHit": 0.58,
-  "Particles": [
-    {
-      "SystemId": "Small_Cog_Test_System_Three",
-      "Scale": 0.3
-    }
-  ],
   "IconProperties": {
     "Scale": 0.3,
     "Rotation": [
@@ -302,5 +295,12 @@
       -4,
       -43
     ]
-  }
+  },
+  "Particles": [
+    {
+      "SystemId": "Small_Cog_Test_System_Three",
+      "Scale": 0.3
+    }
+  ],
+  "Icon": "Icons/ItemsGenerated/New_Bow.png"
 }

@@ -5,6 +5,7 @@ import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponen
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.HammerPhase;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.KnockbackAxis;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
+import com.chocolate.machine.dungeon.spawnable.SpawnerProximityUtil;
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
@@ -287,7 +288,19 @@ public class HammerTrap implements Spawnable {
         }
 
         Ref<EntityStore> pressRef = press.getSpawnedRef();
+
         if (pressRef == null || !pressRef.isValid()) {
+            if (!SpawnerProximityUtil.isPlayerNearby(spawnerRef, commandBuffer)) {
+                return;
+            }
+
+            pressRef = spawnHammer(spawnerRef, commandBuffer, press);
+            if (pressRef == null) {
+                return;
+            }
+            press.setSpawnedRef(pressRef);
+            press.setPhase(HammerPhase.IDLE);
+            AnimationUtils.playAnimation(pressRef, AnimationSlot.Action, ANIM_IDLE, true, commandBuffer);
             return;
         }
 
