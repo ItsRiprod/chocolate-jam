@@ -42,11 +42,14 @@ public class BruteAction implements Spawnable {
             @Nonnull Ref<EntityStore> spawnerRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
+        if (!spawnerRef.isValid()) {
+            return;
+        }
+
         SkeletonActionComponent existing = componentAccessor.getComponent(
                 spawnerRef, SkeletonActionComponent.getComponentType());
 
         if (existing != null) {
-            LOGGER.atFine().log("SkeletonActionComponent already exists, resetting");
             existing.reset();
             return;
         }
@@ -56,8 +59,6 @@ public class BruteAction implements Spawnable {
         } catch (IllegalArgumentException e) {
             // race: component added by another spawner in same tick
         }
-
-        LOGGER.atFine().log("Registered SkeletonActionComponent for spawner");
     }
 
     @Override
@@ -66,7 +67,6 @@ public class BruteAction implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         if (!spawnerRef.isValid()) {
-            LOGGER.atWarning().log("Cannot activate brute: spawner ref is invalid");
             return;
         }
 
@@ -74,16 +74,11 @@ public class BruteAction implements Spawnable {
                 spawnerRef, SkeletonActionComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, SkeletonActionComponent.getComponentType());
-            if (state == null) {
-                LOGGER.atSevere().log("Failed to register BruteAction");
-                return;
-            }
+            // component should have been added by register() - skip if missing
+            return;
         }
 
         state.setActive(true);
-        LOGGER.atFine().log("Brute spawner activated, will spawn when player nearby");
     }
 
     @Override
@@ -131,23 +126,24 @@ public class BruteAction implements Spawnable {
             return;
         }
 
-        Store<EntityStore> store = commandBuffer.getStore();
-        if (store == null) {
-            return;
-        }
+        commandBuffer.run(store -> {
+            Pair<Ref<EntityStore>, ?> npcPair = npcPlugin.spawnNPC(
+                    store, SKELETON_ROLE, SKELETON_GROUP, position, rotation);
 
-        Pair<Ref<EntityStore>, ?> npcPair = npcPlugin.spawnNPC(
-                store, SKELETON_ROLE, SKELETON_GROUP, position, rotation);
+            if (npcPair == null || npcPair.first() == null) {
+                LOGGER.atWarning().log("Failed to spawn brute - role '%s' may not exist", SKELETON_ROLE);
+                return;
+            }
 
-        if (npcPair == null || npcPair.first() == null) {
-            LOGGER.atWarning().log("Failed to spawn brute - role '%s' may not exist", SKELETON_ROLE);
-            return;
-        }
+            SkeletonActionComponent deferredState = store.getComponent(
+                    spawnerRef, SkeletonActionComponent.getComponentType());
+            if (deferredState != null) {
+                deferredState.setSpawnedRef(npcPair.first());
+            }
 
-        state.setSpawnedRef(npcPair.first());
-
-        LOGGER.atInfo().log("Spawned brute at (%.1f, %.1f, %.1f)",
-                position.getX(), position.getY(), position.getZ());
+            LOGGER.atInfo().log("Spawned brute at (%.1f, %.1f, %.1f)",
+                    position.getX(), position.getY(), position.getZ());
+        });
     }
 
     @Override
@@ -208,14 +204,5 @@ public class BruteAction implements Spawnable {
         }
 
         LOGGER.atFine().log("Cleaned up SkeletonActionComponent");
-    }
-
-    private Store<EntityStore> getStore(ComponentAccessor<EntityStore> accessor) {
-        if (accessor instanceof Store) {
-            return (Store<EntityStore>) accessor;
-        } else if (accessor instanceof CommandBuffer) {
-            return ((CommandBuffer<EntityStore>) accessor).getStore();
-        }
-        return null;
     }
 }

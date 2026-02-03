@@ -136,7 +136,6 @@ public class HammerTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         if (!spawnerRef.isValid()) {
-            LOGGER.atWarning().log("Invalid spawner reference in HammerTrap.activate");
             return;
         }
 
@@ -144,23 +143,7 @@ public class HammerTrap implements Spawnable {
                 spawnerRef, BigFreakingHammerComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
-            if (state == null) {
-                LOGGER.atWarning().log("failed to register BigFreakingHammerComponent");
-                return;
-            }
-        }
-
-        if (!state.hasSpawned()) {
-            register(spawnerRef, componentAccessor);
-        }
-
-        // Ensure hammer is spawned
-        Ref<EntityStore> spawnedRef = state.getSpawnedRef();
-        if (spawnedRef == null || !spawnedRef.isValid()) {
-            spawnedRef = this.spawnHammer(spawnerRef, componentAccessor, state);
-            state.setSpawnedRef(spawnedRef);
+            return;
         }
 
         state.setActive(true);

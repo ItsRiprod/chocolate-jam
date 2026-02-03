@@ -64,18 +64,11 @@ public class LaserTrap implements Spawnable {
                 spawnerRef, LaserTrapActionComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
-            if (state == null) {
-                LOGGER.atWarning().log("failed to register LaserTrapActionComponent");
-                return;
-            }
+            return;
         }
 
         state.setActive(true);
         state.resetFireTimer();
-
-        LOGGER.atInfo().log("Laser trap activated");
     }
 
     @Override

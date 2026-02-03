@@ -254,6 +254,7 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
         copy.hasDamagedThisCycle = this.hasDamagedThisCycle;
         copy.pendingDeactivation = this.pendingDeactivation;
         copy.needsIdleAnimation = this.needsIdleAnimation;
+        copy.scale = this.scale;
         return copy;
     }
 }

@@ -139,12 +139,7 @@ public class HydraulicPressTrap implements Spawnable {
                 spawnerRef, HydraulicPressActionComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, HydraulicPressActionComponent.getComponentType());
-            if (state == null) {
-                LOGGER.atWarning().log("failed to register HydraulicPressActionComponent");
-                return;
-            }
+            return;
         }
 
         if (state.hasSpawned()) {

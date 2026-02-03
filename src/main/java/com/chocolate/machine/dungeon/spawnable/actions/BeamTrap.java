@@ -109,12 +109,7 @@ public class BeamTrap implements Spawnable {
                 spawnerRef, LaserBeamComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, LaserBeamComponent.getComponentType());
-            if (state == null) {
-                LOGGER.atWarning().log("failed to register LaserBeamComponent");
-                return;
-            }
+            return;
         }
 
         TransformComponent spawnerTransform = componentAccessor.getComponent(
@@ -260,7 +255,7 @@ public class BeamTrap implements Spawnable {
             Ref<EntityStore> segmentRef = spawnBeamSegment(
                     segX, segY, segZ, pitchDeg, yawDeg, modelAsset, componentAccessor);
 
-            if (segmentRef != null && segmentRef.isValid()) {
+            if (segmentRef != null) {
                 state.addBeamSegment(segmentRef);
             }
         }
