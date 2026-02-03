@@ -110,36 +110,6 @@
     },
     {
       "x": -10,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
       "y": 6,
       "z": -5,
       "name": "Rock_Shale_Brick_Stairs",
@@ -159,42 +129,6 @@
     },
     {
       "x": -10,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -207,42 +141,6 @@
     },
     {
       "x": -10,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -252,42 +150,6 @@
       "y": 0,
       "z": -2,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -10,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": -10,
@@ -309,36 +171,6 @@
     },
     {
       "x": -10,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -348,36 +180,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -10,
-      "y": 1,
-      "z": 0,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -10,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": -10,
@@ -396,36 +198,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -10,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -10,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -10,
@@ -600,24 +372,6 @@
     },
     {
       "x": -9,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
       "y": 5,
       "z": -6,
       "name": "Rock_Shale_Brick_Stairs",
@@ -650,36 +404,6 @@
     },
     {
       "x": -9,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -689,42 +413,6 @@
       "y": 0,
       "z": -4,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -9,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -9,
@@ -740,42 +428,6 @@
     },
     {
       "x": -9,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -785,42 +437,6 @@
       "y": 0,
       "z": -2,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -9,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": -9,
@@ -836,42 +452,6 @@
     },
     {
       "x": -9,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -881,42 +461,6 @@
       "y": 0,
       "z": 0,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -9,
-      "y": 1,
-      "z": 0,
-      "name": "Plant_Bush_Dead_Twisted"
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": -9,
@@ -934,32 +478,8 @@
       "x": -9,
       "y": 1,
       "z": 1,
-      "name": "Furniture_Ancient_Crate",
-      "rotation": 1
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -9,
@@ -985,24 +505,6 @@
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 8
-    },
-    {
-      "x": -9,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -9,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -9,
@@ -1134,28 +636,10 @@
     },
     {
       "x": -8,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
       "y": 3,
       "z": -6,
       "name": "Plant_Vine_Wall",
       "support": 15
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
     },
     {
       "x": -8,
@@ -1177,42 +661,6 @@
     },
     {
       "x": -8,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -1222,42 +670,6 @@
       "y": 0,
       "z": -4,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -8,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -8,
@@ -1280,36 +692,6 @@
     },
     {
       "x": -8,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -1322,42 +704,6 @@
     },
     {
       "x": -8,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -1367,42 +713,6 @@
       "y": 0,
       "z": -1,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -8,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -8,
@@ -1424,36 +734,6 @@
     },
     {
       "x": -8,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
       "y": 7,
       "z": 0,
       "name": "Rock_Basalt"
@@ -1463,42 +743,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -8,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -8,
@@ -1525,24 +769,6 @@
       "z": 2,
       "name": "Plant_Leaves_Wisteria_Wild",
       "support": 15
-    },
-    {
-      "x": -8,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -8,
-      "y": 5,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -8,
@@ -1674,18 +900,6 @@
     },
     {
       "x": -7,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
       "y": 5,
       "z": -6,
       "name": "Rock_Shale_Brick_Stairs",
@@ -1715,30 +929,6 @@
       "z": -5,
       "name": "Plant_Leaves_Wisteria_Wild",
       "support": 15
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": -7,
@@ -1761,42 +951,6 @@
     },
     {
       "x": -7,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -1813,36 +967,6 @@
       "z": -3,
       "name": "Plant_Moss_Rug_Green_Dark",
       "support": 15
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": -7,
@@ -1865,36 +989,6 @@
     },
     {
       "x": -7,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -1907,42 +1001,6 @@
     },
     {
       "x": -7,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -1952,42 +1010,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -7,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": -7,
@@ -2000,42 +1022,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -7,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -7,
@@ -2055,24 +1041,6 @@
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 8
-    },
-    {
-      "x": -7,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -7,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -7,
@@ -2246,36 +1214,6 @@
     },
     {
       "x": -6,
-      "y": 1,
-      "z": -5,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -6,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 6,
       "z": -5,
       "name": "Rock_Shale_Brick_Stairs",
@@ -2295,42 +1233,6 @@
     },
     {
       "x": -6,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -2343,42 +1245,6 @@
     },
     {
       "x": -6,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -2388,42 +1254,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -6,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": -6,
@@ -2446,36 +1276,6 @@
     },
     {
       "x": -6,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -2488,42 +1288,6 @@
     },
     {
       "x": -6,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
       "y": 7,
       "z": 0,
       "name": "Rock_Basalt"
@@ -2533,36 +1297,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -6,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -6,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -6,
@@ -2780,19 +1514,8 @@
       "x": -5,
       "y": 1,
       "z": -5,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -5,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -5,
@@ -2833,24 +1556,6 @@
     },
     {
       "x": -5,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
       "y": 5,
       "z": -4,
       "name": "Rock_Basalt_Brick_Half",
@@ -2876,36 +1581,6 @@
     },
     {
       "x": -5,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
       "y": 6,
       "z": -3,
       "name": "Rock_Basalt_Brick"
@@ -2931,30 +1606,6 @@
     },
     {
       "x": -5,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
       "y": 6,
       "z": -2,
       "name": "Rock_Basalt_Brick"
@@ -2970,36 +1621,6 @@
       "y": 0,
       "z": -1,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -5,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -5,
@@ -3025,24 +1646,6 @@
       "z": 0,
       "name": "Plant_Moss_Rug_Green_Dark",
       "support": 15
-    },
-    {
-      "x": -5,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": -5,
@@ -3068,24 +1671,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -5,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -5,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -5,
@@ -3552,24 +2137,6 @@
     },
     {
       "x": -4,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 4,
       "z": -5,
       "name": "Rock_Basalt_Brick_Half",
@@ -3598,30 +2165,6 @@
       "y": 0,
       "z": -4,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -4,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -3656,30 +2199,6 @@
     },
     {
       "x": -4,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 6,
       "z": -3,
       "name": "Rock_Basalt_Brick"
@@ -3695,36 +2214,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -4,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -3746,36 +2235,6 @@
     },
     {
       "x": -4,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 6,
       "z": -1,
       "name": "Rock_Basalt_Brick"
@@ -3791,30 +2250,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -4,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -3840,24 +2275,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -4,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -4041,24 +2458,6 @@
       "z": 5,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 11
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -4094,29 +2493,11 @@
     },
     {
       "x": -4,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
       "y": 3,
       "z": 6,
       "name": "Plant_Vine_Wall",
       "support": 15,
       "rotation": 1
-    },
-    {
-      "x": -4,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -4142,18 +2523,6 @@
       "z": 7,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 11
-    },
-    {
-      "x": -4,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -4,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
     },
     {
       "x": -4,
@@ -4284,24 +2653,6 @@
       "y": 0,
       "z": -6,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4348,30 +2699,6 @@
     },
     {
       "x": -3,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -4398,30 +2725,6 @@
     },
     {
       "x": -3,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -4434,42 +2737,6 @@
     },
     {
       "x": -3,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -4479,42 +2746,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4537,36 +2768,6 @@
     },
     {
       "x": -3,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -4576,42 +2777,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron_Brick"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4640,30 +2805,6 @@
     },
     {
       "x": -3,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -4673,24 +2814,6 @@
       "y": 0,
       "z": 2,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": 2,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 2,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4727,19 +2850,8 @@
       "x": -3,
       "y": 1,
       "z": 3,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -3,
@@ -4771,30 +2883,6 @@
       "y": 0,
       "z": 4,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4831,36 +2919,6 @@
     },
     {
       "x": -3,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": 5,
       "name": "Rock_Basalt"
@@ -4870,42 +2928,6 @@
       "y": 0,
       "z": 6,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": 6,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -4921,42 +2943,6 @@
     },
     {
       "x": -3,
-      "y": 1,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 6,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
       "y": 7,
       "z": 7,
       "name": "Rock_Basalt"
@@ -4966,36 +2952,6 @@
       "y": 0,
       "z": 8,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": -3,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -3,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": -3,
@@ -5063,24 +3019,6 @@
       "y": 0,
       "z": -6,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5116,42 +3054,6 @@
     },
     {
       "x": -2,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -5161,36 +3063,6 @@
       "y": 0,
       "z": -4,
       "name": "Rock_CastIron_Brick"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5213,42 +3085,6 @@
     },
     {
       "x": -2,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -5258,36 +3094,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5317,36 +3123,6 @@
     },
     {
       "x": -2,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -5359,42 +3135,6 @@
     },
     {
       "x": -2,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 7,
       "z": 0,
       "name": "Rock_Basalt"
@@ -5404,42 +3144,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5458,24 +3162,6 @@
       "y": 1,
       "z": 2,
       "name": "Plant_Bush_Dead_Twisted"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5510,24 +3196,6 @@
     },
     {
       "x": -2,
-      "y": 2,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 5,
       "z": 3,
       "name": "Rock_Basalt_Brick_Half",
@@ -5553,36 +3221,6 @@
     },
     {
       "x": -2,
-      "y": 1,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 6,
       "z": 4,
       "name": "Plant_Leaves_Wisteria_Wild",
@@ -5599,42 +3237,6 @@
       "y": 0,
       "z": 5,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5656,36 +3258,6 @@
     },
     {
       "x": -2,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
       "y": 7,
       "z": 6,
       "name": "Rock_Basalt"
@@ -5695,36 +3267,6 @@
       "y": 0,
       "z": 7,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5743,42 +3285,6 @@
       "y": 0,
       "z": 8,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -2,
-      "y": 6,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": -2,
@@ -5842,36 +3348,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 6,
       "z": -6,
       "name": "Rock_Basalt_Brick"
@@ -5890,42 +3366,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -5938,42 +3378,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -5983,42 +3387,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -1,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -6041,36 +3409,6 @@
     },
     {
       "x": -1,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -6080,36 +3418,6 @@
       "y": 0,
       "z": -1,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -1,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -6132,36 +3440,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 6,
       "z": 0,
       "name": "Plant_Bush_Dead_Hanging"
@@ -6180,42 +3458,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -6231,30 +3473,6 @@
       "y": 1,
       "z": 2,
       "name": "Plant_Flower_Bushy_Green"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -6290,24 +3508,6 @@
     },
     {
       "x": -1,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 6,
       "z": 3,
       "name": "Rock_Basalt_Brick"
@@ -6326,30 +3526,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": 4,
-      "name": "Furniture_Ancient_Crate"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 5,
       "z": 4,
       "name": "Plant_Leaves_Wisteria_Wild",
@@ -6376,40 +3552,10 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 5,
       "z": 5,
       "name": "Plant_Leaves_Wisteria_Wild",
       "support": 15
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -6422,36 +3568,6 @@
       "y": 0,
       "z": 6,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -1,
-      "y": 1,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -6474,42 +3590,6 @@
     },
     {
       "x": -1,
-      "y": 1,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
       "y": 7,
       "z": 7,
       "name": "Rock_Basalt"
@@ -6519,42 +3599,6 @@
       "y": 0,
       "z": 8,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -1,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": -1,
-      "y": 6,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": -1,
@@ -6615,36 +3659,6 @@
       "y": 0,
       "z": -6,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -6679,36 +3693,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -6721,42 +3705,6 @@
     },
     {
       "x": 0,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -6766,42 +3714,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -6824,36 +3736,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -6873,36 +3755,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -6912,42 +3764,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -6970,36 +3786,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -7009,36 +3795,6 @@
       "y": 0,
       "z": 2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -7060,36 +3816,6 @@
     },
     {
       "x": 0,
-      "y": 1,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 6,
       "z": 3,
       "name": "Rock_Basalt_Brick"
@@ -7108,42 +3834,6 @@
     },
     {
       "x": 0,
-      "y": 1,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": 4,
       "name": "Rock_Basalt"
@@ -7153,36 +3843,6 @@
       "y": 0,
       "z": 5,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -7205,42 +3865,6 @@
     },
     {
       "x": 0,
-      "y": 1,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": 6,
       "name": "Rock_Basalt"
@@ -7253,42 +3877,6 @@
     },
     {
       "x": 0,
-      "y": 1,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
       "y": 7,
       "z": 7,
       "name": "Rock_Basalt"
@@ -7298,42 +3886,6 @@
       "y": 0,
       "z": 8,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 0,
-      "y": 6,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": 0,
@@ -7397,36 +3949,6 @@
     },
     {
       "x": 1,
-      "y": 1,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 6,
       "z": -6,
       "name": "Rock_Basalt_Brick"
@@ -7442,36 +3964,6 @@
       "y": 0,
       "z": -5,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 1,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -7493,42 +3985,6 @@
     },
     {
       "x": 1,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -7548,36 +4004,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -7590,42 +4016,6 @@
     },
     {
       "x": 1,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -7635,42 +4025,6 @@
       "y": 0,
       "z": -1,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 1,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -7693,36 +4047,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": 0,
       "name": "Rock_Basalt"
@@ -7735,42 +4059,6 @@
     },
     {
       "x": 1,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -7780,36 +4068,6 @@
       "y": 0,
       "z": 2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 1,
-      "y": 1,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -7838,30 +4096,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 6,
       "z": 3,
       "name": "Rock_Basalt_Brick"
@@ -7880,42 +4114,6 @@
     },
     {
       "x": 1,
-      "y": 1,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": 4,
       "name": "Rock_Basalt"
@@ -7932,36 +4130,6 @@
       "z": 5,
       "name": "Plant_Moss_Rug_Green_Dark",
       "support": 15
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -7984,36 +4152,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": 6,
       "name": "Rock_Basalt"
@@ -8026,42 +4164,6 @@
     },
     {
       "x": 1,
-      "y": 1,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
       "y": 7,
       "z": 7,
       "name": "Rock_Basalt"
@@ -8071,42 +4173,6 @@
       "y": 0,
       "z": 8,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 1,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 1,
-      "y": 6,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": 1,
@@ -8170,30 +4236,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 5,
       "z": -6,
       "name": "Rock_Basalt_Brick_Half",
@@ -8219,42 +4261,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -8267,42 +4273,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -8312,42 +4282,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -8370,36 +4304,6 @@
     },
     {
       "x": 2,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -8409,42 +4313,6 @@
       "y": 0,
       "z": -1,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -8460,42 +4328,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": 0,
       "name": "Rock_Basalt"
@@ -8508,42 +4340,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -8553,30 +4349,6 @@
       "y": 0,
       "z": 2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -8605,30 +4377,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 5,
       "z": 3,
       "name": "Rock_Basalt_Brick_Half",
@@ -8654,42 +4402,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": 4,
       "name": "Rock_Basalt"
@@ -8699,42 +4411,6 @@
       "y": 0,
       "z": 5,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -8756,36 +4432,6 @@
     },
     {
       "x": 2,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": 6,
       "name": "Rock_Basalt"
@@ -8798,42 +4444,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": 7,
       "name": "Rock_Basalt"
@@ -8843,42 +4453,6 @@
       "y": 0,
       "z": 8,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 2,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 2,
-      "y": 6,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": 2,
@@ -8946,18 +4520,6 @@
       "z": -6,
       "name": "Plant_Leaves_Wisteria_Wild",
       "support": 15
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9004,30 +4566,6 @@
     },
     {
       "x": 3,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -9040,42 +4578,6 @@
     },
     {
       "x": 3,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -9085,42 +4587,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9136,42 +4602,6 @@
     },
     {
       "x": 3,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -9181,42 +4611,6 @@
       "y": 0,
       "z": -1,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9229,42 +4623,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron_Brick"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9293,30 +4651,6 @@
     },
     {
       "x": 3,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -9326,24 +4660,6 @@
       "y": 0,
       "z": 2,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9385,18 +4701,6 @@
     },
     {
       "x": 3,
-      "y": 2,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 3,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 4,
       "z": 3,
       "name": "Rock_Basalt_Brick_Half",
@@ -9428,36 +4732,6 @@
     },
     {
       "x": 3,
-      "y": 1,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 4,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 6,
       "z": 4,
       "name": "Rock_Shale_Brick_Stairs",
@@ -9474,36 +4748,6 @@
       "y": 0,
       "z": 5,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 5,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9527,37 +4771,8 @@
       "x": 3,
       "y": 1,
       "z": 6,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": 6,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 3,
@@ -9573,42 +4788,6 @@
     },
     {
       "x": 3,
-      "y": 1,
-      "z": 7,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 6,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
       "y": 7,
       "z": 7,
       "name": "Rock_Basalt"
@@ -9618,36 +4797,6 @@
       "y": 0,
       "z": 8,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 2,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 3,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 4,
-      "z": 8,
-      "name": "Empty"
-    },
-    {
-      "x": 3,
-      "y": 5,
-      "z": 8,
-      "name": "Empty"
     },
     {
       "x": 3,
@@ -9763,24 +4912,6 @@
       "y": 0,
       "z": -5,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 4,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -9815,30 +4946,6 @@
     },
     {
       "x": 4,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 5,
       "z": -4,
       "name": "Rock_Basalt_Brick_Half",
@@ -9861,36 +4968,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 4,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -9919,24 +4996,6 @@
     },
     {
       "x": 4,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 5,
       "z": -2,
       "name": "Plant_Leaves_Wisteria_Wild",
@@ -9959,36 +5018,6 @@
       "y": 0,
       "z": -1,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 4,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -10016,24 +5045,6 @@
     },
     {
       "x": 4,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 5,
       "z": 0,
       "name": "Rock_Basalt_Brick_Half",
@@ -10056,24 +5067,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 4,
-      "y": 1,
-      "z": 1,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -10260,24 +5253,6 @@
     },
     {
       "x": 4,
-      "y": 2,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": 5,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 5,
       "z": 5,
       "name": "Rock_Shale_Brick_Stairs",
@@ -10310,30 +5285,6 @@
     },
     {
       "x": 4,
-      "y": 2,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 5,
-      "z": 6,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
       "y": 6,
       "z": 6,
       "name": "Rock_CastIron_Brick"
@@ -10356,24 +5307,6 @@
       "z": 7,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 9
-    },
-    {
-      "x": 4,
-      "y": 2,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 3,
-      "z": 7,
-      "name": "Empty"
-    },
-    {
-      "x": 4,
-      "y": 4,
-      "z": 7,
-      "name": "Empty"
     },
     {
       "x": 4,
@@ -10544,24 +5477,6 @@
       "y": 0,
       "z": -5,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 5,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
     },
     {
       "x": 5,
@@ -10610,18 +5525,6 @@
     },
     {
       "x": 5,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
       "y": 5,
       "z": -4,
       "name": "Rock_Basalt_Brick_Half",
@@ -10647,36 +5550,6 @@
     },
     {
       "x": 5,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
       "y": 6,
       "z": -3,
       "name": "Rock_Basalt_Brick"
@@ -10692,36 +5565,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 5,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": 5,
@@ -10757,24 +5600,6 @@
     },
     {
       "x": 5,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
       "y": 6,
       "z": -1,
       "name": "Rock_Basalt_Brick"
@@ -10790,30 +5615,6 @@
       "y": 0,
       "z": 0,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 5,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 5,
@@ -10844,19 +5645,8 @@
       "x": 5,
       "y": 1,
       "z": 1,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 5,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 5,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 5,
@@ -11326,31 +6116,8 @@
       "x": 6,
       "y": 1,
       "z": -5,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 6,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 6,
@@ -11379,36 +6146,6 @@
     },
     {
       "x": 6,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -11427,36 +6164,6 @@
     },
     {
       "x": 6,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -11466,42 +6173,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 6,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": 6,
@@ -11517,42 +6188,6 @@
     },
     {
       "x": 6,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -11562,42 +6197,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 6,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 6,
@@ -11610,36 +6209,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 6,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 6,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 6,
@@ -11814,24 +6383,6 @@
     },
     {
       "x": 7,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
       "y": 5,
       "z": -6,
       "name": "Rock_Shale_Brick_Stairs",
@@ -11857,36 +6408,6 @@
     },
     {
       "x": 7,
-      "y": 1,
-      "z": -5,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 7,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
       "y": 6,
       "z": -5,
       "name": "Plant_Bush_Dead_Hanging"
@@ -11902,31 +6423,6 @@
       "y": 0,
       "z": -4,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 7,
-      "y": 1,
-      "z": -4,
-      "name": "Furniture_Ancient_Crate",
-      "rotation": 1
-    },
-    {
-      "x": 7,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
     },
     {
       "x": 7,
@@ -11962,24 +6458,6 @@
     },
     {
       "x": 7,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
       "y": 5,
       "z": -3,
       "name": "Plant_Leaves_Wisteria_Wild",
@@ -12003,42 +6481,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 7,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": 7,
@@ -12061,36 +6503,6 @@
     },
     {
       "x": 7,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -12100,36 +6512,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 7,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 7,
@@ -12152,42 +6534,6 @@
     },
     {
       "x": 7,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
       "y": 7,
       "z": 1,
       "name": "Rock_Basalt"
@@ -12204,24 +6550,6 @@
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 8
-    },
-    {
-      "x": 7,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 7,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 7,
@@ -12353,28 +6681,10 @@
     },
     {
       "x": 8,
-      "y": 2,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
       "y": 3,
       "z": -6,
       "name": "Plant_Vine_Wall",
       "support": 15
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": -6,
-      "name": "Empty"
     },
     {
       "x": 8,
@@ -12396,42 +6706,6 @@
     },
     {
       "x": 8,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -12444,42 +6718,6 @@
     },
     {
       "x": 8,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -12492,42 +6730,6 @@
     },
     {
       "x": 8,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
       "y": 7,
       "z": -3,
       "name": "Rock_Basalt"
@@ -12537,36 +6739,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 8,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
     },
     {
       "x": 8,
@@ -12589,42 +6761,6 @@
     },
     {
       "x": 8,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -12644,36 +6780,6 @@
     },
     {
       "x": 8,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
       "y": 7,
       "z": 0,
       "name": "Rock_Basalt"
@@ -12688,37 +6794,8 @@
       "x": 8,
       "y": 1,
       "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 8,
@@ -12743,13 +6820,8 @@
       "x": 8,
       "y": 2,
       "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 8,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 8,
@@ -12758,12 +6830,6 @@
       "name": "Plant_Vine_Wall",
       "support": 15,
       "rotation": 2
-    },
-    {
-      "x": 8,
-      "y": 5,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 8,
@@ -12895,18 +6961,6 @@
     },
     {
       "x": 9,
-      "y": 3,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": -6,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
       "y": 5,
       "z": -6,
       "name": "Rock_Shale_Brick_Stairs",
@@ -12932,42 +6986,6 @@
     },
     {
       "x": 9,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
       "y": 7,
       "z": -5,
       "name": "Rock_Basalt"
@@ -12980,42 +6998,6 @@
     },
     {
       "x": 9,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -13025,42 +7007,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 9,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 9,
@@ -13083,36 +7029,6 @@
     },
     {
       "x": 9,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -13132,36 +7048,6 @@
     },
     {
       "x": 9,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -13171,42 +7057,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 9,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 9,
@@ -13219,42 +7069,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 9,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 6,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 9,
@@ -13274,24 +7088,6 @@
       "z": 2,
       "name": "Rock_Shale_Brick_Stairs",
       "rotation": 8
-    },
-    {
-      "x": 9,
-      "y": 2,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 3,
-      "z": 2,
-      "name": "Empty"
-    },
-    {
-      "x": 9,
-      "y": 4,
-      "z": 2,
-      "name": "Empty"
     },
     {
       "x": 9,
@@ -13465,36 +7261,6 @@
     },
     {
       "x": 10,
-      "y": 1,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": -5,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
       "y": 6,
       "z": -5,
       "name": "Rock_Shale_Brick_Stairs",
@@ -13514,42 +7280,6 @@
     },
     {
       "x": 10,
-      "y": 1,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 6,
-      "z": -4,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
       "y": 7,
       "z": -4,
       "name": "Rock_Basalt"
@@ -13559,42 +7289,6 @@
       "y": 0,
       "z": -3,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 10,
-      "y": 1,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": -3,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 6,
-      "z": -3,
-      "name": "Empty"
     },
     {
       "x": 10,
@@ -13610,42 +7304,6 @@
     },
     {
       "x": 10,
-      "y": 1,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 6,
-      "z": -2,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -13658,42 +7316,6 @@
     },
     {
       "x": 10,
-      "y": 1,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 6,
-      "z": -1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
       "y": 7,
       "z": -1,
       "name": "Rock_Basalt"
@@ -13703,42 +7325,6 @@
       "y": 0,
       "z": 0,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": 10,
-      "y": 1,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": 0,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 6,
-      "z": 0,
-      "name": "Empty"
     },
     {
       "x": 10,
@@ -13751,36 +7337,6 @@
       "y": 0,
       "z": 1,
       "name": "Rock_CastIron_Brick_Smooth"
-    },
-    {
-      "x": 10,
-      "y": 1,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 2,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 3,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 4,
-      "z": 1,
-      "name": "Empty"
-    },
-    {
-      "x": 10,
-      "y": 5,
-      "z": 1,
-      "name": "Empty"
     },
     {
       "x": 10,
