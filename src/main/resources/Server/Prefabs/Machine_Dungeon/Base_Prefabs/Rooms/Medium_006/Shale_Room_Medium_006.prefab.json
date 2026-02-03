@@ -89664,5 +89664,157 @@
       "name": "Empty",
       "level": 0
     }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -6.977725505828857,
+            "Y": 4.640621185302734,
+            "Z": 6.72210693359375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "31SIWPbeQJa35/j1D8cObQ==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 306.6553955078125,
+          "Pitch": 5.514693260192871
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -6.920802593231201,
+            "Y": 5.513435363769531,
+            "Z": -5.93341064453125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "PQhiRRKhTXCI3pl0YpNGng==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 226.501953125,
+          "Pitch": -11.430535316467285
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 3.1342201232910156,
+            "Y": 4.062774658203125,
+            "Z": 10.17120361328125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "wdykUpy7RwKNN4uijhNTDA==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 0.0,
+          "Pitch": 90.0
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    }
   ]
 }

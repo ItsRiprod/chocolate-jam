@@ -10141,5 +10141,57 @@
       "z": 7,
       "name": "Rock_Basalt"
     }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -3.001800537109375,
+            "Y": 2.6072845458984375,
+            "Z": -4.902099609375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 0.022985950112342834,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "MG2q9GH5TVWSzut/YtzAjg==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 239.39767456054688,
+          "Pitch": 7.118621826171875
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 0.022985950112342834,
+            "Roll": 0.0
+          }
+        }
+      }
+    }
   ]
 }

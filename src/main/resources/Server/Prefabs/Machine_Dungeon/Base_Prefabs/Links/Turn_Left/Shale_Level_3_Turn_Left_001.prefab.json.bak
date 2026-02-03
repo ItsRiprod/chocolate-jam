@@ -10145,53 +10145,49 @@
   "entities": [
     {
       "Components": {
-        "Nameplate": {
-          "Text": "Outlander_Berserker"
-        },
-        "HiddenFromAdventurePlayer": {},
-        "SpawnMarkerComponent": {
-          "SpawnMarker": "Outlander_Berserker",
-          "RespawnTime": 0.0,
-          "SpawnCount": 0,
-          "NPCReferences": [],
-          "PersistedFlock": {},
-          "SpawnPosition": {
-            "X": 0.0,
-            "Y": 0.0,
-            "Z": 0.0
-          }
-        },
         "Transform": {
           "Position": {
-            "X": 3.4512790527343213,
-            "Y": 1.000700134277281,
-            "Z": -1.5046829010009901
+            "X": -3.001800537109375,
+            "Y": 2.6072845458984375,
+            "Z": -4.902099609375
           },
           "Rotation": {
             "Pitch": 0.0,
-            "Yaw": -10.05677318572998,
+            "Yaw": 0.022985950112342834,
             "Roll": 0.0
           }
         },
-        "Intangible": {},
         "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
         "Model": {
           "Model": {
-            "Id": "NPC_Spawn_Marker",
+            "Id": "Trap_Spawner",
             "Scale": 1.0,
-            "Static": false
+            "Static": true
           }
         },
         "UUID": {
           "UUID": {
-            "$binary": "XkEA0TOTPc2jVzc5GXmwoQ==",
+            "$binary": "MG2q9GH5TVWSzut/YtzAjg==",
             "$type": "04"
           }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 239.39767456054688,
+          "Pitch": 7.118621826171875
         },
         "HeadRotation": {
           "Rotation": {
             "Pitch": 0.0,
-            "Yaw": -13.198366165161133,
+            "Yaw": 0.022985950112342834,
             "Roll": 0.0
           }
         }
