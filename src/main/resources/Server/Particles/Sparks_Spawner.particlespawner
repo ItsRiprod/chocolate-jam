@@ -1,0 +1,127 @@
+{
+  "RenderMode": "Erosion",
+  "ParticleRotationInfluence": "BillboardVelocity",
+  "LinearFiltering": false,
+  "LightInfluence": 0,
+  "ParticleRotateWithSpawner": true,
+  "TrailSpawnerPositionMultiplier": 1,
+  "TrailSpawnerRotationMultiplier": 1,
+  "MaxConcurrentParticles": 100,
+  "ParticleLifeSpan": {
+    "Min": 0.1,
+    "Max": 5
+  },
+  "InitialVelocity": {
+    "Speed": {
+      "Min": 0.5,
+      "Max": 1
+    },
+    "Yaw": {
+      "Min": -180,
+      "Max": 180
+    },
+    "Pitch": {
+      "Min": -180,
+      "Max": 180
+    }
+  },
+  "Attractors": [
+    {
+      "Position": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      },
+      "Radius": 0,
+      "RadialAcceleration": -1,
+      "RadialTangentAcceleration": 2,
+      "LinearAcceleration": {
+        "X": 0,
+        "Y": 0,
+        "Z": 0
+      }
+    }
+  ],
+  "Particle": {
+    "Texture": "Particles/Textures/Smoke/Smoke_Drop.png",
+    "ScaleRatioConstraint": "None",
+    "UVOption": "None",
+    "Animation": {
+      "0": {
+        "Color": "#ffffff",
+        "FrameIndex": {
+          "Min": 0
+        }
+      },
+      "20": {
+        "Scale": {
+          "X": {
+            "Min": 0,
+            "Max": 0
+          },
+          "Y": {
+            "Min": 0,
+            "Max": 0
+          }
+        },
+        "Color": "#5e90e6",
+        "FrameIndex": {
+          "Min": 0
+        }
+      },
+      "100": {
+        "Opacity": 0,
+        "Scale": {
+          "X": {
+            "Min": 0.1,
+            "Max": 0.1
+          },
+          "Y": {
+            "Min": 0.1,
+            "Max": 0.1
+          }
+        },
+        "Color": "#2e3a4a",
+        "FrameIndex": {
+          "Min": 0
+        }
+      }
+    },
+    "InitialAnimationFrame": {
+      "Opacity": 1,
+      "FrameIndex": {
+        "Min": 0,
+        "Max": 0
+      },
+      "Scale": {
+        "X": {
+          "Min": 0.1,
+          "Max": 0.15
+        },
+        "Y": {
+          "Min": 0.1,
+          "Max": 0.15
+        }
+      },
+      "Color": "#365c91"
+    },
+    "SoftParticles": "Disable",
+    "CollisionAnimationFrame": {
+      "FrameIndex": {
+        "Min": 0
+      }
+    },
+    "FrameSize": {
+      "Width": 1
+    }
+  },
+  "SpawnBurst": true,
+  "SpawnRate": {
+    "Min": 100,
+    "Max": 100
+  },
+  "TotalParticles": {
+    "Min": -1,
+    "Max": -1
+  }
+}
