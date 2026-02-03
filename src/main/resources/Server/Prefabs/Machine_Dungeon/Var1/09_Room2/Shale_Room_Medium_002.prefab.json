@@ -12449,7 +12449,7 @@
       "components": {
         "Components": {
           "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
+            "BlockSpawnerId": "Machine_Encounters"
           }
         }
       }
@@ -21522,7 +21522,7 @@
       "components": {
         "Components": {
           "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
+            "BlockSpawnerId": "Machine_Encounters"
           }
         }
       }
@@ -26483,7 +26483,7 @@
       "components": {
         "Components": {
           "BlockSpawner": {
-            "BlockSpawnerId": "Zone3_Encounters_Tier3"
+            "BlockSpawnerId": "Machine_Encounters"
           }
         }
       }
