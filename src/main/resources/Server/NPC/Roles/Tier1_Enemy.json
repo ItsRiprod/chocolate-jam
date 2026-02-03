@@ -50,7 +50,7 @@
     "DropList": "Drop_Skeleton_Fighter",
     "Appearance": "Tier1_Enemy",
     "Weapons": [
-      "Weapon_Daggers_Doomed"
+      "New_Sword"
     ],
     "FlockArray": {
       "Compute": "FlockArray"
