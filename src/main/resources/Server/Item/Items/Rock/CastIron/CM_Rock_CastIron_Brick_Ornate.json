@@ -3,7 +3,7 @@
     "Name": "Cast Iron Brick Ornate"
   },
   "Icon": "Icons/ItemsGenerated/CM_Rock_CastIron_Brick_Ornate.png",
-  "Set": "Rock_Shale_Brick",
+  "Set": "Rock_CastIron_Brick",
   "Recipe": {
     "Input": [
       {
@@ -32,7 +32,7 @@
     "Textures": [
       {
         "Weight": 1,
-        "All": "BlockTextures/Rock_CastIron_Brick_Ornate.png"
+        "All": "BlockTextures/CM_Rock_CastIron_Brick_Ornate.png"
       }
     ],
     "ParticleColor": "#432e22",
@@ -56,7 +56,7 @@
           "CustomModel": "Blocks/Structures/Base_Shapes/Cube_Overlay.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "BlockTextures/Rock_CastIron_Brick_Ornate_Glow.png"
+              "Texture": "BlockTextures/CM_Rock_CastIron_Brick_Ornate_Glow.png"
             }
           ],
           "Light": {
