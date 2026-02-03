@@ -62,55 +62,73 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
             @Nonnull Vector3i pos,
             @Nonnull CooldownHandler cooldownHandler) {
 
-        Ref<EntityStore> playerRef = context.getEntity();
-        PlayerRef playerRefComponent = commandBuffer.getComponent(playerRef, PlayerRef.getComponentType());
+        try {
+            Ref<EntityStore> playerRef = context.getEntity();
 
-        Vector3d blockCenter = new Vector3d(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);
-        Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeon(blockCenter, commandBuffer);
+            if (playerRef == null || !playerRef.isValid()) {
+                context.getState().state = InteractionState.Failed;
+                return;
+            }
 
-        if (dungeonRef == null) {
+            PlayerRef playerRefComponent = commandBuffer.getComponent(playerRef, PlayerRef.getComponentType());
+
+            Vector3d blockCenter = new Vector3d(pos.x + 0.5, pos.y + 0.5, pos.z + 0.5);
+            Ref<EntityStore> dungeonRef = DungeonFinder.findNearestDungeon(blockCenter, commandBuffer);
+
+            if (dungeonRef == null) {
+                context.getState().state = InteractionState.Failed;
+                return;
+            }
+
+            DungeonComponent dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
+            if (dungeon == null || dungeon.isTriggered() || dungeon.isActive()) {
+                context.getState().state = InteractionState.Failed;
+                return;
+            }
+
+            playSoundAtPosition(pos, commandBuffer);
+
+            if (playerRefComponent == null || !playerRefComponent.isValid()) {
+                context.getState().state = InteractionState.Failed;
+                return;
+            }
+
+            EventTitleUtil.showEventTitleToPlayer(
+                    playerRefComponent,
+                    Message.raw("Escape"),
+                    Message.raw("Objective Update"),
+                    true);
+
+            DungeonModule module = DungeonModule.get();
+            if (module == null) {
+                context.getState().state = InteractionState.Failed;
+                return;
+            }
+
+            DungeonService dungeonService = module.getDungeonService();
+
+            // reset if already registered (same as /cm d register command)
+            if (dungeon.isRegistered()) {
+                dungeon.reset();
+            }
+
+            // register first, then activate
+            dungeonService.registerDungeon(dungeonRef, commandBuffer, world);
+            dungeonService.activate(dungeonRef, playerRef, commandBuffer);
+
+            dungeon.setArtifactHolderRef(playerRef);
+            setupDungeoneer(playerRef, dungeonRef, dungeon, commandBuffer);
+            giveArtifactArmor(playerRef, commandBuffer);
+
+            setBlockState(world, pos, "On");
+
+            dungeon.setTriggered(true);
+            context.getState().state = InteractionState.Finished;
+        } catch (Exception e) {
             context.getState().state = InteractionState.Failed;
+            e.printStackTrace();
             return;
         }
-
-        DungeonComponent dungeon = commandBuffer.getComponent(dungeonRef, DungeonComponent.getComponentType());
-        if (dungeon == null || dungeon.isTriggered() || dungeon.isActive()) {
-            context.getState().state = InteractionState.Failed;
-            return;
-        }
-
-        playSoundAtPosition(pos, commandBuffer);
-
-        if (playerRefComponent == null || !playerRefComponent.isValid()) {
-            context.getState().state = InteractionState.Failed;
-            return;
-        }
-
-        EventTitleUtil.showEventTitleToPlayer(
-                playerRefComponent,
-                Message.raw("Objective Update"),
-                Message.raw("Escape"),
-                true
-        );
-
-        DungeonModule module = DungeonModule.get();
-        if (module == null) {
-            context.getState().state = InteractionState.Failed;
-            return;
-        }
-
-        DungeonService dungeonService = module.getDungeonService();
-        dungeonService.registerDungeon(dungeonRef, commandBuffer, world);
-        dungeonService.activate(dungeonRef, playerRef, commandBuffer);
-
-        dungeon.setArtifactHolderRef(playerRef);
-        setupDungeoneer(playerRef, dungeonRef, dungeon, commandBuffer);
-        giveArtifactArmor(playerRef, commandBuffer);
-
-        setBlockState(world, pos, "On");
-
-        dungeon.setTriggered(true);
-        context.getState().state = InteractionState.Finished;
     }
 
     private void playSoundAtPosition(Vector3i pos, CommandBuffer<EntityStore> commandBuffer) {

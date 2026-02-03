@@ -29,10 +29,14 @@
         ]
       }
     },
+    "CustomModelAnimation": "Blocks/Machine/Animations/LootIdle.blockyanim",
+    "Looping": true,
     "State": {
       "Definitions": {
         "On": {
-          "HitboxType": "CM_Indicator_Up"
+          "HitboxType": "Pedestal",
+          "CustomModelAnimation": "Blocks/Machine/Animations/PedestalTrigger.blockyanim",
+          "Looping": true
         }
       }
     },
@@ -41,7 +45,7 @@
       "PlaceInEmptyBlocks": true,
       "AllowRotationKey": true
     },
-    "HitboxType": "CM_Indicator"
+    "HitboxType": "Pedestal"
   },
   "Tags": {
     "Type": [

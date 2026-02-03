@@ -6,7 +6,6 @@ import javax.annotation.Nonnull;
 
 import com.chocolate.machine.dungeon.component.actions.LaserTrapActionComponent;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
-import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Holder;
@@ -14,13 +13,10 @@ import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3f;
-import com.hypixel.hytale.protocol.SoundCategory;
-import com.hypixel.hytale.server.core.asset.type.soundevent.config.SoundEvent;
 import com.hypixel.hytale.server.core.entity.entities.ProjectileComponent;
 import com.hypixel.hytale.server.core.modules.entity.component.BoundingBox;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.modules.time.TimeResource;
-import com.hypixel.hytale.server.core.universe.world.SoundUtil;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 public class LaserTrap implements Spawnable {
@@ -28,17 +24,6 @@ public class LaserTrap implements Spawnable {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
     public static final String ID = "laser";
-
-    private static final String FIRE_SOUND_ASSET = "SFX_Staff_Ice_Shoot";
-
-    private int fireSoundIndex = -1;
-
-    private int getFireSoundIndex() {
-        if (fireSoundIndex < 0) {
-            fireSoundIndex = SoundEvent.getAssetMap().getIndex(FIRE_SOUND_ASSET);
-        }
-        return fireSoundIndex;
-    }
 
     @Nonnull
     @Override
@@ -196,14 +181,5 @@ public class LaserTrap implements Spawnable {
                 spawnX, spawnY, spawnZ,
                 yaw,
                 pitch);
-
-        Ref<EntityStore> projectileRef = commandBuffer.addEntity(holder, AddReason.SPAWN);
-
-        if (projectileRef != null) {
-            SoundUtil.playSoundEvent3d(getFireSoundIndex(), SoundCategory.SFX, spawnPos, commandBuffer);
-
-            LOGGER.atFine().log("Fired laser projectile at (%.1f, %.1f, %.1f) yaw=%.2f pitch=%.2f",
-                    spawnX, spawnY, spawnZ, yaw, pitch);
-        }
     }
 }
