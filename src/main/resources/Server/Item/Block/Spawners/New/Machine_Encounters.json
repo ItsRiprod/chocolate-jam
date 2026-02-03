@@ -1,0 +1,14 @@
+{
+  "Entries": [
+    {
+      "Name": "Furniture_Artifact_Chest_Small",
+      "State": {
+        "Custom": false,
+        "AllowViewing": true,
+        "Type": "container",
+        "Droplist": "Zone3_Encounters_Tier3"
+      },
+      "Weight": 100
+    }
+  ]
+}
