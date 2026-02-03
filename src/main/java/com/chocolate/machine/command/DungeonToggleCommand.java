@@ -59,6 +59,10 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
         }
 
         DungeonService.MergeResult mergeResult = dungeonService.checkAndMergeDungeons(dungeonRef, store);
+        if (mergeResult == null) {
+            playerRef.sendMessage(Message.raw("Error: Merge result is null."));
+            return;
+        }
         dungeonRef = mergeResult.primaryDungeonRef;
 
         if (mergeResult.merged) {
@@ -97,6 +101,9 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
             Ref<EntityStore> dungeonRef, DungeonComponent dungeon) {
 
         Vector3d spawnPosition = dungeon.getSpawnPosition();
+        if (spawnPosition == null) {
+            spawnPosition = new Vector3d(0, 0, 0);
+        }
         LOGGER.atInfo().log("[ensurePlayerIsDungeoneer] dungeon.getSpawnPosition() = (%.1f, %.1f, %.1f)",
                 spawnPosition.getX(), spawnPosition.getY(), spawnPosition.getZ());
 
@@ -164,7 +171,7 @@ public class DungeonToggleCommand extends AbstractPlayerCommand {
     private void cleanupAllDungeoneers(Store<EntityStore> store, DungeonComponent dungeon) {
         // triggers DungeoneerRespawnRestoreSystem
         int count = 0;
-        for (Ref<EntityStore> dungeoneerRef : dungeon.getDungeoneerRefs()) {
+        for (Ref<EntityStore> dungeoneerRef : List.copyOf(dungeon.getDungeoneerRefs())) {
             if (dungeoneerRef.isValid()) {
                 store.removeComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
                 count++;

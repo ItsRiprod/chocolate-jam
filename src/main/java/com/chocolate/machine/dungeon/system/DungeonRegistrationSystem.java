@@ -65,8 +65,18 @@ public class DungeonRegistrationSystem extends RefSystem<EntityStore> {
         DungeonModule module = DungeonModule.get();
         if (module != null) {
             DungeonService dungeonService = module.getDungeonService();
+            if (dungeonService == null) {
+                LOGGER.atWarning().log("[DungeonRegistrationSystem] DungeonService not available");
+                return;
+            }
             World world = commandBuffer.getExternalData().getWorld();
-            int spawnerCount = dungeonService.registerDungeon(ref, commandBuffer, world);
+            int spawnerCount;
+            try {
+                spawnerCount = dungeonService.registerDungeon(ref, commandBuffer, world);
+            } catch (Exception e) {
+                LOGGER.atSevere().log("[DungeonRegistrationSystem] Failed to register dungeon: %s", e.getMessage());
+                return;
+            }
 
             // Re-fetch dungeon to get updated counts
             dungeon = commandBuffer.getComponent(ref, DungeonComponent.getComponentType());
@@ -103,7 +113,11 @@ public class DungeonRegistrationSystem extends RefSystem<EntityStore> {
                 if (!executionId.isEmpty()) {
                     Spawnable spawnable = spawnableRegistry.get(executionId);
                     if (spawnable != null) {
-                        spawnable.cleanup(spawnerRef, accessor);
+                        try {
+                            spawnable.cleanup(spawnerRef, accessor);
+                        } catch (Exception e) {
+                            LOGGER.atWarning().log("failed to cleanup spawnable '%s': %s", executionId, e.getMessage());
+                        }
                     }
                 }
             }

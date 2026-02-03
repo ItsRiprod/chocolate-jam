@@ -3,9 +3,11 @@ package com.chocolate.machine.dungeon;
 import com.chocolate.machine.dungeon.component.DungeonComponent;
 import com.chocolate.machine.dungeon.component.DungeonEntranceComponent;
 import com.chocolate.machine.dungeon.component.DungeoneerComponent;
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.SpawnerComponent;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent;
 import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent;
+import com.chocolate.machine.dungeon.component.actions.LaserBeamComponent;
 import com.chocolate.machine.dungeon.component.actions.LaserTrapActionComponent;
 import com.chocolate.machine.dungeon.component.actions.SawBladeComponent;
 import com.chocolate.machine.dungeon.component.actions.SkeletonActionComponent;
@@ -19,6 +21,9 @@ import com.chocolate.machine.dungeon.spawnable.actions.HydraulicPressTrap;
 import com.chocolate.machine.dungeon.spawnable.actions.LaserTrap;
 import com.chocolate.machine.dungeon.spawnable.actions.SawBladeTrap;
 import com.chocolate.machine.dungeon.system.DungeonBossRoomSystem;
+import com.chocolate.machine.dungeon.interaction.PedestalBlockInteraction;
+import com.chocolate.machine.dungeon.interaction.PedestalTriggerInteraction;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.component.ResourceType;
 import com.hypixel.hytale.component.system.System;
@@ -45,7 +50,9 @@ public class DungeonModule extends System<EntityStore> {
     private ComponentType<EntityStore, BigFreakingHammerComponent> hammerActionComponent;
     private ComponentType<EntityStore, HydraulicPressActionComponent> hydraulicPressActionComponentType;
     private ComponentType<EntityStore, LaserTrapActionComponent> laserTrapActionComponentType;
+    private ComponentType<EntityStore, LaserBeamComponent> laserBeamComponentType;
     private ComponentType<EntityStore, SawBladeComponent> sawBladeComponentType;
+    private ComponentType<EntityStore, SpawnedEntityComponent> spawnedEntityComponentType;
 
     private ResourceType<EntityStore, DungeonBossRoomSystem.PendingDungeoneerResource> pendingDungeoneerResourceType;
 
@@ -74,11 +81,17 @@ public class DungeonModule extends System<EntityStore> {
         dungeonEntranceComponentType = registerComponent(DungeonEntranceComponent.class, "DungeonEntrance", DungeonEntranceComponent.CODEC);
         DungeonEntranceComponent.setComponentType(dungeonEntranceComponentType);
 
+        spawnedEntityComponentType = registerComponent(SpawnedEntityComponent.class, SpawnedEntityComponent::new);
+        SpawnedEntityComponent.setComponentType(spawnedEntityComponentType);
+
         // Register resources
         pendingDungeoneerResourceType = registerResource(
                 DungeonBossRoomSystem.PendingDungeoneerResource.class,
                 DungeonBossRoomSystem.PendingDungeoneerResource::new);
         DungeonBossRoomSystem.setPendingResourceType(pendingDungeoneerResourceType);
+
+        Interaction.CODEC.register("CM_PedestalTrigger", PedestalTriggerInteraction.class, PedestalTriggerInteraction.CODEC);
+        Interaction.CODEC.register("CM_PedestalBlock", PedestalBlockInteraction.class, PedestalBlockInteraction.CODEC);
 
         registerDefaultSpawnables();
 
@@ -106,6 +119,9 @@ public class DungeonModule extends System<EntityStore> {
         laserTrapActionComponentType = registerComponent(LaserTrapActionComponent.class, "LaserTrap", LaserTrapActionComponent.CODEC);
         LaserTrapActionComponent.setComponentType(laserTrapActionComponentType);
 
+        laserBeamComponentType = registerComponent(LaserBeamComponent.class, "LaserBeam", LaserBeamComponent.CODEC);
+        LaserBeamComponent.setComponentType(laserBeamComponentType);
+
         sawBladeComponentType = registerComponent(SawBladeComponent.class, "SawBlade", SawBladeComponent.CODEC);
         SawBladeComponent.setComponentType(sawBladeComponentType);
 
@@ -118,6 +134,8 @@ public class DungeonModule extends System<EntityStore> {
         registry.register(new GolemAction());
         registry.register(new ArcherAction());
         registry.register(new BruteAction());
+
+        registry.registerAlias("skeleton", GolemAction.ID);
 
         LOGGER.atInfo().log("Registered %d default spawnables", registry.getRegisteredIds().size());
     }
@@ -160,6 +178,11 @@ public class DungeonModule extends System<EntityStore> {
     @Nonnull
     public ComponentType<EntityStore, LaserTrapActionComponent> getLaserTrapActionComponentType() {
         return laserTrapActionComponentType;
+    }
+
+    @Nonnull
+    public ComponentType<EntityStore, LaserBeamComponent> getLaserBeamComponentType() {
+        return laserBeamComponentType;
     }
 
     @Nonnull

@@ -3,8 +3,8 @@
   "TranslationProperties": {
     "Name": "server.items.Weapon_Sword_Onyxium.name"
   },
-  "Model": "Items/Weapons/New_Sword.blockymodel",
-  "Texture": "Items/Weapons/New_Sword.png",
+  "Model": "Items/New_Sword.blockymodel",
+  "Texture": "Items/New_Sword.png",
   "Icon": "Icons/ItemsGenerated/New_Sword.png",
   "Quality": "Epic",
   "ItemLevel": 30,

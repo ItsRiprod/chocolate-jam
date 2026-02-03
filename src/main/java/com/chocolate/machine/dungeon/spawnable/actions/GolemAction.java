@@ -2,6 +2,7 @@ package com.chocolate.machine.dungeon.spawnable.actions;
 
 import com.chocolate.machine.dungeon.component.actions.SkeletonActionComponent;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
+import com.chocolate.machine.dungeon.spawnable.SpawnerProximityUtil;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
 import com.hypixel.hytale.component.Ref;
@@ -21,7 +22,7 @@ public class GolemAction implements Spawnable {
 
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
 
-    public static final String ID = "skeleton";
+    public static final String ID = "golem";
 
     private static final String GOLEM_ROLE = "Tier1_Enemy";
 
@@ -41,19 +42,23 @@ public class GolemAction implements Spawnable {
             @Nonnull Ref<EntityStore> spawnerRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
+        if (!spawnerRef.isValid()) {
+            return;
+        }
+
         SkeletonActionComponent existing = componentAccessor.getComponent(
                 spawnerRef, SkeletonActionComponent.getComponentType());
 
         if (existing != null) {
-            LOGGER.atFine().log("SkeletonActionComponent already exists, resetting");
             existing.reset();
             return;
         }
 
-        componentAccessor.addComponent(spawnerRef, SkeletonActionComponent.getComponentType(),
-                new SkeletonActionComponent());
-
-        LOGGER.atFine().log("Registered SkeletonActionComponent for spawner");
+        try {
+            componentAccessor.ensureAndGetComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+        } catch (IllegalArgumentException e) {
+            // race: component added by another spawner in same tick
+        }
     }
 
     @Override
@@ -62,7 +67,6 @@ public class GolemAction implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         if (!spawnerRef.isValid()) {
-            LOGGER.atWarning().log("Cannot activate skeleton: spawner ref is invalid");
             return;
         }
 
@@ -70,21 +74,46 @@ public class GolemAction implements Spawnable {
                 spawnerRef, SkeletonActionComponent.getComponentType());
 
         if (state == null) {
-            LOGGER.atWarning().log("No SkeletonActionComponent found, registering first");
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, SkeletonActionComponent.getComponentType());
-        }
-
-        if (state.hasSpawned()) {
-            LOGGER.atFine().log("Skeleton already spawned");
+            // component should have been added by register() - skip if missing
             return;
         }
 
-        TransformComponent spawnerTransform = componentAccessor.getComponent(
+        state.setActive(true);
+    }
+
+    @Override
+    public void tick(
+            float dt,
+            @Nonnull Ref<EntityStore> spawnerRef,
+            @Nonnull CommandBuffer<EntityStore> commandBuffer) {
+
+        SkeletonActionComponent state = commandBuffer.getComponent(
+                spawnerRef, SkeletonActionComponent.getComponentType());
+
+        if (state == null || !state.isActive()) {
+            return;
+        }
+
+        if (state.hasSpawned()) {
+            return;
+        }
+
+        if (!SpawnerProximityUtil.isPlayerNearby(spawnerRef, commandBuffer)) {
+            return;
+        }
+
+        spawnNPC(spawnerRef, state, commandBuffer);
+    }
+
+    private void spawnNPC(
+            Ref<EntityStore> spawnerRef,
+            SkeletonActionComponent state,
+            CommandBuffer<EntityStore> commandBuffer) {
+
+        TransformComponent spawnerTransform = commandBuffer.getComponent(
                 spawnerRef, TransformComponent.getComponentType());
 
         if (spawnerTransform == null) {
-            LOGGER.atWarning().log("Spawner has no TransformComponent");
             return;
         }
 
@@ -97,25 +126,24 @@ public class GolemAction implements Spawnable {
             return;
         }
 
-        Store<EntityStore> store = getStore(componentAccessor);
-        if (store == null) {
-            LOGGER.atWarning().log("Cannot get Store from ComponentAccessor");
-            return;
-        }
+        commandBuffer.run(store -> {
+            Pair<Ref<EntityStore>, ?> npcPair = npcPlugin.spawnNPC(
+                    store, GOLEM_ROLE, GOLEM_GROUP, position, rotation);
 
-        Pair<Ref<EntityStore>, ?> npcPair = npcPlugin.spawnNPC(
-                store, GOLEM_ROLE, GOLEM_GROUP, position, rotation);
+            if (npcPair == null || npcPair.first() == null) {
+                LOGGER.atWarning().log("Failed to spawn golem - role '%s' may not exist", GOLEM_ROLE);
+                return;
+            }
 
-        if (npcPair == null) {
-            LOGGER.atWarning().log("Failed to spawn skeleton - role '%s' may not exist", GOLEM_ROLE);
-            return;
-        }
+            SkeletonActionComponent deferredState = store.getComponent(
+                    spawnerRef, SkeletonActionComponent.getComponentType());
+            if (deferredState != null) {
+                deferredState.setSpawnedRef(npcPair.first());
+            }
 
-        state.setSpawnedRef(npcPair.first());
-        state.setActive(true);
-
-        LOGGER.atInfo().log("Spawned skeleton at (%.1f, %.1f, %.1f)",
-                position.getX(), position.getY(), position.getZ());
+            LOGGER.atInfo().log("Spawned golem at (%.1f, %.1f, %.1f)",
+                    position.getX(), position.getY(), position.getZ());
+        });
     }
 
     @Override
@@ -151,7 +179,7 @@ public class GolemAction implements Spawnable {
         state.setSpawnedRef(null);
         state.setActive(false);
 
-        LOGGER.atInfo().log("Despawned skeleton");
+        LOGGER.atInfo().log("Despawned golem");
     }
 
     @Override
@@ -162,7 +190,7 @@ public class GolemAction implements Spawnable {
         deactivate(spawnerRef, componentAccessor);
         activate(spawnerRef, componentAccessor);
 
-        LOGGER.atInfo().log("Reset skeleton spawner");
+        LOGGER.atInfo().log("Reset golem spawner");
     }
 
     @Override
@@ -176,14 +204,5 @@ public class GolemAction implements Spawnable {
         }
 
         LOGGER.atFine().log("Cleaned up SkeletonActionComponent");
-    }
-
-    private Store<EntityStore> getStore(ComponentAccessor<EntityStore> accessor) {
-        if (accessor instanceof Store) {
-            return (Store<EntityStore>) accessor;
-        } else if (accessor instanceof CommandBuffer) {
-            return ((CommandBuffer<EntityStore>) accessor).getStore();
-        }
-        return null;
     }
 }

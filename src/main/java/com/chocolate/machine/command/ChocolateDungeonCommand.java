@@ -22,6 +22,7 @@ public class ChocolateDungeonCommand extends AbstractCommand {
         addSubCommand(new DungeonDeleteCommand());
         addSubCommand(new DungeonAssignCommand());
         addSubCommand(new DungeonEntranceCommand());
+        addSubCommand(new DungeonCleanCommand());
     }
 
     @Override
@@ -35,6 +36,7 @@ public class ChocolateDungeonCommand extends AbstractCommand {
         context.sendMessage(Message.raw("/cm d delete [--nearest] - Delete bossroom"));
         context.sendMessage(Message.raw("/cm d assign [--dungeon_id <id>] - Assign entity as bossroom"));
         context.sendMessage(Message.raw("/cm d entrance [--dungeon_id <id>] [--delete] - Manage entrance"));
+        context.sendMessage(Message.raw("/cm d clean - Remove all spawned trap/dungeon entities"));
         return CompletableFuture.completedFuture(null);
     }
 }

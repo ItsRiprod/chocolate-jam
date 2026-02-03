@@ -3,13 +3,13 @@
     "Name": "Machine.items.PortalKey_Machine_Dungeon_Var2.name",
     "Description": "Machine.items.PortalKey_machine_Dungeon.description"
   },
-  "Icon": "Icons/ItemsGenerated/PortalKey_Machine_Dungeon.png",
+  "Icon": "Icons/ItemsGenerated/PortalKey_Machine_Dungeon_Var2.png",
   "Categories": [
     "Blocks.Portals"
   ],
   "PortalKey": {
     "PortalType": "PortalType_Machine_Dungeon_Var2",
-    "TimeLimitSeconds": 500
+    "TimeLimitSeconds": 1800
   },
   "BlockType": {
     "DrawType": "Model",
@@ -54,18 +54,18 @@
       "Temporary"
     ]
   },
-  "Quality": "Uncommon",
+  "Quality": "Artifact",
   "ItemLevel": 51,
   "IconProperties": {
     "Scale": 0.7,
     "Rotation": [
-      167,
-      177,
-      341
+      165,
+      243,
+      152
     ],
     "Translation": [
-      5,
-      17
+      -8,
+      -15
     ]
   }
 }

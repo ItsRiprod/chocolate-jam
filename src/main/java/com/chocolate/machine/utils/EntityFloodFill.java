@@ -42,34 +42,47 @@ public class EntityFloodFill {
             @Nonnull ComponentType<EntityStore, T> componentType,
             @Nonnull Double radius) {
 
+        TransformComponent transform = accessor.getComponent(startRef, TransformComponent.getComponentType());
+        if (transform == null) {
+            return new ObjectArrayList<>();
+        }
+        return floodFillFromPosition(transform.getPosition(), accessor, componentType, radius);
+    }
+
+    // finds all entities with the specified component within radius using spatial BFS from a position
+    @Nonnull
+    public static <T extends Component<EntityStore>> List<Ref<EntityStore>> floodFillFromPosition(
+            @Nonnull Vector3d startPosition,
+            @Nonnull ComponentAccessor<EntityStore> accessor,
+            @Nonnull ComponentType<EntityStore, T> componentType,
+            @Nonnull Double radius) {
+
         ObjectArrayList<Ref<EntityStore>> result = new ObjectArrayList<>();
         IntOpenHashSet visitedIndices = new IntOpenHashSet();
-        Deque<Ref<EntityStore>> queue = new ArrayDeque<>();
+        Deque<Vector3d> positionQueue = new ArrayDeque<>();
 
-        queue.add(startRef);
-        visitedIndices.add(startRef.getIndex());
+        positionQueue.add(startPosition);
 
+        EntityModule entityModule = EntityModule.get();
+        if (entityModule == null) {
+            return result;
+        }
         SpatialResource<Ref<EntityStore>, EntityStore> entitySpatial = accessor
-                .getResource(EntityModule.get().getEntitySpatialResourceType());
+                .getResource(entityModule.getEntitySpatialResourceType());
+        if (entitySpatial == null) {
+            return result;
+        }
 
         ObjectArrayList<Ref<EntityStore>> nearby = NEARBY_LIST.get();
+        if (nearby == null) {
+            nearby = new ObjectArrayList<>();
+        }
 
-        while (!queue.isEmpty()) {
-            Ref<EntityStore> current = queue.poll();
-
-            if (!current.isValid()) {
-                continue;
-            }
-
-            TransformComponent transform = accessor.getComponent(current, TransformComponent.getComponentType());
-            if (transform == null) {
-                continue;
-            }
-
-            Vector3d position = transform.getPosition();
+        while (!positionQueue.isEmpty()) {
+            Vector3d currentPos = positionQueue.poll();
 
             nearby.clear();
-            entitySpatial.getSpatialStructure().collect(position, radius, nearby);
+            entitySpatial.getSpatialStructure().collect(currentPos, radius, nearby);
 
             for (int i = 0; i < nearby.size(); i++) {
                 Ref<EntityStore> candidate = nearby.get(i);
@@ -85,12 +98,15 @@ public class EntityFloodFill {
 
                 if (accessor.getComponent(candidate, componentType) != null) {
                     visitedIndices.add(index);
-                    queue.add(candidate);
                     result.add(candidate);
+
+                    TransformComponent transform = accessor.getComponent(candidate, TransformComponent.getComponentType());
+                    if (transform != null) {
+                        positionQueue.add(transform.getPosition());
+                    }
                 }
             }
         }
-        ;
 
         return result;
     }

@@ -3,7 +3,7 @@
     "Name": "Cast Iron Brick Decorative"
   },
   "Icon": "Icons/ItemsGenerated/CM_Rock_CastIron_Brick_Decorative.png",
-  "Set": "Rock_Shale_Brick",
+  "Set": "Rock_CastIron_Brick",
   "Recipe": {
     "Input": [
       {
@@ -31,7 +31,7 @@
     },
     "Textures": [
       {
-        "All": "BlockTextures/Rock_CastIron_Brick_Decorative.png",
+        "All": "BlockTextures/CM_Rock_CastIron_Brick_Decorative.png",
         "Weight": 1
       }
     ],
@@ -49,7 +49,7 @@
           "CustomModel": "Blocks/Structures/Base_Shapes/Cube_Overlay.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "BlockTextures/Rock_CastIron_Brick_Decorative_Glow.png"
+              "Texture": "BlockTextures/CM_Rock_CastIron_Brick_Decorative_Glow.png"
             }
           ],
           "Interactions": {

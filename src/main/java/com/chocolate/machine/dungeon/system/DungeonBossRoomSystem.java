@@ -17,6 +17,8 @@ import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.spatial.SpatialResource;
 import com.hypixel.hytale.component.system.tick.EntityTickingSystem;
+import com.chocolate.machine.dungeon.DungeonModule;
+import com.chocolate.machine.dungeon.DungeonService;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
@@ -89,11 +91,73 @@ public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
 
         Ref<EntityStore> dungeonRef = chunk.getReferenceTo(index);
         Vector3d bossRoomPosition = transform.getPosition();
+
+        // handle deferred registration from pedestal interaction
+        if (dungeon.isPendingActivation()) {
+            dungeon.setPendingActivation(false);
+
+            DungeonModule module = DungeonModule.get();
+            if (module != null) {
+                DungeonService service = module.getDungeonService();
+                World world = store.getExternalData().getWorld();
+
+                service.registerDungeon(dungeonRef, store, world);
+                LOGGER.atInfo().log("[DungeonBossRoomSystem] Registration complete, waiting 1s before activation");
+
+                dungeon.setPendingDelayedActivation(true);
+                dungeon.setActivationDelayTimer(1.0f);
+            }
+            return;
+        }
+
+        // handle delayed activation (1 second after registration)
+        if (dungeon.isPendingDelayedActivation()) {
+            float timer = dungeon.getActivationDelayTimer() - dt;
+            dungeon.setActivationDelayTimer(timer);
+
+            if (timer <= 0f) {
+                dungeon.setPendingDelayedActivation(false);
+                Ref<EntityStore> playerRef = dungeon.getPendingActivationPlayerRef();
+                dungeon.setPendingActivationPlayerRef(null);
+
+                DungeonModule module = DungeonModule.get();
+                if (module != null) {
+                    DungeonService service = module.getDungeonService();
+                    service.activate(dungeonRef, playerRef, store);
+
+                    dungeon.setArtifactHolderRef(playerRef);
+                    dungeon.setTriggered(true);
+
+                    if (playerRef != null && playerRef.isValid()) {
+                        DungeoneerComponent dungeoneer = store.getComponent(playerRef, DungeoneerComponent.getComponentType());
+                        if (dungeoneer == null) {
+                            Vector3d spawnPosition = dungeon.getSpawnPosition();
+                            dungeoneer = new DungeoneerComponent(dungeon.getDungeonId(), spawnPosition);
+                            dungeoneer.setDungeonRef(dungeonRef);
+                            commandBuffer.addComponent(playerRef, DungeoneerComponent.getComponentType(), dungeoneer);
+                            dungeon.addDungeoneerRef(playerRef);
+                        }
+                        dungeoneer.setRelicHolder(true);
+                    }
+
+                    LOGGER.atInfo().log("[DungeonBossRoomSystem] Activation complete for dungeon '%s'",
+                            dungeon.getDungeonId());
+                }
+            }
+            return;
+        }
+
         double radius = dungeon.getTriggerRadius();
         String dungeonId = dungeon.getDungeonId();
 
         // Get the pending resource to track additions this tick
+        if (pendingResourceType == null) {
+            return;
+        }
         PendingDungeoneerResource pendingResource = commandBuffer.getResource(pendingResourceType);
+        if (pendingResource == null) {
+            return;
+        }
 
         // Query players near this boss room
         SpatialResource<Ref<EntityStore>, EntityStore> spatial = commandBuffer.getResource(playerSpatialResource);
@@ -134,23 +198,30 @@ public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
             // backup and override respawn point
             Player player = commandBuffer.getComponent(playerRef, Player.getComponentType());
             if (player != null) {
-                World world = commandBuffer.getExternalData().getWorld();
-                String worldName = world.getName();
-                PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+                try {
+                    World world = commandBuffer.getExternalData().getWorld();
+                    if (world == null) continue;
+                    String worldName = world.getName();
+                    if (worldName == null) continue;
+                    PlayerWorldData worldData = player.getPlayerConfigData().getPerWorldData(worldName);
+                    if (worldData == null) continue;
 
-                PlayerRespawnPointData[] originalRespawn = worldData.getRespawnPoints();
-                dungeoneer.setOriginalRespawnPoints(originalRespawn);
+                    PlayerRespawnPointData[] originalRespawn = worldData.getRespawnPoints();
+                    dungeoneer.setOriginalRespawnPoints(originalRespawn);
 
-                Vector3i blockPos = new Vector3i(
-                        (int) spawnPosition.getX(),
-                        (int) spawnPosition.getY(),
-                        (int) spawnPosition.getZ());
-                PlayerRespawnPointData dungeonSpawn = new PlayerRespawnPointData(
-                        blockPos, spawnPosition, "Dungeon");
-                worldData.setRespawnPoints(new PlayerRespawnPointData[] { dungeonSpawn });
+                    Vector3i blockPos = new Vector3i(
+                            (int) spawnPosition.getX(),
+                            (int) spawnPosition.getY(),
+                            (int) spawnPosition.getZ());
+                    PlayerRespawnPointData dungeonSpawn = new PlayerRespawnPointData(
+                            blockPos, spawnPosition, "Dungeon");
+                    worldData.setRespawnPoints(new PlayerRespawnPointData[] { dungeonSpawn });
 
-                LOGGER.atInfo().log("[DungeonBossRoomSystem] Set dungeon respawn for player, backed up %d original points",
-                        originalRespawn != null ? originalRespawn.length : 0);
+                    LOGGER.atInfo().log("[DungeonBossRoomSystem] Set dungeon respawn for player, backed up %d original points",
+                            originalRespawn != null ? originalRespawn.length : 0);
+                } catch (Exception e) {
+                    LOGGER.atWarning().log("failed to backup player respawn: %s", e.getMessage());
+                }
             }
 
             commandBuffer.addComponent(playerRef, DungeoneerComponent.getComponentType(), dungeoneer);

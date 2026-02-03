@@ -9,9 +9,20 @@ import com.chocolate.machine.dungeon.spawnable.Spawnable;
 import com.chocolate.machine.dungeon.spawnable.SpawnableRegistry;
 import com.chocolate.machine.utils.DungeonFinder;
 import com.chocolate.machine.utils.EntityFloodFill;
+import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.ComponentAccessor;
+import com.hypixel.hytale.component.Holder;
 import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.math.vector.Vector3f;
+import com.hypixel.hytale.server.core.asset.type.model.config.Model;
+import com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset;
+import com.hypixel.hytale.server.core.entity.UUIDComponent;
+import com.hypixel.hytale.server.core.modules.entity.EntityModule;
+import com.hypixel.hytale.server.core.modules.entity.component.BoundingBox;
+import com.hypixel.hytale.server.core.modules.entity.component.ModelComponent;
+import com.hypixel.hytale.server.core.modules.entity.tracker.NetworkId;
+import java.util.UUID;
 import com.hypixel.hytale.math.util.ChunkUtil;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
@@ -54,14 +65,53 @@ public class DungeonService {
         return blockId;
     }
 
+    private static final String DUNGEON_ENTITY_MODEL = "Trap_Spawner";
+
     public DungeonService() {
         this.spawnableRegistry = SpawnableRegistry.getInstance();
+    }
+
+    @Nullable
+    public Ref<EntityStore> spawnDungeonEntity(
+            @Nonnull Vector3d position,
+            @Nonnull String dungeonId,
+            @Nonnull ComponentAccessor<EntityStore> accessor) {
+
+        Holder<EntityStore> holder = EntityStore.REGISTRY.newHolder();
+
+        holder.addComponent(TransformComponent.getComponentType(),
+                new TransformComponent(position, new Vector3f(0f, 0f, 0f)));
+
+        holder.addComponent(UUIDComponent.getComponentType(),
+                new UUIDComponent(UUID.randomUUID()));
+
+        int networkId = accessor.getExternalData().takeNextNetworkId();
+        holder.addComponent(NetworkId.getComponentType(), new NetworkId(networkId));
+
+        holder.ensureComponent(EntityModule.get().getVisibleComponentType());
+
+        ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(DUNGEON_ENTITY_MODEL);
+        if (modelAsset != null) {
+            Model model = Model.createScaledModel(modelAsset, 1.0f);
+            holder.addComponent(ModelComponent.getComponentType(), new ModelComponent(model));
+            holder.addComponent(BoundingBox.getComponentType(), new BoundingBox(model.getBoundingBox()));
+        }
+
+        DungeonComponent dungeon = new DungeonComponent();
+        dungeon.setDungeonId(dungeonId);
+        dungeon.setSpawnPosition(position);
+        dungeon.setTriggerRadius(10.0);
+        holder.addComponent(DungeonComponent.getComponentType(), dungeon);
+
+        Ref<EntityStore> ref = accessor.addEntity(holder, AddReason.SPAWN);
+        LOGGER.atInfo().log("[DungeonService] Spawned dungeon entity '%s' at (%.1f, %.1f, %.1f)",
+                dungeonId, position.x, position.y, position.z);
+        return ref;
     }
 
     public int registerDungeon(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
-        // Try to get world from component accessor
         World world = componentAccessor.getExternalData().getWorld();
         return registerDungeon(dungeonRef, componentAccessor, world);
     }
@@ -70,6 +120,14 @@ public class DungeonService {
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor,
             @Nullable World world) {
+        return registerDungeon(dungeonRef, componentAccessor, world, null);
+    }
+
+    public int registerDungeon(
+            @Nonnull Ref<EntityStore> dungeonRef,
+            @Nonnull ComponentAccessor<EntityStore> componentAccessor,
+            @Nullable World world,
+            @Nullable Vector3d searchOrigin) {
 
         DungeonComponent dungeon = componentAccessor.getComponent(dungeonRef, DungeonComponent.getComponentType());
         if (dungeon == null) {
@@ -115,8 +173,10 @@ public class DungeonService {
 
         int registeredCount = 0;
 
-        List<Ref<EntityStore>> nearbySpawners = EntityFloodFill.floodFillSpawners(
-                dungeonRef, componentAccessor, SpawnerComponent.getComponentType(), BLOCK_SCAN_RADIUS);
+        // use searchOrigin if provided (for CommandBuffer cases where dungeon entity isn't in spatial yet)
+        Vector3d floodFillOrigin = searchOrigin != null ? searchOrigin : dungeonTransform.getPosition();
+        List<Ref<EntityStore>> nearbySpawners = EntityFloodFill.floodFillFromPosition(
+                floodFillOrigin, componentAccessor, SpawnerComponent.getComponentType(), BLOCK_SCAN_RADIUS);
 
         for (Ref<EntityStore> spawnerRef : nearbySpawners) {
             SpawnerComponent spawner = componentAccessor.getComponent(spawnerRef,
@@ -136,14 +196,14 @@ public class DungeonService {
         // Register dungeon blocks (CM_* blocks)
         int blockCount = 0;
         if (world != null) {
-            Vector3d center = dungeonTransform.getPosition();
-            blockCount = registerDungeonBlocks(dungeon, world, center);
+            Vector3d blockCenter = searchOrigin != null ? searchOrigin : dungeonTransform.getPosition();
+            blockCount = registerDungeonBlocks(dungeon, world, blockCenter);
         } else {
             LOGGER.atWarning().log("Cannot register dungeon blocks: world is null (use registerDungeon with world parameter)");
         }
 
         // Link entrance
-        linkEntrance(dungeonRef, dungeon, componentAccessor);
+        linkEntrance(dungeonRef, dungeon, componentAccessor, floodFillOrigin);
 
         dungeon.setRegistered(true);
         LOGGER.atInfo().log("Dungeon registration complete: %d spawners, %d dungeon blocks registered",
@@ -155,7 +215,8 @@ public class DungeonService {
     private boolean linkEntrance(
             @Nonnull Ref<EntityStore> dungeonRef,
             @Nonnull DungeonComponent dungeon,
-            @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
+            @Nonnull ComponentAccessor<EntityStore> componentAccessor,
+            @Nonnull Vector3d searchOrigin) {
 
         String dungeonId = dungeon.getDungeonId();
         if (dungeonId.isEmpty()) {
@@ -163,9 +224,9 @@ public class DungeonService {
             return false;
         }
 
-        // Search for entrance entities via flood-fill
-        List<Ref<EntityStore>> nearbyEntities = EntityFloodFill.floodFillSpawners(
-                dungeonRef, componentAccessor, DungeonEntranceComponent.getComponentType(), BLOCK_SCAN_RADIUS);
+        // Search for entrance entities via flood-fill from searchOrigin
+        List<Ref<EntityStore>> nearbyEntities = EntityFloodFill.floodFillFromPosition(
+                searchOrigin, componentAccessor, DungeonEntranceComponent.getComponentType(), BLOCK_SCAN_RADIUS);
 
         for (Ref<EntityStore> entityRef : nearbyEntities) {
             if (!entityRef.isValid()) continue;
@@ -490,8 +551,13 @@ public class DungeonService {
             return false;
         }
         
-        spawnable.activate(spawnerRef, componentAccessor);
-        
+        try {
+            spawnable.activate(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to activate spawnable '%s': %s", executionId, e.getMessage());
+            return false;
+        }
+
         spawner.setActive(true);
 
         LOGGER.atFine().log("Activated spawner '%s'", executionId);
@@ -522,7 +588,12 @@ public class DungeonService {
             return false;
         }
 
-        spawnable.deactivate(spawnerRef, componentAccessor);
+        try {
+            spawnable.deactivate(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to deactivate spawnable '%s': %s", executionId, e.getMessage());
+            return false;
+        }
 
         LOGGER.atFine().log("Deactivated spawner '%s'", executionId);
         return true;
@@ -547,7 +618,12 @@ public class DungeonService {
             return false;
         }
 
-        spawnable.reset(spawnerRef, componentAccessor);
+        try {
+            spawnable.reset(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to reset spawnable '%s': %s", executionId, e.getMessage());
+            return false;
+        }
         spawner.setActive(true);
 
         LOGGER.atFine().log("Reset spawner '%s'", executionId);
@@ -571,7 +647,11 @@ public class DungeonService {
         if (!oldExecutionId.isEmpty()) {
             Spawnable oldSpawnable = spawnableRegistry.get(oldExecutionId);
             if (oldSpawnable != null) {
-                oldSpawnable.cleanup(spawnerRef, componentAccessor);
+                try {
+                    oldSpawnable.cleanup(spawnerRef, componentAccessor);
+                } catch (Exception e) {
+                    LOGGER.atSevere().log("failed to cleanup spawnable '%s': %s", oldExecutionId, e.getMessage());
+                }
                 LOGGER.atFine().log("Cleaned up old action '%s'", oldExecutionId);
             }
         }
@@ -581,7 +661,12 @@ public class DungeonService {
         if (!newExecutionId.isEmpty()) {
             Spawnable newSpawnable = spawnableRegistry.get(newExecutionId);
             if (newSpawnable != null) {
-                newSpawnable.register(spawnerRef, componentAccessor);
+                try {
+                    newSpawnable.register(spawnerRef, componentAccessor);
+                } catch (Exception e) {
+                    LOGGER.atSevere().log("failed to register spawnable '%s': %s", newExecutionId, e.getMessage());
+                    return false;
+                }
                 LOGGER.atFine().log("Registered new action '%s'", newExecutionId);
                 return true;
             } else {
@@ -606,7 +691,11 @@ public class DungeonService {
         if (!executionId.isEmpty()) {
             Spawnable spawnable = spawnableRegistry.get(executionId);
             if (spawnable != null) {
-                spawnable.cleanup(spawnerRef, componentAccessor);
+                try {
+                    spawnable.cleanup(spawnerRef, componentAccessor);
+                } catch (Exception e) {
+                    LOGGER.atSevere().log("failed to cleanup spawnable '%s': %s", executionId, e.getMessage());
+                }
                 spawner.setActive(false);
                 LOGGER.atFine().log("Cleaned up spawner '%s'", executionId);
             }
@@ -630,7 +719,11 @@ public class DungeonService {
             return;
         }
 
-        spawnable.register(spawnerRef, componentAccessor);
+        try {
+            spawnable.register(spawnerRef, componentAccessor);
+        } catch (Exception e) {
+            LOGGER.atSevere().log("failed to register spawnable '%s': %s", executionId, e.getMessage());
+        }
     }
 
     private int registerDungeonBlocks(

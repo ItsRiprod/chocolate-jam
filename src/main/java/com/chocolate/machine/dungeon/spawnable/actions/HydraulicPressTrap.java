@@ -5,6 +5,7 @@ import java.util.UUID;
 
 import javax.annotation.Nonnull;
 
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent;
 import com.chocolate.machine.dungeon.component.actions.HydraulicPressActionComponent.PressPhase;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
@@ -118,8 +119,11 @@ public class HydraulicPressTrap implements Spawnable {
             return;
         }
 
-        componentAccessor.addComponent(spawnerRef, HydraulicPressActionComponent.getComponentType(),
-                new HydraulicPressActionComponent());
+        try {
+            componentAccessor.ensureAndGetComponent(spawnerRef, HydraulicPressActionComponent.getComponentType());
+        } catch (IllegalArgumentException e) {
+            // race: component added by another spawner in same tick
+        }
     }
 
     @Override
@@ -135,8 +139,7 @@ public class HydraulicPressTrap implements Spawnable {
                 spawnerRef, HydraulicPressActionComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, HydraulicPressActionComponent.getComponentType());
+            return;
         }
 
         if (state.hasSpawned()) {
@@ -165,6 +168,10 @@ public class HydraulicPressTrap implements Spawnable {
 
         holder.ensureComponent(EntityModule.get().getVisibleComponentType());
         holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
+
+        if (SpawnedEntityComponent.getComponentType() != null) {
+            holder.addComponent(SpawnedEntityComponent.getComponentType(), new SpawnedEntityComponent(ID));
+        }
 
         ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(PRESS_MODEL_ASSET);
         if (modelAsset != null) {
@@ -363,7 +370,8 @@ public class HydraulicPressTrap implements Spawnable {
             }
 
             // skip the press entity itself
-            if (entityRef.equals(press.getSpawnedRef())) {
+            Ref<EntityStore> pressSpawnedRef = press.getSpawnedRef();
+            if (pressSpawnedRef != null && entityRef.equals(pressSpawnedRef)) {
                 LOGGER.atInfo().log("Entity %d: is press entity, skipping", i);
                 continue;
             }

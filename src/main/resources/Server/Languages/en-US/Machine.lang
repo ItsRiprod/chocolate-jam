@@ -1,12 +1,17 @@
+items.CM_Pedestal.name=Pedestal
+items.CM_Indicator.name=Indicator
+items.CM_Torch.name=Machine Torch
+items.CM_Sparks.name=Machine Sparks
+
 items.PortalKey_Machine_Dungeon_Var1.name=Fragment: Dungeon of the Machine V1
-items.PortalKey_Machine_Dungeon_Var2.name=Fragment: Dungeon of the Machine V2
+items.PortalKey_Machine_Dungeon_Var2.name=Fragment: Dungeon of the Machine
 items.PortalKey_Machine_Dungeon_Var3.name=Fragment: Dungeon of the Machine V3
-items.PortalKey_Machine_Dungeon.description=<msg key="server.items.PortalKey.description"/>\n\n<i>This fragment might bing you to a long dorment machine</i>
+items.PortalKey_Machine_Dungeon.description=This fragment might bring you to a long<color is="#3a94a7"> dormant machine </color>
 
 portals.Machine_Dungeon_Var1.name=Dungeon of the Machine V1
-portals.Machine_Dungeon_Var2.name=Dungeon of the Machine V2
+portals.Machine_Dungeon_Var2.name=Dungeon of the Machine
 portals.Machine_Dungeon_Var3.name=Dungeon of the Machine V3
-portals.Machine_Dungeon.description=This fragment might bing you to a long dorment machine\n\
+portals.Machine_Dungeon.description=This fragment might bring you to a long dorment machine\n\
 <b>This instance was added by chocolate.machine</b>
 
 portals.Machine_Dungeon.tip1=<color is="#0572c0">It's not as it seems</color>

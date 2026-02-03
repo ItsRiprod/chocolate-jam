@@ -53,7 +53,7 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
 
     // configurable via command
     private float fireInterval = 2.0f;
-    private float damage = 15f;
+    private float damage = 45f;
     private float offsetX = 0f;  // Spawn position offset X
     private float offsetY = 0f;  // Spawn position offset Y
     private float offsetZ = 0f;  // Spawn position offset Z

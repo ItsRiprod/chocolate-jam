@@ -1,9 +1,11 @@
 package com.chocolate.machine.dungeon.spawnable.actions;
 
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.HammerPhase;
 import com.chocolate.machine.dungeon.component.actions.BigFreakingHammerComponent.KnockbackAxis;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
+import com.chocolate.machine.dungeon.spawnable.SpawnerProximityUtil;
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
@@ -117,21 +119,14 @@ public class HammerTrap implements Spawnable {
         }
 
         if (state == null) {
-            state = new BigFreakingHammerComponent();
-            componentAccessor.addComponent(spawnerRef, BigFreakingHammerComponent.getComponentType(), state);
+            try {
+                state = componentAccessor.ensureAndGetComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            } catch (IllegalArgumentException e) {
+                state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            }
+            if (state == null) return;
         }
 
-        if (state.hasSpawned()) {
-            return;
-        }
-
-        Ref<EntityStore> spawnedRef = this.spawnHammer(spawnerRef, componentAccessor, state);
-
-        if (spawnedRef == null) {
-            return;
-        }
-
-        state.setSpawnedRef(spawnedRef);
         state.setActive(false);
         state.setPhase(HammerPhase.IDLE);
     }
@@ -142,7 +137,6 @@ public class HammerTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         if (!spawnerRef.isValid()) {
-            LOGGER.atWarning().log("Invalid spawner reference in HammerTrap.activate");
             return;
         }
 
@@ -150,19 +144,7 @@ public class HammerTrap implements Spawnable {
                 spawnerRef, BigFreakingHammerComponent.getComponentType());
 
         if (state == null) {
-            register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
-        }
-
-        if (!state.hasSpawned()) {
-            register(spawnerRef, componentAccessor);
-        }
-
-        // Ensure hammer is spawned
-        Ref<EntityStore> spawnedRef = state.getSpawnedRef();
-        if (spawnedRef == null || !spawnedRef.isValid()) {
-            spawnedRef = this.spawnHammer(spawnerRef, componentAccessor, state);
-            state.setSpawnedRef(spawnedRef);
+            return;
         }
 
         state.setActive(true);
@@ -260,8 +242,9 @@ public class HammerTrap implements Spawnable {
         }
 
         Vector3d position = spawnerTransform.getPosition().clone();
-        float yaw = state.getKnockbackAxis() == KnockbackAxis.Z ? 90f : 0f;
-        Vector3f rotation = new Vector3f(0f, yaw, 0f);
+        float yawDeg = state.getKnockbackAxis() == KnockbackAxis.Z ? 90f : 0f;
+        float yawRad = (float) Math.toRadians(yawDeg);
+        Vector3f rotation = new Vector3f(0f, yawRad, 0f);
 
         Holder<EntityStore> holder = EntityStore.REGISTRY.newHolder();
         holder.addComponent(TransformComponent.getComponentType(),
@@ -276,9 +259,13 @@ public class HammerTrap implements Spawnable {
         holder.ensureComponent(EntityModule.get().getVisibleComponentType());
         holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
 
+        if (SpawnedEntityComponent.getComponentType() != null) {
+            holder.addComponent(SpawnedEntityComponent.getComponentType(), new SpawnedEntityComponent(ID));
+        }
+
         ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(HAMMER_MODEL_ASSET);
         if (modelAsset != null) {
-            Model model = Model.createScaledModel(modelAsset, 2.5f);
+            Model model = Model.createScaledModel(modelAsset, state.getScale());
             holder.addComponent(ModelComponent.getComponentType(), new ModelComponent(model));
             holder.addComponent(BoundingBox.getComponentType(), new BoundingBox(model.getBoundingBox()));
         }
@@ -301,7 +288,19 @@ public class HammerTrap implements Spawnable {
         }
 
         Ref<EntityStore> pressRef = press.getSpawnedRef();
+
         if (pressRef == null || !pressRef.isValid()) {
+            if (!SpawnerProximityUtil.isPlayerNearby(spawnerRef, commandBuffer)) {
+                return;
+            }
+
+            pressRef = spawnHammer(spawnerRef, commandBuffer, press);
+            if (pressRef == null) {
+                return;
+            }
+            press.setSpawnedRef(pressRef);
+            press.setPhase(HammerPhase.IDLE);
+            AnimationUtils.playAnimation(pressRef, AnimationSlot.Action, ANIM_IDLE, true, commandBuffer);
             return;
         }
 
@@ -409,7 +408,8 @@ public class HammerTrap implements Spawnable {
                 continue;
             }
 
-            if (entityRef.equals(hammer.getSpawnedRef())) {
+            Ref<EntityStore> hammerSpawnedRef = hammer.getSpawnedRef();
+            if (hammerSpawnedRef != null && entityRef.equals(hammerSpawnedRef)) {
                 continue;
             }
 
