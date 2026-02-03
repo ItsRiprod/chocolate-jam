@@ -120,7 +120,7 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
                 }
             }
 
-            if (dungeon.isTriggered() || dungeon.isActive()) {
+            if (dungeon.isTriggered() || dungeon.isActive() || dungeon.isPendingActivation()) {
                 context.getState().state = InteractionState.Failed;
                 return;
             }
@@ -134,27 +134,22 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
 
             EventTitleUtil.showEventTitleToPlayer(
                     playerRefComponent,
-                    Message.raw("Escape"),
-                    Message.raw("Objective Update"),
+                    Message.raw("Escape The Machine!"),
+                    Message.raw("Artifacts stolen. New Objective:"),
                     true);
 
-            // reset if already registered (same as /cm d register command)
+            // reset if already registered
             if (dungeon.isRegistered()) {
                 dungeon.reset();
             }
 
-            // register first, then activate
-            // use blockCenter as searchOrigin so flood fill works even if dungeon entity was just spawned
-            dungeonService.registerDungeon(dungeonRef, commandBuffer, world, blockCenter);
-            dungeonService.activate(dungeonRef, playerRef, commandBuffer);
+            // defer registration to next tick (Store has spatial, CommandBuffer doesn't)
+            dungeon.setPendingActivation(true);
+            dungeon.setPendingActivationPlayerRef(playerRef);
 
-            dungeon.setArtifactHolderRef(playerRef);
-            setupDungeoneer(playerRef, dungeonRef, dungeon, commandBuffer);
             giveArtifactArmor(playerRef, commandBuffer);
-
             setBlockState(world, pos, "On");
 
-            dungeon.setTriggered(true);
             context.getState().state = InteractionState.Finished;
         } catch (Exception e) {
             context.getState().state = InteractionState.Failed;
