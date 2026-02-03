@@ -10160,24 +10160,6 @@
     },
     {
       "x": -1,
-      "y": 2,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
       "y": 5,
       "z": -12,
       "name": "Rock_Shale"
@@ -10220,24 +10202,6 @@
     },
     {
       "x": -1,
-      "y": 2,
-      "z": -11,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": -1,
       "y": 5,
       "z": -11,
       "name": "Rock_Basalt"
@@ -10277,24 +10241,6 @@
       "y": 1,
       "z": -10,
       "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -10,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 4,
-      "z": -10,
-      "name": "Rock_Shale"
     },
     {
       "x": -1,
@@ -10326,20 +10272,6 @@
       "y": 1,
       "z": -9,
       "name": "Rock_Shale"
-    },
-    {
-      "x": -1,
-      "y": 2,
-      "z": -9,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 9
-    },
-    {
-      "x": -1,
-      "y": 3,
-      "z": -9,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 1
     },
     {
       "x": -1,
@@ -10772,24 +10704,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
       "y": 5,
       "z": -12,
       "name": "Rock_Shale"
@@ -10832,24 +10746,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 0,
       "y": 5,
       "z": -11,
       "name": "Rock_Shale_Brick"
@@ -10886,24 +10782,6 @@
     },
     {
       "x": 0,
-      "y": 2,
-      "z": -10,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 0,
-      "y": 3,
-      "z": -10,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 4,
-      "z": -10,
-      "name": "Rock_Crystal_Green_Medium"
-    },
-    {
-      "x": 0,
       "y": 5,
       "z": -10,
       "name": "Rock_Shale"
@@ -10931,19 +10809,6 @@
       "y": 0,
       "z": -9,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 0,
-      "y": 1,
-      "z": -9,
-      "name": "Rock_Shale_Brick_Half",
-      "rotation": 8
-    },
-    {
-      "x": 0,
-      "y": 2,
-      "z": -9,
-      "name": "Rock_Shale_Brick"
     },
     {
       "x": 0,
@@ -11405,24 +11270,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -12,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
       "y": 5,
       "z": -12,
       "name": "Rock_Shale"
@@ -11465,24 +11312,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": -11,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -11,
-      "name": "Rock_Shale_Brick"
-    },
-    {
-      "x": 1,
       "y": 5,
       "z": -11,
       "name": "Rock_Shale_Brick"
@@ -11514,24 +11343,6 @@
     },
     {
       "x": 1,
-      "y": 2,
-      "z": -10,
-      "name": "Rock_Basalt_Brick"
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -10,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 4,
-      "z": -10,
-      "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
       "y": 5,
       "z": -10,
       "name": "Rock_Shale"
@@ -11554,20 +11365,6 @@
       "y": 0,
       "z": -9,
       "name": "Rock_Shale"
-    },
-    {
-      "x": 1,
-      "y": 2,
-      "z": -9,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 11
-    },
-    {
-      "x": 1,
-      "y": 3,
-      "z": -9,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 3
     },
     {
       "x": 1,
@@ -22021,7 +21818,7 @@
         },
         "UUID": {
           "UUID": {
-            "$binary": "9ax3n1iIOle9VYdxnvH1sw==",
+            "$binary": "6SGEFYRzPu2OaOcfCQLN2g==",
             "$type": "04"
           }
         },
@@ -22075,7 +21872,7 @@
         },
         "UUID": {
           "UUID": {
-            "$binary": "/Rmn/7b3OBiOT9aOdyT5Hg==",
+            "$binary": "5Hl7MweyMKao6mExwLEbww==",
             "$type": "04"
           }
         },
