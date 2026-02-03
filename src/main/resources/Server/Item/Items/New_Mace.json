@@ -3,8 +3,8 @@
   "TranslationProperties": {
     "Name": "server.items.Weapon_Mace_Cobalt.name"
   },
-  "Model": "Items/Weapons/New_Mace.blockymodel",
-  "Texture": "Items/Weapons/New_Mace.png",
+  "Model": "Items/New_Mace.blockymodel",
+  "Texture": "Items/New_Mace.png",
   "Icon": "Icons/ItemsGenerated/New_Mace.png",
   "Quality": "Rare",
   "ItemLevel": 35,

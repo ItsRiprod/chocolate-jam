@@ -81,6 +81,7 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
             }
 
             UUID playerUuid = playerRefComponent.getUuid();
+            if (playerUuid == null) continue;
             currentInside.add(playerUuid);
         }
 
@@ -154,7 +155,11 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
         }
 
         if (playerRefComponent != null) {
-            playerRefComponent.sendMessage(Message.raw("You escaped the dungeon!"));
+            try {
+                playerRefComponent.sendMessage(Message.raw("You escaped the dungeon!"));
+            } catch (Exception e) {
+                LOGGER.atWarning().log("failed to send message: %s", e.getMessage());
+            }
         }
 
         if (isRelicHolder) {
@@ -182,7 +187,7 @@ public class DungeonAreaSystem extends EntityTickingSystem<EntityStore> {
         DungeonModule.get().getDungeonService().deactivate(dungeonRef, commandBuffer);
 
         // Remove DungeoneerComponent from all other dungeoneers
-        for (Ref<EntityStore> dungeoneerRef : dungeon.getDungeoneerRefs()) {
+        for (Ref<EntityStore> dungeoneerRef : List.copyOf(dungeon.getDungeoneerRefs())) {
             if (dungeoneerRef.isValid()) {
                 DungeoneerComponent otherDungeoneer = commandBuffer.getComponent(dungeoneerRef, DungeoneerComponent.getComponentType());
                 if (otherDungeoneer != null) {

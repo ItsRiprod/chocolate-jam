@@ -1,8 +1,10 @@
 package com.chocolate.machine.dungeon.spawnable.actions;
 
+import com.chocolate.machine.dungeon.component.SpawnedEntityComponent;
 import com.chocolate.machine.dungeon.component.actions.SawBladeComponent;
 import com.chocolate.machine.dungeon.component.actions.SawBladeComponent.Phase;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
+import com.chocolate.machine.dungeon.spawnable.SpawnerProximityUtil;
 import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
@@ -95,21 +97,14 @@ public class SawBladeTrap implements Spawnable {
         }
 
         if (state == null) {
-            state = new SawBladeComponent();
-            componentAccessor.addComponent(spawnerRef, SawBladeComponent.getComponentType(), state);
+            try {
+                state = componentAccessor.ensureAndGetComponent(spawnerRef, SawBladeComponent.getComponentType());
+            } catch (IllegalArgumentException e) {
+                state = componentAccessor.getComponent(spawnerRef, SawBladeComponent.getComponentType());
+            }
+            if (state == null) return;
         }
 
-        if (state.hasSpawned()) {
-            return;
-        }
-
-        Ref<EntityStore> spawnedRef = this.spawnBlade(spawnerRef, componentAccessor, state);
-
-        if (spawnedRef == null) {
-            return;
-        }
-
-        state.setSpawnedRef(spawnedRef);
         state.setActive(false);
         state.setPhase(Phase.HIDDEN);
     }
@@ -120,7 +115,6 @@ public class SawBladeTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         if (!spawnerRef.isValid()) {
-            LOGGER.atWarning().log("Invalid spawner reference in SawBladeTrap.activate");
             return;
         }
 
@@ -130,23 +124,13 @@ public class SawBladeTrap implements Spawnable {
         if (state == null) {
             register(spawnerRef, componentAccessor);
             state = componentAccessor.getComponent(spawnerRef, SawBladeComponent.getComponentType());
-        }
-
-        if (!state.hasSpawned()) {
-            register(spawnerRef, componentAccessor);
-        }
-
-        Ref<EntityStore> spawnedRef = state.getSpawnedRef();
-        if (spawnedRef == null || !spawnedRef.isValid()) {
-            spawnedRef = this.spawnBlade(spawnerRef, componentAccessor, state);
-            state.setSpawnedRef(spawnedRef);
+            if (state == null) {
+                return;
+            }
         }
 
         state.setActive(true);
         state.setPendingDeactivation(false);
-        state.setPhase(Phase.ENTERING);
-
-        AnimationUtils.playAnimation(spawnedRef, AnimationSlot.Movement, ANIM_ENTER, false, componentAccessor);
     }
 
     @Override
@@ -252,6 +236,10 @@ public class SawBladeTrap implements Spawnable {
         holder.ensureComponent(EntityModule.get().getVisibleComponentType());
         holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
 
+        if (SpawnedEntityComponent.getComponentType() != null) {
+            holder.addComponent(SpawnedEntityComponent.getComponentType(), new SpawnedEntityComponent(ID));
+        }
+
         ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(SAWBLADE_MODEL_ASSET);
         if (modelAsset != null) {
             Model model = Model.createScaledModel(modelAsset, 2.5f);
@@ -277,7 +265,20 @@ public class SawBladeTrap implements Spawnable {
         }
 
         Ref<EntityStore> bladeRef = state.getSpawnedRef();
+
+        // spawn blade when player gets nearby
         if (bladeRef == null || !bladeRef.isValid()) {
+            if (!SpawnerProximityUtil.isPlayerNearby(spawnerRef, commandBuffer)) {
+                return;
+            }
+
+            bladeRef = spawnBlade(spawnerRef, commandBuffer, state);
+            if (bladeRef == null) {
+                return;
+            }
+            state.setSpawnedRef(bladeRef);
+            state.setPhase(Phase.ENTERING);
+            AnimationUtils.playAnimation(bladeRef, AnimationSlot.Movement, ANIM_ENTER, false, commandBuffer);
             return;
         }
 
