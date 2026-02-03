@@ -1,0 +1,24 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "Small_Cog_Test_Spawner",
+      "PositionOffset": {
+        "Y": 0,
+        "X": 0.55
+      },
+      "FixedRotation": false,
+      "RotationOffset": {
+        "Yaw": 0,
+        "Roll": 0
+      }
+    },
+    {
+      "SpawnerId": "Sparks_Spawner",
+      "PositionOffset": {
+        "Y": 0,
+        "X": 0.5
+      }
+    }
+  ],
+  "LifeSpan": 0
+}
