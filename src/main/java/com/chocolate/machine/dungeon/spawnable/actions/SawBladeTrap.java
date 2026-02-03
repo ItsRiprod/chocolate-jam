@@ -96,7 +96,11 @@ public class SawBladeTrap implements Spawnable {
         }
 
         if (state == null) {
-            state = componentAccessor.ensureAndGetComponent(spawnerRef, SawBladeComponent.getComponentType());
+            try {
+                state = componentAccessor.ensureAndGetComponent(spawnerRef, SawBladeComponent.getComponentType());
+            } catch (IllegalArgumentException e) {
+                state = componentAccessor.getComponent(spawnerRef, SawBladeComponent.getComponentType());
+            }
             if (state == null) return;
         }
 

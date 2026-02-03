@@ -89,7 +89,11 @@ public class BeamTrap implements Spawnable {
             return;
         }
 
-        componentAccessor.ensureAndGetComponent(spawnerRef, LaserBeamComponent.getComponentType());
+        try {
+            componentAccessor.ensureAndGetComponent(spawnerRef, LaserBeamComponent.getComponentType());
+        } catch (IllegalArgumentException e) {
+            // race: component added by another spawner in same tick
+        }
     }
 
     @Override

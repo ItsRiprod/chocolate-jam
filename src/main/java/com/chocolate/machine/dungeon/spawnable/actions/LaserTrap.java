@@ -44,7 +44,11 @@ public class LaserTrap implements Spawnable {
             return;
         }
 
-        componentAccessor.ensureAndGetComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
+        try {
+            componentAccessor.ensureAndGetComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
+        } catch (IllegalArgumentException e) {
+            // race: component added by another spawner in same tick
+        }
     }
 
     @Override

@@ -30330,5 +30330,49 @@
       "z": 7,
       "name": "Rock_CastIron"
     }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "Prop": {},
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "Transform": {
+          "Position": {
+            "X": 0.5150504112243652,
+            "Y": 135.00212860107422,
+            "Z": 5.90399169921875
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "PMUkqacPPC+z+kbMCb6kNQ==",
+            "$type": "04"
+          }
+        },
+        "DungeonEntrance": {
+          "TriggerRadius": 5.0,
+          "DungeonId": "chocolate"
+        },
+        "PrefabCopyable": {},
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          }
+        }
+      }
+    }
   ]
 }

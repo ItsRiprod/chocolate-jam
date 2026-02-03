@@ -51,7 +51,11 @@ public class GolemAction implements Spawnable {
             return;
         }
 
-        componentAccessor.ensureAndGetComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+        try {
+            componentAccessor.ensureAndGetComponent(spawnerRef, SkeletonActionComponent.getComponentType());
+        } catch (IllegalArgumentException e) {
+            // race: component added by another spawner in same tick
+        }
 
         LOGGER.atFine().log("Registered SkeletonActionComponent for spawner");
     }

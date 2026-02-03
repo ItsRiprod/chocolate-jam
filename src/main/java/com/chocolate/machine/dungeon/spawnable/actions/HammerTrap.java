@@ -118,7 +118,11 @@ public class HammerTrap implements Spawnable {
         }
 
         if (state == null) {
-            state = componentAccessor.ensureAndGetComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            try {
+                state = componentAccessor.ensureAndGetComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            } catch (IllegalArgumentException e) {
+                state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            }
             if (state == null) return;
         }
 
@@ -254,8 +258,9 @@ public class HammerTrap implements Spawnable {
         }
 
         Vector3d position = spawnerTransform.getPosition().clone();
-        float yaw = state.getKnockbackAxis() == KnockbackAxis.Z ? 90f : 0f;
-        Vector3f rotation = new Vector3f(0f, yaw, 0f);
+        float yawDeg = state.getKnockbackAxis() == KnockbackAxis.Z ? 90f : 0f;
+        float yawRad = (float) Math.toRadians(yawDeg);
+        Vector3f rotation = new Vector3f(0f, yawRad, 0f);
 
         Holder<EntityStore> holder = EntityStore.REGISTRY.newHolder();
         holder.addComponent(TransformComponent.getComponentType(),

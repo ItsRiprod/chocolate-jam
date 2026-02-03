@@ -3195,31 +3195,31 @@
       "x": -16,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -16,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -16,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -16,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -16,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -16,
@@ -6367,31 +6367,31 @@
       "x": -15,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -15,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -15,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -15,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -15,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -15,
@@ -9528,31 +9528,31 @@
       "x": -14,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -14,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -14,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -14,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -14,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -14,
@@ -9888,15 +9888,13 @@
       "x": -14,
       "y": 6,
       "z": -13,
-      "name": "Plant_Grass_Sharp_Tall",
-      "support": 15
+      "name": "Empty"
     },
     {
       "x": -14,
       "y": 7,
       "z": -13,
-      "name": "Plant_Grass_Sharp_Tall",
-      "filler": 1024
+      "name": "Empty"
     },
     {
       "x": -14,
@@ -12693,31 +12691,31 @@
       "x": -13,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -13,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -13,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -13,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -13,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -13,
@@ -15858,31 +15856,31 @@
       "x": -12,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -12,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": -12,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -12,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -12,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": -12,
@@ -91787,31 +91785,31 @@
       "x": 12,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": 12,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": 12,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 12,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 12,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 12,
@@ -94974,13 +94972,13 @@
       "x": 13,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 13,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 13,
@@ -98134,13 +98132,13 @@
       "x": 14,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 14,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 14,
@@ -101297,13 +101295,13 @@
       "x": 15,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 15,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 15,
@@ -104443,31 +104441,31 @@
       "x": 16,
       "y": 6,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": 16,
       "y": 7,
       "z": -17,
-      "name": "Rock_CastIron_Brick"
+      "name": "Empty"
     },
     {
       "x": 16,
       "y": 8,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 16,
       "y": 9,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 16,
       "y": 10,
       "z": -17,
-      "name": "Rock_CastIron"
+      "name": "Empty"
     },
     {
       "x": 16,
@@ -239352,6 +239350,958 @@
       "z": 17,
       "name": "Empty",
       "level": 0
+    }
+  ],
+  "entities": [
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -16.195385694503784,
+            "Y": 7.475028991699219,
+            "Z": 5.151763916015625
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "1t1Z1BvnTTGsvo3v9uoS9A==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 292.517578125,
+          "Pitch": 1.4035872220993042
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -16.10344624519348,
+            "Y": 7.01397705078125,
+            "Z": 14.03094482421875
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "1GvaJTqiR9ug9HtK3jRVfw==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 270.5592041015625,
+          "Pitch": 1.0027110576629639
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -15.896438837051392,
+            "Y": 5.999195098876953,
+            "Z": -10.206207275390625
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "ZwdMMRhVSMqwrzNjoQO7Yg==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 312.2708740234375,
+          "Pitch": 20.35441017150879
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -13.469541549682617,
+            "Y": 5.902244567871094,
+            "Z": 8.09796142578125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "brute"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "roDbJ45nQoSxpmQdiHKXWQ==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -9.03649377822876,
+            "Y": 8.355026245117188,
+            "Z": 8.545684814453125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "sO8lES6zR22g191EZdaSPg==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 260.5323791503906,
+          "Pitch": -8.221920013427734
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -9.03649377822876,
+            "Y": 8.355026245117188,
+            "Z": 8.545684814453125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "qx5icG2XRZKIUHxPOk0Csw==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 260.5323791503906,
+          "Pitch": -8.221920013427734
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -8.635298728942871,
+            "Y": 5.894783020019531,
+            "Z": -12.22021484375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "archer"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "r9tA4EegQv68OiE4JLu6bQ==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -2.024794578552246,
+            "Y": 5.945316314697266,
+            "Z": 17.41143798828125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "sawblade"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "JaC96upLSQepqDLjfR4JcA==",
+            "$type": "04"
+          }
+        },
+        "SawBlade": {
+          "DamageAmount": 25.0,
+          "DamageTickInterval": 0.5,
+          "DamageRadius": 0.5,
+          "MovementAxis": "Z"
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": -0.023015975952148438,
+            "Y": 0.9150657653808594,
+            "Z": 6.38958740234375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "brute"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "9MYhHsrUSvC3VyAe7eClfw==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 0.5532913208007812,
+            "Y": 5.927265167236328,
+            "Z": 17.278076171875
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "hammer"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "gTORZHeiSHy0qJf6F0JeeQ==",
+            "$type": "04"
+          }
+        },
+        "Hammer": {
+          "DamageAmount": 75.0,
+          "KnockbackForce": 8.0,
+          "KnockbackAxis": "Z",
+          "Scale": 2.5
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 2.9209461212158203,
+            "Y": 5.9207000732421875,
+            "Z": 17.524444580078125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "sawblade"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "J+LQgotURBeBewRm9a1Hcg==",
+            "$type": "04"
+          }
+        },
+        "SawBlade": {
+          "DamageAmount": 25.0,
+          "DamageTickInterval": 0.5,
+          "DamageRadius": 0.5,
+          "MovementAxis": "Z"
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 12.043764114379883,
+            "Y": 9.68072509765625,
+            "Z": -15.418731689453125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "Vv7AMmX+TL6wsA+7+kL6Qg==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 268.95513916015625,
+          "Pitch": -39.705909729003906
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 12.503009796142578,
+            "Y": 6.0,
+            "Z": -16.5205078125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "HydraulicPress": {
+          "PressAnimationDuration": 3.049499988555908,
+          "RetractAnimationDuration": 3.0,
+          "MinCooldown": 0.0,
+          "MaxCooldown": 2.0,
+          "DamageAmount": 25.0,
+          "VelocityMultiplier": 1.0
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "press"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "JIWranERSOmc7yxdSiNIlg==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 13.471841812133789,
+            "Y": 6.0,
+            "Z": -16.496551513671875
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "HydraulicPress": {
+          "PressAnimationDuration": 3.049499988555908,
+          "RetractAnimationDuration": 3.0,
+          "MinCooldown": 0.0,
+          "MaxCooldown": 2.0,
+          "DamageAmount": 25.0,
+          "VelocityMultiplier": 1.0
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "press"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "3C2QZqWkTjKqBXv5uqLAOg==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 14.210668563842773,
+            "Y": 5.901775360107422,
+            "Z": 12.831573486328125
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "brute"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "4znb4OTZT5qiO4/joL3auQ==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 14.52414321899414,
+            "Y": 6.0,
+            "Z": -16.449615478515625
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "HydraulicPress": {
+          "PressAnimationDuration": 3.049499988555908,
+          "RetractAnimationDuration": 3.0,
+          "MinCooldown": 0.0,
+          "MaxCooldown": 2.0,
+          "DamageAmount": 25.0,
+          "VelocityMultiplier": 1.0
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "press"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "pCb8CBWjRieuu7VvAlkNbA==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 14.885465621948242,
+            "Y": 11.661224365234375,
+            "Z": 9.37835693359375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "beam"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "ko/SmmqRREuZXJvGRS/knQ==",
+            "$type": "04"
+          }
+        },
+        "LaserBeam": {
+          "Damage": 25.0,
+          "DamageInterval": 0.30000001192092896,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 102.00926971435547,
+          "Pitch": -13.335589408874512
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 15.00592041015625,
+            "Y": 8.662071228027344,
+            "Z": -11.208984375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "PrefabCopyable": {},
+        "LaserTrap": {
+          "FireInterval": 2.0,
+          "Damage": 45.0,
+          "OffsetX": 0.0,
+          "OffsetY": 0.0,
+          "OffsetZ": 0.0,
+          "Yaw": 2.187113046646118,
+          "Pitch": -0.08924602717161179
+        },
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "laser"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "EaMm8CXwQB2w8/9kiHc7bQ==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 15.479637145996094,
+            "Y": 6.0,
+            "Z": -16.465667724609375
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "HydraulicPress": {
+          "PressAnimationDuration": 3.049499988555908,
+          "RetractAnimationDuration": 3.0,
+          "MinCooldown": 0.0,
+          "MaxCooldown": 2.0,
+          "DamageAmount": 25.0,
+          "VelocityMultiplier": 1.0
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "press"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "c79k/hSCRUqvBrmU1/V3Nw==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
+    },
+    {
+      "Components": {
+        "Transform": {
+          "Position": {
+            "X": 16.489524841308594,
+            "Y": 6.0,
+            "Z": -16.518218994140625
+          },
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        },
+        "HydraulicPress": {
+          "PressAnimationDuration": 3.049499988555908,
+          "RetractAnimationDuration": 3.0,
+          "MinCooldown": 0.0,
+          "MaxCooldown": 2.0,
+          "DamageAmount": 25.0,
+          "VelocityMultiplier": 1.0
+        },
+        "PrefabCopyable": {},
+        "Prop": {},
+        "Spawner": {
+          "ExecutionId": "press"
+        },
+        "Model": {
+          "Model": {
+            "Id": "Trap_Spawner",
+            "Scale": 1.0,
+            "Static": true
+          }
+        },
+        "UUID": {
+          "UUID": {
+            "$binary": "CpWfFfrKSfuU9lRXGdYCmA==",
+            "$type": "04"
+          }
+        },
+        "HeadRotation": {
+          "Rotation": {
+            "Pitch": 0.0,
+            "Yaw": 2.092480421066284,
+            "Roll": 0.0
+          }
+        }
+      }
     }
   ]
 }
