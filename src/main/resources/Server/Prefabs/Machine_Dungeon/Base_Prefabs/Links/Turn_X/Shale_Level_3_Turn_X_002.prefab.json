@@ -129,12 +129,6 @@
     },
     {
       "x": -10,
-      "y": 1,
-      "z": -2,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -10,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -403,12 +397,6 @@
     },
     {
       "x": -9,
-      "y": 1,
-      "z": -2,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": -9,
       "y": 7,
       "z": -2,
       "name": "Rock_Basalt"
@@ -418,12 +406,6 @@
       "y": 0,
       "z": -1,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -9,
-      "y": 1,
-      "z": -1,
-      "name": "Furniture_Ancient_Barrel"
     },
     {
       "x": -9,
@@ -677,13 +659,6 @@
       "y": 0,
       "z": -2,
       "name": "Rock_CastIron"
-    },
-    {
-      "x": -8,
-      "y": 1,
-      "z": -2,
-      "name": "Furniture_Ancient_Crate",
-      "rotation": 2
     },
     {
       "x": -8,
@@ -2712,6 +2687,13 @@
     },
     {
       "x": -4,
+      "y": 1,
+      "z": 3,
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
+    },
+    {
+      "x": -4,
       "y": 4,
       "z": 3,
       "name": "Rock_Basalt_Brick_Half",
@@ -3077,6 +3059,13 @@
     },
     {
       "x": -3,
+      "y": 1,
+      "z": -7,
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
+    },
+    {
+      "x": -3,
       "y": 7,
       "z": -7,
       "name": "Rock_Basalt"
@@ -3615,6 +3604,13 @@
     },
     {
       "x": -2,
+      "y": 1,
+      "z": -3,
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
+    },
+    {
+      "x": -2,
       "y": 6,
       "z": -3,
       "name": "Plant_Bush_Dead_Hanging"
@@ -3696,12 +3692,6 @@
       "y": 0,
       "z": 3,
       "name": "Rock_CastIron_Brick"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": 3,
-      "name": "Furniture_Ancient_Barrel"
     },
     {
       "x": -2,
@@ -3787,7 +3777,7 @@
       "x": -2,
       "y": 1,
       "z": 7,
-      "name": "Plant_Bush_Dead_Twisted"
+      "name": "Plant_Flower_Bushy_Green"
     },
     {
       "x": -2,
@@ -3800,12 +3790,6 @@
       "y": 0,
       "z": 8,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": -2,
-      "y": 1,
-      "z": 8,
-      "name": "Furniture_Ancient_Crate"
     },
     {
       "x": -2,
@@ -5144,12 +5128,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 5,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 2,
       "y": 5,
       "z": 5,
       "name": "Rock_Basalt_Brick_Half",
@@ -5175,12 +5153,6 @@
     },
     {
       "x": 2,
-      "y": 1,
-      "z": 6,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 2,
       "y": 7,
       "z": 6,
       "name": "Rock_Basalt"
@@ -5190,6 +5162,20 @@
       "y": 0,
       "z": 7,
       "name": "Soil_Dirt_Cold"
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Tall",
+      "support": 15
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "z": 7,
+      "name": "Plant_Grass_Sharp_Tall",
+      "filler": 1024
     },
     {
       "x": 2,
@@ -5238,12 +5224,6 @@
       "y": 0,
       "z": -10,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": -10,
-      "name": "Furniture_Ancient_Barrel"
     },
     {
       "x": 3,
@@ -5263,12 +5243,6 @@
       "y": 0,
       "z": -9,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 3,
-      "y": 1,
-      "z": -9,
-      "name": "Plant_Bush_Dead_Twisted"
     },
     {
       "x": 3,
@@ -5573,7 +5547,8 @@
       "x": 3,
       "y": 1,
       "z": 5,
-      "name": "Furniture_Ancient_Barrel"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 3,
@@ -5605,6 +5580,20 @@
       "y": 0,
       "z": 6,
       "name": "Rock_CastIron_Brick_Smooth"
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "z": 6,
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "z": 6,
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 3,
@@ -6798,12 +6787,6 @@
     },
     {
       "x": 5,
-      "y": 1,
-      "z": -3,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 5,
       "y": 4,
       "z": -3,
       "name": "Rock_Basalt_Brick_Half",
@@ -7422,12 +7405,6 @@
     },
     {
       "x": 6,
-      "y": 1,
-      "z": -3,
-      "name": "Furniture_Ancient_Crate"
-    },
-    {
-      "x": 6,
       "y": 6,
       "z": -3,
       "name": "Rock_Shale_Brick_Stairs",
@@ -7813,6 +7790,13 @@
       "y": 0,
       "z": 3,
       "name": "Rock_CastIron_Brick_Smooth"
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "z": 3,
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 7,
@@ -8312,12 +8296,6 @@
     },
     {
       "x": 9,
-      "y": 1,
-      "z": 2,
-      "name": "Furniture_Ancient_Barrel"
-    },
-    {
-      "x": 9,
       "y": 7,
       "z": 2,
       "name": "Rock_Basalt"
@@ -8601,12 +8579,6 @@
       "y": 0,
       "z": 3,
       "name": "Soil_Dirt_Cold"
-    },
-    {
-      "x": 10,
-      "y": 1,
-      "z": 3,
-      "name": "Furniture_Ancient_Barrel"
     },
     {
       "x": 10,
