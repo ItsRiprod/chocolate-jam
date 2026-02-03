@@ -1,0 +1,30 @@
+{
+  "formatVersion": 1,
+  "duration": 180,
+  "holdLastKeyframe": false,
+  "nodeAnimations": {
+    "origin": {
+      "position": [],
+      "orientation": [
+        {
+          "time": 0,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": 1},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 90,
+          "delta": {"x": 0, "y": 1, "z": 0, "w": 0},
+          "interpolationType": "linear"
+        },
+        {
+          "time": 180,
+          "delta": {"x": 0, "y": 0, "z": 0, "w": -1},
+          "interpolationType": "linear"
+        }
+      ],
+      "shapeStretch": [],
+      "shapeVisible": [],
+      "shapeUvOffset": []
+    }
+  }
+}

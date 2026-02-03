@@ -5,21 +5,24 @@ import com.hypixel.hytale.codec.KeyedCodec;
 import com.hypixel.hytale.codec.builder.BuilderCodec;
 import com.hypixel.hytale.component.Component;
 import com.hypixel.hytale.component.ComponentType;
+import com.hypixel.hytale.component.Ref;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
+import java.util.ArrayList;
+import java.util.List;
 
-public class LaserTrapActionComponent implements Component<EntityStore> {
+public class LaserBeamComponent implements Component<EntityStore> {
 
-    public static final BuilderCodec<LaserTrapActionComponent> CODEC = BuilderCodec
-            .builder(LaserTrapActionComponent.class, LaserTrapActionComponent::new)
-            .append(new KeyedCodec<>("FireInterval", Codec.FLOAT),
-                    (c, v) -> c.fireInterval = v,
-                    c -> c.fireInterval)
-            .add()
+    public static final BuilderCodec<LaserBeamComponent> CODEC = BuilderCodec
+            .builder(LaserBeamComponent.class, LaserBeamComponent::new)
             .append(new KeyedCodec<>("Damage", Codec.FLOAT),
                     (c, v) -> c.damage = v,
                     c -> c.damage)
+            .add()
+            .append(new KeyedCodec<>("DamageInterval", Codec.FLOAT),
+                    (c, v) -> c.damageInterval = v,
+                    c -> c.damageInterval)
             .add()
             .append(new KeyedCodec<>("OffsetX", Codec.FLOAT),
                     (c, v) -> c.offsetX = v,
@@ -43,41 +46,39 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
             .add()
             .build();
 
-    private static ComponentType<EntityStore, LaserTrapActionComponent> componentType;
+    private static ComponentType<EntityStore, LaserBeamComponent> componentType;
 
-    // runtime state
+    public static final float BEAM_SEGMENT_HEIGHT = 1.0f;
+    public static final float MIN_BLOCK_HIT_DISTANCE = 2.0f;
+    public static final float MAX_BEAM_DISTANCE = 64.0f;
+
+    public static final float SOUND_INTERVAL = 0.3f;
+
     private boolean active;
-    private float fireTimer = 0f;
+    private float soundTimer = 0f;
+    private float damageTimer = 0f;
     private float yaw = 0f;
-    private float pitch = 90f;  // Default shoots up (model faces up by default)
+    private float pitch = 0f;
 
-    // configurable via command
-    private float fireInterval = 2.0f;
-    private float damage = 45f;
-    private float offsetX = 0f;  // Spawn position offset X
-    private float offsetY = 0f;  // Spawn position offset Y
-    private float offsetZ = 0f;  // Spawn position offset Z
+    private float damage = 25f;
+    private float damageInterval = 0.3f;
+    private float offsetX = 0f;
+    private float offsetY = 0f;
+    private float offsetZ = 0f;
 
-    private String projectileId = "Laser_Projectile";
+    private final List<Ref<EntityStore>> beamSegments = new ArrayList<>();
 
-    public LaserTrapActionComponent() {
+    public LaserBeamComponent() {
         this.active = false;
     }
 
-    public LaserTrapActionComponent(float fireTimer) {
-        this.active = false;
-        this.fireTimer = fireTimer;
-    }
-
-    public static void setComponentType(ComponentType<EntityStore, LaserTrapActionComponent> type) {
+    public static void setComponentType(ComponentType<EntityStore, LaserBeamComponent> type) {
         componentType = type;
     }
 
-    public static ComponentType<EntityStore, LaserTrapActionComponent> getComponentType() {
+    public static ComponentType<EntityStore, LaserBeamComponent> getComponentType() {
         return componentType;
     }
-
-    // --- Active state ---
 
     public boolean isActive() {
         return active;
@@ -87,21 +88,29 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
         this.active = active;
     }
 
-    // --- Timer management ---
-
-    public float getFireTimer() {
-        return fireTimer;
+    public float getSoundTimer() {
+        return soundTimer;
     }
 
-    public void addFireTime(float dt) {
-        this.fireTimer += dt;
+    public void addSoundTime(float dt) {
+        this.soundTimer += dt;
     }
 
-    public void resetFireTimer() {
-        this.fireTimer = 0f;
+    public void resetSoundTimer() {
+        this.soundTimer = 0f;
     }
 
-    // --- Direction (set via /cm t config offset) ---
+    public float getDamageTimer() {
+        return damageTimer;
+    }
+
+    public void addDamageTime(float dt) {
+        this.damageTimer += dt;
+    }
+
+    public void resetDamageTimer() {
+        this.damageTimer = 0f;
+    }
 
     public float getYaw() {
         return yaw;
@@ -119,22 +128,20 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
         this.pitch = pitch;
     }
 
-    // --- Configurable via command ---
-
-    public float getFireInterval() {
-        return fireInterval;
-    }
-
-    public void setFireInterval(float interval) {
-        this.fireInterval = interval;
-    }
-
     public float getDamage() {
         return damage;
     }
 
     public void setDamage(float damage) {
         this.damage = damage;
+    }
+
+    public float getDamageInterval() {
+        return damageInterval;
+    }
+
+    public void setDamageInterval(float interval) {
+        this.damageInterval = interval;
     }
 
     public float getOffsetX() {
@@ -161,32 +168,40 @@ public class LaserTrapActionComponent implements Component<EntityStore> {
         this.offsetZ = offsetZ;
     }
 
-    // --- Fixed values ---
-
-    public String getProjectileId() {
-        return projectileId;
+    public List<Ref<EntityStore>> getBeamSegments() {
+        return beamSegments;
     }
 
-    // --- Reset ---
+    public void addBeamSegment(Ref<EntityStore> segment) {
+        beamSegments.add(segment);
+    }
+
+    public void clearBeamSegments() {
+        beamSegments.clear();
+    }
 
     public void reset() {
         this.active = false;
-        this.fireTimer = 0f;
+        this.soundTimer = 0f;
+        this.damageTimer = 0f;
+        beamSegments.clear();
     }
 
     @Nonnull
     @Override
-    public LaserTrapActionComponent clone() {
-        LaserTrapActionComponent copy = new LaserTrapActionComponent();
+    public LaserBeamComponent clone() {
+        LaserBeamComponent copy = new LaserBeamComponent();
         copy.active = this.active;
-        copy.fireTimer = this.fireTimer;
-        copy.fireInterval = this.fireInterval;
+        copy.soundTimer = this.soundTimer;
+        copy.damageTimer = this.damageTimer;
         copy.damage = this.damage;
+        copy.damageInterval = this.damageInterval;
         copy.offsetX = this.offsetX;
         copy.offsetY = this.offsetY;
         copy.offsetZ = this.offsetZ;
         copy.yaw = this.yaw;
         copy.pitch = this.pitch;
+        copy.beamSegments.addAll(this.beamSegments);
         return copy;
     }
 }

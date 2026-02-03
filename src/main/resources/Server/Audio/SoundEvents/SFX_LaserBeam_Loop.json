@@ -1,0 +1,11 @@
+{
+  "Layers": [
+    {
+      "Files": ["Sounds/Traps/LaserBeam_Loop.ogg"],
+      "Looping": false
+    }
+  ],
+  "Volume": 0,
+  "Parent": "SFX_Attn_Moderate",
+  "MaxInstance": 5
+}

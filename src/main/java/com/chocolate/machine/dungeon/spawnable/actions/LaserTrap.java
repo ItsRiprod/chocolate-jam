@@ -29,7 +29,6 @@ public class LaserTrap implements Spawnable {
 
     public static final String ID = "laser";
 
-    // sound for when laser fires
     private static final String FIRE_SOUND_ASSET = "SFX_Staff_Ice_Shoot";
 
     private int fireSoundIndex = -1;
@@ -81,9 +80,6 @@ public class LaserTrap implements Spawnable {
             state = componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
         }
 
-        // Direction is configured via /cm t config offset command
-        // Uses hardcoded defaults from LaserTrapActionComponent (pitch=90 shoots up)
-
         state.setActive(true);
         state.resetFireTimer();
 
@@ -124,7 +120,6 @@ public class LaserTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         deactivate(spawnerRef, componentAccessor);
-        // only remove if the component exists on this entity
         if (componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType()) != null) {
             componentAccessor.removeComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
         }
@@ -152,7 +147,6 @@ public class LaserTrap implements Spawnable {
 
         laser.addFireTime(dt);
 
-        // check if time to fire
         if (laser.getFireTimer() >= laser.getFireInterval()) {
             fireProjectile(laser, spawnerTransform, commandBuffer);
             laser.resetFireTimer();
@@ -166,36 +160,30 @@ public class LaserTrap implements Spawnable {
 
         Vector3d basePos = spawnerTransform.getPosition();
 
-        // Calculate spawn position with configured offsets
         double spawnX = basePos.x + laser.getOffsetX();
         double spawnY = basePos.y + laser.getOffsetY();
         double spawnZ = basePos.z + laser.getOffsetZ();
 
         Vector3d spawnPos = new Vector3d(spawnX, spawnY, spawnZ);
 
-        // Use configured direction (set via /cm t config rotate)
         float pitch = laser.getPitch();
         float yaw = laser.getYaw();
         Vector3f rotation = new Vector3f(pitch, yaw, 0f);
 
-        // get time resource for despawn component
         TimeResource timeResource = commandBuffer.getResource(TimeResource.getResourceType());
 
-        // assemble the projectile entity
         Holder<EntityStore> holder = ProjectileComponent.assembleDefaultProjectile(
                 timeResource,
                 laser.getProjectileId(),
                 spawnPos,
                 rotation);
 
-        // get the projectile component and initialize it
         ProjectileComponent projectileComponent = holder.getComponent(ProjectileComponent.getComponentType());
         if (projectileComponent == null || !projectileComponent.initialize()) {
             LOGGER.atWarning().log("Failed to initialize projectile: %s", laser.getProjectileId());
             return;
         }
 
-        // initialize physics with bounding box
         BoundingBox boundingBox = holder.getComponent(BoundingBox.getComponentType());
         if (boundingBox != null) {
             projectileComponent.initializePhysics(boundingBox);
@@ -209,11 +197,9 @@ public class LaserTrap implements Spawnable {
                 yaw,
                 pitch);
 
-        // spawn the projectile entity
         Ref<EntityStore> projectileRef = commandBuffer.addEntity(holder, AddReason.SPAWN);
 
         if (projectileRef != null) {
-            // play fire sound
             SoundUtil.playSoundEvent3d(getFireSoundIndex(), SoundCategory.SFX, spawnPos, commandBuffer);
 
             LOGGER.atFine().log("Fired laser projectile at (%.1f, %.1f, %.1f) yaw=%.2f pitch=%.2f",

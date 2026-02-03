@@ -45,3 +45,4 @@ gradle.properties
 /lib
 # Build Files
 build/
+/sounds

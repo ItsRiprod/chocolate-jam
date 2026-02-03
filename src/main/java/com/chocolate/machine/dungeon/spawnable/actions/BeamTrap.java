@@ -1,35 +1,44 @@
 package com.chocolate.machine.dungeon.spawnable.actions;
 
 import java.util.List;
+import java.util.UUID;
 
 import javax.annotation.Nonnull;
 
-import com.chocolate.machine.dungeon.component.actions.LaserTrapActionComponent;
+import com.chocolate.machine.dungeon.component.actions.LaserBeamComponent;
 import com.chocolate.machine.dungeon.spawnable.Spawnable;
+import com.hypixel.hytale.component.AddReason;
 import com.hypixel.hytale.component.CommandBuffer;
 import com.hypixel.hytale.component.ComponentAccessor;
+import com.hypixel.hytale.component.Holder;
 import com.hypixel.hytale.component.Ref;
-import com.hypixel.hytale.component.spatial.SpatialResource;
+import com.hypixel.hytale.component.RemoveReason;
+import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.math.shape.Box;
 import com.hypixel.hytale.math.vector.Transform;
 import com.hypixel.hytale.math.vector.Vector2d;
 import com.hypixel.hytale.math.vector.Vector3d;
-import com.hypixel.hytale.protocol.Color;
+import com.hypixel.hytale.math.vector.Vector3f;
+import com.hypixel.hytale.protocol.SoundCategory;
+import com.hypixel.hytale.server.core.asset.type.model.config.Model;
+import com.hypixel.hytale.server.core.asset.type.soundevent.config.SoundEvent;
+import com.hypixel.hytale.server.core.asset.type.model.config.ModelAsset;
+import com.hypixel.hytale.server.core.entity.UUIDComponent;
 import com.hypixel.hytale.server.core.modules.collision.CollisionMath;
 import com.hypixel.hytale.server.core.modules.entity.EntityModule;
 import com.hypixel.hytale.server.core.modules.entity.component.BoundingBox;
+import com.hypixel.hytale.server.core.modules.entity.component.ModelComponent;
 import com.hypixel.hytale.server.core.modules.entity.component.TransformComponent;
 import com.hypixel.hytale.server.core.modules.entity.damage.Damage;
 import com.hypixel.hytale.server.core.modules.entity.damage.DamageCause;
 import com.hypixel.hytale.server.core.modules.entity.damage.DamageSystems;
+import com.hypixel.hytale.server.core.modules.entity.tracker.NetworkId;
 import com.hypixel.hytale.server.core.modules.entitystats.EntityStatMap;
-import com.hypixel.hytale.server.core.universe.world.ParticleUtil;
+import com.hypixel.hytale.server.core.universe.world.SoundUtil;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.util.TargetUtil;
-
-import it.unimi.dsi.fastutil.objects.ObjectList;
 
 public class BeamTrap implements Spawnable {
 
@@ -37,20 +46,27 @@ public class BeamTrap implements Spawnable {
 
     public static final String ID = "beam";
 
+    private static final String LASER_BEAM_MODEL_ASSET = "Laser_Beam";
+    private static final String LASER_BEAM_SOUND = "SFX_LaserBeam_Loop";
+
     private static final String DAMAGE_CAUSE_NAME = "Environment";
     private static final String ENVIRONMENT_SOURCE_TYPE = "beam_trap";
-    private static final double MAX_BEAM_DISTANCE = 64.0;
-    private static final double PARTICLE_VIEW_DISTANCE = 75.0;
-    private static final String BEAM_PARTICLE_SYSTEM = "CM_Line_System";
-    private static final Color BEAM_COLOR = new Color((byte) 255, (byte) 100, (byte) 100);
 
     private int damageCauseIndex = -1;
+    private int soundIndex = -1;
 
     private int getDamageCauseIndex() {
         if (damageCauseIndex < 0) {
             damageCauseIndex = DamageCause.getAssetMap().getIndex(DAMAGE_CAUSE_NAME);
         }
         return damageCauseIndex;
+    }
+
+    private int getSoundIndex() {
+        if (soundIndex < 0) {
+            soundIndex = SoundEvent.getAssetMap().getIndex(LASER_BEAM_SOUND);
+        }
+        return soundIndex;
     }
 
     @Nonnull
@@ -64,17 +80,16 @@ public class BeamTrap implements Spawnable {
             @Nonnull Ref<EntityStore> spawnerRef,
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
-        LaserTrapActionComponent existing = componentAccessor.getComponent(
-                spawnerRef, LaserTrapActionComponent.getComponentType());
+        LaserBeamComponent existing = componentAccessor.getComponent(
+                spawnerRef, LaserBeamComponent.getComponentType());
 
         if (existing != null) {
             existing.reset();
             return;
         }
 
-        // set with default short interval for beam traps
-        componentAccessor.addComponent(spawnerRef, LaserTrapActionComponent.getComponentType(),
-                new LaserTrapActionComponent(0.25f));
+        componentAccessor.addComponent(spawnerRef, LaserBeamComponent.getComponentType(),
+                new LaserBeamComponent());
     }
 
     @Override
@@ -86,18 +101,31 @@ public class BeamTrap implements Spawnable {
             return;
         }
 
-        LaserTrapActionComponent state = componentAccessor.getComponent(
-                spawnerRef, LaserTrapActionComponent.getComponentType());
+        LaserBeamComponent state = componentAccessor.getComponent(
+                spawnerRef, LaserBeamComponent.getComponentType());
 
         if (state == null) {
             register(spawnerRef, componentAccessor);
-            state = componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
+            state = componentAccessor.getComponent(spawnerRef, LaserBeamComponent.getComponentType());
         }
 
-        state.setActive(true);
-        state.resetFireTimer();
+        TransformComponent spawnerTransform = componentAccessor.getComponent(
+                spawnerRef, TransformComponent.getComponentType());
 
-        LOGGER.atInfo().log("Beam trap activated");
+        if (spawnerTransform == null) {
+            return;
+        }
+
+        removeBeamSegments(state, componentAccessor);
+
+        World world = componentAccessor.getExternalData().getWorld();
+        spawnBeamSegments(spawnerRef, state, spawnerTransform, world, componentAccessor);
+
+        state.setActive(true);
+        state.resetDamageTimer();
+        state.addSoundTime(LaserBeamComponent.SOUND_INTERVAL);
+
+        LOGGER.atInfo().log("Laser trap activated with %d beam segments", state.getBeamSegments().size());
     }
 
     @Override
@@ -109,13 +137,14 @@ public class BeamTrap implements Spawnable {
             return;
         }
 
-        LaserTrapActionComponent state = componentAccessor.getComponent(
-                spawnerRef, LaserTrapActionComponent.getComponentType());
+        LaserBeamComponent state = componentAccessor.getComponent(
+                spawnerRef, LaserBeamComponent.getComponentType());
 
         if (state == null) {
             return;
         }
 
+        removeBeamSegments(state, componentAccessor);
         state.setActive(false);
     }
 
@@ -134,8 +163,8 @@ public class BeamTrap implements Spawnable {
             @Nonnull ComponentAccessor<EntityStore> componentAccessor) {
 
         deactivate(spawnerRef, componentAccessor);
-        if (componentAccessor.getComponent(spawnerRef, LaserTrapActionComponent.getComponentType()) != null) {
-            componentAccessor.removeComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
+        if (componentAccessor.getComponent(spawnerRef, LaserBeamComponent.getComponentType()) != null) {
+            componentAccessor.removeComponent(spawnerRef, LaserBeamComponent.getComponentType());
         }
     }
 
@@ -145,10 +174,10 @@ public class BeamTrap implements Spawnable {
             @Nonnull Ref<EntityStore> spawnerRef,
             @Nonnull CommandBuffer<EntityStore> commandBuffer) {
 
-        LaserTrapActionComponent laser = commandBuffer.getComponent(
-                spawnerRef, LaserTrapActionComponent.getComponentType());
+        LaserBeamComponent state = commandBuffer.getComponent(
+                spawnerRef, LaserBeamComponent.getComponentType());
 
-        if (laser == null || !laser.isActive()) {
+        if (state == null || !state.isActive()) {
             return;
         }
 
@@ -159,88 +188,204 @@ public class BeamTrap implements Spawnable {
             return;
         }
 
-        Vector3d basePos = spawnerTransform.getPosition();
-        double startX = basePos.x + laser.getOffsetX();
-        double startY = basePos.y + laser.getOffsetY();
-        double startZ = basePos.z + laser.getOffsetZ();
-        Vector3d startPos = new Vector3d(startX, startY, startZ);
-
-        float pitch = laser.getPitch();
-        float yaw = laser.getYaw();
-        Vector3d direction = Transform.getDirection(pitch, yaw);
-
-        World world = commandBuffer.getExternalData().getWorld();
-        Vector3d hitLocation = TargetUtil.getTargetLocation(
-                world,
-                blockId -> blockId != 0,
-                startX, startY, startZ,
-                direction.x, direction.y, direction.z,
-                MAX_BEAM_DISTANCE);
-
-        Vector3d endPos;
-        if (hitLocation != null) {
-            endPos = hitLocation;
-        } else {
-            endPos = new Vector3d(
-                    startX + direction.x * MAX_BEAM_DISTANCE,
-                    startY + direction.y * MAX_BEAM_DISTANCE,
-                    startZ + direction.z * MAX_BEAM_DISTANCE);
+        state.addSoundTime(dt);
+        if (state.getSoundTimer() >= LaserBeamComponent.SOUND_INTERVAL) {
+            Vector3d basePos = spawnerTransform.getPosition();
+            Vector3d soundPos = new Vector3d(
+                    basePos.x + state.getOffsetX(),
+                    basePos.y + state.getOffsetY(),
+                    basePos.z + state.getOffsetZ());
+            SoundUtil.playSoundEvent3d(getSoundIndex(), SoundCategory.SFX, soundPos, commandBuffer);
+            state.resetSoundTimer();
         }
 
-        renderBeam(spawnerRef, startPos, endPos, yaw, pitch, commandBuffer);
+        state.addDamageTime(dt);
 
-        laser.addFireTime(dt);
-        if (laser.getFireTimer() >= laser.getFireInterval()) {
-            damageEntitiesAlongBeam(spawnerRef, laser, startPos, direction, endPos, commandBuffer);
-            laser.resetFireTimer();
+        if (state.getDamageTimer() >= state.getDamageInterval()) {
+            damageEntitiesAlongBeam(spawnerRef, state, spawnerTransform, commandBuffer);
+            state.resetDamageTimer();
         }
     }
 
-    private void renderBeam(
+    private void spawnBeamSegments(
             Ref<EntityStore> spawnerRef,
-            Vector3d startPos,
-            Vector3d endPos,
-            float yaw,
-            float pitch,
-            CommandBuffer<EntityStore> commandBuffer) {
+            LaserBeamComponent state,
+            TransformComponent spawnerTransform,
+            World world,
+            ComponentAccessor<EntityStore> componentAccessor) {
 
-        SpatialResource<Ref<EntityStore>, EntityStore> playerSpatialResource = commandBuffer.getResource(
-                EntityModule.get().getPlayerSpatialResourceType());
-        ObjectList<Ref<EntityStore>> playerRefs = SpatialResource.getThreadLocalReferenceList();
-        playerSpatialResource.getSpatialStructure().collect(startPos, PARTICLE_VIEW_DISTANCE, playerRefs);
+        Vector3d basePos = spawnerTransform.getPosition();
+        double startX = basePos.x + state.getOffsetX();
+        double startY = basePos.y + state.getOffsetY();
+        double startZ = basePos.z + state.getOffsetZ();
 
-        if (playerRefs.isEmpty()) {
+        float pitchDeg = state.getPitch();
+        float yawDeg = state.getYaw();
+        float pitchRad = (float) Math.toRadians(pitchDeg);
+        float yawRad = (float) Math.toRadians(yawDeg);
+        Vector3d direction = Transform.getDirection(pitchRad, yawRad);
+
+        double blockHitDistance = findBlockHitDistance(world, startX, startY, startZ, direction, state);
+
+        int numSegments = (int) Math.ceil(blockHitDistance / LaserBeamComponent.BEAM_SEGMENT_HEIGHT);
+        if (numSegments < 1) {
+            numSegments = 1;
+        }
+
+        ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(LASER_BEAM_MODEL_ASSET);
+        if (modelAsset == null) {
+            LOGGER.atWarning().log("Failed to find Laser_Beam model asset");
             return;
         }
 
-        ParticleUtil.spawnParticleEffect(
-                BEAM_PARTICLE_SYSTEM,
-                startPos.x, startPos.y, startPos.z,
-                yaw, pitch, 0.0f,
-                spawnerRef,
-                playerRefs,
-                commandBuffer);
+        for (int i = 0; i < numSegments; i++) {
+            double segmentOffset = i * LaserBeamComponent.BEAM_SEGMENT_HEIGHT;
+
+            double segX = startX + direction.x * segmentOffset;
+            double segY = startY + direction.y * segmentOffset;
+            double segZ = startZ + direction.z * segmentOffset;
+
+            Ref<EntityStore> segmentRef = spawnBeamSegment(
+                    segX, segY, segZ, pitchDeg, yawDeg, modelAsset, componentAccessor);
+
+            if (segmentRef != null && segmentRef.isValid()) {
+                state.addBeamSegment(segmentRef);
+            }
+        }
+    }
+
+    private double findBlockHitDistance(
+            World world,
+            double startX, double startY, double startZ,
+            Vector3d direction,
+            LaserBeamComponent state) {
+
+        // skips the first few units to avoid hitting the spawner block itself
+        double rayStartX = startX + direction.x * LaserBeamComponent.MIN_BLOCK_HIT_DISTANCE;
+        double rayStartY = startY + direction.y * LaserBeamComponent.MIN_BLOCK_HIT_DISTANCE;
+        double rayStartZ = startZ + direction.z * LaserBeamComponent.MIN_BLOCK_HIT_DISTANCE;
+
+        Vector3d hitLocation = TargetUtil.getTargetLocation(
+                world,
+                blockId -> blockId != 0,
+                rayStartX, rayStartY, rayStartZ,
+                direction.x, direction.y, direction.z,
+                LaserBeamComponent.MAX_BEAM_DISTANCE);
+
+        if (hitLocation != null) {
+            double distance = Math.sqrt(
+                    Math.pow(hitLocation.x - startX, 2) +
+                            Math.pow(hitLocation.y - startY, 2) +
+                            Math.pow(hitLocation.z - startZ, 2));
+
+            if (distance < LaserBeamComponent.MIN_BLOCK_HIT_DISTANCE) {
+                return LaserBeamComponent.MIN_BLOCK_HIT_DISTANCE;
+            }
+            return distance;
+        }
+
+        return LaserBeamComponent.MAX_BEAM_DISTANCE;
+    }
+
+    private Ref<EntityStore> spawnBeamSegment(
+            double x, double y, double z,
+            float pitchDeg, float yawDeg,
+            ModelAsset modelAsset,
+            ComponentAccessor<EntityStore> componentAccessor) {
+
+        Vector3d position = new Vector3d(x, y, z);
+        float modelPitchDeg = pitchDeg - 90f;
+        float modelPitchRad = (float) Math.toRadians(modelPitchDeg);
+        float yawRad = (float) Math.toRadians(yawDeg);
+        Vector3f rotation = new Vector3f(modelPitchRad, yawRad, 0f);
+
+        Holder<EntityStore> holder = EntityStore.REGISTRY.newHolder();
+        holder.addComponent(TransformComponent.getComponentType(),
+                new TransformComponent(position, rotation));
+
+        holder.addComponent(UUIDComponent.getComponentType(),
+                new UUIDComponent(UUID.randomUUID()));
+
+        int networkId = componentAccessor.getExternalData().takeNextNetworkId();
+        holder.addComponent(NetworkId.getComponentType(), new NetworkId(networkId));
+
+        holder.ensureComponent(EntityModule.get().getVisibleComponentType());
+        holder.ensureComponent(EntityStore.REGISTRY.getNonSerializedComponentType());
+
+        Model model = Model.createScaledModel(modelAsset, 2.0f);
+        holder.addComponent(ModelComponent.getComponentType(), new ModelComponent(model));
+        holder.addComponent(BoundingBox.getComponentType(), new BoundingBox(model.getBoundingBox()));
+
+        return componentAccessor.addEntity(holder, AddReason.SPAWN);
+    }
+
+    private void removeBeamSegments(
+            LaserBeamComponent state,
+            ComponentAccessor<EntityStore> componentAccessor) {
+
+        List<Ref<EntityStore>> segments = state.getBeamSegments();
+
+        for (Ref<EntityStore> segmentRef : segments) {
+            if (segmentRef != null && segmentRef.isValid()) {
+                if (componentAccessor instanceof CommandBuffer) {
+                    ((CommandBuffer<EntityStore>) componentAccessor).tryRemoveEntity(segmentRef, RemoveReason.REMOVE);
+                } else if (componentAccessor instanceof Store) {
+                    ((Store<EntityStore>) componentAccessor).removeEntity(segmentRef, RemoveReason.REMOVE);
+                }
+            }
+        }
+
+        state.clearBeamSegments();
     }
 
     private void damageEntitiesAlongBeam(
             Ref<EntityStore> spawnerRef,
-            LaserTrapActionComponent laser,
-            Vector3d startPos,
-            Vector3d direction,
-            Vector3d endPos,
+            LaserBeamComponent state,
+            TransformComponent spawnerTransform,
             CommandBuffer<EntityStore> commandBuffer) {
 
-        double beamLength = startPos.distanceTo(endPos);
+        Vector3d basePos = spawnerTransform.getPosition();
+        double startX = basePos.x + state.getOffsetX();
+        double startY = basePos.y + state.getOffsetY();
+        double startZ = basePos.z + state.getOffsetZ();
+        Vector3d startPos = new Vector3d(startX, startY, startZ);
+
+        float pitchRad = (float) Math.toRadians(state.getPitch());
+        float yawRad = (float) Math.toRadians(state.getYaw());
+        Vector3d direction = Transform.getDirection(pitchRad, yawRad);
+
+        World world = commandBuffer.getExternalData().getWorld();
+        double beamLength = findBlockHitDistance(world, startX, startY, startZ, direction, state);
+
+        Vector3d endPos = new Vector3d(
+                startX + direction.x * beamLength,
+                startY + direction.y * beamLength,
+                startZ + direction.z * beamLength);
+
         Vector3d midPoint = new Vector3d(
                 (startPos.x + endPos.x) / 2,
                 (startPos.y + endPos.y) / 2,
                 (startPos.z + endPos.z) / 2);
 
         double searchRadius = (beamLength / 2) + 2.0;
-        List<Ref<EntityStore>> nearbyEntities = TargetUtil.getAllEntitiesInSphere(midPoint, searchRadius, commandBuffer);
+        List<Ref<EntityStore>> nearbyEntities = TargetUtil.getAllEntitiesInSphere(midPoint, searchRadius,
+                commandBuffer);
+
+        List<Ref<EntityStore>> beamSegments = state.getBeamSegments();
 
         for (Ref<EntityStore> entityRef : nearbyEntities) {
             if (!entityRef.isValid() || entityRef.equals(spawnerRef)) {
+                continue;
+            }
+
+            boolean isBeamSegment = false;
+            for (Ref<EntityStore> segment : beamSegments) {
+                if (entityRef.equals(segment)) {
+                    isBeamSegment = true;
+                    break;
+                }
+            }
+            if (isBeamSegment) {
                 continue;
             }
 
@@ -250,7 +395,8 @@ public class BeamTrap implements Spawnable {
             }
 
             BoundingBox boundingBoxComponent = commandBuffer.getComponent(entityRef, BoundingBox.getComponentType());
-            TransformComponent entityTransform = commandBuffer.getComponent(entityRef, TransformComponent.getComponentType());
+            TransformComponent entityTransform = commandBuffer.getComponent(entityRef,
+                    TransformComponent.getComponentType());
 
             if (boundingBoxComponent == null || entityTransform == null) {
                 continue;
@@ -269,7 +415,7 @@ public class BeamTrap implements Spawnable {
                 Damage damage = new Damage(
                         new Damage.EnvironmentSource(ENVIRONMENT_SOURCE_TYPE),
                         getDamageCauseIndex(),
-                        laser.getDamage() * 1.15f);
+                        state.getDamage());
 
                 DamageSystems.executeDamage(entityRef, commandBuffer, damage);
             }

@@ -278,7 +278,7 @@ public class HammerTrap implements Spawnable {
 
         ModelAsset modelAsset = ModelAsset.getAssetMap().getAsset(HAMMER_MODEL_ASSET);
         if (modelAsset != null) {
-            Model model = Model.createScaledModel(modelAsset, 2.5f);
+            Model model = Model.createScaledModel(modelAsset, state.getScale());
             holder.addComponent(ModelComponent.getComponentType(), new ModelComponent(model));
             holder.addComponent(BoundingBox.getComponentType(), new BoundingBox(model.getBoundingBox()));
         }

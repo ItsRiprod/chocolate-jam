@@ -56,6 +56,7 @@ public class DungeonComponent implements Component<EntityStore> {
     private double spawnY = 0.0;
     private double spawnZ = 0.0;
     private boolean active = false;
+    private boolean triggered = false;
 
     @Nullable
     private Ref<EntityStore> artifactHolderRef;
@@ -118,6 +119,14 @@ public class DungeonComponent implements Component<EntityStore> {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public boolean isTriggered() {
+        return triggered;
+    }
+
+    public void setTriggered(boolean triggered) {
+        this.triggered = triggered;
     }
 
     // Registration state
@@ -222,6 +231,7 @@ public class DungeonComponent implements Component<EntityStore> {
     // reset state
     public void reset() {
         this.setActive(false);
+        this.setTriggered(false);
         this.setArtifactHolderRef(null);
         this.clearDungeoneerRefs();
         this.clearSpawnerRefs();
@@ -240,6 +250,7 @@ public class DungeonComponent implements Component<EntityStore> {
         copy.spawnY = this.spawnY;
         copy.spawnZ = this.spawnZ;
         copy.active = this.active;
+        copy.triggered = this.triggered;
         copy.artifactHolderRef = this.artifactHolderRef;
         copy.entranceRef = this.entranceRef;
         copy.dungeoneerRefs.addAll(this.dungeoneerRefs);
