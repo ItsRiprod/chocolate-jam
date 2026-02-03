@@ -1,0 +1,10 @@
+{
+  "Interactions": [
+    "CM_PedestalTrigger"
+  ],
+  "RequireNewClick": true,
+  "Cooldown": {
+    "Id": "PedestalTriggerCooldown",
+    "Cooldown": 1.0
+  }
+}

@@ -32,6 +32,10 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
                     (c, v) -> c.knockbackAxis = KnockbackAxis.valueOf(v),
                     c -> c.knockbackAxis.name())
             .add()
+            .append(new KeyedCodec<>("Scale", Codec.FLOAT),
+                    (c, v) -> c.scale = v,
+                    c -> c.scale)
+            .add()
             .build();
 
     public enum HammerPhase {
@@ -53,6 +57,7 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
 
     private float damageAmount = 75f;
     private KnockbackAxis knockbackAxis = KnockbackAxis.X;
+    private float scale = 2.5f;
     private boolean pendingDeactivation = false;
     private boolean needsIdleAnimation = true;
 
@@ -149,6 +154,14 @@ public class BigFreakingHammerComponent implements Component<EntityStore> {
 
     public KnockbackAxis getKnockbackAxis() {
         return knockbackAxis;
+    }
+
+    public float getScale() {
+        return scale;
+    }
+
+    public void setScale(float scale) {
+        this.scale = scale;
     }
 
     public void setKnockbackAxis(KnockbackAxis axis) {

@@ -236,7 +236,7 @@ public class SawBladeTrap implements Spawnable {
         }
 
         Vector3d position = spawnerTransform.getPosition().clone();
-        float yaw = state.getMovementAxis() == SawBladeComponent.MovementAxis.X ? 90f : 0f;
+        float yaw = state.getMovementAxis() == SawBladeComponent.MovementAxis.X ? (float) Math.toRadians(90) : 0f;
         Vector3f rotation = new Vector3f(0f, yaw, 0f);
 
         Holder<EntityStore> holder = EntityStore.REGISTRY.newHolder();

@@ -1,0 +1,72 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.CM_Pedestal.name"
+  },
+  "Icon": "Icons/ItemsGenerated/CM_Pedestal.png",
+  "Categories": [
+    "Blocks.Deco"
+  ],
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "Material": "Solid",
+    "CustomModel": "Blocks/Machine/CM_Pedestal.blockymodel",
+    "CustomModelScale": 0.5,
+    "CustomModelTexture": [
+      {
+        "Weight": 1,
+        "Texture": "Blocks/Machine/CM_Pedestal_Texture.png"
+      }
+    ],
+    "BlockSoundSetId": "Stone",
+    "BlockParticleSetId": "Stone",
+    "Interactions": {
+      "Use": {
+        "Interactions": [
+          {
+            "Type": "CM_PedestalBlock"
+          }
+        ]
+      }
+    },
+    "CustomModelAnimation": "Blocks/Machine/Animations/LootIdle.blockyanim",
+    "Looping": true,
+    "State": {
+      "Definitions": {
+        "On": {
+          "HitboxType": "Pedestal",
+          "CustomModelAnimation": "Blocks/Machine/Animations/PedestalTrigger.blockyanim",
+          "Looping": false
+        }
+      }
+    },
+    "IsDoor": false,
+    "PlacementSettings": {
+      "PlaceInEmptyBlocks": true,
+      "AllowRotationKey": true
+    },
+    "HitboxType": "Pedestal"
+  },
+  "Tags": {
+    "Type": [
+      "Block"
+    ],
+    "Family": [
+      "Machine"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone",
+  "IconProperties": {
+    "Scale": 0.2,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "Texture": "NPC/Traps/Laser_Beam.png",
+  "Model": "NPC/Traps/Laser_Beam.blockymodel",
+  "HitBox": {
+    "Max": {
+      "X": 0.1,
+      "Y": 0.1,
+      "Z": 0.1
+    },
+    "Min": {
+      "X": -0.1,
+      "Y": -0.1,
+      "Z": -0.1
+    }
+  },
+  "MinScale": 1,
+  "MaxScale": 1,
+  "AnimationSets": {
+    "Idle": {
+      "Animations": [
+        {
+          "Animation": "NPC/Traps/Animations/Laser_Spin.blockyanim",
+          "Looping": true,
+          "Speed": 0.7
+        }
+      ]
+    }
+  }
+}
