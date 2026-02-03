@@ -29,6 +29,7 @@ import com.hypixel.hytale.server.core.inventory.ItemStack;
 import com.hypixel.hytale.server.core.inventory.container.ItemContainer;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.CooldownHandler;
 import com.hypixel.hytale.server.core.modules.interaction.interaction.config.client.SimpleBlockInteraction;
+import com.hypixel.hytale.server.core.command.system.CommandManager;
 import com.hypixel.hytale.server.core.universe.PlayerRef;
 import com.hypixel.hytale.server.core.universe.world.SoundUtil;
 import com.hypixel.hytale.server.core.universe.world.World;
@@ -120,7 +121,7 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
                 }
             }
 
-            if (dungeon.isTriggered() || dungeon.isActive() || dungeon.isPendingActivation()) {
+            if (dungeon.isTriggered() || dungeon.isActive()) {
                 context.getState().state = InteractionState.Failed;
                 return;
             }
@@ -143,9 +144,14 @@ public class PedestalBlockInteraction extends SimpleBlockInteraction {
                 dungeon.reset();
             }
 
-            // defer registration to next tick (Store has spatial, CommandBuffer doesn't)
-            dungeon.setPendingActivation(true);
-            dungeon.setPendingActivationPlayerRef(playerRef);
+            dungeon.setTriggered(true);
+
+            // run commands as player (uses Store context which has spatial structure)
+            CommandManager.get().handleCommand(playerRefComponent, "cm d register")
+                .thenCompose(v -> {
+                    try { Thread.sleep(1000); } catch (Exception e) {}
+                    return CommandManager.get().handleCommand(playerRefComponent, "cm d toggle");
+                });
 
             giveArtifactArmor(playerRef, commandBuffer);
             setBlockState(world, pos, "On");
