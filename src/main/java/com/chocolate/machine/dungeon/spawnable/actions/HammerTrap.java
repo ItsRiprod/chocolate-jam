@@ -118,26 +118,10 @@ public class HammerTrap implements Spawnable {
         }
 
         if (state == null) {
-            state = new BigFreakingHammerComponent();
-            try {
-                componentAccessor.addComponent(spawnerRef, BigFreakingHammerComponent.getComponentType(), state);
-            } catch (IllegalArgumentException e) {
-                state = componentAccessor.getComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
-                if (state == null) return;
-            }
+            state = componentAccessor.ensureAndGetComponent(spawnerRef, BigFreakingHammerComponent.getComponentType());
+            if (state == null) return;
         }
 
-        if (state.hasSpawned()) {
-            return;
-        }
-
-        Ref<EntityStore> spawnedRef = this.spawnHammer(spawnerRef, componentAccessor, state);
-
-        if (spawnedRef == null) {
-            return;
-        }
-
-        state.setSpawnedRef(spawnedRef);
         state.setActive(false);
         state.setPhase(HammerPhase.IDLE);
     }

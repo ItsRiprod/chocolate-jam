@@ -9,7 +9,7 @@
   ],
   "PortalKey": {
     "PortalType": "PortalType_Machine_Dungeon_Var2",
-    "TimeLimitSeconds": 500
+    "TimeLimitSeconds": 1800
   },
   "BlockType": {
     "DrawType": "Model",

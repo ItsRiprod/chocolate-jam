@@ -119,8 +119,7 @@ public class HydraulicPressTrap implements Spawnable {
             return;
         }
 
-        componentAccessor.addComponent(spawnerRef, HydraulicPressActionComponent.getComponentType(),
-                new HydraulicPressActionComponent());
+        componentAccessor.ensureAndGetComponent(spawnerRef, HydraulicPressActionComponent.getComponentType());
     }
 
     @Override

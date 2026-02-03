@@ -51,8 +51,7 @@ public class BruteAction implements Spawnable {
             return;
         }
 
-        componentAccessor.addComponent(spawnerRef, SkeletonActionComponent.getComponentType(),
-                new SkeletonActionComponent());
+        componentAccessor.ensureAndGetComponent(spawnerRef, SkeletonActionComponent.getComponentType());
 
         LOGGER.atFine().log("Registered SkeletonActionComponent for spawner");
     }

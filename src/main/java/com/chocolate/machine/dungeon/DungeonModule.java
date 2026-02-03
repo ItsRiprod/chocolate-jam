@@ -135,6 +135,8 @@ public class DungeonModule extends System<EntityStore> {
         registry.register(new ArcherAction());
         registry.register(new BruteAction());
 
+        registry.registerAlias("skeleton", GolemAction.ID);
+
         LOGGER.atInfo().log("Registered %d default spawnables", registry.getRegisteredIds().size());
     }
 

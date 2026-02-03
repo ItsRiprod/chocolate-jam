@@ -44,8 +44,7 @@ public class LaserTrap implements Spawnable {
             return;
         }
 
-        componentAccessor.addComponent(spawnerRef, LaserTrapActionComponent.getComponentType(),
-                new LaserTrapActionComponent());
+        componentAccessor.ensureAndGetComponent(spawnerRef, LaserTrapActionComponent.getComponentType());
     }
 
     @Override
