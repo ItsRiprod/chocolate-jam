@@ -50,7 +50,7 @@
     "DropList": "Drop_Skeleton_Fighter",
     "Appearance": "Tier3_Enemy",
     "Weapons": [
-      "Weapon_Sword_Doomed"
+      "New_Mace"
     ],
     "FlockArray": {
       "Compute": "FlockArray"

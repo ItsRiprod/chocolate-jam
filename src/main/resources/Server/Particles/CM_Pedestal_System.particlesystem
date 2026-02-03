@@ -1,0 +1,21 @@
+{
+  "Spawners": [
+    {
+      "SpawnerId": "CM_Pedestal_Spawner",
+      "PositionOffset": {
+        "Y": 6
+      },
+      "RotationOffset": {
+        "Yaw": 0,
+        "Pitch": 0,
+        "Roll": 0
+      }
+    },
+    {
+      "SpawnerId": "CM_Pedestal_Sparks",
+      "PositionOffset": {
+        "Y": 6
+      }
+    }
+  ]
+}
