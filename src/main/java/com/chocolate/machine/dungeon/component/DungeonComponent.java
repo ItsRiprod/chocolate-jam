@@ -58,8 +58,15 @@ public class DungeonComponent implements Component<EntityStore> {
     private boolean active = false;
     private boolean triggered = false;
 
+    // these were made 30 minutes before submission because normal registration wasnt working!
+    private boolean pendingActivation = false;
+    private boolean pendingDelayedActivation = false;
+    private float activationDelayTimer = 0f;
+
     @Nullable
     private Ref<EntityStore> artifactHolderRef;
+    @Nullable
+    private Ref<EntityStore> pendingActivationPlayerRef;
     @Nullable
     private Ref<EntityStore> entranceRef;
     @Nonnull
@@ -127,6 +134,39 @@ public class DungeonComponent implements Component<EntityStore> {
 
     public void setTriggered(boolean triggered) {
         this.triggered = triggered;
+    }
+
+    public boolean isPendingActivation() {
+        return pendingActivation;
+    }
+
+    public void setPendingActivation(boolean pending) {
+        this.pendingActivation = pending;
+    }
+
+    @Nullable
+    public Ref<EntityStore> getPendingActivationPlayerRef() {
+        return pendingActivationPlayerRef;
+    }
+
+    public void setPendingActivationPlayerRef(@Nullable Ref<EntityStore> ref) {
+        this.pendingActivationPlayerRef = ref;
+    }
+
+    public boolean isPendingDelayedActivation() {
+        return pendingDelayedActivation;
+    }
+
+    public void setPendingDelayedActivation(boolean pending) {
+        this.pendingDelayedActivation = pending;
+    }
+
+    public float getActivationDelayTimer() {
+        return activationDelayTimer;
+    }
+
+    public void setActivationDelayTimer(float timer) {
+        this.activationDelayTimer = timer;
     }
 
     // Registration state
@@ -232,6 +272,10 @@ public class DungeonComponent implements Component<EntityStore> {
     public void reset() {
         this.setActive(false);
         this.setTriggered(false);
+        this.setPendingActivation(false);
+        this.setPendingDelayedActivation(false);
+        this.setActivationDelayTimer(0f);
+        this.setPendingActivationPlayerRef(null);
         this.setArtifactHolderRef(null);
         this.clearDungeoneerRefs();
         this.clearSpawnerRefs();
@@ -251,7 +295,11 @@ public class DungeonComponent implements Component<EntityStore> {
         copy.spawnZ = this.spawnZ;
         copy.active = this.active;
         copy.triggered = this.triggered;
+        copy.pendingActivation = this.pendingActivation;
+        copy.pendingDelayedActivation = this.pendingDelayedActivation;
+        copy.activationDelayTimer = this.activationDelayTimer;
         copy.artifactHolderRef = this.artifactHolderRef;
+        copy.pendingActivationPlayerRef = this.pendingActivationPlayerRef;
         copy.entranceRef = this.entranceRef;
         copy.dungeoneerRefs.addAll(this.dungeoneerRefs);
         copy.spawnerRefs.addAll(this.spawnerRefs);

@@ -17,6 +17,8 @@ import com.hypixel.hytale.component.Store;
 import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.spatial.SpatialResource;
 import com.hypixel.hytale.component.system.tick.EntityTickingSystem;
+import com.chocolate.machine.dungeon.DungeonModule;
+import com.chocolate.machine.dungeon.DungeonService;
 import com.hypixel.hytale.logger.HytaleLogger;
 import com.hypixel.hytale.math.vector.Vector3d;
 import com.hypixel.hytale.math.vector.Vector3i;
@@ -89,6 +91,62 @@ public class DungeonBossRoomSystem extends EntityTickingSystem<EntityStore> {
 
         Ref<EntityStore> dungeonRef = chunk.getReferenceTo(index);
         Vector3d bossRoomPosition = transform.getPosition();
+
+        // handle deferred registration from pedestal interaction
+        if (dungeon.isPendingActivation()) {
+            dungeon.setPendingActivation(false);
+
+            DungeonModule module = DungeonModule.get();
+            if (module != null) {
+                DungeonService service = module.getDungeonService();
+                World world = store.getExternalData().getWorld();
+
+                service.registerDungeon(dungeonRef, store, world);
+                LOGGER.atInfo().log("[DungeonBossRoomSystem] Registration complete, waiting 1s before activation");
+
+                dungeon.setPendingDelayedActivation(true);
+                dungeon.setActivationDelayTimer(1.0f);
+            }
+            return;
+        }
+
+        // handle delayed activation (1 second after registration)
+        if (dungeon.isPendingDelayedActivation()) {
+            float timer = dungeon.getActivationDelayTimer() - dt;
+            dungeon.setActivationDelayTimer(timer);
+
+            if (timer <= 0f) {
+                dungeon.setPendingDelayedActivation(false);
+                Ref<EntityStore> playerRef = dungeon.getPendingActivationPlayerRef();
+                dungeon.setPendingActivationPlayerRef(null);
+
+                DungeonModule module = DungeonModule.get();
+                if (module != null) {
+                    DungeonService service = module.getDungeonService();
+                    service.activate(dungeonRef, playerRef, store);
+
+                    dungeon.setArtifactHolderRef(playerRef);
+                    dungeon.setTriggered(true);
+
+                    if (playerRef != null && playerRef.isValid()) {
+                        DungeoneerComponent dungeoneer = store.getComponent(playerRef, DungeoneerComponent.getComponentType());
+                        if (dungeoneer == null) {
+                            Vector3d spawnPosition = dungeon.getSpawnPosition();
+                            dungeoneer = new DungeoneerComponent(dungeon.getDungeonId(), spawnPosition);
+                            dungeoneer.setDungeonRef(dungeonRef);
+                            commandBuffer.addComponent(playerRef, DungeoneerComponent.getComponentType(), dungeoneer);
+                            dungeon.addDungeoneerRef(playerRef);
+                        }
+                        dungeoneer.setRelicHolder(true);
+                    }
+
+                    LOGGER.atInfo().log("[DungeonBossRoomSystem] Activation complete for dungeon '%s'",
+                            dungeon.getDungeonId());
+                }
+            }
+            return;
+        }
+
         double radius = dungeon.getTriggerRadius();
         String dungeonId = dungeon.getDungeonId();
 

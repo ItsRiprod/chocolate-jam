@@ -9,7 +9,6 @@ import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
 
 public class SpawnerComponent implements Component<EntityStore> {
 

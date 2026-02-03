@@ -205,13 +205,4 @@ public class ArcherAction implements Spawnable {
 
         LOGGER.atFine().log("Cleaned up SkeletonActionComponent");
     }
-
-    private Store<EntityStore> getStore(ComponentAccessor<EntityStore> accessor) {
-        if (accessor instanceof Store) {
-            return (Store<EntityStore>) accessor;
-        } else if (accessor instanceof CommandBuffer) {
-            return ((CommandBuffer<EntityStore>) accessor).getStore();
-        }
-        return null;
-    }
 }
