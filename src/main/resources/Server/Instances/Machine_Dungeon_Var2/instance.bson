@@ -23,10 +23,10 @@
     "WorldStructure": "WorldStructures_Machine_Dungeon_Var2",
     "PlayerSpawn" : {
       "X": 0,
-      "Y": 101,
-      "Z": 0,
+      "Y": 161,
+      "Z": -15,
       "Pitch" : 0,
-      "Yaw" : 0,
+      "Yaw" : 0.5,
       "Roll" : 0
     }
   },
@@ -34,8 +34,8 @@
     "Id": "Global",
     "SpawnPoint": {
       "X": 0,
-      "Y": 101,
-      "Z": 3,
+      "Y": 161,
+      "Z": -20,
       "Pitch": 0.0,
       "Yaw": 0.0,
       "Roll": 0.0
