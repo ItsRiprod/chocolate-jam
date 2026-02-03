@@ -57,7 +57,7 @@
           {
             "$NodeId": "Point3D-c34bcfc0-b973-40f1-a3bf-449a63a81805",
             "X": 0,
-            "Y": 0,
+            "Y": 20,
             "Z": 0
           }
         ]
@@ -96,7 +96,7 @@
             "$NodeId": "ColumnLinear.Scanner-38c74b9e-07c5-4236-a84e-003f24c4faf5",
             "Type": "ColumnLinear",
             "Skip": false,
-            "MaxY": 320,
+            "MaxY": 520,
             "MinY": 0,
             "RelativeToPosition": false,
             "BaseHeightName": "Base",

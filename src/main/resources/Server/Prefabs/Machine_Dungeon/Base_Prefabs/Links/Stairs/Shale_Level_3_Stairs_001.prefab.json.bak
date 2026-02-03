@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "blockIdVersion": 8,
+  "blockIdVersion": 11,
   "anchorX": 0,
   "anchorY": 13,
   "anchorZ": 9,
@@ -1146,7 +1146,8 @@
       "x": -4,
       "y": 4,
       "z": -4,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -4,
@@ -1195,13 +1196,15 @@
       "x": -4,
       "y": 4,
       "z": -3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -4,
       "y": 5,
       "z": -3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -4,
@@ -1250,7 +1253,8 @@
       "x": -4,
       "y": 5,
       "z": -2,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -4,
@@ -1525,7 +1529,8 @@
       "x": -4,
       "y": 10,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -4,
@@ -1690,7 +1695,7 @@
       "x": -4,
       "y": 13,
       "z": 6,
-      "name": "Plant_Crop_Mushroom_Glowing_Red"
+      "name": "Empty"
     },
     {
       "x": -4,
@@ -2060,7 +2065,8 @@
       "x": -3,
       "y": 7,
       "z": -5,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -3,
@@ -2249,12 +2255,7 @@
       "x": -3,
       "y": 6,
       "z": -1,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -3,
@@ -2449,7 +2450,9 @@
       "x": -3,
       "y": 14,
       "z": 2,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15,
+      "rotation": 1
     },
     {
       "x": -3,
@@ -2632,13 +2635,15 @@
       "x": -3,
       "y": 12,
       "z": 6,
-      "name": "Empty"
+      "name": "Plant_Grass_Sharp_Tall",
+      "support": 15
     },
     {
       "x": -3,
       "y": 13,
       "z": 6,
-      "name": "Empty"
+      "name": "Plant_Grass_Sharp_Tall",
+      "filler": 1024
     },
     {
       "x": -3,
@@ -2740,12 +2745,7 @@
       "x": -3,
       "y": 14,
       "z": 8,
-      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal",
-      "components": {
-        "Components": {
-          "FarmingBlock": {}
-        }
-      }
+      "name": "*Plant_Crop_Berry_Winter_Block_State_Definitions_StageFinal"
     },
     {
       "x": -3,
@@ -2956,7 +2956,8 @@
       "x": -2,
       "y": 6,
       "z": -6,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": -2,
@@ -3338,7 +3339,8 @@
       "x": -2,
       "y": 13,
       "z": 1,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": -2,
@@ -3460,20 +3462,21 @@
       "x": -2,
       "y": 9,
       "z": 4,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 2
+      "name": "Soil_Dirt_Cold"
     },
     {
       "x": -2,
       "y": 10,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Grass_Gnarled_Tall",
+      "support": 15
     },
     {
       "x": -2,
       "y": 11,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Grass_Gnarled_Tall",
+      "filler": 1024
     },
     {
       "x": -2,
@@ -3613,7 +3616,8 @@
       "x": -2,
       "y": 18,
       "z": 6,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": -2,
@@ -4004,7 +4008,8 @@
       "x": -1,
       "y": 8,
       "z": -4,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": -1,
@@ -4223,7 +4228,8 @@
       "x": -1,
       "y": 12,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": -1,
@@ -4541,19 +4547,22 @@
       "x": -1,
       "y": 16,
       "z": 6,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -1,
       "y": 17,
       "z": 6,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -1,
       "y": 18,
       "z": 6,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": -1,
@@ -5056,7 +5065,8 @@
       "x": 0,
       "y": 10,
       "z": -2,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": 0,
@@ -5160,13 +5170,15 @@
       "x": 0,
       "y": 11,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 0,
       "y": 12,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 0,
@@ -5221,7 +5233,8 @@
       "x": 0,
       "y": 13,
       "z": 1,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 0,
@@ -5386,7 +5399,8 @@
       "x": 0,
       "y": 16,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": 0,
@@ -5441,7 +5455,8 @@
       "x": 0,
       "y": 17,
       "z": 5,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": 0,
@@ -5835,7 +5850,8 @@
       "x": 1,
       "y": 7,
       "z": -5,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": 1,
@@ -5890,7 +5906,8 @@
       "x": 1,
       "y": 8,
       "z": -4,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 1,
@@ -5945,7 +5962,8 @@
       "x": 1,
       "y": 9,
       "z": -3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 1,
@@ -6275,7 +6293,8 @@
       "x": 1,
       "y": 15,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 1,
@@ -6845,8 +6864,7 @@
       "x": 2,
       "y": 2,
       "z": -3,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 2
+      "name": "Soil_Dirt_Cold"
     },
     {
       "x": 2,
@@ -6998,7 +7016,8 @@
       "x": 2,
       "y": 11,
       "z": -1,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": 2,
@@ -7053,7 +7072,8 @@
       "x": 2,
       "y": 12,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Vine_Wall",
+      "support": 15
     },
     {
       "x": 2,
@@ -7163,7 +7183,8 @@
       "x": 2,
       "y": 14,
       "z": 2,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 2,
@@ -7181,7 +7202,7 @@
       "x": 2,
       "y": 9,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Flower_Bushy_Green"
     },
     {
       "x": 2,
@@ -7217,7 +7238,8 @@
       "x": 2,
       "y": 15,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 2,
@@ -7235,13 +7257,15 @@
       "x": 2,
       "y": 10,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Grass_Gnarled_Tall",
+      "support": 15
     },
     {
       "x": 2,
       "y": 11,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Grass_Gnarled_Tall",
+      "filler": 1024
     },
     {
       "x": 2,
@@ -7787,8 +7811,7 @@
       "x": 3,
       "y": 2,
       "z": -3,
-      "name": "Rock_Shale_Brick_Stairs",
-      "rotation": 2
+      "name": "Soil_Dirt_Cold"
     },
     {
       "x": 3,
@@ -8159,7 +8182,8 @@
       "x": 3,
       "y": 15,
       "z": 3,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 3,
@@ -8177,13 +8201,15 @@
       "x": 3,
       "y": 10,
       "z": 4,
-      "name": "Plant_Crop_Mushroom_Glowing_Red"
+      "name": "Plant_Grass_Sharp_Tall",
+      "support": 15
     },
     {
       "x": 3,
       "y": 11,
       "z": 4,
-      "name": "Empty"
+      "name": "Plant_Grass_Sharp_Tall",
+      "filler": 1024
     },
     {
       "x": 3,
@@ -8231,13 +8257,15 @@
       "x": 3,
       "y": 11,
       "z": 5,
-      "name": "Empty"
+      "name": "Plant_Grass_Sharp_Tall",
+      "support": 15
     },
     {
       "x": 3,
       "y": 12,
       "z": 5,
-      "name": "Empty"
+      "name": "Plant_Grass_Sharp_Tall",
+      "filler": 1024
     },
     {
       "x": 3,
@@ -8634,13 +8662,13 @@
       "x": 4,
       "y": 2,
       "z": -5,
-      "name": "Empty"
+      "name": "Soil_Dirt_Cold"
     },
     {
       "x": 4,
       "y": 3,
       "z": -5,
-      "name": "Empty"
+      "name": "Plant_Flower_Bushy_Green"
     },
     {
       "x": 4,
@@ -8689,13 +8717,13 @@
       "x": 4,
       "y": 3,
       "z": -4,
-      "name": "Empty"
+      "name": "Soil_Dirt_Cold"
     },
     {
       "x": 4,
       "y": 4,
       "z": -4,
-      "name": "Empty"
+      "name": "Plant_Flower_Bushy_Green"
     },
     {
       "x": 4,
@@ -8799,13 +8827,15 @@
       "x": 4,
       "y": 5,
       "z": -2,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 4,
       "y": 6,
       "z": -2,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 4,
@@ -8854,7 +8884,8 @@
       "x": 4,
       "y": 6,
       "z": -1,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 4,
@@ -8909,13 +8940,15 @@
       "x": 4,
       "y": 7,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 4,
       "y": 8,
       "z": 0,
-      "name": "Empty"
+      "name": "Plant_Leaves_Wisteria_Wild",
+      "support": 15
     },
     {
       "x": 4,

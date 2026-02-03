@@ -8,7 +8,8 @@
     "Blocks.Portals"
   ],
   "PortalKey": {
-    "PortalType": "PortalType_Machine_Dungeon_Var1"
+    "PortalType": "PortalType_Machine_Dungeon_Var1",
+    "TimeLimitSeconds": 500
   },
   "BlockType": {
     "DrawType": "Model",
