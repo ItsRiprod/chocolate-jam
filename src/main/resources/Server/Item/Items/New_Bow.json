@@ -299,7 +299,8 @@
   },
   "Particles": [
     {
-      "SystemId": "Small_Cog_Test_System_Three"
+      "SystemId": "Small_Cog_Test_System_Three",
+      "Scale": 0.3
     }
   ]
 }
