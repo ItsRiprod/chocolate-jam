@@ -1,0 +1,33 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Rock_Bedrock.name"
+  },
+  "Icon": "Icons/ItemsGenerated/Rock_Bedrock.png",
+  "Categories": [
+    "Blocks.Rocks"
+  ],
+  "PlayerAnimationsId": "Block",
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Group": "Stone",
+    "Flags": {},
+    "BlockParticleSetId": "Stone",
+    "ParticleColor": "#4a6466",
+    "BlockSoundSetId": "Stone",
+    "CustomModel": "NPC/Cogs/Cog.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "NPC/Cogs/Cog_Texture.png"
+      }
+    ],
+    "CustomModelAnimation": "NPC/Cogs/Animations/SpinSlow.blockyanim",
+    "Looping": true
+  },
+  "Tags": {
+    "Type": [
+      "Rock"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Blocks_Stone"
+}
